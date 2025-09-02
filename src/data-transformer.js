@@ -1,16 +1,13 @@
 function formatDate(dateString) {
   if (!dateString) return "";
   const date = new Date(dateString);
-  return `${(date.getMonth() + 1).toString().padStart(2, 
-'0')}/${date.getDate().toString().padStart(2, 
-'0')}/${date.getFullYear()}`;
+  return `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}/${date.getFullYear()}`;
 }
 
 function formatCurrency(value) {
   if (!value) return "$0.00";
   const num = parseFloat(value.toString().replace(/[^0-9.-]/g, ''));
-  return `$${num.toLocaleString('en-US', { minimumFractionDigits: 2, 
-maximumFractionDigits: 2 })}`;
+  return `$${num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
 function parseHeirs(heirsList) {
@@ -60,12 +57,9 @@ function transformQuestionnaireData(webhookData) {
     },
     
     estate: {
-      personal_property: 
-formatCurrency(webhookData.personal_property_value),
-      real_property_gross: 
-formatCurrency(webhookData.real_property_gross),
-      real_property_encumbrance: 
-formatCurrency(webhookData.real_property_encumbrance),
+      personal_property: formatCurrency(webhookData.personal_property_value),
+      real_property_gross: formatCurrency(webhookData.real_property_gross),
+      real_property_encumbrance: formatCurrency(webhookData.real_property_encumbrance),
       has_will: webhookData.has_will === "yes",
       will_date: formatDate(webhookData.will_date),
       will_self_proving: webhookData.will_self_proving === "yes",
@@ -75,5 +69,25 @@ formatCurrency(webhookData.real_property_encumbrance),
     
     administration: {
       type: webhookData.admin_type,
-      b
+      bond_required: webhookData.bond_required === "yes",
+      bond_amount: formatCurrency(webhookData.bond_amount),
+    },
+    
+    court: {
+      county: webhookData.court_county || "LOS ANGELES",
+      branch: webhookData.court_branch || "CENTRAL",
+      street: "111 N HILL ST",
+      city: "LOS ANGELES",
+      zip: "90012",
+    }
+  };
+  
+  return transformed;
+}
 
+module.exports = {
+  transformQuestionnaireData,
+  formatDate,
+  formatCurrency,
+  parseHeirs
+};
