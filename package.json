@@ -1,9 +1,19 @@
 {
-  "name": "probate-form-automation",
+  "name": "probate-forms-automation",
   "version": "1.0.0",
-  "description": "Probate form PDF automation",
+  "description": "California Probate Forms PDF Automation System",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build required'",
+    "test": "node test-pdf-generation.js"
+  },
   "dependencies": {
     "pdf-lib": "^1.17.1",
-    "@netlify/functions": "^2.0.0"
+    "@netlify/functions": "^2.4.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.10.1"
   }
 }
+
