@@ -309,10 +309,5 @@ CA`);
 
 module.exports = {
   fillProbateForms,
-  fillDE111,
-  fillDE140,
-  fillDE147,
-  fillDE147S,
-  fillDE150
 };
 
