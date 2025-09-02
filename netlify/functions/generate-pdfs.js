@@ -1,14 +1,4 @@
 exports.handler = async (event, context) => {
-  console.log('Function triggered!');
-  console.log('Request method:', event.httpMethod);
-  console.log('Request body:', event.body);
-  
-  try {
-    const data = JSON.parse(event.body);
-    console.log('Parsed data:', JSON.stringify(data, null, 2));
-    
-    // Rest of your existing code...
-exports.handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
