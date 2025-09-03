@@ -77,7 +77,7 @@ function transformQuestionnaireData(webhookData) {
     },
     heirs: parseHeirs(webhookData.heirs_list),
     administration: {
-      type: webhookData.admin_type,
+      type: webhookData.admin_type || "full",
       bond_required: webhookData.bond_required === "yes",
       bond_amount: formatCurrency(webhookData.bond_amount || 0),
     },
@@ -116,7 +116,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form - COMPLETE with all 4 pages
+// Fill DE-111 form - COMPLETE with all corrections
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -169,26 +169,30 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page1[0].FillText161[0]': '',
     };
     
-    // PAGE 2 - Estate Values (corrected based on actual form structure)
+    // PAGE 2 - All fields including estate values and sections 3.e through 3.h
     const page2Fields = {
-      // Estate value fields in correct order
-      'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': data.estate.personal_property,
+      // Estate value fields (3.d) - these are working correctly
+      'topmostSubform[0].Page2[0].Page2[0].FillText181[0]': data.estate.personal_property,
+      'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': '0.00',
       'topmostSubform[0].Page2[0].Page2[0].FillText173[1]': '0.00',
-      'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': '0.00',
-      'topmostSubform[0].Page2[0].Page2[0].FillText165[0]': data.estate.personal_property,
-      'topmostSubform[0].Page2[0].Page2[0].FillText164[0]': data.estate.real_property_gross,
-      'topmostSubform[0].Page2[0].Page2[0].FillText163[0]': data.estate.real_property_encumbrance,
-      'topmostSubform[0].Page2[0].Page2[0].FillText178[0]': data.estate.real_property_net,
-      'topmostSubform[0].Page2[0].Page2[0].FillText177[0]': data.estate.total,
+      'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': data.estate.personal_property,
+      'topmostSubform[0].Page2[0].Page2[0].FillText165[0]': data.estate.real_property_gross,
+      'topmostSubform[0].Page2[0].Page2[0].FillText164[0]': data.estate.real_property_encumbrance,
+      'topmostSubform[0].Page2[0].Page2[0].FillText163[0]': data.estate.real_property_net,
+      'topmostSubform[0].Page2[0].Page2[0].FillText178[0]': data.estate.total,
       
-      // Will date field
+      // Section 3.f - Will date
       'topmostSubform[0].Page2[0].Page2[0].FillText179[0]': data.estate.will_date,
+      'topmostSubform[0].Page2[0].Page2[0].FillText177[0]': '', // Codicil dates
       
-      // Other text fields
-      'topmostSubform[0].Page2[0].Page2[0].FillText181[0]': '',
-      'topmostSubform[0].Page2[0].Page2[0].FillText182[0]': '',
-      'topmostSubform[0].Page2[0].Page2[0].FillText183[0]': '',
-      'topmostSubform[0].Page2[0].Page2[0].FillTxt181[0]': '',
+      // Section 3.g(1)(d) - Other executors who won't act
+      'topmostSubform[0].Page2[0].Page2[0].FillText182[0]': '', // Other reasons specify
+      
+      // Section 3.g(2)(c) - Relationship to decedent
+      'topmostSubform[0].Page2[0].Page2[0].FillTxt181[0]': data.petitioner.relationship,
+      
+      // Section 3.h - Non-resident address
+      'topmostSubform[0].Page2[0].Page2[0].FillText183[0]': '', // Permanent address
       
       // Case number and estate name
       'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
@@ -197,14 +201,12 @@ async function fillDE111(data, pdfBytes) {
     
     // PAGE 3 - Family relationship section
     const page3Fields = {
-      // Case number and estate name for Page 3
       'topmostSubform[0].Page3[0].PxCaption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
       'topmostSubform[0].Page3[0].PxCaption[0].TitlePartyName[0].Party1[0]': data.decedent.name,
     };
     
     // PAGE 4 - Heirs/Beneficiaries list and signatures
     const page4Fields = {
-      // Case number and estate name for Page 4
       'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
       'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
       
@@ -217,13 +219,17 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page4[0].FillText277[0]': data.petitioner.relationship,
     };
     
-    // Add heirs/beneficiaries list (up to 10 entries)
+    // PAGE 4 - CORRECTED Heirs/Beneficiaries list
+    // Based on the form, the columns are: Name and relationship | Age | Address
     for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
       const heir = data.heirs[i];
-      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = heir.name || '';
-      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.relationship || '';
-      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = 
-        heir.age ? `Age ${heir.age}, ${heir.address || ''}` : (heir.address || '');
+      // Combine name and relationship in first column
+      const nameAndRelationship = heir.relationship ? 
+        `${heir.name}, ${heir.relationship}` : heir.name;
+      
+      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = nameAndRelationship || '';
+      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.age || '';
+      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = heir.address || '';
     }
     
     // Combine all text field mappings
@@ -277,12 +283,41 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page1[0].CheckBox15[1]': !data.decedent.is_resident,
     };
     
-    // PAGE 2 CHECKBOXES
+    // PAGE 2 CHECKBOXES - Complete all sections 3.e through 3.h
     const page2Checkboxes = {
+      // Section 3.e - Bond waivers
       'topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]': data.estate.has_will && !data.administration.bond_required,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox72[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox74[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox75[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox76[0]': false,
+      
+      // Section 3.f - Will/intestate
       'topmostSubform[0].Page2[0].Page2[0].CheckBox77[0]': !data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox78[0]': data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox79[0]': false, // Codicil
       'topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]': data.estate.will_self_proving,
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.petitioner.is_executor,
+      
+      // Section 3.g(1) - Appointment of executor/administrator with will
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.petitioner.is_executor && data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox60[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox61[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox63[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox62[0]': false,
+      
+      // Section 3.g(2) - Appointment of administrator
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox66[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox68[0]': false,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox69[0]': false,
+      
+      // Section 3.h - Residency
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox70[0]': true, // Resident of California
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox70[1]': false, // Non-resident of California
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox81[0]': false, // Resident of US
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox81[1]': false, // Non-resident of US
     };
     
     // PAGE 3 CHECKBOXES - Family relationships
