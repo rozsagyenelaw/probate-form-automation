@@ -1,45 +1,5 @@
 const { PDFDocument } = require('pdf-lib');
 
-// Field mappings with ACTUAL field names from the California court forms
-const fieldMappings = {
-  "DE-111": {
-    // Based on the actual field names from pdftk dump
-    "petitioner_name_1": "topmostSubform[0].Page4[0].FillText357[0]",
-    "petitioner_name_2": "topmostSubform[0].Page4[0].FillText357[1]",
-    "case_number": "topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]",
-    "estate_name": "topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]",
-    "date_field": "topmostSubform[0].Page4[0].FillText276[1]",
-    
-    // Checkboxes for petition type (these are checkbox fields)
-    "checkbox_probate_will": "topmostSubform[0].Page4[0].CheckBox82[0]",
-    
-    // You'll need to map more fields based on the full dump
-    // Run: pdftk DE-111.pdf dump_data_fields
-    // to see all available fields
-  },
-  
-  "DE-120": {
-    // You need to run: pdftk DE-120.pdf dump_data_fields
-    // to get the actual field names for this form
-    // Placeholder fields for now
-    "placeholder": "topmostSubform[0].Page1[0].TextField1[0]",
-  },
-  
-  "DE-140": {
-    // You need to run: pdftk DE-140.pdf dump_data_fields
-    // to get the actual field names for this form
-    // Placeholder fields for now
-    "placeholder": "topmostSubform[0].Page1[0].TextField1[0]",
-  },
-  
-  "DE-147": {
-    // You need to run: pdftk DE-147.pdf dump_data_fields
-    // to get the actual field names for this form
-    // Placeholder fields for now
-    "placeholder": "topmostSubform[0].Page1[0].TextField1[0]",
-  }
-};
-
 // Helper functions
 function formatDate(dateString) {
   if (!dateString) return "";
@@ -154,97 +114,100 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form with CORRECT field names
+// Fill DE-111 form with ACTUAL field names from the PDF
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
     const form = pdfDoc.getForm();
     
-    // Get all fields to see what's available
     const fields = form.getFields();
     console.log(`DE-111 has ${fields.length} fields available`);
     
-    // Log field names for debugging
-    fields.forEach(field => {
-      console.log(`Field: ${field.getName()}`);
-    });
+    // Map of actual field names to our data
+    const fieldMappings = {
+      // Page 1 - Attorney/Court Info (if these fields exist)
+      'topmostSubform[0].Page1[0].TextField3g5[0]': `${data.attorney.name}, SBN ${data.attorney.bar_number}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}\nPhone: ${data.attorney.phone}\nEmail: ${data.attorney.email}\nAttorney for ${data.petitioner.name}`,
+      
+      // Page 2 - Estate values and other info
+      'topmostSubform[0].Page2[0].Page2[0].FillText181[0]': data.estate.personal_property,
+      'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': data.estate.real_property_gross,
+      'topmostSubform[0].Page2[0].Page2[0].FillText173[1]': data.estate.real_property_encumbrance,
+      'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': data.estate.real_property_net,
+      'topmostSubform[0].Page2[0].Page2[0].FillText165[0]': data.estate.total,
+      'topmostSubform[0].Page2[0].Page2[0].FillText164[0]': data.estate.will_date,
+      'topmostSubform[0].Page2[0].Page2[0].FillText163[0]': data.decedent.death_place,
+      'topmostSubform[0].Page2[0].Page2[0].FillText178[0]': data.decedent.death_date,
+      'topmostSubform[0].Page2[0].Page2[0].FillText177[0]': data.decedent.death_address,
+      'topmostSubform[0].Page2[0].Page2[0].FillText179[0]': data.administration.bond_amount,
+      'topmostSubform[0].Page2[0].Page2[0].FillText182[0]': data.court.county,
+      'topmostSubform[0].Page2[0].Page2[0].FillText183[0]': data.court.branch,
+      
+      // Case number and estate name on Page 2
+      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+      
+      // Page 3 - Case number and estate name
+      'topmostSubform[0].Page3[0].PxCaption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page3[0].PxCaption[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+      
+      // Page 4 - Petitioner information and signatures
+      'topmostSubform[0].Page4[0].FillText357[0]': data.petitioner.name,
+      'topmostSubform[0].Page4[0].FillText357[1]': data.petitioner.name, // Second petitioner field if needed
+      'topmostSubform[0].Page4[0].FillText358[0]': data.petitioner.address,
+      'topmostSubform[0].Page4[0].FillText276[0]': data.decedent.death_date,
+      'topmostSubform[0].Page4[0].FillText276[1]': formatDate(new Date()), // Today's date
+      'topmostSubform[0].Page4[0].FillText277[0]': data.petitioner.relationship,
+      
+      // Case number and estate name on Page 4
+      'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+      
+      // Heirs list (if multiple heir fields exist)
+      'topmostSubform[0].Page4[0].FillText350[0]': data.heirs[0]?.name || '',
+      'topmostSubform[0].Page4[0].FillText351[0]': data.heirs[0]?.relationship || '',
+      'topmostSubform[0].Page4[0].FillText352[0]': data.heirs[0]?.address || '',
+    };
     
-    // Fill the fields we know exist
-    const fieldFillers = [
-      { 
-        fieldName: 'topmostSubform[0].Page4[0].FillText357[0]',
-        value: data.petitioner.name,
-        type: 'text'
-      },
-      { 
-        fieldName: 'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]',
-        value: data.court.case_number || '',
-        type: 'text'
-      },
-      { 
-        fieldName: 'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]',
-        value: data.decedent.name,
-        type: 'text'
-      },
-      { 
-        fieldName: 'topmostSubform[0].Page4[0].FillText276[1]',
-        value: data.decedent.death_date,
-        type: 'text'
-      },
-    ];
-    
-    // Try to fill each field
-    for (const { fieldName, value, type } of fieldFillers) {
+    // Fill text fields
+    for (const [fieldName, value] of Object.entries(fieldMappings)) {
       try {
-        if (type === 'text') {
-          const field = form.getTextField(fieldName);
-          field.setText(value || '');
-          console.log(`Set field ${fieldName} to "${value}"`);
-        } else if (type === 'checkbox') {
-          const field = form.getCheckBox(fieldName);
-          if (value) field.check();
-          console.log(`Checked field ${fieldName}`);
-        }
+        const field = form.getTextField(fieldName);
+        field.setText(value || '');
+        console.log(`Set field ${fieldName} to "${value}"`);
       } catch (e) {
-        console.log(`Could not set field ${fieldName}: ${e.message}`);
+        console.log(`Could not set text field ${fieldName}: ${e.message}`);
       }
     }
     
-    // Try to fill fields by searching for partial matches
-    // This is a fallback if exact field names don't work
-    try {
-      fields.forEach(field => {
-        const fieldName = field.getName();
-        
-        // Match petitioner name fields
-        if (fieldName.includes('FillText357')) {
-          try {
-            const textField = form.getTextField(fieldName);
-            textField.setText(data.petitioner.name);
-            console.log(`Set ${fieldName} to petitioner name`);
-          } catch (e) {}
+    // Handle checkboxes based on data
+    const checkboxMappings = {
+      // Page 1 checkboxes
+      'topmostSubform[0].Page1[0].CheckBox81[0]': data.estate.has_will, // Has will checkbox
+      
+      // Page 2 checkboxes - set based on petition type
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]': data.estate.has_will, // Probate of will
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox74[0]': !data.estate.has_will, // Letters of administration
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]': data.decedent.is_resident, // Resident of county
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': !data.decedent.is_resident, // Non-resident
+      
+      // Page 4 checkboxes
+      'topmostSubform[0].Page4[0].CheckBox82[0]': true, // Publication requested
+      'topmostSubform[0].Page4[0].CheckBox83[0]': false, // Publication to be arranged
+    };
+    
+    // Check/uncheck checkboxes
+    for (const [fieldName, shouldCheck] of Object.entries(checkboxMappings)) {
+      try {
+        const checkbox = form.getCheckBox(fieldName);
+        if (shouldCheck) {
+          checkbox.check();
+        } else {
+          checkbox.uncheck();
         }
-        
-        // Match case number fields
-        if (fieldName.includes('CaseNumber')) {
-          try {
-            const textField = form.getTextField(fieldName);
-            textField.setText(data.court.case_number || 'To be assigned');
-            console.log(`Set ${fieldName} to case number`);
-          } catch (e) {}
-        }
-        
-        // Match estate/party name fields
-        if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
-          try {
-            const textField = form.getTextField(fieldName);
-            textField.setText(data.decedent.name);
-            console.log(`Set ${fieldName} to decedent name`);
-          } catch (e) {}
-        }
-      });
-    } catch (e) {
-      console.log('Error in fallback field filling:', e.message);
+        console.log(`${shouldCheck ? 'Checked' : 'Unchecked'} checkbox ${fieldName}`);
+      } catch (e) {
+        console.log(`Could not set checkbox ${fieldName}: ${e.message}`);
+      }
     }
     
     return await pdfDoc.save();
@@ -263,29 +226,27 @@ async function fillDE120(data, pdfBytes) {
     
     console.log(`DE-120 has ${fields.length} fields available`);
     
-    // Log all field names to identify correct ones
-    fields.forEach(field => {
-      console.log(`DE-120 Field: ${field.getName()}`);
-    });
-    
-    // Try to fill any text fields with relevant data
+    // Fill all fields we can identify
     fields.forEach(field => {
       const fieldName = field.getName();
       try {
         const textField = form.getTextField(fieldName);
         
         // Fill based on field name patterns
-        if (fieldName.toLowerCase().includes('case')) {
-          textField.setText(data.court.case_number || 'To be assigned');
-        } else if (fieldName.toLowerCase().includes('estate') || fieldName.toLowerCase().includes('decedent')) {
-          textField.setText(`Estate of ${data.decedent.name}, Decedent`);
-        } else if (fieldName.toLowerCase().includes('date')) {
+        if (fieldName.includes('CaseNumber')) {
+          textField.setText('To be assigned');
+        } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
+          textField.setText(data.decedent.name);
+        } else if (fieldName.includes('Date')) {
           textField.setText(data.hearing.date);
-        } else if (fieldName.toLowerCase().includes('time')) {
+        } else if (fieldName.includes('Time')) {
           textField.setText(data.hearing.time);
+        } else if (fieldName.includes('Dept')) {
+          textField.setText(data.hearing.dept);
         }
+        
       } catch (e) {
-        // Not a text field or error setting it
+        // Not a text field
       }
     });
     
@@ -305,28 +266,23 @@ async function fillDE140(data, pdfBytes) {
     
     console.log(`DE-140 has ${fields.length} fields available`);
     
-    // Log all field names
-    fields.forEach(field => {
-      console.log(`DE-140 Field: ${field.getName()}`);
-    });
-    
-    // Try to fill fields based on patterns
     fields.forEach(field => {
       const fieldName = field.getName();
       try {
         const textField = form.getTextField(fieldName);
         
-        if (fieldName.toLowerCase().includes('case')) {
-          textField.setText(data.court.case_number || 'To be assigned');
-        } else if (fieldName.toLowerCase().includes('estate') || fieldName.toLowerCase().includes('decedent')) {
-          textField.setText(`Estate of ${data.decedent.name}, Decedent`);
-        } else if (fieldName.toLowerCase().includes('petitioner') || fieldName.toLowerCase().includes('appointment')) {
+        if (fieldName.includes('CaseNumber')) {
+          textField.setText('To be assigned');
+        } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
+          textField.setText(data.decedent.name);
+        } else if (fieldName.includes('Petitioner')) {
           textField.setText(data.petitioner.name);
-        } else if (fieldName.toLowerCase().includes('bond')) {
+        } else if (fieldName.includes('Bond')) {
           textField.setText(data.administration.bond_amount);
         }
+        
       } catch (e) {
-        // Not a text field or error
+        // Not a text field
       }
     });
     
@@ -346,30 +302,25 @@ async function fillDE147(data, pdfBytes) {
     
     console.log(`DE-147 has ${fields.length} fields available`);
     
-    // Log all field names
-    fields.forEach(field => {
-      console.log(`DE-147 Field: ${field.getName()}`);
-    });
-    
-    // Try to fill fields based on patterns
     fields.forEach(field => {
       const fieldName = field.getName();
       try {
         const textField = form.getTextField(fieldName);
         
-        if (fieldName.toLowerCase().includes('case')) {
-          textField.setText(data.court.case_number || 'To be assigned');
-        } else if (fieldName.toLowerCase().includes('estate') || fieldName.toLowerCase().includes('decedent')) {
-          textField.setText(`Estate of ${data.decedent.name}`);
-        } else if (fieldName.toLowerCase().includes('petitioner') || fieldName.includes('FillText357')) {
+        if (fieldName.includes('CaseNumber')) {
+          textField.setText('To be assigned');
+        } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
+          textField.setText(data.decedent.name);
+        } else if (fieldName.includes('FillText357')) {
           textField.setText(data.petitioner.name);
-        } else if (fieldName.toLowerCase().includes('address')) {
+        } else if (fieldName.includes('Address')) {
           textField.setText(data.petitioner.address);
-        } else if (fieldName.toLowerCase().includes('phone')) {
+        } else if (fieldName.includes('Phone')) {
           textField.setText(data.petitioner.phone);
         }
+        
       } catch (e) {
-        // Not a text field or error
+        // Not a text field
       }
     });
     
@@ -384,7 +335,6 @@ async function fillDE147(data, pdfBytes) {
 async function fillProbateForms(data) {
   const results = {};
   
-  // Process each form
   const forms = [
     { name: 'DE-111', filler: fillDE111 },
     { name: 'DE-120', filler: fillDE120 },
