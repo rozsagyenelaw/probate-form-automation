@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>California Probate Forms - Download</title>
+    <title>California Probate Forms Generator - Law Offices of Rozsa Gyene</title>
     <style>
         * {
             margin: 0;
@@ -12,21 +12,18 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
         }
         
         .container {
+            max-width: 900px;
+            margin: 0 auto;
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 800px;
-            width: 100%;
             padding: 40px;
         }
         
@@ -34,88 +31,169 @@
             color: #333;
             margin-bottom: 10px;
             font-size: 28px;
+            text-align: center;
         }
         
         .subtitle {
             color: #666;
             margin-bottom: 30px;
             font-size: 16px;
+            text-align: center;
         }
         
-        .status {
-            padding: 15px;
-            border-radius: 10px;
+        .form-section {
             margin-bottom: 30px;
-            font-weight: 500;
-        }
-        
-        .status.loading {
-            background: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffc107;
-        }
-        
-        .status.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #28a745;
-        }
-        
-        .status.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #dc3545;
-        }
-        
-        .form-info {
+            padding: 25px;
             background: #f8f9fa;
-            padding: 20px;
             border-radius: 10px;
-            margin-bottom: 30px;
         }
         
-        .form-info h3 {
-            margin-bottom: 15px;
+        .form-section h2 {
             color: #495057;
-        }
-        
-        .info-row {
-            display: flex;
-            margin-bottom: 10px;
-        }
-        
-        .info-label {
-            font-weight: 600;
-            min-width: 150px;
-            color: #666;
-        }
-        
-        .info-value {
-            color: #333;
-        }
-        
-        .downloads {
-            margin-top: 30px;
-        }
-        
-        .downloads h3 {
             margin-bottom: 20px;
+            font-size: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
             color: #495057;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .required {
+            color: #dc3545;
+        }
+        
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        
+        .radio-item, .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading.active {
+            display: block;
+        }
+        
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 10px;
+            color: #155724;
+        }
+        
+        .result.active {
+            display: block;
+        }
+        
+        .download-section {
+            margin-top: 30px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
         }
         
         .download-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
+            margin-top: 20px;
         }
         
         .download-card {
+            background: white;
             border: 2px solid #e9ecef;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
             transition: all 0.3s ease;
-            background: white;
         }
         
         .download-card:hover {
@@ -146,8 +224,8 @@
             cursor: pointer;
             font-size: 14px;
             font-weight: 600;
-            transition: all 0.3s ease;
             width: 100%;
+            transition: all 0.3s ease;
         }
         
         .download-btn:hover {
@@ -155,41 +233,38 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
         
-        .download-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
+        .error {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8d7da;
+            border: 1px solid #dc3545;
+            border-radius: 10px;
+            color: #721c24;
         }
         
-        .loader {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
+        .error.active {
+            display: block;
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .help-text {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 5px;
         }
         
-        .test-button {
+        .test-btn {
             background: #28a745;
             color: white;
             border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
             margin-top: 20px;
-            width: 100%;
+            font-weight: 600;
         }
         
-        .test-button:hover {
+        .test-btn:hover {
             background: #218838;
         }
     </style>
@@ -199,118 +274,321 @@
         <h1>California Probate Forms Generator</h1>
         <p class="subtitle">Law Offices of Rozsa Gyene</p>
         
-        <div id="status" class="status loading">
-            <div class="loader"></div>
-            <p style="text-align: center; margin-top: 15px;">Checking for form data...</p>
+        <!-- Quick Test Button -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <button class="test-btn" onclick="fillTestData()">Fill with Test Data</button>
         </div>
         
-        <div id="formInfo" class="form-info" style="display: none;">
-            <h3>Case Information</h3>
-            <div class="info-row">
-                <span class="info-label">Decedent:</span>
-                <span class="info-value" id="decedentName">-</span>
+        <form id="probateForm">
+            <!-- Decedent Information -->
+            <div class="form-section">
+                <h2>Decedent Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" name="decedent_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Death <span class="required">*</span></label>
+                        <input type="date" name="death_date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Place of Death <span class="required">*</span></label>
+                        <input type="text" name="death_place" placeholder="City, State" required>
+                    </div>
+                    <div class="form-group">
+                        <label>California Resident? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" name="death_resident" value="yes" id="resident_yes" required>
+                                <label for="resident_yes">Yes</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="death_resident" value="no" id="resident_no" required>
+                                <label for="resident_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Address at Time of Death <span class="required">*</span></label>
+                    <input type="text" name="death_address" required>
+                </div>
             </div>
-            <div class="info-row">
-                <span class="info-label">Petitioner:</span>
-                <span class="info-value" id="petitionerName">-</span>
+            
+            <!-- Petitioner Information -->
+            <div class="form-section">
+                <h2>Petitioner Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" name="petitioner_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Relationship to Decedent <span class="required">*</span></label>
+                        <select name="petitioner_relationship" required>
+                            <option value="">Select...</option>
+                            <option value="Spouse">Spouse</option>
+                            <option value="Child">Child</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="Other Relative">Other Relative</option>
+                            <option value="Creditor">Creditor</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Address <span class="required">*</span></label>
+                        <input type="text" name="petitioner_address" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number <span class="required">*</span></label>
+                        <input type="tel" name="petitioner_phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Is Petitioner Named as Executor in Will?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="petitioner_is_executor" value="yes" id="executor_yes">
+                            <label for="executor_yes">Yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="petitioner_is_executor" value="no" id="executor_no" checked>
+                            <label for="executor_no">No</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="info-row">
-                <span class="info-label">Estate Value:</span>
-                <span class="info-value" id="estateValue">-</span>
+            
+            <!-- Estate Information -->
+            <div class="form-section">
+                <h2>Estate Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Personal Property Value <span class="required">*</span></label>
+                        <input type="number" name="personal_property_value" placeholder="Enter amount without $" required>
+                        <span class="help-text">Bank accounts, vehicles, jewelry, etc.</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Real Property Gross Value</label>
+                        <input type="number" name="real_property_gross" placeholder="Enter amount without $">
+                        <span class="help-text">Total value of real estate</span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Real Property Encumbrances</label>
+                        <input type="number" name="real_property_encumbrance" placeholder="Enter amount without $">
+                        <span class="help-text">Mortgages/liens on real estate</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Is There a Will? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" name="has_will" value="yes" id="will_yes" required onchange="toggleWillFields()">
+                                <label for="will_yes">Yes</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="has_will" value="no" id="will_no" required onchange="toggleWillFields()">
+                                <label for="will_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="willFields" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Date of Will</label>
+                            <input type="date" name="will_date">
+                        </div>
+                        <div class="form-group">
+                            <label>Is Will Self-Proving?</label>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" name="will_self_proving" value="yes" id="self_proving_yes">
+                                    <label for="self_proving_yes">Yes</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" name="will_self_proving" value="no" id="self_proving_no" checked>
+                                    <label for="self_proving_no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="info-row">
-                <span class="info-label">Generated:</span>
-                <span class="info-value" id="timestamp">-</span>
+            
+            <!-- Heirs and Beneficiaries -->
+            <div class="form-section">
+                <h2>Heirs and Beneficiaries</h2>
+                <div class="form-group">
+                    <label>List All Heirs <span class="required">*</span></label>
+                    <textarea name="heirs_list" required placeholder="Enter each heir on a new line in format: Name, Relationship, Age, Address&#10;Example:&#10;Jane Smith, Spouse, 55, 123 Main St Los Angeles CA 90001&#10;John Smith Jr, Son, 30, 456 Oak Ave Los Angeles CA 90002"></textarea>
+                    <span class="help-text">Enter each heir on a new line with comma-separated values</span>
+                </div>
+            </div>
+            
+            <!-- Administration Details -->
+            <div class="form-section">
+                <h2>Administration Details</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Type of Authority Requested <span class="required">*</span></label>
+                        <select name="admin_type" required>
+                            <option value="">Select...</option>
+                            <option value="full">Full Authority (Independent Administration)</option>
+                            <option value="limited">Limited Authority</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Is Bond Required? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" name="bond_required" value="yes" id="bond_yes" required onchange="toggleBondAmount()">
+                                <label for="bond_yes">Yes</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="bond_required" value="no" id="bond_no" required onchange="toggleBondAmount()">
+                                <label for="bond_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bondAmountField" style="display: none;">
+                    <div class="form-group">
+                        <label>Bond Amount</label>
+                        <input type="number" name="bond_amount" placeholder="Enter amount without $">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Court Information -->
+            <div class="form-section">
+                <h2>Court Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>County</label>
+                        <select name="court_county">
+                            <option value="LOS ANGELES" selected>Los Angeles</option>
+                            <option value="ORANGE">Orange</option>
+                            <option value="SAN DIEGO">San Diego</option>
+                            <option value="RIVERSIDE">Riverside</option>
+                            <option value="SAN BERNARDINO">San Bernardino</option>
+                            <option value="VENTURA">Ventura</option>
+                            <option value="SANTA BARBARA">Santa Barbara</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Court Branch</label>
+                        <input type="text" name="court_branch" value="STANLEY MOSK COURTHOUSE">
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Generate Probate Forms</button>
+        </form>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 20px;">Generating your probate forms...</p>
+            <p style="font-size: 14px; color: #666;">This may take a moment as we fill out all forms.</p>
+        </div>
+        
+        <div id="result" class="result">
+            <h3>✓ Forms Generated Successfully!</h3>
+            <p>Your California probate forms have been generated and are ready for download.</p>
+            
+            <div class="download-section">
+                <h3>Download Your Completed Forms</h3>
+                <div class="download-grid" id="downloadGrid">
+                    <!-- Download cards will be inserted here -->
+                </div>
             </div>
         </div>
         
-        <div id="downloads" class="downloads" style="display: none;">
-            <h3>Download Completed Forms</h3>
-            <div class="download-grid">
-                <div class="download-card">
-                    <div class="form-number">DE-111</div>
-                    <div class="form-name">Petition for Probate</div>
-                    <button class="download-btn" onclick="downloadPDF('DE-111')">Download PDF</button>
-                </div>
-                <div class="download-card">
-                    <div class="form-number">DE-140</div>
-                    <div class="form-name">Order for Probate</div>
-                    <button class="download-btn" onclick="downloadPDF('DE-140')">Download PDF</button>
-                </div>
-                <div class="download-card">
-                    <div class="form-number">DE-147</div>
-                    <div class="form-name">Duties and Liabilities</div>
-                    <button class="download-btn" onclick="downloadPDF('DE-147')">Download PDF</button>
-                </div>
-                <div class="download-card">
-                    <div class="form-number">DE-147S</div>
-                    <div class="form-name">Confidential Supplement</div>
-                    <button class="download-btn" onclick="downloadPDF('DE-147S')">Download PDF</button>
-                </div>
-                <div class="download-card">
-                    <div class="form-number">DE-150</div>
-                    <div class="form-name">Letters</div>
-                    <button class="download-btn" onclick="downloadPDF('DE-150')">Download PDF</button>
-                </div>
-            </div>
+        <div id="error" class="error">
+            <h3>Error</h3>
+            <p id="errorMessage"></p>
         </div>
-        
-        <button id="testButton" class="test-button" onclick="testWithSampleData()" style="display: none;">
-            Test with Sample Data
-        </button>
     </div>
     
     <script>
-        let pdfData = {};
+        let generatedPDFs = {};
         
-        // Check URL parameters for form ID
-        const urlParams = new URLSearchParams(window.location.search);
-        const formId = urlParams.get('id');
-        
-        if (!formId) {
-            // No form ID provided, show test button
-            document.getElementById('status').className = 'status error';
-            document.getElementById('status').innerHTML = '<p>No form ID provided. Click below to test with sample data.</p>';
-            document.getElementById('testButton').style.display = 'block';
-        } else {
-            // Load form data
-            loadFormData(formId);
+        function toggleWillFields() {
+            const hasWill = document.querySelector('input[name="has_will"]:checked')?.value;
+            document.getElementById('willFields').style.display = hasWill === 'yes' ? 'block' : 'none';
         }
         
-        async function loadFormData(id) {
-            // In a real implementation, this would fetch from your backend
-            // For now, we'll simulate it
-            document.getElementById('status').className = 'status success';
-            document.getElementById('status').innerHTML = '<p>✓ Forms generated successfully!</p>';
-            document.getElementById('formInfo').style.display = 'block';
-            document.getElementById('downloads').style.display = 'block';
+        function toggleBondAmount() {
+            const bondRequired = document.querySelector('input[name="bond_required"]:checked')?.value;
+            document.getElementById('bondAmountField').style.display = bondRequired === 'yes' ? 'block' : 'none';
         }
         
-        async function testWithSampleData() {
-            document.getElementById('status').className = 'status loading';
-            document.getElementById('status').innerHTML = '<div class="loader"></div><p style="text-align: center; margin-top: 15px;">Generating forms...</p>';
-            document.getElementById('testButton').style.display = 'none';
+        function fillTestData() {
+            // Fill form with test data for quick testing
+            document.querySelector('input[name="decedent_name"]').value = "John Michael Smith";
+            document.querySelector('input[name="death_date"]').value = "2024-01-15";
+            document.querySelector('input[name="death_place"]').value = "Los Angeles, CA";
+            document.querySelector('input[name="death_address"]').value = "123 Main Street, Los Angeles, CA 90001";
+            document.querySelector('#resident_yes').checked = true;
             
-            const testData = {
-                decedent_name: "John Michael Smith",
-                death_date: "2024-01-15",
-                death_place: "Los Angeles, CA",
-                death_address: "123 Main St, Los Angeles, CA 90001",
-                death_resident: "yes",
-                petitioner_name: "Jane Smith",
-                petitioner_relationship: "Spouse",
-                petitioner_address: "123 Main St, Los Angeles, CA 90001",
-                petitioner_phone: "(555) 123-4567",
-                personal_property_value: 150000,
-                real_property_gross: 500000,
-                real_property_encumbrance: 200000,
-                has_will: "yes",
-                will_date: "2020-01-01",
-                will_self_proving: "yes",
-                heirs_list: "Jane Smith,Spouse,55,123 Main St\\nMichael Smith Jr,Son,30,456 Oak Ave",
-                admin_type: "full",
-                bond_required: "no"
-            };
+            document.querySelector('input[name="petitioner_name"]').value = "Jane Smith";
+            document.querySelector('select[name="petitioner_relationship"]').value = "Spouse";
+            document.querySelector('input[name="petitioner_address"]').value = "123 Main Street, Los Angeles, CA 90001";
+            document.querySelector('input[name="petitioner_phone"]').value = "(555) 123-4567";
+            document.querySelector('#executor_yes').checked = true;
+            
+            document.querySelector('input[name="personal_property_value"]').value = "150000";
+            document.querySelector('input[name="real_property_gross"]').value = "500000";
+            document.querySelector('input[name="real_property_encumbrance"]').value = "200000";
+            document.querySelector('#will_yes').checked = true;
+            toggleWillFields();
+            document.querySelector('input[name="will_date"]').value = "2020-01-01";
+            document.querySelector('#self_proving_yes').checked = true;
+            
+            document.querySelector('textarea[name="heirs_list"]').value = "Jane Smith, Spouse, 55, 123 Main St Los Angeles CA 90001\nMichael Smith Jr, Son, 30, 456 Oak Ave Los Angeles CA 90002\nSarah Smith, Daughter, 28, 789 Pine St Los Angeles CA 90003";
+            
+            document.querySelector('select[name="admin_type"]').value = "full";
+            document.querySelector('#bond_no').checked = true;
+            
+            alert('Form filled with test data. Click "Generate Probate Forms" to test!');
+        }
+        
+        document.getElementById('probateForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Hide previous results/errors
+            document.getElementById('result').classList.remove('active');
+            document.getElementById('error').classList.remove('active');
+            
+            // Show loading
+            document.getElementById('loading').classList.add('active');
+            document.querySelector('.submit-btn').disabled = true;
+            
+            // Get form data
+            const formData = new FormData(e.target);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Add attorney information (default values)
+            data.attorney_name = "ROZSA GYENE, ESQ.";
+            data.attorney_bar = "208356";
+            data.firm_name = "LAW OFFICES OF ROZSA GYENE";
+            data.firm_street = "450 N BRAND BLVD SUITE 600";
+            data.firm_city = "GLENDALE";
+            data.firm_state = "CA";
+            data.firm_zip = "91203";
+            data.firm_phone = "818-291-6217";
+            data.firm_fax = "818-291-6205";
+            data.firm_email = "ROZSAGYENELAW@YAHOO.COM";
             
             try {
                 const response = await fetch('/.netlify/functions/process-form', {
@@ -318,43 +596,60 @@
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(testData)
+                    body: JSON.stringify(data)
                 });
                 
                 const result = await response.json();
                 
                 if (result.success) {
-                    pdfData = result.pdfs;
-                    
-                    // Update UI with metadata
-                    document.getElementById('decedentName').textContent = result.metadata.decedent;
-                    document.getElementById('petitionerName').textContent = result.metadata.petitioner;
-                    document.getElementById('estateValue').textContent = result.metadata.estate_value;
-                    document.getElementById('timestamp').textContent = new Date(result.timestamp).toLocaleString();
-                    
-                    // Show success
-                    document.getElementById('status').className = 'status success';
-                    document.getElementById('status').innerHTML = '<p>✓ Forms generated successfully!</p>';
-                    document.getElementById('formInfo').style.display = 'block';
-                    document.getElementById('downloads').style.display = 'block';
+                    generatedPDFs = result.pdfs;
+                    showDownloadCards(result.pdfs, result.metadata);
+                    document.getElementById('result').classList.add('active');
                 } else {
                     throw new Error(result.error || 'Failed to generate forms');
                 }
             } catch (error) {
-                document.getElementById('status').className = 'status error';
-                document.getElementById('status').innerHTML = `<p>Error: ${error.message}</p>`;
-                document.getElementById('testButton').style.display = 'block';
+                document.getElementById('error').classList.add('active');
+                document.getElementById('errorMessage').textContent = error.message;
+            } finally {
+                document.getElementById('loading').classList.remove('active');
+                document.querySelector('.submit-btn').disabled = false;
+            }
+        });
+        
+        function showDownloadCards(pdfs, metadata) {
+            const container = document.getElementById('downloadGrid');
+            container.innerHTML = '';
+            
+            const forms = {
+                'DE-111': 'Petition for Probate',
+                'DE-120': 'Notice of Hearing',
+                'DE-140': 'Order for Probate',
+                'DE-147': 'Duties and Liabilities'
+            };
+            
+            for (const [formId, formName] of Object.entries(forms)) {
+                if (pdfs[formId]) {
+                    const card = document.createElement('div');
+                    card.className = 'download-card';
+                    card.innerHTML = `
+                        <div class="form-number">${formId}</div>
+                        <div class="form-name">${formName}</div>
+                        <button class="download-btn" onclick="downloadPDF('${formId}')">Download PDF</button>
+                    `;
+                    container.appendChild(card);
+                }
             }
         }
         
         function downloadPDF(formName) {
-            if (!pdfData[formName]) {
-                alert('PDF data not available. Please generate the forms first.');
+            if (!generatedPDFs[formName]) {
+                alert('PDF not available. Please generate the forms first.');
                 return;
             }
             
             // Convert base64 to blob
-            const byteCharacters = atob(pdfData[formName]);
+            const byteCharacters = atob(generatedPDFs[formName]);
             const byteNumbers = new Array(byteCharacters.length);
             for (let i = 0; i < byteCharacters.length; i++) {
                 byteNumbers[i] = byteCharacters.charCodeAt(i);
