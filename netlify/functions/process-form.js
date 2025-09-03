@@ -55,6 +55,8 @@ function transformQuestionnaireData(webhookData) {
       death_place: webhookData.death_place,
       death_address: webhookData.death_address,
       is_resident: webhookData.death_resident === "yes",
+      has_spouse: webhookData.has_spouse === "yes",
+      has_children: webhookData.has_children === "yes",
     },
     petitioner: {
       name: webhookData.petitioner_name,
@@ -77,7 +79,7 @@ function transformQuestionnaireData(webhookData) {
     administration: {
       type: webhookData.admin_type,
       bond_required: webhookData.bond_required === "yes",
-      bond_amount: formatCurrency(webhookData.bond_amount),
+      bond_amount: formatCurrency(webhookData.bond_amount || 0),
     },
     court: {
       county: webhookData.court_county || "LOS ANGELES",
@@ -114,7 +116,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form with CORRECT field names
+// Fill DE-111 form - COMPLETE with all 4 pages
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -155,24 +157,84 @@ async function fillDE111(data, pdfBytes) {
     
     // PAGE 1 BODY - Petition Details
     const petitionFields = {
-      'topmostSubform[0].Page1[0].FillText141[0]': 'Los Angeles Times', // newspaper
-      'topmostSubform[0].Page1[0].FillText142[0]': data.petitioner.name, // petitioner name
-      'topmostSubform[0].Page1[0].FillText143[0]': data.petitioner.name, // name for appointment
-      'topmostSubform[0].Page1[0].FillText144[0]': data.administration.bond_amount, // bond amount
-      'topmostSubform[0].Page1[0].FillText145[0]': '0.00', // blocked account amount
-      'topmostSubform[0].Page1[0].FillText146[0]': data.decedent.death_date, // death date
-      'topmostSubform[0].Page1[0].FillText147[0]': data.decedent.death_place, // death place
-      'topmostSubform[0].Page1[0].FillText148[0]': '', // location for nonresident
-      'topmostSubform[0].Page1[0].FillText149[0]': data.decedent.death_address, // residence at death
-      'topmostSubform[0].Page1[0].FillText161[0]': '', // institution for blocked account
+      'topmostSubform[0].Page1[0].FillText141[0]': 'Los Angeles Times',
+      'topmostSubform[0].Page1[0].FillText142[0]': data.petitioner.name,
+      'topmostSubform[0].Page1[0].FillText143[0]': data.petitioner.name,
+      'topmostSubform[0].Page1[0].FillText144[0]': data.administration.bond_amount,
+      'topmostSubform[0].Page1[0].FillText145[0]': '0.00',
+      'topmostSubform[0].Page1[0].FillText146[0]': data.decedent.death_date,
+      'topmostSubform[0].Page1[0].FillText147[0]': data.decedent.death_place,
+      'topmostSubform[0].Page1[0].FillText148[0]': '',
+      'topmostSubform[0].Page1[0].FillText149[0]': data.decedent.death_address,
+      'topmostSubform[0].Page1[0].FillText161[0]': '',
     };
+    
+    // PAGE 2 - Estate Values (corrected based on actual form structure)
+    const page2Fields = {
+      // Estate value fields in correct order
+      'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': data.estate.personal_property,
+      'topmostSubform[0].Page2[0].Page2[0].FillText173[1]': '0.00',
+      'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': '0.00',
+      'topmostSubform[0].Page2[0].Page2[0].FillText165[0]': data.estate.personal_property,
+      'topmostSubform[0].Page2[0].Page2[0].FillText164[0]': data.estate.real_property_gross,
+      'topmostSubform[0].Page2[0].Page2[0].FillText163[0]': data.estate.real_property_encumbrance,
+      'topmostSubform[0].Page2[0].Page2[0].FillText178[0]': data.estate.real_property_net,
+      'topmostSubform[0].Page2[0].Page2[0].FillText177[0]': data.estate.total,
+      
+      // Will date field
+      'topmostSubform[0].Page2[0].Page2[0].FillText179[0]': data.estate.will_date,
+      
+      // Other text fields
+      'topmostSubform[0].Page2[0].Page2[0].FillText181[0]': '',
+      'topmostSubform[0].Page2[0].Page2[0].FillText182[0]': '',
+      'topmostSubform[0].Page2[0].Page2[0].FillText183[0]': '',
+      'topmostSubform[0].Page2[0].Page2[0].FillTxt181[0]': '',
+      
+      // Case number and estate name
+      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+    };
+    
+    // PAGE 3 - Family relationship section
+    const page3Fields = {
+      // Case number and estate name for Page 3
+      'topmostSubform[0].Page3[0].PxCaption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page3[0].PxCaption[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+    };
+    
+    // PAGE 4 - Heirs/Beneficiaries list and signatures
+    const page4Fields = {
+      // Case number and estate name for Page 4
+      'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+      
+      // Petitioner signature section
+      'topmostSubform[0].Page4[0].FillText357[0]': data.petitioner.name,
+      'topmostSubform[0].Page4[0].FillText357[1]': '',
+      'topmostSubform[0].Page4[0].FillText358[0]': data.petitioner.address,
+      'topmostSubform[0].Page4[0].FillText276[0]': formatDate(new Date()),
+      'topmostSubform[0].Page4[0].FillText276[1]': '',
+      'topmostSubform[0].Page4[0].FillText277[0]': data.petitioner.relationship,
+    };
+    
+    // Add heirs/beneficiaries list (up to 10 entries)
+    for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
+      const heir = data.heirs[i];
+      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = heir.name || '';
+      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.relationship || '';
+      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = 
+        heir.age ? `Age ${heir.age}, ${heir.address || ''}` : (heir.address || '');
+    }
     
     // Combine all text field mappings
     const allTextFields = {
       ...attorneyFields,
       ...courtFields,
       ...estateFields,
-      ...petitionFields
+      ...petitionFields,
+      ...page2Fields,
+      ...page3Fields,
+      ...page4Fields
     };
     
     // Fill all text fields
@@ -186,39 +248,86 @@ async function fillDE111(data, pdfBytes) {
       }
     }
     
-    // PAGE 1 - Checkboxes
-    const checkboxes = {
-      // Form title checkboxes (top of form)
-      'topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox23[0]': data.estate.has_will, // Probate of Will
-      'topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will, // Letters of Administration
+    // PAGE 1 CHECKBOXES
+    const page1Checkboxes = {
+      // Form title checkboxes
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox23[0]': data.estate.has_will,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will,
       
       // Publication checkboxes
-      'topmostSubform[0].Page1[0].CheckBox1[0]': true, // Publication requested
-      'topmostSubform[0].Page1[0].CheckBox1[1]': false, // Publication to be arranged
+      'topmostSubform[0].Page1[0].CheckBox1[0]': true,
+      'topmostSubform[0].Page1[0].CheckBox1[1]': false,
       
-      // Will admission
-      'topmostSubform[0].Page1[0].CheckBox3[0]': data.estate.has_will, // admit will to probate
+      // Will and appointment checkboxes
+      'topmostSubform[0].Page1[0].CheckBox3[0]': data.estate.has_will,
+      'topmostSubform[0].Page1[0].CheckBox5[0]': data.petitioner.is_executor && data.estate.has_will,
+      'topmostSubform[0].Page1[0].CheckBox6[0]': !data.petitioner.is_executor && data.estate.has_will,
+      'topmostSubform[0].Page1[0].CheckBox7[0]': !data.estate.has_will,
       
-      // Appointment type
-      'topmostSubform[0].Page1[0].CheckBox5[0]': data.petitioner.is_executor && data.estate.has_will, // executor
-      'topmostSubform[0].Page1[0].CheckBox6[0]': !data.petitioner.is_executor && data.estate.has_will, // admin with will
-      'topmostSubform[0].Page1[0].CheckBox7[0]': !data.estate.has_will, // administrator
+      // Authority checkboxes
+      'topmostSubform[0].Page1[0].CheckBox12[0]': true,
+      'topmostSubform[0].Page1[0].CheckBox12[1]': false,
       
-      // Authority type
-      'topmostSubform[0].Page1[0].CheckBox12[0]': true, // full authority
-      'topmostSubform[0].Page1[0].CheckBox12[1]': false, // limited authority
+      // Bond checkboxes
+      'topmostSubform[0].Page1[0].CheckBox11[0]': !data.administration.bond_required,
+      'topmostSubform[0].Page1[0].CheckBox13[0]': data.administration.bond_required,
       
-      // Bond
-      'topmostSubform[0].Page1[0].CheckBox11[0]': !data.administration.bond_required, // bond not required
-      'topmostSubform[0].Page1[0].CheckBox13[0]': data.administration.bond_required, // bond required
+      // Residency checkboxes
+      'topmostSubform[0].Page1[0].CheckBox15[0]': data.decedent.is_resident,
+      'topmostSubform[0].Page1[0].CheckBox15[1]': !data.decedent.is_resident,
+    };
+    
+    // PAGE 2 CHECKBOXES
+    const page2Checkboxes = {
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]': data.estate.has_will && !data.administration.bond_required,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox77[0]': !data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]': data.estate.will_self_proving,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.petitioner.is_executor,
+    };
+    
+    // PAGE 3 CHECKBOXES - Family relationships
+    const page3Checkboxes = {
+      // Independent Administration
+      'topmostSubform[0].Page3[0].CheckBox56[0]': true,
       
-      // Residency
-      'topmostSubform[0].Page1[0].CheckBox15[0]': data.decedent.is_resident, // resident
-      'topmostSubform[0].Page1[0].CheckBox15[1]': !data.decedent.is_resident, // nonresident
+      // Marital status
+      'topmostSubform[0].Page3[0].CheckBox55[0]': data.decedent.has_spouse,
+      'topmostSubform[0].Page3[0].CheckBox55[1]': !data.decedent.has_spouse,
+      'topmostSubform[0].Page3[0].CheckBox53[0]': !data.decedent.has_spouse,
+      'topmostSubform[0].Page3[0].CheckBox52[0]': false,
+      
+      // Domestic partner
+      'topmostSubform[0].Page3[0].CheckBox51[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox51[1]': true,
+      
+      // Children
+      'topmostSubform[0].Page3[0].CheckBox49[0]': data.decedent.has_children,
+      'topmostSubform[0].Page3[0].CheckBox48[0]': data.decedent.has_children,
+      'topmostSubform[0].Page3[0].CheckBox47[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox49[1]': !data.decedent.has_children,
+      
+      // Issue of predeceased child
+      'topmostSubform[0].Page3[0].CheckBox45[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox45[1]': true,
+      
+      // Stepchild/foster child
+      'topmostSubform[0].Page3[0].CheckBox43[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox43[1]': true,
+      
+      // Parents and other relatives
+      'topmostSubform[0].Page3[0].CheckBox41[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox40[0]': false,
+    };
+    
+    // PAGE 4 CHECKBOXES
+    const page4Checkboxes = {
+      'topmostSubform[0].Page4[0].CheckBox82[0]': false,
+      'topmostSubform[0].Page4[0].CheckBox83[0]': false,
     };
     
     // Set all checkboxes
-    for (const [fieldName, shouldCheck] of Object.entries(checkboxes)) {
+    const allCheckboxes = {...page1Checkboxes, ...page2Checkboxes, ...page3Checkboxes, ...page4Checkboxes};
+    for (const [fieldName, shouldCheck] of Object.entries(allCheckboxes)) {
       try {
         const checkbox = form.getCheckBox(fieldName);
         if (shouldCheck) {
@@ -232,31 +341,6 @@ async function fillDE111(data, pdfBytes) {
       }
     }
     
-    // Now handle Pages 2, 3, 4 - we need to get their field mappings too
-    // For now, let's just set the case number and estate name on all pages
-    const otherPageFields = {
-      // Page 2
-      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
-      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
-      
-      // Page 3
-      'topmostSubform[0].Page3[0].PxCaption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
-      'topmostSubform[0].Page3[0].PxCaption[0].TitlePartyName[0].Party1[0]': data.decedent.name,
-      
-      // Page 4
-      'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
-      'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
-    };
-    
-    for (const [fieldName, value] of Object.entries(otherPageFields)) {
-      try {
-        const field = form.getTextField(fieldName);
-        field.setText(value || '');
-      } catch (e) {
-        console.log(`Could not set field ${fieldName}`);
-      }
-    }
-    
     return await pdfDoc.save();
   } catch (error) {
     console.error('Error filling DE-111:', error);
@@ -264,7 +348,7 @@ async function fillDE111(data, pdfBytes) {
   }
 }
 
-// Fill DE-120 form - you'll need to get field names for this form too
+// Fill DE-120 form
 async function fillDE120(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -273,12 +357,10 @@ async function fillDE120(data, pdfBytes) {
     
     console.log(`DE-120 has ${fields.length} fields available`);
     
-    // Fill fields based on patterns until we get exact field names
     fields.forEach(field => {
       const fieldName = field.getName();
       try {
         const textField = form.getTextField(fieldName);
-        
         if (fieldName.includes('CaseNumber')) {
           textField.setText('To be assigned');
         } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
@@ -307,7 +389,6 @@ async function fillDE140(data, pdfBytes) {
       const fieldName = field.getName();
       try {
         const textField = form.getTextField(fieldName);
-        
         if (fieldName.includes('CaseNumber')) {
           textField.setText('To be assigned');
         } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
@@ -336,7 +417,6 @@ async function fillDE147(data, pdfBytes) {
       const fieldName = field.getName();
       try {
         const textField = form.getTextField(fieldName);
-        
         if (fieldName.includes('CaseNumber')) {
           textField.setText('To be assigned');
         } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
@@ -352,7 +432,7 @@ async function fillDE147(data, pdfBytes) {
   }
 }
 
-// Main function to fill all forms
+// Main function
 async function fillProbateForms(data) {
   const results = {};
   
