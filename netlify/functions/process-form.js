@@ -16,12 +16,12 @@ function formatCurrency(value) {
 function parseHeirs(heirsList) {
   if (typeof heirsList === 'string') {
     return heirsList.split('\n').map(line => {
-      const parts = line.split(',');
+      const parts = line.split(',').map(p => p.trim());
       return {
-        name: parts[0]?.trim(),
-        relationship: parts[1]?.trim(),
-        age: parts[2]?.trim(),
-        address: parts[3]?.trim(),
+        name: parts[0] || '',
+        relationship: parts[1] || '',
+        age: parts[2] || '',
+        address: parts[3] || '',
       };
     });
   }
@@ -117,7 +117,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form - COMPLETE with all corrections
+// Fill DE-111 form - COMPLETE with corrected heir fields
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -220,17 +220,26 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page4[0].FillText277[0]': '',
     };
     
-    // PAGE 4 - CORRECTED Heirs/Beneficiaries list
-    // Based on the form, the columns are: Name and relationship | Age | Address
+    // PAGE 4 - CORRECTED Heirs/Beneficiaries list mapping
+    // The form has 3 columns: "Name and relationship to decedent" | "Age" | "Address"
+    // Field 350 = Name and relationship column
+    // Field 351 = Age column  
+    // Field 352 = Address column
     for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
       const heir = data.heirs[i];
-      // Combine name and relationship in first column
-      const nameAndRelationship = heir.relationship ? 
-        `${heir.name}, ${heir.relationship}` : heir.name;
       
-      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = nameAndRelationship || '';
+      // First column: Name and relationship combined
+      let nameAndRelationship = heir.name || '';
+      if (heir.relationship) {
+        nameAndRelationship += `, ${heir.relationship}`;
+      }
+      
+      // Map to the correct fields
+      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = nameAndRelationship;
       page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.age || '';
       page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = heir.address || '';
+      
+      console.log(`Heir ${i}: Name/Rel="${nameAndRelationship}", Age="${heir.age}", Address="${heir.address}"`);
     }
     
     // Combine all text field mappings
@@ -548,7 +557,7 @@ exports.handler = async (event, context) => {
     const response = {
       success: true,
       message: 'PDFs generated successfully',
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString().split('T')[0],
       metadata: {
         decedent: transformedData.decedent.name,
         petitioner: transformedData.petitioner.name,
