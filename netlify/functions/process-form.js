@@ -1,79 +1,42 @@
 const { PDFDocument } = require('pdf-lib');
 
-// Field mappings for each form based on the actual California court forms
+// Field mappings with ACTUAL field names from the California court forms
 const fieldMappings = {
   "DE-111": {
-    // Attorney/Firm Information
-    "attorney_name": "topmostSubform[0].Page1[0].TextField1[0]",
-    "attorney_bar": "topmostSubform[0].Page1[0].TextField1[1]",
-    "firm_name": "topmostSubform[0].Page1[0].TextField1[2]",
-    "firm_address": "topmostSubform[0].Page1[0].TextField1[3]",
-    "firm_city": "topmostSubform[0].Page1[0].TextField1[4]",
-    "firm_state": "topmostSubform[0].Page1[0].TextField1[5]",
-    "firm_zip": "topmostSubform[0].Page1[0].TextField1[6]",
-    "firm_phone": "topmostSubform[0].Page1[0].TextField1[7]",
-    "firm_fax": "topmostSubform[0].Page1[0].TextField1[8]",
-    "firm_email": "topmostSubform[0].Page1[0].TextField1[9]",
-    "attorney_for": "topmostSubform[0].Page1[0].TextField1[10]",
+    // Based on the actual field names from pdftk dump
+    "petitioner_name_1": "topmostSubform[0].Page4[0].FillText357[0]",
+    "petitioner_name_2": "topmostSubform[0].Page4[0].FillText357[1]",
+    "case_number": "topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]",
+    "estate_name": "topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]",
+    "date_field": "topmostSubform[0].Page4[0].FillText276[1]",
     
-    // Court Information
-    "court_county": "topmostSubform[0].Page1[0].TextField2[0]",
-    "court_street": "topmostSubform[0].Page1[0].TextField2[1]",
-    "court_mailing": "topmostSubform[0].Page1[0].TextField2[2]",
-    "court_city": "topmostSubform[0].Page1[0].TextField2[3]",
-    "court_branch": "topmostSubform[0].Page1[0].TextField2[4]",
+    // Checkboxes for petition type (these are checkbox fields)
+    "checkbox_probate_will": "topmostSubform[0].Page4[0].CheckBox82[0]",
     
-    // Estate Information
-    "estate_of": "topmostSubform[0].Page1[0].TextField3[0]",
-    "case_number": "topmostSubform[0].Page1[0].TextField3[1]",
-    
-    // Death Information
-    "death_date": "topmostSubform[0].Page1[0].TextField7[0]",
-    "death_place": "topmostSubform[0].Page1[0].TextField7[1]",
-    "death_address": "topmostSubform[0].Page1[0].TextField7[2]",
-    
-    // Petitioner
-    "petitioner_name": "topmostSubform[0].Page1[0].TextField5[0]",
-    
-    // Estate Values
-    "personal_property": "topmostSubform[0].Page2[0].TextField8[0]",
-    "real_property_gross": "topmostSubform[0].Page2[0].TextField8[1]",
-    "real_property_encumbrance": "topmostSubform[0].Page2[0].TextField8[2]",
-    "real_property_net": "topmostSubform[0].Page2[0].TextField8[3]",
-    "estate_total": "topmostSubform[0].Page2[0].TextField8[4]",
-    
-    // Will Information
-    "will_date": "topmostSubform[0].Page2[0].TextField9[0]",
-    "bond_amount": "topmostSubform[0].Page1[0].TextField6[0]",
+    // You'll need to map more fields based on the full dump
+    // Run: pdftk DE-111.pdf dump_data_fields
+    // to see all available fields
   },
   
   "DE-120": {
-    // Notice of Hearing form
-    "attorney_info": "topmostSubform[0].Page1[0].TextField1[0]",
-    "court_info": "topmostSubform[0].Page1[0].TextField2[0]",
-    "estate_name": "topmostSubform[0].Page1[0].TextField3[0]",
-    "case_number": "topmostSubform[0].Page1[0].TextField3[1]",
-    "hearing_date": "topmostSubform[0].Page1[0].TextField4[0]",
-    "hearing_time": "topmostSubform[0].Page1[0].TextField4[1]",
-    "hearing_dept": "topmostSubform[0].Page1[0].TextField4[2]",
-    "hearing_address": "topmostSubform[0].Page1[0].TextField4[3]",
+    // You need to run: pdftk DE-120.pdf dump_data_fields
+    // to get the actual field names for this form
+    // Placeholder fields for now
+    "placeholder": "topmostSubform[0].Page1[0].TextField1[0]",
   },
   
   "DE-140": {
-    "attorney_info": "topmostSubform[0].Page1[0].TextField1[0]",
-    "case_number": "topmostSubform[0].Page1[0].TextField2[0]",
-    "estate_name": "topmostSubform[0].Page1[0].TextField3[0]",
-    "appointment_name": "topmostSubform[0].Page1[0].TextField5[0]",
-    "bond_amount": "topmostSubform[0].Page1[0].TextField6[0]",
+    // You need to run: pdftk DE-140.pdf dump_data_fields
+    // to get the actual field names for this form
+    // Placeholder fields for now
+    "placeholder": "topmostSubform[0].Page1[0].TextField1[0]",
   },
   
   "DE-147": {
-    "attorney_info": "topmostSubform[0].Page1[0].TextField1[0]",
-    "estate_name": "topmostSubform[0].Page1[0].TextField2[0]",
-    "case_number": "topmostSubform[0].Page1[0].TextField3[0]",
-    "petitioner_address": "topmostSubform[0].Page2[0].TextField4[0]",
-    "petitioner_phone": "topmostSubform[0].Page2[0].TextField4[1]",
-    "petitioner_name": "topmostSubform[0].Page2[0].TextField5[0]",
+    // You need to run: pdftk DE-147.pdf dump_data_fields
+    // to get the actual field names for this form
+    // Placeholder fields for now
+    "placeholder": "topmostSubform[0].Page1[0].TextField1[0]",
   }
 };
 
@@ -163,7 +126,6 @@ function transformQuestionnaireData(webhookData) {
       city: "LOS ANGELES",
       zip: "90012",
     },
-    // For DE-120 Notice of Hearing - using placeholder date 30 days out
     hearing: {
       date: formatDate(new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)),
       time: "9:00 AM",
@@ -173,10 +135,9 @@ function transformQuestionnaireData(webhookData) {
   };
 }
 
-// FIXED: Load PDF from deployed Netlify site instead of GitHub
+// Load PDF from deployed Netlify site
 async function loadPDFFromRepo(filename) {
   const fetch = (await import('node-fetch')).default;
-  // Changed to load from the deployed site
   const url = `https://probateformautomation.netlify.app/templates/${filename}`;
   
   try {
@@ -193,58 +154,97 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form
+// Fill DE-111 form with CORRECT field names
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
     const form = pdfDoc.getForm();
-    const fields = form.getFields();
     
+    // Get all fields to see what's available
+    const fields = form.getFields();
     console.log(`DE-111 has ${fields.length} fields available`);
     
-    // Fill fields - wrapped in try-catch for each field
+    // Log field names for debugging
+    fields.forEach(field => {
+      console.log(`Field: ${field.getName()}`);
+    });
+    
+    // Fill the fields we know exist
     const fieldFillers = [
-      { field: 'attorney_name', value: `${data.attorney.name}, SBN ${data.attorney.bar_number}` },
-      { field: 'firm_name', value: data.attorney.firm_name },
-      { field: 'firm_address', value: data.attorney.street },
-      { field: 'firm_city', value: data.attorney.city },
-      { field: 'firm_state', value: data.attorney.state },
-      { field: 'firm_zip', value: data.attorney.zip },
-      { field: 'firm_phone', value: data.attorney.phone },
-      { field: 'firm_email', value: data.attorney.email },
-      { field: 'attorney_for', value: `PETITIONER, ${data.petitioner.name}` },
-      { field: 'court_county', value: data.court.county },
-      { field: 'court_street', value: data.court.street },
-      { field: 'court_city', value: `${data.court.city} CA ${data.court.zip}` },
-      { field: 'court_branch', value: data.court.branch },
-      { field: 'estate_of', value: data.decedent.name },
-      { field: 'petitioner_name', value: data.petitioner.name },
-      { field: 'death_date', value: data.decedent.death_date },
-      { field: 'death_place', value: data.decedent.death_place },
-      { field: 'death_address', value: data.decedent.death_address },
-      { field: 'personal_property', value: data.estate.personal_property },
-      { field: 'real_property_gross', value: data.estate.real_property_gross },
-      { field: 'real_property_encumbrance', value: data.estate.real_property_encumbrance },
-      { field: 'real_property_net', value: data.estate.real_property_net },
-      { field: 'estate_total', value: data.estate.total },
+      { 
+        fieldName: 'topmostSubform[0].Page4[0].FillText357[0]',
+        value: data.petitioner.name,
+        type: 'text'
+      },
+      { 
+        fieldName: 'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]',
+        value: data.court.case_number || '',
+        type: 'text'
+      },
+      { 
+        fieldName: 'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]',
+        value: data.decedent.name,
+        type: 'text'
+      },
+      { 
+        fieldName: 'topmostSubform[0].Page4[0].FillText276[1]',
+        value: data.decedent.death_date,
+        type: 'text'
+      },
     ];
     
-    for (const { field, value } of fieldFillers) {
+    // Try to fill each field
+    for (const { fieldName, value, type } of fieldFillers) {
       try {
-        if (fieldMappings['DE-111'][field]) {
-          const textField = form.getTextField(fieldMappings['DE-111'][field]);
-          textField.setText(value);
+        if (type === 'text') {
+          const field = form.getTextField(fieldName);
+          field.setText(value || '');
+          console.log(`Set field ${fieldName} to "${value}"`);
+        } else if (type === 'checkbox') {
+          const field = form.getCheckBox(fieldName);
+          if (value) field.check();
+          console.log(`Checked field ${fieldName}`);
         }
       } catch (e) {
-        console.log(`Could not set field ${field} in DE-111`);
+        console.log(`Could not set field ${fieldName}: ${e.message}`);
       }
     }
     
-    if (data.estate.has_will) {
-      try {
-        const willDateField = form.getTextField(fieldMappings['DE-111'].will_date);
-        willDateField.setText(data.estate.will_date);
-      } catch (e) {}
+    // Try to fill fields by searching for partial matches
+    // This is a fallback if exact field names don't work
+    try {
+      fields.forEach(field => {
+        const fieldName = field.getName();
+        
+        // Match petitioner name fields
+        if (fieldName.includes('FillText357')) {
+          try {
+            const textField = form.getTextField(fieldName);
+            textField.setText(data.petitioner.name);
+            console.log(`Set ${fieldName} to petitioner name`);
+          } catch (e) {}
+        }
+        
+        // Match case number fields
+        if (fieldName.includes('CaseNumber')) {
+          try {
+            const textField = form.getTextField(fieldName);
+            textField.setText(data.court.case_number || 'To be assigned');
+            console.log(`Set ${fieldName} to case number`);
+          } catch (e) {}
+        }
+        
+        // Match estate/party name fields
+        if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
+          try {
+            const textField = form.getTextField(fieldName);
+            textField.setText(data.decedent.name);
+            console.log(`Set ${fieldName} to decedent name`);
+          } catch (e) {}
+        }
+      });
+    } catch (e) {
+      console.log('Error in fallback field filling:', e.message);
     }
     
     return await pdfDoc.save();
@@ -254,7 +254,7 @@ async function fillDE111(data, pdfBytes) {
   }
 }
 
-// Fill DE-120 form (Notice of Hearing)
+// Fill DE-120 form
 async function fillDE120(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -263,33 +263,31 @@ async function fillDE120(data, pdfBytes) {
     
     console.log(`DE-120 has ${fields.length} fields available`);
     
-    // Build attorney info string
-    const attorneyInfo = `${data.attorney.name}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}\nPhone: ${data.attorney.phone}`;
+    // Log all field names to identify correct ones
+    fields.forEach(field => {
+      console.log(`DE-120 Field: ${field.getName()}`);
+    });
     
-    // Build court info string
-    const courtInfo = `Superior Court of California\nCounty of ${data.court.county}\n${data.court.street}\n${data.court.city}, CA ${data.court.zip}`;
-    
-    const fieldFillers = [
-      { field: 'attorney_info', value: attorneyInfo },
-      { field: 'court_info', value: courtInfo },
-      { field: 'estate_name', value: `Estate of ${data.decedent.name}, Decedent` },
-      { field: 'case_number', value: data.court.case_number || 'To be assigned' },
-      { field: 'hearing_date', value: data.hearing.date },
-      { field: 'hearing_time', value: data.hearing.time },
-      { field: 'hearing_dept', value: data.hearing.dept },
-      { field: 'hearing_address', value: `${data.court.street}, ${data.hearing.room}` },
-    ];
-    
-    for (const { field, value } of fieldFillers) {
+    // Try to fill any text fields with relevant data
+    fields.forEach(field => {
+      const fieldName = field.getName();
       try {
-        if (fieldMappings['DE-120'][field]) {
-          const textField = form.getTextField(fieldMappings['DE-120'][field]);
-          textField.setText(value);
+        const textField = form.getTextField(fieldName);
+        
+        // Fill based on field name patterns
+        if (fieldName.toLowerCase().includes('case')) {
+          textField.setText(data.court.case_number || 'To be assigned');
+        } else if (fieldName.toLowerCase().includes('estate') || fieldName.toLowerCase().includes('decedent')) {
+          textField.setText(`Estate of ${data.decedent.name}, Decedent`);
+        } else if (fieldName.toLowerCase().includes('date')) {
+          textField.setText(data.hearing.date);
+        } else if (fieldName.toLowerCase().includes('time')) {
+          textField.setText(data.hearing.time);
         }
       } catch (e) {
-        console.log(`Could not set field ${field} in DE-120`);
+        // Not a text field or error setting it
       }
-    }
+    });
     
     return await pdfDoc.save();
   } catch (error) {
@@ -307,25 +305,30 @@ async function fillDE140(data, pdfBytes) {
     
     console.log(`DE-140 has ${fields.length} fields available`);
     
-    const attorneyInfo = `${data.attorney.name}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}`;
+    // Log all field names
+    fields.forEach(field => {
+      console.log(`DE-140 Field: ${field.getName()}`);
+    });
     
-    const fieldFillers = [
-      { field: 'attorney_info', value: attorneyInfo },
-      { field: 'estate_name', value: `Estate of ${data.decedent.name}, Decedent` },
-      { field: 'appointment_name', value: data.petitioner.name },
-      { field: 'bond_amount', value: data.administration.bond_amount },
-    ];
-    
-    for (const { field, value } of fieldFillers) {
+    // Try to fill fields based on patterns
+    fields.forEach(field => {
+      const fieldName = field.getName();
       try {
-        if (fieldMappings['DE-140'][field]) {
-          const textField = form.getTextField(fieldMappings['DE-140'][field]);
-          textField.setText(value);
+        const textField = form.getTextField(fieldName);
+        
+        if (fieldName.toLowerCase().includes('case')) {
+          textField.setText(data.court.case_number || 'To be assigned');
+        } else if (fieldName.toLowerCase().includes('estate') || fieldName.toLowerCase().includes('decedent')) {
+          textField.setText(`Estate of ${data.decedent.name}, Decedent`);
+        } else if (fieldName.toLowerCase().includes('petitioner') || fieldName.toLowerCase().includes('appointment')) {
+          textField.setText(data.petitioner.name);
+        } else if (fieldName.toLowerCase().includes('bond')) {
+          textField.setText(data.administration.bond_amount);
         }
       } catch (e) {
-        console.log(`Could not set field ${field} in DE-140`);
+        // Not a text field or error
       }
-    }
+    });
     
     return await pdfDoc.save();
   } catch (error) {
@@ -343,26 +346,32 @@ async function fillDE147(data, pdfBytes) {
     
     console.log(`DE-147 has ${fields.length} fields available`);
     
-    const attorneyInfo = `${data.attorney.name}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}`;
+    // Log all field names
+    fields.forEach(field => {
+      console.log(`DE-147 Field: ${field.getName()}`);
+    });
     
-    const fieldFillers = [
-      { field: 'attorney_info', value: attorneyInfo },
-      { field: 'estate_name', value: `Estate of ${data.decedent.name}` },
-      { field: 'petitioner_name', value: data.petitioner.name },
-      { field: 'petitioner_address', value: data.petitioner.address },
-      { field: 'petitioner_phone', value: data.petitioner.phone },
-    ];
-    
-    for (const { field, value } of fieldFillers) {
+    // Try to fill fields based on patterns
+    fields.forEach(field => {
+      const fieldName = field.getName();
       try {
-        if (fieldMappings['DE-147'][field]) {
-          const textField = form.getTextField(fieldMappings['DE-147'][field]);
-          textField.setText(value);
+        const textField = form.getTextField(fieldName);
+        
+        if (fieldName.toLowerCase().includes('case')) {
+          textField.setText(data.court.case_number || 'To be assigned');
+        } else if (fieldName.toLowerCase().includes('estate') || fieldName.toLowerCase().includes('decedent')) {
+          textField.setText(`Estate of ${data.decedent.name}`);
+        } else if (fieldName.toLowerCase().includes('petitioner') || fieldName.includes('FillText357')) {
+          textField.setText(data.petitioner.name);
+        } else if (fieldName.toLowerCase().includes('address')) {
+          textField.setText(data.petitioner.address);
+        } else if (fieldName.toLowerCase().includes('phone')) {
+          textField.setText(data.petitioner.phone);
         }
       } catch (e) {
-        console.log(`Could not set field ${field} in DE-147`);
+        // Not a text field or error
       }
-    }
+    });
     
     return await pdfDoc.save();
   } catch (error) {
@@ -375,48 +384,24 @@ async function fillDE147(data, pdfBytes) {
 async function fillProbateForms(data) {
   const results = {};
   
-  // Process DE-111
-  try {
-    console.log('Processing DE-111...');
-    const pdfBytes = await loadPDFFromRepo('DE-111.pdf');
-    results['DE-111'] = await fillDE111(data, pdfBytes);
-    console.log('DE-111 completed');
-  } catch (error) {
-    console.error('Error with DE-111:', error);
-    results['DE-111'] = Buffer.from('Error processing DE-111');
-  }
+  // Process each form
+  const forms = [
+    { name: 'DE-111', filler: fillDE111 },
+    { name: 'DE-120', filler: fillDE120 },
+    { name: 'DE-140', filler: fillDE140 },
+    { name: 'DE-147', filler: fillDE147 }
+  ];
   
-  // Process DE-120
-  try {
-    console.log('Processing DE-120...');
-    const pdfBytes = await loadPDFFromRepo('DE-120.pdf');
-    results['DE-120'] = await fillDE120(data, pdfBytes);
-    console.log('DE-120 completed');
-  } catch (error) {
-    console.error('Error with DE-120:', error);
-    results['DE-120'] = Buffer.from('Error processing DE-120');
-  }
-  
-  // Process DE-140
-  try {
-    console.log('Processing DE-140...');
-    const pdfBytes = await loadPDFFromRepo('DE-140.pdf');
-    results['DE-140'] = await fillDE140(data, pdfBytes);
-    console.log('DE-140 completed');
-  } catch (error) {
-    console.error('Error with DE-140:', error);
-    results['DE-140'] = Buffer.from('Error processing DE-140');
-  }
-  
-  // Process DE-147
-  try {
-    console.log('Processing DE-147...');
-    const pdfBytes = await loadPDFFromRepo('DE-147.pdf');
-    results['DE-147'] = await fillDE147(data, pdfBytes);
-    console.log('DE-147 completed');
-  } catch (error) {
-    console.error('Error with DE-147:', error);
-    results['DE-147'] = Buffer.from('Error processing DE-147');
+  for (const { name, filler } of forms) {
+    try {
+      console.log(`Processing ${name}...`);
+      const pdfBytes = await loadPDFFromRepo(`${name}.pdf`);
+      results[name] = await filler(data, pdfBytes);
+      console.log(`${name} completed`);
+    } catch (error) {
+      console.error(`Error with ${name}:`, error);
+      results[name] = Buffer.from(`Error processing ${name}`);
+    }
   }
   
   return results;
