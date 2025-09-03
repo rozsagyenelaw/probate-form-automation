@@ -117,7 +117,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form - COMPLETE with corrected heir fields
+// Fill DE-111 form with CORRECTED field mapping
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -170,9 +170,9 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page1[0].FillText161[0]': '',
     };
     
-    // PAGE 2 - All fields including estate values and sections 3.e through 3.h
+    // PAGE 2 - All fields including estate values
     const page2Fields = {
-      // Estate value fields (3.d) - corrected field mappings
+      // Estate value fields (3.d)
       'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': data.estate.personal_property,
       'topmostSubform[0].Page2[0].Page2[0].FillText173[1]': '0.00',
       'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': '0.00',
@@ -220,11 +220,11 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page4[0].FillText277[0]': '',
     };
     
-    // PAGE 4 - CORRECTED Heirs/Beneficiaries list mapping
-    // The form has 3 columns: "Name and relationship to decedent" | "Age" | "Address"
-    // Field 350 = Name and relationship column
-    // Field 351 = Age column  
-    // Field 352 = Address column
+    // PAGE 4 - FIXED Heirs/Beneficiaries list mapping
+    // Based on your feedback, the fields are reversed:
+    // Field 352 = Name and relationship column (LEFT)
+    // Field 351 = Age column (MIDDLE)
+    // Field 350 = Address column (RIGHT)
     for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
       const heir = data.heirs[i];
       
@@ -234,10 +234,10 @@ async function fillDE111(data, pdfBytes) {
         nameAndRelationship += `, ${heir.relationship}`;
       }
       
-      // Map to the correct fields
-      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = nameAndRelationship;
-      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.age || '';
-      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = heir.address || '';
+      // CORRECTED MAPPING - swapped 350 and 352
+      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = nameAndRelationship;  // LEFT column
+      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.age || '';       // MIDDLE column
+      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = heir.address || '';   // RIGHT column
       
       console.log(`Heir ${i}: Name/Rel="${nameAndRelationship}", Age="${heir.age}", Address="${heir.address}"`);
     }
