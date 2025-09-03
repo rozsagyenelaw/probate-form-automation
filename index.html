@@ -317,6 +317,52 @@
                     <input type="text" name="death_address" required>
                 </div>
             </div>
+
+            <!-- Family Information - NEW SECTION -->
+            <div class="form-section">
+                <h2>Family Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Was decedent survived by a spouse? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" name="has_spouse" value="yes" id="spouse_yes" required>
+                                <label for="spouse_yes">Yes</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="has_spouse" value="no" id="spouse_no" required>
+                                <label for="spouse_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Was decedent survived by children? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" name="has_children" value="yes" id="children_yes" required>
+                                <label for="children_yes">Yes</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="has_children" value="no" id="children_no" required>
+                                <label for="children_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Was decedent survived by issue of predeceased children (grandchildren)? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="has_grandchildren" value="yes" id="grandchildren_yes" required>
+                            <label for="grandchildren_yes">Yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="has_grandchildren" value="no" id="grandchildren_no" required>
+                            <label for="grandchildren_no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Petitioner Information -->
             <div class="form-section">
@@ -407,17 +453,18 @@
                             <input type="date" name="will_date">
                         </div>
                         <div class="form-group">
-                            <label>Is Will Self-Proving?</label>
+                            <label>Is Will Self-Proving? <span class="required">*</span></label>
                             <div class="radio-group">
                                 <div class="radio-item">
                                     <input type="radio" name="will_self_proving" value="yes" id="self_proving_yes">
                                     <label for="self_proving_yes">Yes</label>
                                 </div>
                                 <div class="radio-item">
-                                    <input type="radio" name="will_self_proving" value="no" id="self_proving_no" checked>
+                                    <input type="radio" name="will_self_proving" value="no" id="self_proving_no">
                                     <label for="self_proving_no">No</label>
                                 </div>
                             </div>
+                            <span class="help-text">A self-proving will includes notarized witness affidavits</span>
                         </div>
                     </div>
                 </div>
@@ -429,7 +476,7 @@
                 <div class="form-group">
                     <label>List All Heirs <span class="required">*</span></label>
                     <textarea name="heirs_list" required placeholder="Enter each heir on a new line in format: Name, Relationship, Age, Address&#10;Example:&#10;Jane Smith, Spouse, 55, 123 Main St Los Angeles CA 90001&#10;John Smith Jr, Son, 30, 456 Oak Ave Los Angeles CA 90002"></textarea>
-                    <span class="help-text">Enter each heir on a new line with comma-separated values</span>
+                    <span class="help-text">Enter each heir on a new line with comma-separated values: Name, Relationship, Age, Address</span>
                 </div>
             </div>
             
@@ -523,6 +570,12 @@
         function toggleWillFields() {
             const hasWill = document.querySelector('input[name="has_will"]:checked')?.value;
             document.getElementById('willFields').style.display = hasWill === 'yes' ? 'block' : 'none';
+            // Set default value for self-proving if will exists
+            if (hasWill === 'yes') {
+                if (!document.querySelector('input[name="will_self_proving"]:checked')) {
+                    document.querySelector('#self_proving_no').checked = true;
+                }
+            }
         }
         
         function toggleBondAmount() {
@@ -537,6 +590,11 @@
             document.querySelector('input[name="death_place"]').value = "Los Angeles, CA";
             document.querySelector('input[name="death_address"]').value = "123 Main Street, Los Angeles, CA 90001";
             document.querySelector('#resident_yes').checked = true;
+            
+            // Family Information
+            document.querySelector('#spouse_yes').checked = true;
+            document.querySelector('#children_yes').checked = true;
+            document.querySelector('#grandchildren_no').checked = true;
             
             document.querySelector('input[name="petitioner_name"]').value = "Jane Smith";
             document.querySelector('select[name="petitioner_relationship"]').value = "Spouse";
