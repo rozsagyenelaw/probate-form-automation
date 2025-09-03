@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Probate Forms - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .status.loading {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffc107;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #28a745;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #dc3545;
+        }
+        
+        .form-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .form-info h3 {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            min-width: 150px;
+            color: #666;
+        }
+        
+        .info-value {
+            color: #333;
+        }
+        
+        .downloads {
+            margin-top: 30px;
+        }
+        
+        .downloads h3 {
+            margin-bottom: 20px;
+            color: #495057;
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .download-card {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .download-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .form-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .form-name {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .download-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .test-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            width: 100%;
+        }
+        
+        .test-button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>California Probate Forms Generator</h1>
+        <p class="subtitle">Law Offices of Rozsa Gyene</p>
+        
+        <div id="status" class="status loading">
+            <div class="loader"></div>
+            <p style="text-align: center; margin-top: 15px;">Checking for form data...</p>
+        </div>
+        
+        <div id="formInfo" class="form-info" style="display: none;">
+            <h3>Case Information</h3>
+            <div class="info-row">
+                <span class="info-label">Decedent:</span>
+                <span class="info-value" id="decedentName">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Petitioner:</span>
+                <span class="info-value" id="petitionerName">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Estate Value:</span>
+                <span class="info-value" id="estateValue">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Generated:</span>
+                <span class="info-value" id="timestamp">-</span>
+            </div>
+        </div>
+        
+        <div id="downloads" class="downloads" style="display: none;">
+            <h3>Download Completed Forms</h3>
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="form-number">DE-111</div>
+                    <div class="form-name">Petition for Probate</div>
+                    <button class="download-btn" onclick="downloadPDF('DE-111')">Download PDF</button>
+                </div>
+                <div class="download-card">
+                    <div class="form-number">DE-140</div>
+                    <div class="form-name">Order for Probate</div>
+                    <button class="download-btn" onclick="downloadPDF('DE-140')">Download PDF</button>
+                </div>
+                <div class="download-card">
+                    <div class="form-number">DE-147</div>
+                    <div class="form-name">Duties and Liabilities</div>
+                    <button class="download-btn" onclick="downloadPDF('DE-147')">Download PDF</button>
+                </div>
+                <div class="download-card">
+                    <div class="form-number">DE-147S</div>
+                    <div class="form-name">Confidential Supplement</div>
+                    <button class="download-btn" onclick="downloadPDF('DE-147S')">Download PDF</button>
+                </div>
+                <div class="download-card">
+                    <div class="form-number">DE-150</div>
+                    <div class="form-name">Letters</div>
+                    <button class="download-btn" onclick="downloadPDF('DE-150')">Download PDF</button>
+                </div>
+            </div>
+        </div>
+        
+        <button id="testButton" class="test-button" onclick="testWithSampleData()" style="display: none;">
+            Test with Sample Data
+        </button>
+    </div>
+    
+    <script>
+        let pdfData = {};
+        
+        // Check URL parameters for form ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const formId = urlParams.get('id');
+        
+        if (!formId) {
+            // No form ID provided, show test button
+            document.getElementById('status').className = 'status error';
+            document.getElementById('status').innerHTML = '<p>No form ID provided. Click below to test with sample data.</p>';
+            document.getElementById('testButton').style.display = 'block';
+        } else {
+            // Load form data
+            loadFormData(formId);
+        }
+        
+        async function loadFormData(id) {
+            // In a real implementation, this would fetch from your backend
+            // For now, we'll simulate it
+            document.getElementById('status').className = 'status success';
+            document.getElementById('status').innerHTML = '<p>✓ Forms generated successfully!</p>';
+            document.getElementById('formInfo').style.display = 'block';
+            document.getElementById('downloads').style.display = 'block';
+        }
+        
+        async function testWithSampleData() {
+            document.getElementById('status').className = 'status loading';
+            document.getElementById('status').innerHTML = '<div class="loader"></div><p style="text-align: center; margin-top: 15px;">Generating forms...</p>';
+            document.getElementById('testButton').style.display = 'none';
+            
+            const testData = {
+                decedent_name: "John Michael Smith",
+                death_date: "2024-01-15",
+                death_place: "Los Angeles, CA",
+                death_address: "123 Main St, Los Angeles, CA 90001",
+                death_resident: "yes",
+                petitioner_name: "Jane Smith",
+                petitioner_relationship: "Spouse",
+                petitioner_address: "123 Main St, Los Angeles, CA 90001",
+                petitioner_phone: "(555) 123-4567",
+                personal_property_value: 150000,
+                real_property_gross: 500000,
+                real_property_encumbrance: 200000,
+                has_will: "yes",
+                will_date: "2020-01-01",
+                will_self_proving: "yes",
+                heirs_list: "Jane Smith,Spouse,55,123 Main St\\nMichael Smith Jr,Son,30,456 Oak Ave",
+                admin_type: "full",
+                bond_required: "no"
+            };
+            
+            try {
+                const response = await fetch('/.netlify/functions/process-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    pdfData = result.pdfs;
+                    
+                    // Update UI with metadata
+                    document.getElementById('decedentName').textContent = result.metadata.decedent;
+                    document.getElementById('petitionerName').textContent = result.metadata.petitioner;
+                    document.getElementById('estateValue').textContent = result.metadata.estate_value;
+                    document.getElementById('timestamp').textContent = new Date(result.timestamp).toLocaleString();
+                    
+                    // Show success
+                    document.getElementById('status').className = 'status success';
+                    document.getElementById('status').innerHTML = '<p>✓ Forms generated successfully!</p>';
+                    document.getElementById('formInfo').style.display = 'block';
+                    document.getElementById('downloads').style.display = 'block';
+                } else {
+                    throw new Error(result.error || 'Failed to generate forms');
+                }
+            } catch (error) {
+                document.getElementById('status').className = 'status error';
+                document.getElementById('status').innerHTML = `<p>Error: ${error.message}</p>`;
+                document.getElementById('testButton').style.display = 'block';
+            }
+        }
+        
+        function downloadPDF(formName) {
+            if (!pdfData[formName]) {
+                alert('PDF data not available. Please generate the forms first.');
+                return;
+            }
+            
+            // Convert base64 to blob
+            const byteCharacters = atob(pdfData[formName]);
+            const byteNumbers = new Array(byteCharacters.length);
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            const byteArray = new Uint8Array(byteNumbers);
+            const blob = new Blob([byteArray], { type: 'application/pdf' });
+            
+            // Create download link
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = `${formName}_${new Date().toISOString().split('T')[0]}.pdf`;
+            link.click();
+            
+            // Clean up
+            window.URL.revokeObjectURL(link.href);
+        }
+    </script>
+</body>
+</html>
