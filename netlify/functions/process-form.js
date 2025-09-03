@@ -57,6 +57,7 @@ function transformQuestionnaireData(webhookData) {
       is_resident: webhookData.death_resident === "yes",
       has_spouse: webhookData.has_spouse === "yes",
       has_children: webhookData.has_children === "yes",
+      has_grandchildren: webhookData.has_grandchildren === "yes",
     },
     petitioner: {
       name: webhookData.petitioner_name,
@@ -171,19 +172,19 @@ async function fillDE111(data, pdfBytes) {
     
     // PAGE 2 - All fields including estate values and sections 3.e through 3.h
     const page2Fields = {
-      // Estate value fields (3.d) - these are working correctly
-      'topmostSubform[0].Page2[0].Page2[0].FillText181[0]': data.estate.personal_property,
-      'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': '0.00',
+      // Estate value fields (3.d) - corrected field mappings
+      'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': data.estate.personal_property,
       'topmostSubform[0].Page2[0].Page2[0].FillText173[1]': '0.00',
-      'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': data.estate.personal_property,
-      'topmostSubform[0].Page2[0].Page2[0].FillText165[0]': data.estate.real_property_gross,
-      'topmostSubform[0].Page2[0].Page2[0].FillText164[0]': data.estate.real_property_encumbrance,
-      'topmostSubform[0].Page2[0].Page2[0].FillText163[0]': data.estate.real_property_net,
-      'topmostSubform[0].Page2[0].Page2[0].FillText178[0]': data.estate.total,
+      'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': '0.00',
+      'topmostSubform[0].Page2[0].Page2[0].FillText165[0]': data.estate.personal_property,
+      'topmostSubform[0].Page2[0].Page2[0].FillText164[0]': data.estate.real_property_gross,
+      'topmostSubform[0].Page2[0].Page2[0].FillText163[0]': data.estate.real_property_encumbrance,
+      'topmostSubform[0].Page2[0].Page2[0].FillText178[0]': data.estate.real_property_net,
+      'topmostSubform[0].Page2[0].Page2[0].FillText177[0]': data.estate.total,
       
       // Section 3.f - Will date
       'topmostSubform[0].Page2[0].Page2[0].FillText179[0]': data.estate.will_date,
-      'topmostSubform[0].Page2[0].Page2[0].FillText177[0]': '', // Codicil dates
+      'topmostSubform[0].Page2[0].Page2[0].FillText181[0]': '', // Codicil dates
       
       // Section 3.g(1)(d) - Other executors who won't act
       'topmostSubform[0].Page2[0].Page2[0].FillText182[0]': '', // Other reasons specify
@@ -211,12 +212,12 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
       
       // Petitioner signature section
-      'topmostSubform[0].Page4[0].FillText357[0]': data.petitioner.name,
-      'topmostSubform[0].Page4[0].FillText357[1]': '',
-      'topmostSubform[0].Page4[0].FillText358[0]': data.petitioner.address,
+      'topmostSubform[0].Page4[0].FillText357[0]': data.attorney.name,
+      'topmostSubform[0].Page4[0].FillText357[1]': data.petitioner.name,
+      'topmostSubform[0].Page4[0].FillText358[0]': '',
       'topmostSubform[0].Page4[0].FillText276[0]': formatDate(new Date()),
-      'topmostSubform[0].Page4[0].FillText276[1]': '',
-      'topmostSubform[0].Page4[0].FillText277[0]': data.petitioner.relationship,
+      'topmostSubform[0].Page4[0].FillText276[1]': formatDate(new Date()),
+      'topmostSubform[0].Page4[0].FillText277[0]': '',
     };
     
     // PAGE 4 - CORRECTED Heirs/Beneficiaries list
@@ -297,6 +298,7 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page2[0].Page2[0].CheckBox78[0]': data.estate.has_will,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox79[0]': false, // Codicil
       'topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]': data.estate.will_self_proving,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox80[0]': false, // Lost will
       
       // Section 3.g(1) - Appointment of executor/administrator with will
       'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.petitioner.is_executor && data.estate.has_will,
@@ -306,26 +308,28 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page2[0].Page2[0].CheckBox63[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox62[0]': false,
       
-      // Section 3.g(2) - Appointment of administrator
+      // Section 3.g(2) - Appointment of administrator (intestate)
       'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox66[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will,
+      
+      // Section 3.g(3) and (4) - Special administrator
       'topmostSubform[0].Page2[0].Page2[0].CheckBox68[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox69[0]': false,
       
       // Section 3.h - Residency
       'topmostSubform[0].Page2[0].Page2[0].CheckBox70[0]': true, // Resident of California
       'topmostSubform[0].Page2[0].Page2[0].CheckBox70[1]': false, // Non-resident of California
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox81[0]': false, // Resident of US
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox81[0]': true, // Resident of US
       'topmostSubform[0].Page2[0].Page2[0].CheckBox81[1]': false, // Non-resident of US
     };
     
     // PAGE 3 CHECKBOXES - Family relationships
     const page3Checkboxes = {
-      // Independent Administration
+      // Item 4 - Independent Administration
       'topmostSubform[0].Page3[0].CheckBox56[0]': true,
       
-      // Marital status
+      // Item 5 - Marital status
       'topmostSubform[0].Page3[0].CheckBox55[0]': data.decedent.has_spouse,
       'topmostSubform[0].Page3[0].CheckBox55[1]': !data.decedent.has_spouse,
       'topmostSubform[0].Page3[0].CheckBox53[0]': !data.decedent.has_spouse,
@@ -341,23 +345,35 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page3[0].CheckBox47[0]': false,
       'topmostSubform[0].Page3[0].CheckBox49[1]': !data.decedent.has_children,
       
-      // Issue of predeceased child
-      'topmostSubform[0].Page3[0].CheckBox45[0]': false,
-      'topmostSubform[0].Page3[0].CheckBox45[1]': true,
+      // Issue of predeceased child (grandchildren)
+      'topmostSubform[0].Page3[0].CheckBox45[0]': data.decedent.has_grandchildren,
+      'topmostSubform[0].Page3[0].CheckBox45[1]': !data.decedent.has_grandchildren,
       
       // Stepchild/foster child
       'topmostSubform[0].Page3[0].CheckBox43[0]': false,
       'topmostSubform[0].Page3[0].CheckBox43[1]': true,
       
-      // Parents and other relatives
+      // Item 6 - Parents and other relatives
       'topmostSubform[0].Page3[0].CheckBox41[0]': false,
       'topmostSubform[0].Page3[0].CheckBox40[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox39[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox38[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox37[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox36[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox35[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox34[0]': false,
+      
+      // Item 7 - Predeceased spouse
+      'topmostSubform[0].Page3[0].CheckBox33[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox32[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox31[0]': false,
+      'topmostSubform[0].Page3[0].CheckBox30[0]': false,
     };
     
     // PAGE 4 CHECKBOXES
     const page4Checkboxes = {
-      'topmostSubform[0].Page4[0].CheckBox82[0]': false,
-      'topmostSubform[0].Page4[0].CheckBox83[0]': false,
+      'topmostSubform[0].Page4[0].CheckBox82[0]': false, // Continued on Attachment 8
+      'topmostSubform[0].Page4[0].CheckBox83[0]': false, // Additional petitioners
     };
     
     // Set all checkboxes
