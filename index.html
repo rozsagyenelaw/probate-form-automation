@@ -110,6 +110,56 @@
             gap: 5px;
         }
         
+        .heir-entry {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .heir-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .heir-number {
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .remove-heir-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .remove-heir-btn:hover {
+            background: #c82333;
+        }
+        
+        .add-heir-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .add-heir-btn:hover {
+            background: #218838;
+        }
+        
         .submit-btn {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
@@ -318,7 +368,7 @@
                 </div>
             </div>
 
-            <!-- Family Information - NEW SECTION -->
+            <!-- Family Information -->
             <div class="form-section">
                 <h2>Family Information</h2>
                 <div class="form-row">
@@ -470,14 +520,14 @@
                 </div>
             </div>
             
-            <!-- Heirs and Beneficiaries -->
+            <!-- Heirs and Beneficiaries - UPDATED SECTION -->
             <div class="form-section">
                 <h2>Heirs and Beneficiaries</h2>
-                <div class="form-group">
-                    <label>List All Heirs <span class="required">*</span></label>
-                    <textarea name="heirs_list" required placeholder="Enter each heir on a new line in format: Name, Relationship, Age, Address&#10;Example:&#10;Jane Smith, Spouse, 55, 123 Main St Los Angeles CA 90001&#10;John Smith Jr, Son, 30, 456 Oak Ave Los Angeles CA 90002"></textarea>
-                    <span class="help-text">Enter each heir on a new line with comma-separated values: Name, Relationship, Age, Address</span>
+                <div id="heirsContainer">
+                    <!-- Heirs will be added here dynamically -->
                 </div>
+                <button type="button" class="add-heir-btn" onclick="addHeir()">+ Add Heir/Beneficiary</button>
+                <span class="help-text" style="display: block; margin-top: 10px;">Include all heirs, beneficiaries, and anyone named in the will. For trusts, use "N/A" for age.</span>
             </div>
             
             <!-- Administration Details -->
@@ -566,11 +616,67 @@
     
     <script>
         let generatedPDFs = {};
+        let heirCount = 0;
+        
+        function addHeir(name = '', relationship = '', age = '', address = '') {
+            heirCount++;
+            const heirDiv = document.createElement('div');
+            heirDiv.className = 'heir-entry';
+            heirDiv.id = `heir_${heirCount}`;
+            
+            heirDiv.innerHTML = `
+                <div class="heir-header">
+                    <span class="heir-number">Heir/Beneficiary #${heirCount}</span>
+                    ${heirCount > 1 ? `<button type="button" class="remove-heir-btn" onclick="removeHeir('heir_${heirCount}')">Remove</button>` : ''}
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name <span class="required">*</span></label>
+                        <input type="text" name="heir_name_${heirCount}" value="${name}" required placeholder="e.g., Jane Smith or The John Rude Living Trust">
+                    </div>
+                    <div class="form-group">
+                        <label>Relationship <span class="required">*</span></label>
+                        <select name="heir_relationship_${heirCount}" required>
+                            <option value="">Select...</option>
+                            <option value="Spouse" ${relationship === 'Spouse' ? 'selected' : ''}>Spouse</option>
+                            <option value="Child" ${relationship === 'Child' ? 'selected' : ''}>Child (Son/Daughter)</option>
+                            <option value="Son" ${relationship === 'Son' ? 'selected' : ''}>Son</option>
+                            <option value="Daughter" ${relationship === 'Daughter' ? 'selected' : ''}>Daughter</option>
+                            <option value="Grandchild" ${relationship === 'Grandchild' ? 'selected' : ''}>Grandchild</option>
+                            <option value="Parent" ${relationship === 'Parent' ? 'selected' : ''}>Parent</option>
+                            <option value="Sibling" ${relationship === 'Sibling' ? 'selected' : ''}>Sibling</option>
+                            <option value="Brother" ${relationship === 'Brother' ? 'selected' : ''}>Brother</option>
+                            <option value="Sister" ${relationship === 'Sister' ? 'selected' : ''}>Sister</option>
+                            <option value="Niece" ${relationship === 'Niece' ? 'selected' : ''}>Niece</option>
+                            <option value="Nephew" ${relationship === 'Nephew' ? 'selected' : ''}>Nephew</option>
+                            <option value="Beneficiary" ${relationship === 'Beneficiary' ? 'selected' : ''}>Beneficiary</option>
+                            <option value="Trust" ${relationship === 'Trust' ? 'selected' : ''}>Trust</option>
+                            <option value="Other" ${relationship === 'Other' ? 'selected' : ''}>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" name="heir_age_${heirCount}" value="${age}" placeholder="Enter age or N/A for trusts">
+                    </div>
+                    <div class="form-group">
+                        <label>Address <span class="required">*</span></label>
+                        <input type="text" name="heir_address_${heirCount}" value="${address}" required placeholder="e.g., 123 Main St Los Angeles CA 90001">
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('heirsContainer').appendChild(heirDiv);
+        }
+        
+        function removeHeir(heirId) {
+            document.getElementById(heirId).remove();
+        }
         
         function toggleWillFields() {
             const hasWill = document.querySelector('input[name="has_will"]:checked')?.value;
             document.getElementById('willFields').style.display = hasWill === 'yes' ? 'block' : 'none';
-            // Set default value for self-proving if will exists
             if (hasWill === 'yes') {
                 if (!document.querySelector('input[name="will_self_proving"]:checked')) {
                     document.querySelector('#self_proving_no').checked = true;
@@ -584,7 +690,11 @@
         }
         
         function fillTestData() {
-            // Fill form with test data for quick testing
+            // Clear existing heirs
+            document.getElementById('heirsContainer').innerHTML = '';
+            heirCount = 0;
+            
+            // Fill form with test data
             document.querySelector('input[name="decedent_name"]').value = "John Michael Smith";
             document.querySelector('input[name="death_date"]').value = "2024-01-15";
             document.querySelector('input[name="death_place"]').value = "Los Angeles, CA";
@@ -610,13 +720,22 @@
             document.querySelector('input[name="will_date"]').value = "2020-01-01";
             document.querySelector('#self_proving_yes').checked = true;
             
-            document.querySelector('textarea[name="heirs_list"]').value = "Jane Smith, Spouse, 55, 123 Main St Los Angeles CA 90001\nMichael Smith Jr, Son, 30, 456 Oak Ave Los Angeles CA 90002\nSarah Smith, Daughter, 28, 789 Pine St Los Angeles CA 90003";
+            // Add test heirs
+            addHeir("Jane Smith", "Spouse", "55", "123 Main St Los Angeles CA 90001");
+            addHeir("Michael Smith Jr", "Son", "30", "456 Oak Ave Los Angeles CA 90002");
+            addHeir("Sarah Smith", "Daughter", "28", "789 Pine St Los Angeles CA 90003");
+            addHeir("The John Rude Living Trust", "Beneficiary", "N/A", "321 Trust Way Los Angeles CA 90004");
             
             document.querySelector('select[name="admin_type"]').value = "full";
             document.querySelector('#bond_no').checked = true;
             
             alert('Form filled with test data. Click "Generate Probate Forms" to test!');
         }
+        
+        // Add at least one heir field by default
+        window.onload = function() {
+            addHeir();
+        };
         
         document.getElementById('probateForm').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -632,11 +751,32 @@
             // Get form data
             const formData = new FormData(e.target);
             const data = {};
+            
+            // Process regular form fields
             for (let [key, value] of formData.entries()) {
-                data[key] = value;
+                if (!key.startsWith('heir_')) {
+                    data[key] = value;
+                }
             }
             
-            // Add attorney information (default values)
+            // Process heirs data
+            const heirsList = [];
+            const heirElements = document.querySelectorAll('.heir-entry');
+            heirElements.forEach(heirEl => {
+                const id = heirEl.id.replace('heir_', '');
+                const name = document.querySelector(`input[name="heir_name_${id}"]`)?.value;
+                const relationship = document.querySelector(`select[name="heir_relationship_${id}"]`)?.value;
+                const age = document.querySelector(`input[name="heir_age_${id}"]`)?.value || '';
+                const address = document.querySelector(`input[name="heir_address_${id}"]`)?.value;
+                
+                if (name && relationship && address) {
+                    heirsList.push(`${name}, ${relationship}, ${age}, ${address}`);
+                }
+            });
+            
+            data.heirs_list = heirsList.join('\n');
+            
+            // Add attorney information
             data.attorney_name = "ROZSA GYENE, ESQ.";
             data.attorney_bar = "208356";
             data.firm_name = "LAW OFFICES OF ROZSA GYENE";
