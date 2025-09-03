@@ -173,14 +173,14 @@ function transformQuestionnaireData(webhookData) {
   };
 }
 
-// Load PDF from GitHub repository
+// FIXED: Load PDF from deployed Netlify site instead of GitHub
 async function loadPDFFromRepo(filename) {
   const fetch = (await import('node-fetch')).default;
-  // Using raw GitHub content URL
-  const url = `https://raw.githubusercontent.com/rozsagyenelaw/probate-form-automation/main/templates/${filename}`;
+  // Changed to load from the deployed site
+  const url = `https://probateformautomation.netlify.app/templates/${filename}`;
   
   try {
-    console.log(`Loading ${filename} from GitHub...`);
+    console.log(`Loading ${filename} from deployed site...`);
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to load ${filename}: ${response.statusText}`);
