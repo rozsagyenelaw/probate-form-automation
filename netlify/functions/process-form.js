@@ -8,9 +8,9 @@ function formatDate(dateString) {
 }
 
 function formatCurrency(value) {
-  if (!value) return "$0.00";
+  if (!value) return "0.00";
   const num = parseFloat(value.toString().replace(/[^0-9.-]/g, ''));
-  return `$${num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  return num.toFixed(2);
 }
 
 function parseHeirs(heirsList) {
@@ -114,7 +114,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form with ACTUAL field names from the PDF
+// Fill DE-111 form with CORRECT field names
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -123,80 +123,102 @@ async function fillDE111(data, pdfBytes) {
     const fields = form.getFields();
     console.log(`DE-111 has ${fields.length} fields available`);
     
-    // Map of actual field names to our data
-    const fieldMappings = {
-      // Page 1 - Attorney/Court Info (if these fields exist)
-      'topmostSubform[0].Page1[0].TextField3g5[0]': `${data.attorney.name}, SBN ${data.attorney.bar_number}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}\nPhone: ${data.attorney.phone}\nEmail: ${data.attorney.email}\nAttorney for ${data.petitioner.name}`,
-      
-      // Page 2 - Estate values and other info
-      'topmostSubform[0].Page2[0].Page2[0].FillText181[0]': data.estate.personal_property,
-      'topmostSubform[0].Page2[0].Page2[0].FillText173[0]': data.estate.real_property_gross,
-      'topmostSubform[0].Page2[0].Page2[0].FillText173[1]': data.estate.real_property_encumbrance,
-      'topmostSubform[0].Page2[0].Page2[0].FillText162[0]': data.estate.real_property_net,
-      'topmostSubform[0].Page2[0].Page2[0].FillText165[0]': data.estate.total,
-      'topmostSubform[0].Page2[0].Page2[0].FillText164[0]': data.estate.will_date,
-      'topmostSubform[0].Page2[0].Page2[0].FillText163[0]': data.decedent.death_place,
-      'topmostSubform[0].Page2[0].Page2[0].FillText178[0]': data.decedent.death_date,
-      'topmostSubform[0].Page2[0].Page2[0].FillText177[0]': data.decedent.death_address,
-      'topmostSubform[0].Page2[0].Page2[0].FillText179[0]': data.administration.bond_amount,
-      'topmostSubform[0].Page2[0].Page2[0].FillText182[0]': data.court.county,
-      'topmostSubform[0].Page2[0].Page2[0].FillText183[0]': data.court.branch,
-      
-      // Case number and estate name on Page 2
-      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
-      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
-      
-      // Page 3 - Case number and estate name
-      'topmostSubform[0].Page3[0].PxCaption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
-      'topmostSubform[0].Page3[0].PxCaption[0].TitlePartyName[0].Party1[0]': data.decedent.name,
-      
-      // Page 4 - Petitioner information and signatures
-      'topmostSubform[0].Page4[0].FillText357[0]': data.petitioner.name,
-      'topmostSubform[0].Page4[0].FillText357[1]': data.petitioner.name, // Second petitioner field if needed
-      'topmostSubform[0].Page4[0].FillText358[0]': data.petitioner.address,
-      'topmostSubform[0].Page4[0].FillText276[0]': data.decedent.death_date,
-      'topmostSubform[0].Page4[0].FillText276[1]': formatDate(new Date()), // Today's date
-      'topmostSubform[0].Page4[0].FillText277[0]': data.petitioner.relationship,
-      
-      // Case number and estate name on Page 4
-      'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
-      'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
-      
-      // Heirs list (if multiple heir fields exist)
-      'topmostSubform[0].Page4[0].FillText350[0]': data.heirs[0]?.name || '',
-      'topmostSubform[0].Page4[0].FillText351[0]': data.heirs[0]?.relationship || '',
-      'topmostSubform[0].Page4[0].FillText352[0]': data.heirs[0]?.address || '',
+    // PAGE 1 HEADER - Attorney Information Box
+    const attorneyFields = {
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyName_ft[0]': data.attorney.name,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyBarNo_dc[0]': data.attorney.bar_number,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyFirm_ft[0]': data.attorney.firm_name,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyStreet_ft[0]': data.attorney.street,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyCity_ft[0]': data.attorney.city,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyState_ft[0]': data.attorney.state,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyZip_ft[0]': data.attorney.zip,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].Phone_ft[0]': data.attorney.phone,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].Fax_ft[0]': data.attorney.fax,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].Email_ft[0]': data.attorney.email,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyFor_ft[0]': `Petitioner ${data.petitioner.name}`,
     };
     
-    // Fill text fields
-    for (const [fieldName, value] of Object.entries(fieldMappings)) {
+    // PAGE 1 HEADER - Court Information
+    const courtFields = {
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].CrtCounty_ft[0]': data.court.county,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].Street_ft[0]': data.court.street,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].MailingAdd_ft[0]': data.court.street,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].CityZip_ft[0]': `${data.court.city}, CA ${data.court.zip}`,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].Branch_ft[0]': data.court.branch,
+    };
+    
+    // PAGE 1 HEADER - Estate Information
+    const estateFields = {
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+    };
+    
+    // PAGE 1 BODY - Petition Details
+    const petitionFields = {
+      'topmostSubform[0].Page1[0].FillText141[0]': 'Los Angeles Times', // newspaper
+      'topmostSubform[0].Page1[0].FillText142[0]': data.petitioner.name, // petitioner name
+      'topmostSubform[0].Page1[0].FillText143[0]': data.petitioner.name, // name for appointment
+      'topmostSubform[0].Page1[0].FillText144[0]': data.administration.bond_amount, // bond amount
+      'topmostSubform[0].Page1[0].FillText145[0]': '0.00', // blocked account amount
+      'topmostSubform[0].Page1[0].FillText146[0]': data.decedent.death_date, // death date
+      'topmostSubform[0].Page1[0].FillText147[0]': data.decedent.death_place, // death place
+      'topmostSubform[0].Page1[0].FillText148[0]': '', // location for nonresident
+      'topmostSubform[0].Page1[0].FillText149[0]': data.decedent.death_address, // residence at death
+      'topmostSubform[0].Page1[0].FillText161[0]': '', // institution for blocked account
+    };
+    
+    // Combine all text field mappings
+    const allTextFields = {
+      ...attorneyFields,
+      ...courtFields,
+      ...estateFields,
+      ...petitionFields
+    };
+    
+    // Fill all text fields
+    for (const [fieldName, value] of Object.entries(allTextFields)) {
       try {
         const field = form.getTextField(fieldName);
         field.setText(value || '');
-        console.log(`Set field ${fieldName} to "${value}"`);
+        console.log(`Set ${fieldName} to "${value}"`);
       } catch (e) {
-        console.log(`Could not set text field ${fieldName}: ${e.message}`);
+        console.log(`Could not set field ${fieldName}: ${e.message}`);
       }
     }
     
-    // Handle checkboxes based on data
-    const checkboxMappings = {
-      // Page 1 checkboxes
-      'topmostSubform[0].Page1[0].CheckBox81[0]': data.estate.has_will, // Has will checkbox
+    // PAGE 1 - Checkboxes
+    const checkboxes = {
+      // Form title checkboxes (top of form)
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox23[0]': data.estate.has_will, // Probate of Will
+      'topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will, // Letters of Administration
       
-      // Page 2 checkboxes - set based on petition type
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]': data.estate.has_will, // Probate of will
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox74[0]': !data.estate.has_will, // Letters of administration
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]': data.decedent.is_resident, // Resident of county
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': !data.decedent.is_resident, // Non-resident
+      // Publication checkboxes
+      'topmostSubform[0].Page1[0].CheckBox1[0]': true, // Publication requested
+      'topmostSubform[0].Page1[0].CheckBox1[1]': false, // Publication to be arranged
       
-      // Page 4 checkboxes
-      'topmostSubform[0].Page4[0].CheckBox82[0]': true, // Publication requested
-      'topmostSubform[0].Page4[0].CheckBox83[0]': false, // Publication to be arranged
+      // Will admission
+      'topmostSubform[0].Page1[0].CheckBox3[0]': data.estate.has_will, // admit will to probate
+      
+      // Appointment type
+      'topmostSubform[0].Page1[0].CheckBox5[0]': data.petitioner.is_executor && data.estate.has_will, // executor
+      'topmostSubform[0].Page1[0].CheckBox6[0]': !data.petitioner.is_executor && data.estate.has_will, // admin with will
+      'topmostSubform[0].Page1[0].CheckBox7[0]': !data.estate.has_will, // administrator
+      
+      // Authority type
+      'topmostSubform[0].Page1[0].CheckBox12[0]': true, // full authority
+      'topmostSubform[0].Page1[0].CheckBox12[1]': false, // limited authority
+      
+      // Bond
+      'topmostSubform[0].Page1[0].CheckBox11[0]': !data.administration.bond_required, // bond not required
+      'topmostSubform[0].Page1[0].CheckBox13[0]': data.administration.bond_required, // bond required
+      
+      // Residency
+      'topmostSubform[0].Page1[0].CheckBox15[0]': data.decedent.is_resident, // resident
+      'topmostSubform[0].Page1[0].CheckBox15[1]': !data.decedent.is_resident, // nonresident
     };
     
-    // Check/uncheck checkboxes
-    for (const [fieldName, shouldCheck] of Object.entries(checkboxMappings)) {
+    // Set all checkboxes
+    for (const [fieldName, shouldCheck] of Object.entries(checkboxes)) {
       try {
         const checkbox = form.getCheckBox(fieldName);
         if (shouldCheck) {
@@ -204,9 +226,34 @@ async function fillDE111(data, pdfBytes) {
         } else {
           checkbox.uncheck();
         }
-        console.log(`${shouldCheck ? 'Checked' : 'Unchecked'} checkbox ${fieldName}`);
+        console.log(`${shouldCheck ? 'Checked' : 'Unchecked'} ${fieldName}`);
       } catch (e) {
         console.log(`Could not set checkbox ${fieldName}: ${e.message}`);
+      }
+    }
+    
+    // Now handle Pages 2, 3, 4 - we need to get their field mappings too
+    // For now, let's just set the case number and estate name on all pages
+    const otherPageFields = {
+      // Page 2
+      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+      
+      // Page 3
+      'topmostSubform[0].Page3[0].PxCaption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page3[0].PxCaption[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+      
+      // Page 4
+      'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
+    };
+    
+    for (const [fieldName, value] of Object.entries(otherPageFields)) {
+      try {
+        const field = form.getTextField(fieldName);
+        field.setText(value || '');
+      } catch (e) {
+        console.log(`Could not set field ${fieldName}`);
       }
     }
     
@@ -217,7 +264,7 @@ async function fillDE111(data, pdfBytes) {
   }
 }
 
-// Fill DE-120 form
+// Fill DE-120 form - you'll need to get field names for this form too
 async function fillDE120(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -226,28 +273,18 @@ async function fillDE120(data, pdfBytes) {
     
     console.log(`DE-120 has ${fields.length} fields available`);
     
-    // Fill all fields we can identify
+    // Fill fields based on patterns until we get exact field names
     fields.forEach(field => {
       const fieldName = field.getName();
       try {
         const textField = form.getTextField(fieldName);
         
-        // Fill based on field name patterns
         if (fieldName.includes('CaseNumber')) {
           textField.setText('To be assigned');
         } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
           textField.setText(data.decedent.name);
-        } else if (fieldName.includes('Date')) {
-          textField.setText(data.hearing.date);
-        } else if (fieldName.includes('Time')) {
-          textField.setText(data.hearing.time);
-        } else if (fieldName.includes('Dept')) {
-          textField.setText(data.hearing.dept);
         }
-        
-      } catch (e) {
-        // Not a text field
-      }
+      } catch (e) {}
     });
     
     return await pdfDoc.save();
@@ -275,15 +312,8 @@ async function fillDE140(data, pdfBytes) {
           textField.setText('To be assigned');
         } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
           textField.setText(data.decedent.name);
-        } else if (fieldName.includes('Petitioner')) {
-          textField.setText(data.petitioner.name);
-        } else if (fieldName.includes('Bond')) {
-          textField.setText(data.administration.bond_amount);
         }
-        
-      } catch (e) {
-        // Not a text field
-      }
+      } catch (e) {}
     });
     
     return await pdfDoc.save();
@@ -311,17 +341,8 @@ async function fillDE147(data, pdfBytes) {
           textField.setText('To be assigned');
         } else if (fieldName.includes('Party') || fieldName.includes('TitleParty')) {
           textField.setText(data.decedent.name);
-        } else if (fieldName.includes('FillText357')) {
-          textField.setText(data.petitioner.name);
-        } else if (fieldName.includes('Address')) {
-          textField.setText(data.petitioner.address);
-        } else if (fieldName.includes('Phone')) {
-          textField.setText(data.petitioner.phone);
         }
-        
-      } catch (e) {
-        // Not a text field
-      }
+      } catch (e) {}
     });
     
     return await pdfDoc.save();
@@ -387,15 +408,12 @@ exports.handler = async (event, context) => {
     
     console.log('Received form submission for:', webhookData.decedent_name);
     
-    // Transform the data
     const transformedData = transformQuestionnaireData(webhookData);
     
     console.log('Data transformed, filling PDFs...');
     
-    // Generate the PDFs
     const pdfs = await fillProbateForms(transformedData);
     
-    // Return base64 encoded PDFs
     const response = {
       success: true,
       message: 'PDFs generated successfully',
