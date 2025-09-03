@@ -1,34 +1,16 @@
 {
-  "name": "probate-forms-automation",
+  "name": "probate-form-automation",
   "version": "1.0.0",
   "description": "California Probate Forms PDF Automation System",
   "main": "netlify/functions/process-form.js",
   "scripts": {
     "dev": "netlify dev",
-    "build": "echo 'No build required'",
-    "test": "node test-pdf-generation.js",
-    "test-local": "node test-local.js"
+    "test": "node test-local.js"
   },
   "dependencies": {
-    "pdf-lib": "^1.17.1",
-    "@netlify/functions": "^2.4.0"
+    "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
     "netlify-cli": "^17.10.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/probate-automation.git"
-  },
-  "keywords": [
-    "probate",
-    "california",
-    "legal",
-    "pdf",
-    "automation",
-    "netlify",
-    "serverless"
-  ],
-  "author": "Your Name",
-  "license": "MIT"
+  }
 }
