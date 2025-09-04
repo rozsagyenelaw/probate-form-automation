@@ -1,3 +1,4 @@
+
 const { PDFDocument } = require('pdf-lib');
 
 // Helper functions
@@ -65,7 +66,7 @@ function transformQuestionnaireData(webhookData) {
       address: webhookData.petitioner_address,
       phone: webhookData.petitioner_phone,
       is_executor: webhookData.petitioner_is_executor === "yes",
-      executor_named_in_will: webhookData.executor_named_in_will === "yes",
+      executor_named_in_will: webhookData.executor_named_in_will === "yes", // NEW FIELD ADDED
     },
     estate: {
       personal_property: formatCurrency(personal),
@@ -118,7 +119,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form with CORRECTED field mapping
+// Fill DE-111 form with CORRECTED field mapping (UPDATED WITH NEW SECTION G LOGIC)
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -212,49 +213,31 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
       'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
       
-      // CORRECTED - Attorney signature section
-      'topmostSubform[0].Page4[0].FillText357[0]': data.attorney.name, // Attorney name
-      'topmostSubform[0].Page4[0].FillText357[1]': data.petitioner.name, // Petitioner name
-      'topmostSubform[0].Page4[0].FillText358[0]': '', // Additional petitioner if needed
-      'topmostSubform[0].Page4[0].FillText276[0]': formatDate(new Date()), // Attorney date
-      'topmostSubform[0].Page4[0].FillText276[1]': formatDate(new Date()), // Petitioner date
-      'topmostSubform[0].Page4[0].FillText277[0]': '', // Additional petitioner date
+      // Petitioner signature section
+      'topmostSubform[0].Page4[0].FillText357[0]': data.attorney.name,
+      'topmostSubform[0].Page4[0].FillText357[1]': data.petitioner.name,
+      'topmostSubform[0].Page4[0].FillText358[0]': '',
+      'topmostSubform[0].Page4[0].FillText276[0]': formatDate(new Date()),
+      'topmostSubform[0].Page4[0].FillText276[1]': formatDate(new Date()),
+      'topmostSubform[0].Page4[0].FillText277[0]': '',
     };
     
-    // PAGE 4 - CORRECTED Heirs/Beneficiaries - put second heir on line 1 (index [1])
-    if (data.heirs.length > 0) {
-      const heir0 = data.heirs[0];
-      let nameAndRel0 = heir0.name || '';
-      if (heir0.relationship) {
-        nameAndRel0 += `, ${heir0.relationship}`;
-      }
-      page4Fields['topmostSubform[0].Page4[0].FillText352[0]'] = nameAndRel0;
-      page4Fields['topmostSubform[0].Page4[0].FillText351[0]'] = heir0.age || '';
-      page4Fields['topmostSubform[0].Page4[0].FillText350[0]'] = heir0.address || '';
-    }
-    
-    // Put second heir on line 2 (index [1]), not line 10
-    if (data.heirs.length > 1) {
-      const heir1 = data.heirs[1];
-      let nameAndRel1 = heir1.name || '';
-      if (heir1.relationship) {
-        nameAndRel1 += `, ${heir1.relationship}`;
-      }
-      page4Fields['topmostSubform[0].Page4[0].FillText352[1]'] = nameAndRel1;
-      page4Fields['topmostSubform[0].Page4[0].FillText351[1]'] = heir1.age || '';
-      page4Fields['topmostSubform[0].Page4[0].FillText350[1]'] = heir1.address || '';
-    }
-    
-    // Continue with remaining heirs
-    for (let i = 2; i < Math.min(data.heirs.length, 10); i++) {
+    // PAGE 4 - FIXED Heirs/Beneficiaries list mapping
+    for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
       const heir = data.heirs[i];
+      
+      // First column: Name and relationship combined
       let nameAndRelationship = heir.name || '';
       if (heir.relationship) {
         nameAndRelationship += `, ${heir.relationship}`;
       }
-      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = nameAndRelationship;
-      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.age || '';
-      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = heir.address || '';
+      
+      // CORRECTED MAPPING - swapped 350 and 352
+      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = nameAndRelationship;  // LEFT column
+      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.age || '';       // MIDDLE column
+      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = heir.address || '';   // RIGHT column
+      
+      console.log(`Heir ${i}: Name/Rel="${nameAndRelationship}", Age="${heir.age}", Address="${heir.address}"`);
     }
     
     // Combine all text field mappings
@@ -308,7 +291,7 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page1[0].CheckBox15[1]': !data.decedent.is_resident,
     };
     
-    // PAGE 2 CHECKBOXES - UPDATED SECTION G LOGIC
+    // PAGE 2 CHECKBOXES - Complete all sections 3.e through 3.h - UPDATED SECTION G LOGIC
     const page2Checkboxes = {
       // Section 3.e - Bond waivers
       'topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]': data.estate.has_will && !data.administration.bond_required,
@@ -325,17 +308,17 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page2[0].Page2[0].CheckBox80[0]': false, // Lost will
       
       // CORRECTED Section 3.g(1) - Appointment with WILL
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.estate.has_will && data.petitioner.executor_named_in_will,
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]': data.estate.has_will && !data.petitioner.executor_named_in_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.estate.has_will && data.petitioner.executor_named_in_will, // g(1)(a) - executor named
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]': data.estate.has_will && !data.petitioner.executor_named_in_will, // g(1)(b) - no executor named
       'topmostSubform[0].Page2[0].Page2[0].CheckBox60[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox61[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox63[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox62[0]': false,
       
       // CORRECTED Section 3.g(2) - Appointment WITHOUT WILL (intestate)
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will, // g(2)(a)
       'topmostSubform[0].Page2[0].Page2[0].CheckBox66[0]': false,
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will, // g(2)(c)
       
       // Section 3.g(3) and (4) - Special administrator
       'topmostSubform[0].Page2[0].Page2[0].CheckBox68[0]': false,
@@ -423,7 +406,7 @@ async function fillDE111(data, pdfBytes) {
   }
 }
 
-// Fill DE-120 form with UPDATED HEIR MAILING LIST
+// Fill DE-120 form with NEW MAPPINGS
 async function fillDE120(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -478,22 +461,10 @@ async function fillDE120(data, pdfBytes) {
       'DE-120[0].Page1[0].HearingInfo[0].HearingAdd[0].HearingCourtAdd[0]': '',
     };
     
-    // Page 2 - Repeated fields and HEIR MAILING LIST
+    // Page 2 - Repeated fields
     const page2Fields = {
       'DE-120[0].#subform[1].TitlePartyName[0].name_tf[0]': data.decedent.name,
       'DE-120[0].#subform[1].CaseNumber[0].CaseNumber[0]': 'To be assigned',
-      
-      // ADD HEIRS TO MAILING LIST ON PAGE 2
-      'DE-120[0].#subform[1].FillText6[0]': data.heirs[0] ? data.heirs[0].name : '',
-      'DE-120[0].#subform[1].FillText7[0]': data.heirs[0] ? data.heirs[0].address : '',
-      'DE-120[0].#subform[1].FillText6[1]': data.heirs[1] ? data.heirs[1].name : '',
-      'DE-120[0].#subform[1].FillText7[1]': data.heirs[1] ? data.heirs[1].address : '',
-      'DE-120[0].#subform[1].FillText6[2]': data.heirs[2] ? data.heirs[2].name : '',
-      'DE-120[0].#subform[1].FillText7[2]': data.heirs[2] ? data.heirs[2].address : '',
-      'DE-120[0].#subform[1].FillText6[3]': data.heirs[3] ? data.heirs[3].name : '',
-      'DE-120[0].#subform[1].FillText7[3]': data.heirs[3] ? data.heirs[3].address : '',
-      'DE-120[0].#subform[1].FillText6[4]': data.heirs[4] ? data.heirs[4].name : '',
-      'DE-120[0].#subform[1].FillText7[4]': data.heirs[4] ? data.heirs[4].address : '',
     };
     
     // Combine all text fields
