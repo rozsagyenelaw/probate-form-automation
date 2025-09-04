@@ -1,4 +1,3 @@
-
 const { PDFDocument } = require('pdf-lib');
 
 // Helper functions
@@ -66,7 +65,7 @@ function transformQuestionnaireData(webhookData) {
       address: webhookData.petitioner_address,
       phone: webhookData.petitioner_phone,
       is_executor: webhookData.petitioner_is_executor === "yes",
-      executor_named_in_will: webhookData.executor_named_in_will === "yes", // NEW FIELD ADDED
+      executor_named_in_will: webhookData.executor_named_in_will === "yes",
     },
     estate: {
       personal_property: formatCurrency(personal),
@@ -119,7 +118,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form with CORRECTED field mapping (UPDATED WITH NEW SECTION G LOGIC)
+// Fill DE-111 form
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -223,9 +222,8 @@ async function fillDE111(data, pdfBytes) {
     };
     
     // PAGE 4 - FIXED Heirs/Beneficiaries list mapping with corrected visual order
-    // The PDF form has field index [1] positioned as the 10th row visually
-    // This mapping ensures heirs appear in consecutive rows from top to bottom
-    const heirFieldMapping = [0, 2, 3, 4, 5, 6, 7, 8, 9, 1]; // Maps visual row position to field index
+    // Field [9] appears to be in visual row 2 based on testing
+    const heirFieldMapping = [0, 9, 2, 3, 4, 5, 6, 7, 8, 1]; // Maps visual row position to field index
     
     // Fill heirs in visual order (will fill rows 1,2,3... consecutively)
     for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
@@ -302,7 +300,7 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page1[0].CheckBox15[1]': !data.decedent.is_resident,
     };
     
-    // PAGE 2 CHECKBOXES - Complete all sections 3.e through 3.h - UPDATED SECTION G LOGIC
+    // PAGE 2 CHECKBOXES - Complete all sections 3.e through 3.h
     const page2Checkboxes = {
       // Section 3.e - Bond waivers
       'topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]': data.estate.has_will && !data.administration.bond_required,
@@ -318,18 +316,18 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]': data.estate.will_self_proving,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox80[0]': false, // Lost will
       
-      // CORRECTED Section 3.g(1) - Appointment with WILL
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.estate.has_will && data.petitioner.executor_named_in_will, // g(1)(a) - executor named
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]': data.estate.has_will && !data.petitioner.executor_named_in_will, // g(1)(b) - no executor named
+      // Section 3.g(1) - Appointment with WILL
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.estate.has_will && data.petitioner.executor_named_in_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]': data.estate.has_will && !data.petitioner.executor_named_in_will,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox60[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox61[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox63[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox62[0]': false,
       
-      // CORRECTED Section 3.g(2) - Appointment WITHOUT WILL (intestate)
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will, // g(2)(a)
+      // Section 3.g(2) - Appointment WITHOUT WILL (intestate)
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox66[0]': false,
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will, // g(2)(c)
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will,
       
       // Section 3.g(3) and (4) - Special administrator
       'topmostSubform[0].Page2[0].Page2[0].CheckBox68[0]': false,
@@ -417,7 +415,7 @@ async function fillDE111(data, pdfBytes) {
   }
 }
 
-// Fill DE-120 form with NEW MAPPINGS and HEIR LIST
+// Fill DE-120 form with HEIR LIST
 async function fillDE120(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -478,7 +476,7 @@ async function fillDE120(data, pdfBytes) {
       'DE-120[0].#subform[1].CaseNumber[0].CaseNumber[0]': 'To be assigned',
     };
     
-    // ADDED: Page 2 - Service List (Heirs)
+    // Page 2 - Service List (Heirs)
     const serviceFields = {};
     for (let i = 0; i < Math.min(data.heirs.length, 5); i++) {
       const heir = data.heirs[i];
@@ -495,7 +493,7 @@ async function fillDE120(data, pdfBytes) {
       ...noticeFields,
       ...hearingFields,
       ...page2Fields,
-      ...serviceFields  // ADDED heir service fields
+      ...serviceFields
     };
     
     // Fill all text fields
@@ -538,7 +536,7 @@ async function fillDE120(data, pdfBytes) {
   }
 }
 
-// Fill DE-140 form with NEW MAPPINGS
+// Fill DE-140 form
 async function fillDE140(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -547,7 +545,7 @@ async function fillDE140(data, pdfBytes) {
     
     console.log(`DE-140 has ${fields.length} fields available`);
     
-    // Attorney Information - note: TextField1[0] contains full attorney info
+    // Attorney Information
     const attorneyFields = {
       'DE-140[0].Page1[0].P1Caption[0].AttyPartyInfo[0].TextField1[0]': `${data.attorney.name}\n${data.attorney.bar_number}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}`,
       'DE-140[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]': data.attorney.phone,
@@ -572,15 +570,15 @@ async function fillDE140(data, pdfBytes) {
     // Death Information
     const deathFields = {
       'DE-140[0].Page1[0].FillText143[0]': data.decedent.death_date,
-      'DE-140[0].Page1[0].FillText1[0]': data.estate.will_date, // will dated
-      'DE-140[0].Page1[0].FillText1[1]': '', // codicil dated
-      'DE-140[0].Page1[0].FillText1[2]': '', // admitted to probate date
+      'DE-140[0].Page1[0].FillText1[0]': data.estate.will_date,
+      'DE-140[0].Page1[0].FillText1[1]': '',
+      'DE-140[0].Page1[0].FillText1[2]': '',
     };
     
     // Appointment Information
     const appointmentFields = {
-      'DE-140[0].Page1[0].FillText1[3]': data.petitioner.name, // appointee name
-      'DE-140[0].Page1[0].FillText1[5]': data.petitioner.name, // duty name
+      'DE-140[0].Page1[0].FillText1[3]': data.petitioner.name,
+      'DE-140[0].Page1[0].FillText1[5]': data.petitioner.name,
     };
     
     // Hearing Information
@@ -588,21 +586,21 @@ async function fillDE140(data, pdfBytes) {
       'DE-140[0].Page1[0].HearingDate[0]': data.hearing.date,
       'DE-140[0].Page1[0].HearingTime[0]': data.hearing.time,
       'DE-140[0].Page1[0].HearingDept[0]': data.hearing.dept,
-      'DE-140[0].Page1[0].HearingRm[0]': '', // Judge name
+      'DE-140[0].Page1[0].HearingRm[0]': '',
     };
     
     // Bond Information
     const bondFields = {
-      'DE-140[0].Page1[0].HearingTime[1]': data.administration.bond_amount, // bond amount
-      'DE-140[0].Page1[0].HearingTime[2]': '0', // deposits amount
-      'DE-140[0].Page1[0].FillText1[4]': '', // institution location
+      'DE-140[0].Page1[0].HearingTime[1]': data.administration.bond_amount,
+      'DE-140[0].Page1[0].HearingTime[2]': '0',
+      'DE-140[0].Page1[0].FillText1[4]': '',
     };
     
     // Judge Signature
     const signatureFields = {
-      'DE-140[0].Page1[0].SigDate[0]': formatDate(new Date()), // judge signature date
-      'DE-140[0].Page1[0].SigDate[1]': '', // expire date for special admin
-      'DE-140[0].Page1[0].NumericField1[0]': '0', // pages attached
+      'DE-140[0].Page1[0].SigDate[0]': formatDate(new Date()),
+      'DE-140[0].Page1[0].SigDate[1]': '',
+      'DE-140[0].Page1[0].NumericField1[0]': '0',
     };
     
     // Combine all text fields
@@ -630,49 +628,34 @@ async function fillDE140(data, pdfBytes) {
     
     // Set checkboxes
     const checkboxes = {
-      // Order type at top
-      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox23[0]': data.petitioner.is_executor && data.estate.has_will, // Executor
-      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox22[0]': !data.petitioner.is_executor && data.estate.has_will, // Admin with will
-      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will, // Administrator
-      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox20[0]': false, // Special administrator
-      
-      // Independent Administration
-      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox17[0]': true, // Order authorizing
-      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox18[0]': false, // limited authority
-      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox18[1]': true, // full authority
-      
-      // Death location
-      'DE-140[0].Page1[0].CheckBox45[0]': data.decedent.is_resident, // resident
-      'DE-140[0].Page1[0].CheckBox45[1]': !data.decedent.is_resident, // nonresident
-      
-      // Intestate/testate
-      'DE-140[0].Page1[0].CheckBox89[0]': !data.estate.has_will, // intestate
-      'DE-140[0].Page1[0].CheckBox89[1]': data.estate.has_will, // testate
-      
-      // Appointment type
-      'DE-140[0].Page1[0].Choice1[0]': data.petitioner.is_executor && data.estate.has_will, // executor
-      'DE-140[0].Page1[0].Choice1[1]': !data.petitioner.is_executor && data.estate.has_will, // admin with will
-      'DE-140[0].Page1[0].Choice1[2]': !data.estate.has_will, // administrator
-      'DE-140[0].Page1[0].Choice2[0]': false, // special administrator
-      
-      // Authority granted
-      'DE-140[0].Page1[0].CheckBox41[0]': true, // full authority
-      'DE-140[0].Page1[0].CheckBox41[1]': false, // limited authority
-      
-      // Bond
-      'DE-140[0].Page1[0].Choice1[3]': !data.administration.bond_required, // bond not required
-      'DE-140[0].Page1[0].Choice1[4]': data.administration.bond_required, // bond required
-      'DE-140[0].Page1[0].Choice1[5]': false, // deposits
-      
-      // Other checkboxes
-      'DE-140[0].Page1[0].CheckBox5[0]': false, // general powers
-      'DE-140[0].Page1[0].CheckBox6[0]': false, // special powers
-      'DE-140[0].Page1[0].CheckBox7[0]': false, // without notice
-      'DE-140[0].Page1[0].CheckBox8[0]': false, // letters expire
-      'DE-140[0].Page1[0].CheckBox5[1]': false, // duty checkbox
-      'DE-140[0].Page1[0].Choice1[6]': false, // not authorized possession
-      'DE-140[0].Page1[0].limited[0]': false, // additional orders
-      'DE-140[0].Page1[0].limited[1]': false, // signature follows attachment
+      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox23[0]': data.petitioner.is_executor && data.estate.has_will,
+      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox22[0]': !data.petitioner.is_executor && data.estate.has_will,
+      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will,
+      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox20[0]': false,
+      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox17[0]': true,
+      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox18[0]': false,
+      'DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox18[1]': true,
+      'DE-140[0].Page1[0].CheckBox45[0]': data.decedent.is_resident,
+      'DE-140[0].Page1[0].CheckBox45[1]': !data.decedent.is_resident,
+      'DE-140[0].Page1[0].CheckBox89[0]': !data.estate.has_will,
+      'DE-140[0].Page1[0].CheckBox89[1]': data.estate.has_will,
+      'DE-140[0].Page1[0].Choice1[0]': data.petitioner.is_executor && data.estate.has_will,
+      'DE-140[0].Page1[0].Choice1[1]': !data.petitioner.is_executor && data.estate.has_will,
+      'DE-140[0].Page1[0].Choice1[2]': !data.estate.has_will,
+      'DE-140[0].Page1[0].Choice2[0]': false,
+      'DE-140[0].Page1[0].CheckBox41[0]': true,
+      'DE-140[0].Page1[0].CheckBox41[1]': false,
+      'DE-140[0].Page1[0].Choice1[3]': !data.administration.bond_required,
+      'DE-140[0].Page1[0].Choice1[4]': data.administration.bond_required,
+      'DE-140[0].Page1[0].Choice1[5]': false,
+      'DE-140[0].Page1[0].CheckBox5[0]': false,
+      'DE-140[0].Page1[0].CheckBox6[0]': false,
+      'DE-140[0].Page1[0].CheckBox7[0]': false,
+      'DE-140[0].Page1[0].CheckBox8[0]': false,
+      'DE-140[0].Page1[0].CheckBox5[1]': false,
+      'DE-140[0].Page1[0].Choice1[6]': false,
+      'DE-140[0].Page1[0].limited[0]': false,
+      'DE-140[0].Page1[0].limited[1]': false,
     };
     
     for (const [fieldName, shouldCheck] of Object.entries(checkboxes)) {
@@ -696,7 +679,7 @@ async function fillDE140(data, pdfBytes) {
   }
 }
 
-// Fill DE-147 form with NEW MAPPINGS
+// Fill DE-147 form
 async function fillDE147(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -720,7 +703,7 @@ async function fillDE147(data, pdfBytes) {
       'DE-147[0].Page1[0].CaseNumber[0].CaseNumber_ft[0]': 'To be assigned',
     };
     
-    // Attorney Information - TextField1[0] contains full attorney info
+    // Attorney Information
     const attorneyFields = {
       'DE-147[0].Page1[0].AttyPartyInfo[0].TextField1[0]': `${data.attorney.name}\n${data.attorney.bar_number}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}`,
       'DE-147[0].Page1[0].AttyPartyInfo[0].Phone[0]': data.attorney.phone,
@@ -740,8 +723,8 @@ async function fillDE147(data, pdfBytes) {
     const signatureFields = {
       'DE-147[0].Page2[0].SigDate[0]': formatDate(new Date()),
       'DE-147[0].Page2[0].SigName[0]': data.petitioner.name,
-      'DE-147[0].Page2[0].SigDate[1]': '', // second signature if needed
-      'DE-147[0].Page2[0].SigName[1]': '', // second signer if needed
+      'DE-147[0].Page2[0].SigDate[1]': '',
+      'DE-147[0].Page2[0].SigName[1]': '',
     };
     
     // Combine all text fields
@@ -771,7 +754,7 @@ async function fillDE147(data, pdfBytes) {
   }
 }
 
-// NEW FUNCTION - Fill DE-150 form
+// Fill DE-150 form
 async function fillDE150(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -781,28 +764,19 @@ async function fillDE150(data, pdfBytes) {
     
     // Text fields
     const textFields = {
-      // Court info
       'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCounty[0]': data.court.county,
       'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtStreet[0]': data.court.street,
       'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtMailingAdd[0]': data.court.street,
       'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtBranch[0]': data.court.branch,
       'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCityZip[0]': `${data.court.city}, CA ${data.court.zip}`,
-      
-      // Case info
       'DE-150[0].Page1[0].P1Caption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
       'DE-150[0].Page1[0].P1Caption[0].TitlePartyName[0].Party1_ft[0]': data.decedent.name,
-      
-      // Attorney info
       'DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].TextField1[0]': 
         `${data.attorney.name}\n${data.attorney.bar_number}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}`,
       'DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]': data.attorney.phone,
       'DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[0]': `Petitioner ${data.petitioner.name}`,
-      
-      // Names
       'DE-150[0].Page1[0].FillText1[0]': data.petitioner.name,
       'DE-150[0].Page1[0].FillText1[2]': data.petitioner.name,
-      
-      // Execution
       'DE-150[0].Page1[0].HearingTime[0]': formatDate(new Date()),
       'DE-150[0].Page1[0].FillText1[1]': 'Clerk of the Superior Court',
     };
@@ -818,31 +792,20 @@ async function fillDE150(data, pdfBytes) {
       }
     }
     
-    // Checkboxes based on will/intestate
+    // Checkboxes
     const checkboxes = {
-      // Letters type (top of form)
-      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox23[0]': data.estate.has_will && data.petitioner.is_executor, // Testamentary
-      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox22[0]': data.estate.has_will && !data.petitioner.is_executor, // Admin with will
-      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will, // Administration
-      
-      // Section 1 - Will proved (checkbox for will)
-      'DE-150[0].Page1[0].Choice1[4]': data.estate.has_will, // Will proved checkbox
-      
-      // Appointment type for will
-      'DE-150[0].Page1[0].Choice1[0]': data.estate.has_will && data.petitioner.is_executor, // executor
-      'DE-150[0].Page1[0].Choice1[1]': data.estate.has_will && !data.petitioner.is_executor, // admin with will
-      
-      // Section 2 - Court appoints (checkbox for intestate)
-      'DE-150[0].Page1[0].Choice1[5]': !data.estate.has_will, // Court appoints checkbox
-      'DE-150[0].Page1[0].Choice1[6]': !data.estate.has_will, // administrator
-      
-      // Authority
-      'DE-150[0].Page1[0].Choice1[2]': true, // Independent admin
-      'DE-150[0].Page1[0].Choice2[0]': data.administration.type === 'full', // full authority
-      'DE-150[0].Page1[0].Choice2[1]': data.administration.type === 'limited', // limited authority
-      
-      // Affirmation
-      'DE-150[0].Page1[0].Choice1[9]': true, // Individual affirm
+      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox23[0]': data.estate.has_will && data.petitioner.is_executor,
+      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox22[0]': data.estate.has_will && !data.petitioner.is_executor,
+      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will,
+      'DE-150[0].Page1[0].Choice1[4]': data.estate.has_will,
+      'DE-150[0].Page1[0].Choice1[0]': data.estate.has_will && data.petitioner.is_executor,
+      'DE-150[0].Page1[0].Choice1[1]': data.estate.has_will && !data.petitioner.is_executor,
+      'DE-150[0].Page1[0].Choice1[5]': !data.estate.has_will,
+      'DE-150[0].Page1[0].Choice1[6]': !data.estate.has_will,
+      'DE-150[0].Page1[0].Choice1[2]': true,
+      'DE-150[0].Page1[0].Choice2[0]': data.administration.type === 'full',
+      'DE-150[0].Page1[0].Choice2[1]': data.administration.type === 'limited',
+      'DE-150[0].Page1[0].Choice1[9]': true,
     };
     
     for (const [fieldName, shouldCheck] of Object.entries(checkboxes)) {
@@ -866,7 +829,7 @@ async function fillDE150(data, pdfBytes) {
   }
 }
 
-// Main function - UPDATED TO INCLUDE DE-150
+// Main function
 async function fillProbateForms(data) {
   const results = {};
   
@@ -875,7 +838,7 @@ async function fillProbateForms(data) {
     { name: 'DE-120', filler: fillDE120 },
     { name: 'DE-140', filler: fillDE140 },
     { name: 'DE-147', filler: fillDE147 },
-    { name: 'DE-150', filler: fillDE150 }, // NEW FORM ADDED
+    { name: 'DE-150', filler: fillDE150 },
   ];
   
   for (const { name, filler } of forms) {
@@ -893,7 +856,7 @@ async function fillProbateForms(data) {
   return results;
 }
 
-// Netlify Function Handler - UPDATED TO INCLUDE DE-150
+// Netlify Function Handler
 exports.handler = async (event, context) => {
   if (event.httpMethod === 'OPTIONS') {
     return {
@@ -944,7 +907,7 @@ exports.handler = async (event, context) => {
         'DE-120': Buffer.from(pdfs['DE-120']).toString('base64'),
         'DE-140': Buffer.from(pdfs['DE-140']).toString('base64'),
         'DE-147': Buffer.from(pdfs['DE-147']).toString('base64'),
-        'DE-150': Buffer.from(pdfs['DE-150']).toString('base64'), // NEW FORM ADDED
+        'DE-150': Buffer.from(pdfs['DE-150']).toString('base64'),
       }
     };
     
