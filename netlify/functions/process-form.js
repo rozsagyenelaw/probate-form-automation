@@ -1,4 +1,3 @@
-
 const { PDFDocument } = require('pdf-lib');
 
 // Helper functions
@@ -213,10 +212,10 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
       'topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]': data.decedent.name,
       
-      // Petitioner signature section
-      'topmostSubform[0].Page4[0].FillText357[0]': data.attorney.name,
-      'topmostSubform[0].Page4[0].FillText357[1]': data.petitioner.name,
-      'topmostSubform[0].Page4[0].FillText358[0]': '',
+      // FIXED: Attorney name goes in FillText358[0], not under petitioner
+      'topmostSubform[0].Page4[0].FillText358[0]': data.attorney.name,
+      'topmostSubform[0].Page4[0].FillText357[0]': data.petitioner.name,
+      'topmostSubform[0].Page4[0].FillText357[1]': '', // Second petitioner if any
       'topmostSubform[0].Page4[0].FillText276[0]': formatDate(new Date()),
       'topmostSubform[0].Page4[0].FillText276[1]': formatDate(new Date()),
       'topmostSubform[0].Page4[0].FillText277[0]': '',
@@ -406,7 +405,7 @@ async function fillDE111(data, pdfBytes) {
   }
 }
 
-// Fill DE-120 form with NEW MAPPINGS
+// Fill DE-120 form with NEW MAPPINGS and HEIR LIST
 async function fillDE120(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -467,6 +466,15 @@ async function fillDE120(data, pdfBytes) {
       'DE-120[0].#subform[1].CaseNumber[0].CaseNumber[0]': 'To be assigned',
     };
     
+    // ADDED: Page 2 - Service List (Heirs)
+    const serviceFields = {};
+    for (let i = 0; i < Math.min(data.heirs.length, 5); i++) {
+      const heir = data.heirs[i];
+      serviceFields[`DE-120[0].#subform[1].servname${i + 1}[0]`] = heir.name || '';
+      serviceFields[`DE-120[0].#subform[1].servaddy${i + 1}[0]`] = heir.address || '';
+      console.log(`DE-120 Service ${i + 1}: Name="${heir.name}", Address="${heir.address}"`);
+    }
+    
     // Combine all text fields
     const allTextFields = {
       ...attorneyFields,
@@ -474,7 +482,8 @@ async function fillDE120(data, pdfBytes) {
       ...caseFields,
       ...noticeFields,
       ...hearingFields,
-      ...page2Fields
+      ...page2Fields,
+      ...serviceFields  // ADDED heir service fields
     };
     
     // Fill all text fields
