@@ -517,6 +517,23 @@
                             <span class="help-text">A self-proving will includes notarized witness affidavits</span>
                         </div>
                     </div>
+                    <!-- NEW FIELD ADDED HERE -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Is there an executor named in the will? <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" name="executor_named_in_will" value="yes" id="executor_named_yes">
+                                    <label for="executor_named_yes">Yes</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" name="executor_named_in_will" value="no" id="executor_named_no">
+                                    <label for="executor_named_no">No</label>
+                                </div>
+                            </div>
+                            <span class="help-text">Check the will to see if it names someone as executor</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -681,6 +698,10 @@
                 if (!document.querySelector('input[name="will_self_proving"]:checked')) {
                     document.querySelector('#self_proving_no').checked = true;
                 }
+                // Also set default for executor named in will if not already set
+                if (!document.querySelector('input[name="executor_named_in_will"]:checked')) {
+                    document.querySelector('#executor_named_no').checked = true;
+                }
             }
         }
         
@@ -719,6 +740,9 @@
             toggleWillFields();
             document.querySelector('input[name="will_date"]').value = "2020-01-01";
             document.querySelector('#self_proving_yes').checked = true;
+            
+            // Add executor named in will test data
+            document.querySelector('#executor_named_yes').checked = true;
             
             // Add test heirs
             addHeir("Jane Smith", "Spouse", "55", "123 Main St Los Angeles CA 90001");
@@ -823,7 +847,8 @@
                 'DE-111': 'Petition for Probate',
                 'DE-120': 'Notice of Hearing',
                 'DE-140': 'Order for Probate',
-                'DE-147': 'Duties and Liabilities'
+                'DE-147': 'Duties and Liabilities',
+                'DE-150': 'Letters'  // ADDED DE-150
             };
             
             for (const [formId, formName] of Object.entries(forms)) {
