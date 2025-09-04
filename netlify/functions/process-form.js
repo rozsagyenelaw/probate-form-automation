@@ -221,9 +221,15 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page4[0].FillText277[0]': '',
     };
     
-    // PAGE 4 - FIXED Heirs/Beneficiaries list mapping
+    // PAGE 4 - FIXED Heirs/Beneficiaries list mapping with corrected visual order
+    // The PDF form has field index [1] positioned as the 10th row visually
+    // This mapping ensures heirs appear in consecutive rows from top to bottom
+    const heirFieldMapping = [0, 2, 3, 4, 5, 6, 7, 8, 9, 1]; // Maps visual row position to field index
+    
+    // Fill heirs in visual order (will fill rows 1,2,3... consecutively)
     for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
       const heir = data.heirs[i];
+      const fieldIndex = heirFieldMapping[i]; // Get the correct field index for this visual row
       
       // First column: Name and relationship combined
       let nameAndRelationship = heir.name || '';
@@ -231,12 +237,17 @@ async function fillDE111(data, pdfBytes) {
         nameAndRelationship += `, ${heir.relationship}`;
       }
       
-      // CORRECTED MAPPING - swapped 350 and 352
-      page4Fields[`topmostSubform[0].Page4[0].FillText352[${i}]`] = nameAndRelationship;  // LEFT column
-      page4Fields[`topmostSubform[0].Page4[0].FillText351[${i}]`] = heir.age || '';       // MIDDLE column
-      page4Fields[`topmostSubform[0].Page4[0].FillText350[${i}]`] = heir.address || '';   // RIGHT column
+      // Use the mapped field index
+      page4Fields[`topmostSubform[0].Page4[0].FillText352[${fieldIndex}]`] = nameAndRelationship;  // LEFT column
+      page4Fields[`topmostSubform[0].Page4[0].FillText351[${fieldIndex}]`] = heir.age || '';       // MIDDLE column
+      page4Fields[`topmostSubform[0].Page4[0].FillText350[${fieldIndex}]`] = heir.address || '';   // RIGHT column
       
-      console.log(`Heir ${i}: Name/Rel="${nameAndRelationship}", Age="${heir.age}", Address="${heir.address}"`);
+      console.log(`Heir ${i+1} -> Field ${fieldIndex}: Name/Rel="${nameAndRelationship}", Age="${heir.age}", Address="${heir.address}"`);
+    }
+    
+    // If more than 10 heirs, check the continuation box and set pages attached
+    if (data.heirs.length > 10) {
+      page4Fields['topmostSubform[0].Page4[0].FillText277[0]'] = '1'; // Number of pages attached
     }
     
     // Combine all text field mappings
@@ -378,8 +389,8 @@ async function fillDE111(data, pdfBytes) {
     
     // PAGE 4 CHECKBOXES
     const page4Checkboxes = {
-      'topmostSubform[0].Page4[0].CheckBox82[0]': false, // Continued on Attachment 8
-      'topmostSubform[0].Page4[0].CheckBox83[0]': false, // Additional petitioners
+      'topmostSubform[0].Page4[0].CheckBox83[0]': data.heirs.length > 10, // Continued on Attachment 8
+      'topmostSubform[0].Page4[0].CheckBox82[0]': false, // Additional petitioners
     };
     
     // Set all checkboxes
