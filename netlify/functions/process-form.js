@@ -1,3 +1,4 @@
+
 const { PDFDocument } = require('pdf-lib');
 
 // Helper functions
@@ -229,7 +230,7 @@ async function fillDE111(data, pdfBytes) {
     // Fill heirs in visual order (will fill rows 1,2,3... consecutively)
     for (let i = 0; i < Math.min(data.heirs.length, 10); i++) {
       const heir = data.heirs[i];
-      const heirFieldMapping = [0, 2, 3, 4, 5, 6, 7, 8, 9, 1]; // Maps visual row position to field index
+      const fieldIndex = heirFieldMapping[i]; // Get the correct field index for this visual row
       
       // First column: Name and relationship combined
       let nameAndRelationship = heir.name || '';
