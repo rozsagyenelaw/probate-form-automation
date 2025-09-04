@@ -65,6 +65,7 @@ function transformQuestionnaireData(webhookData) {
       address: webhookData.petitioner_address,
       phone: webhookData.petitioner_phone,
       is_executor: webhookData.petitioner_is_executor === "yes",
+      executor_named_in_will: webhookData.executor_named_in_will === "yes", // NEW FIELD ADDED
     },
     estate: {
       personal_property: formatCurrency(personal),
@@ -117,7 +118,7 @@ async function loadPDFFromRepo(filename) {
   }
 }
 
-// Fill DE-111 form with CORRECTED field mapping (UNCHANGED - WORKING PERFECTLY)
+// Fill DE-111 form with CORRECTED field mapping (UPDATED WITH NEW SECTION G LOGIC)
 async function fillDE111(data, pdfBytes) {
   try {
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -289,7 +290,7 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page1[0].CheckBox15[1]': !data.decedent.is_resident,
     };
     
-    // PAGE 2 CHECKBOXES - Complete all sections 3.e through 3.h
+    // PAGE 2 CHECKBOXES - Complete all sections 3.e through 3.h - UPDATED SECTION G LOGIC
     const page2Checkboxes = {
       // Section 3.e - Bond waivers
       'topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]': data.estate.has_will && !data.administration.bond_required,
@@ -305,18 +306,18 @@ async function fillDE111(data, pdfBytes) {
       'topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]': data.estate.will_self_proving,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox80[0]': false, // Lost will
       
-      // Section 3.g(1) - Appointment of executor/administrator with will
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.petitioner.is_executor && data.estate.has_will,
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]': false,
+      // CORRECTED Section 3.g(1) - Appointment with WILL
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]': data.estate.has_will && data.petitioner.executor_named_in_will, // g(1)(a) - executor named
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]': data.estate.has_will && !data.petitioner.executor_named_in_will, // g(1)(b) - no executor named
       'topmostSubform[0].Page2[0].Page2[0].CheckBox60[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox61[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox63[0]': false,
       'topmostSubform[0].Page2[0].Page2[0].CheckBox62[0]': false,
       
-      // Section 3.g(2) - Appointment of administrator (intestate)
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will,
+      // CORRECTED Section 3.g(2) - Appointment WITHOUT WILL (intestate)
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]': !data.estate.has_will, // g(2)(a)
       'topmostSubform[0].Page2[0].Page2[0].CheckBox66[0]': false,
-      'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will,
+      'topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]': !data.estate.has_will, // g(2)(c)
       
       // Section 3.g(3) and (4) - Special administrator
       'topmostSubform[0].Page2[0].Page2[0].CheckBox68[0]': false,
@@ -748,7 +749,102 @@ async function fillDE147(data, pdfBytes) {
   }
 }
 
-// Main function
+// NEW FUNCTION - Fill DE-150 form
+async function fillDE150(data, pdfBytes) {
+  try {
+    const pdfDoc = await PDFDocument.load(pdfBytes);
+    const form = pdfDoc.getForm();
+    
+    console.log(`DE-150 has ${form.getFields().length} fields available`);
+    
+    // Text fields
+    const textFields = {
+      // Court info
+      'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCounty[0]': data.court.county,
+      'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtStreet[0]': data.court.street,
+      'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtMailingAdd[0]': data.court.street,
+      'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtBranch[0]': data.court.branch,
+      'DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCityZip[0]': `${data.court.city}, CA ${data.court.zip}`,
+      
+      // Case info
+      'DE-150[0].Page1[0].P1Caption[0].CaseNumber[0].CaseNumber[0]': 'To be assigned',
+      'DE-150[0].Page1[0].P1Caption[0].TitlePartyName[0].Party1_ft[0]': data.decedent.name,
+      
+      // Attorney info
+      'DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].TextField1[0]': 
+        `${data.attorney.name}\n${data.attorney.bar_number}\n${data.attorney.firm_name}\n${data.attorney.street}\n${data.attorney.city}, ${data.attorney.state} ${data.attorney.zip}`,
+      'DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]': data.attorney.phone,
+      'DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[0]': `Petitioner ${data.petitioner.name}`,
+      
+      // Names
+      'DE-150[0].Page1[0].FillText1[0]': data.petitioner.name,
+      'DE-150[0].Page1[0].FillText1[2]': data.petitioner.name,
+      
+      // Execution
+      'DE-150[0].Page1[0].HearingTime[0]': formatDate(new Date()),
+      'DE-150[0].Page1[0].FillText1[1]': 'Clerk of the Superior Court',
+    };
+    
+    // Fill text fields
+    for (const [fieldName, value] of Object.entries(textFields)) {
+      try {
+        const field = form.getTextField(fieldName);
+        field.setText(value || '');
+        console.log(`DE-150: Set ${fieldName} to "${value}"`);
+      } catch (e) {
+        console.log(`DE-150: Could not set field ${fieldName}: ${e.message}`);
+      }
+    }
+    
+    // Checkboxes based on will/intestate
+    const checkboxes = {
+      // Letters type (top of form)
+      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox23[0]': data.estate.has_will && data.petitioner.is_executor, // Testamentary
+      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox22[0]': data.estate.has_will && !data.petitioner.is_executor, // Admin with will
+      'DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox21[0]': !data.estate.has_will, // Administration
+      
+      // Section 1 - Will proved (checkbox for will)
+      'DE-150[0].Page1[0].Choice1[4]': data.estate.has_will, // Will proved checkbox
+      
+      // Appointment type for will
+      'DE-150[0].Page1[0].Choice1[0]': data.estate.has_will && data.petitioner.is_executor, // executor
+      'DE-150[0].Page1[0].Choice1[1]': data.estate.has_will && !data.petitioner.is_executor, // admin with will
+      
+      // Section 2 - Court appoints (checkbox for intestate)
+      'DE-150[0].Page1[0].Choice1[5]': !data.estate.has_will, // Court appoints checkbox
+      'DE-150[0].Page1[0].Choice1[6]': !data.estate.has_will, // administrator
+      
+      // Authority
+      'DE-150[0].Page1[0].Choice1[2]': true, // Independent admin
+      'DE-150[0].Page1[0].Choice2[0]': data.administration.type === 'full', // full authority
+      'DE-150[0].Page1[0].Choice2[1]': data.administration.type === 'limited', // limited authority
+      
+      // Affirmation
+      'DE-150[0].Page1[0].Choice1[9]': true, // Individual affirm
+    };
+    
+    for (const [fieldName, shouldCheck] of Object.entries(checkboxes)) {
+      try {
+        const checkbox = form.getCheckBox(fieldName);
+        if (shouldCheck) {
+          checkbox.check();
+        } else {
+          checkbox.uncheck();
+        }
+        console.log(`DE-150: ${shouldCheck ? 'Checked' : 'Unchecked'} ${fieldName}`);
+      } catch (e) {
+        console.log(`DE-150: Could not set checkbox ${fieldName}: ${e.message}`);
+      }
+    }
+    
+    return await pdfDoc.save();
+  } catch (error) {
+    console.error('Error filling DE-150:', error);
+    throw error;
+  }
+}
+
+// Main function - UPDATED TO INCLUDE DE-150
 async function fillProbateForms(data) {
   const results = {};
   
@@ -756,7 +852,8 @@ async function fillProbateForms(data) {
     { name: 'DE-111', filler: fillDE111 },
     { name: 'DE-120', filler: fillDE120 },
     { name: 'DE-140', filler: fillDE140 },
-    { name: 'DE-147', filler: fillDE147 }
+    { name: 'DE-147', filler: fillDE147 },
+    { name: 'DE-150', filler: fillDE150 }, // NEW FORM ADDED
   ];
   
   for (const { name, filler } of forms) {
@@ -774,7 +871,7 @@ async function fillProbateForms(data) {
   return results;
 }
 
-// Netlify Function Handler
+// Netlify Function Handler - UPDATED TO INCLUDE DE-150
 exports.handler = async (event, context) => {
   if (event.httpMethod === 'OPTIONS') {
     return {
@@ -825,6 +922,7 @@ exports.handler = async (event, context) => {
         'DE-120': Buffer.from(pdfs['DE-120']).toString('base64'),
         'DE-140': Buffer.from(pdfs['DE-140']).toString('base64'),
         'DE-147': Buffer.from(pdfs['DE-147']).toString('base64'),
+        'DE-150': Buffer.from(pdfs['DE-150']).toString('base64'), // NEW FORM ADDED
       }
     };
     
