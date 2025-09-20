@@ -30,10 +30,3 @@
   "author": "Rozsa Gyene Law",
   "license": "MIT"
 }
-{
-  "name": "probate-form-automation",
-  "version": "1.0.0",
-  "dependencies": {
-    "pdf-lib": "^1.17.1"
-  }
-}
