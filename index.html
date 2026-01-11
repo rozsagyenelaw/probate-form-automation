@@ -764,7 +764,9 @@
             if (!dataParam) return false;
 
             try {
-                const data = JSON.parse(atob(dataParam));
+                // Unicode-safe base64 decoding
+                const jsonString = decodeURIComponent(escape(atob(dataParam)));
+                const data = JSON.parse(jsonString);
                 console.log('Pre-filling form with data:', data);
 
                 // Fill text inputs and selects
