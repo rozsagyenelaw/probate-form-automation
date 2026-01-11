@@ -756,9 +756,85 @@
             alert('Form filled with test data. Click "Generate Probate Forms" to test!');
         }
         
+        // Pre-fill form from URL parameters (from probate-california app)
+        function prefillFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const dataParam = urlParams.get('data');
+
+            if (!dataParam) return false;
+
+            try {
+                const data = JSON.parse(atob(dataParam));
+                console.log('Pre-filling form with data:', data);
+
+                // Fill text inputs and selects
+                Object.keys(data).forEach(key => {
+                    const field = document.querySelector(`[name="${key}"]`);
+                    if (field) {
+                        if (field.type === 'radio') {
+                            // For radio buttons, find the one with matching value
+                            const radio = document.querySelector(`input[name="${key}"][value="${data[key]}"]`);
+                            if (radio) radio.checked = true;
+                        } else {
+                            field.value = data[key] || '';
+                        }
+                    }
+                });
+
+                // Handle radio buttons explicitly
+                if (data.death_resident) {
+                    document.getElementById(data.death_resident === 'yes' ? 'resident_yes' : 'resident_no').checked = true;
+                }
+                if (data.has_will) {
+                    document.getElementById(data.has_will === 'yes' ? 'will_yes' : 'will_no').checked = true;
+                    toggleWillFields();
+                }
+                if (data.bond_required) {
+                    document.getElementById(data.bond_required === 'yes' ? 'bond_yes' : 'bond_no').checked = true;
+                    toggleBondAmount();
+                }
+                if (data.petitioner_is_executor) {
+                    document.getElementById(data.petitioner_is_executor === 'yes' ? 'executor_yes' : 'executor_no').checked = true;
+                }
+
+                // Handle heirs_list - split by newline and add each heir
+                if (data.heirs_list) {
+                    document.getElementById('heirsContainer').innerHTML = '';
+                    heirCount = 0;
+                    const heirs = data.heirs_list.split('\n').filter(h => h.trim());
+                    heirs.forEach(heirLine => {
+                        const parts = heirLine.split(',').map(p => p.trim());
+                        const name = parts[0] || '';
+                        const relationship = parts[1] || '';
+                        const age = parts[2] || '';
+                        const address = parts.slice(3).join(', ') || '';
+                        addHeir(name, relationship, age, address);
+                    });
+                }
+
+                // Show success message
+                const msgDiv = document.createElement('div');
+                msgDiv.style.cssText = 'background: #d4edda; border: 1px solid #28a745; border-radius: 10px; padding: 15px; margin-bottom: 20px; color: #155724; text-align: center;';
+                msgDiv.innerHTML = '<strong>Form pre-filled with case data.</strong> Review the information and click "Generate Probate Forms" when ready.';
+                document.querySelector('.container').insertBefore(msgDiv, document.getElementById('probateForm'));
+
+                return true;
+            } catch (e) {
+                console.error('Error parsing URL data:', e);
+                return false;
+            }
+        }
+
         // Add at least one heir field by default
         window.onload = function() {
-            addHeir();
+            const prefilled = prefillFromURL();
+            // Only add default heir if not prefilled (prefillFromURL handles heirs)
+            if (!prefilled) {
+                addHeir();
+            } else if (heirCount === 0) {
+                // If prefilled but no heirs, add one empty entry
+                addHeir();
+            }
         };
         
         document.getElementById('probateForm').addEventListener('submit', async (e) => {
