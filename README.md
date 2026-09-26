@@ -104,7 +104,7 @@ probate-form-automation/
 Private - Law Offices of Rozsa Gyene
 
 ## Support
-For issues or questions, contact: rozsagyenelaw@yahoo.com
+For issues or questions, contact: rozsa@myprobateca.com
 # 
 California Probate Forms 
 Automation 
