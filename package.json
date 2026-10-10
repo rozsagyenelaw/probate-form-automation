@@ -11,9 +11,6 @@
     "pdf-lib": "^1.17.1",
     "node-fetch": "^2.6.7"
   },
-  "devDependencies": {
-    "netlify-cli": "^17.10.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rozsagyenelaw/probate-form-automation.git"
@@ -28,5 +25,8 @@
     "serverless"
   ],
   "author": "Rozsa Gyene Law",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  }
 }
