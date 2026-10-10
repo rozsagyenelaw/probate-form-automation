@@ -17,12 +17,12 @@ const TPL = path.join(__dirname, '../templates/official');
 const SRC = path.join(__dirname, '../templates/source');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(FX, f)));
 const opt = (f) => (fs.existsSync(path.join(FX, f)) ? read(f) : {});
-const answers = { ...read('answers-group-b.json'), ...read('answers-admin.json'), ...read('answers-full.json'), ...read('answers-sale.json'), ...opt('answers-mc950.json') };
+const answers = { ...read('answers-group-b.json'), ...read('answers-admin.json'), ...read('answers-full.json'), ...read('answers-sale.json'), ...opt('answers-civ150.json') };
 const adminRecords = read('admin-records.json');
 
 const RUNS = [
   { title: 'Full probate (Los Angeles, will, executor)', caseFile: 'test-case.json', extraCase: adminRecords,
-    forms: ['FILING-STEPS', 'WILL-LODGING', 'DE-111', 'DE-142', 'DE-121', 'DE-140', 'DE-147', 'DE-147S', 'DE-150', 'MC-950', 'DE-157', 'NOTICE-9202-DHCS', 'NOTICE-9202-FTB', 'NOTICE-9202-CALVCB', 'NOTICE-9202-DCSS', 'DE-160', 'DE-161', 'BOE-502-D', 'DE-165', 'NOTICE-OF-SALE', 'DE-260', 'DE-120-SALE', 'DE-265', 'DE-174', 'PETITION-FINAL-DISTRIBUTION', { id: 'DE-120', extra: { purpose: 'final' } }, 'ORDER-FINAL-DISTRIBUTION', 'DE-295'] },
+    forms: ['FILING-STEPS', 'WILL-LODGING', 'DE-111', 'DE-142', 'DE-121', 'DE-140', 'DE-147', 'DE-147S', 'DE-150', 'CIV-150', 'PRO-010', 'DE-157', 'NOTICE-9202-DHCS', 'NOTICE-9202-FTB', 'NOTICE-9202-CALVCB', 'NOTICE-9202-DCSS', 'DE-160', 'DE-161', 'BOE-502-D', 'DE-165', 'NOTICE-OF-SALE', 'DE-260', 'DE-120-SALE', 'DE-265', 'DE-174', 'PETITION-FINAL-DISTRIBUTION', { id: 'DE-120', extra: { purpose: 'final' } }, 'ORDER-FINAL-DISTRIBUTION', 'DE-295'] },
   { title: 'Primary residence petition (Prob. Code 13151)', caseFile: 'test-case-13151.json', forms: ['DE-310', { id: 'DE-120', extra: { purpose: '13151' } }, 'DE-315', 'DE-160', 'DE-161'] },
   { title: 'Spousal property petition (Prob. Code 13650)', caseFile: 'test-case-spousal.json', forms: ['DE-221', { id: 'DE-120', extra: { purpose: '13650' } }, 'DE-226'] },
   { title: 'Small estate affidavit (Prob. Code 13100)', caseFile: 'test-case-small.json', forms: ['SMALL-ESTATE-AFFIDAVIT'] },
@@ -114,7 +114,7 @@ async function sheet(doc, { heading, lines = [], table }) {
     heading: 'Court forms sample set for approval (HOLD FOR ME) - October 10, 2026',
     lines: [
       'Fictional test cases only (Test Decedent, Los Angeles County). Every page is marked DRAFT - NOT FOR FILING. Nothing has been sent to anyone.',
-      'Per your decision of October 10: the client is the petitioner and files as a self-represented party. No attorney name, State Bar number, firm name or firm email appears on any court form, pleading or letter. The only exception is MC-950, the notice of limited scope representation used when you appear at a hearing ($500 per hearing).',
+      'Per your decision of October 10: the client is the petitioner and files as a self-represented party. No attorney name, State Bar number, firm name or firm email appears on any court form, pleading or letter. The only exception is CIV-150, the notice of limited scope representation (MC-950 no longer exists; rule 3.36 names CIV-150) used when you appear at a hearing ($500 per hearing).',
       'For each document: the filled form, then the blank Judicial Council revision page by page, then a review sheet with every field, its value and its source, and the questions the generator asks when only the intake answers exist.',
       'The same documents are also saved one per file in this folder (NN-FORM.pdf).',
     ],

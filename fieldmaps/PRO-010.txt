@@ -1,0 +1,684 @@
+p1 y=  72.9 x=  76.9 w=317.6 h=89.6 Tx ML 01
+      T: TITLE OF CASE
+      L: 
+      A: 
+p1 y= 140.1 x= 394.9 w=201.9 h=22.3 Tx 02
+      T: CASE NUMBER
+      L: 
+      A: CASE NUMBER
+p1 y= 260.8 x= 563.6 w=  8.8 h=48.6 Tx 02A
+      T: list statute
+      L: ro desoporp renoititep tnedeced tnediser tsurt etaborP( ytirohtua
+      A: 
+p1 y= 374.7 x= 453.2 w= 26.5 h=13.2 Tx 04
+      T: Petition – Letters of Administration (Initial) [3069]: District where decedent resided
+      L: (Initial) [3069]
+      A: 
+p1 y= 374.7 x= 480.2 w= 35.1 h=13.3 Tx 05
+      T: Petition – Letters of Administration (Initial) [3069]: Decedent, conservatee or minor not CA resident but property is in
+      L: [3069]
+      A: 
+p1 y= 374.7 x= 551.2 w= 44.1 h=13.2 Tx 06
+      T: Petition – Letters of Administration (Initial) [3069]: Other statutory authority
+      L: 
+      A: 
+p1 y= 375.3 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Letters of Administration (Initial) [3069]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: Decedent’s
+p1 y= 388.4 x= 453.2 w= 26.5 h=13.2 Tx 07
+      T: Petition – Letters of Special Admin w/Gen Powers (Initial) [3070]: District where decedent resided
+      L: w/Gen Powers (Initial) [3070]
+      A: 
+p1 y= 388.4 x= 480.2 w= 35.1 h=13.2 Tx 08
+      T: Petition – Letters of Special Admin w/Gen Powers (Initial) [3070]: Decedent, conservatee or minor not CA resident but pr
+      L: Powers (Initial) [3070]
+      A: 
+p1 y= 388.4 x= 551.2 w= 44.1 h=13.2 Tx 09
+      T: Petition – Letters of Special Admin w/Gen Powers (Initial) [3070]: Other statutory authority
+      L: 
+      A: 
+p1 y= 389.2 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Letters of Special Admin w/Gen Powers (Initial) [3070]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p1 y= 402.0 x= 453.2 w= 26.6 h=13.3 Tx 10
+      T: Petition – Letters of Special Admin w/o Gen Powers (Initial) [3071]: District where decedent resided
+      L: Gen Powers (Initial) [3071]
+      A: 
+p1 y= 402.0 x= 480.2 w= 35.1 h=13.3 Tx 11
+      T: Petition – Letters of Special Admin w/o Gen Powers (Initial) [3071]: Decedent, conservatee or minor not CA resident but 
+      L: Powers (Initial) [3071]
+      A: 
+p1 y= 402.0 x= 551.2 w= 44.1 h=13.3 Tx 12
+      T: Petition – Letters of Special Admin w/o Gen Powers (Initial) [3071]: Other statutory authority
+      L: [3071]
+      A: 
+p1 y= 402.8 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Letters of Special Admin w/o Gen Powers (Initial) [3071]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p1 y= 415.8 x= 453.2 w= 26.5 h=13.2 Tx 13
+      T: Petition – Probate of Lost Will (Initial) [3074]: District where decedent resided
+      L: [3074]
+      A: 
+p1 y= 415.8 x= 480.2 w= 35.1 h=13.2 Tx 14
+      T: Petition – Probate of Lost Will (Initial) [3074]: Decedent, conservatee or minor not CA resident but property is in dist
+      L: 
+      A: 
+p1 y= 415.8 x= 551.2 w= 44.1 h=13.2 Tx 15
+      T: Petition – Probate of Lost Will (Initial) [3074]: Other statutory authority
+      L: 
+      A: 
+p1 y= 416.3 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Probate of Lost Will (Initial) [3074]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p1 y= 429.5 x= 453.2 w= 26.5 h=13.3 Tx 16
+      T: Petition – Probate of Will (Initial) [3075]: District where decedent resided
+      L: 
+      A: 
+p1 y= 429.5 x= 480.2 w= 35.1 h=13.3 Tx 17
+      T: Petition – Probate of Will (Initial) [3075]: Decedent, conservatee or minor not CA resident but property is in district
+      L: 
+      A: 
+p1 y= 429.5 x= 551.2 w= 44.1 h=13.3 Tx 18
+      T: Petition – Probate of Will (Initial) [3075]: Other statutory authority
+      L: 
+      A: 
+p1 y= 430.2 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Probate of Will (Initial) [3075]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p1 y= 458.7 x= 480.2 w= 35.1 h=32.5 Tx 21
+      T: Petition – Appoint Conservator of Estate – Attend/Nominate (Initial) [3303]: Decedent, conservatee or minor not CA resid
+      L: the hearing and has
+      A: 
+p1 y= 458.7 x= 551.2 w= 44.1 h=32.5 Tx 22
+      T: Petition – Appoint Conservator of Estate – Attend/Nominate (Initial) [3303]: Other statutory authority
+      L: has
+      A: 
+p1 y= 459.0 x= 381.7 w= 48.6 h=31.9 Tx 20
+      T: Petition – Appoint Conservator of Estate – Attend/Nominate (Initial) [3303]: District where proposed conservatee, person
+      L: conservatee will appear at the hearing and has
+      A: 
+p1 y= 460.1 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Appoint Conservator of Estate  Attend/Nominate (Initial) [3303]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: Conservatorship
+p1 y= 491.4 x= 381.7 w= 48.6 h=13.3 Tx 23
+      T: Petition – Appoint Conservator of Estate Only (Initial) [3046]: District where proposed conservatee, person w/o capacity
+      L: Conservator of Estate Only (Initial) [3046]
+      A: 
+p1 y= 491.4 x= 480.2 w= 35.1 h=13.3 Tx 24
+      T: Petition – Appoint Conservator of Estate Only (Initial) [3046]: Decedent, conservatee or minor not CA resident but prope
+      L: (Initial) [3046]
+      A: 
+p1 y= 491.4 x= 551.2 w= 44.1 h=13.3 Tx 25
+      T: Petition – Appoint Conservator of Estate Only (Initial) [3046]: Other statutory authority
+      L: 
+      A: 
+p1 y= 492.1 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Appoint Conservator of Estate Only (Initial) [3046]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: 
+p1 y= 505.1 x= 381.7 w= 48.6 h=13.3 Tx 26
+      T: Petition – Appoint Conservator of Person Only (Initial) [3047]: District where proposed conservatee, person w/o capacity
+      L: Conservator of Person Only (Initial) [3047]
+      A: 
+p1 y= 505.1 x= 551.2 w= 44.1 h=13.3 Tx 27
+      T: Petition – Appoint Conservator of Person Only (Initial) [3047]: Other statutory authority
+      L: 
+      A: 
+p1 y= 505.9 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Appoint Conservator of Person Only (Initial) [3047]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p1 y= 518.8 x= 381.7 w= 48.5 h=13.2 Tx 28
+      T: Petition – Appoint Conservator of Person & Estate (Initial) [3048]: District where proposed conservatee, person w/o capa
+      L: Conservator of Person & Estate (Initial) [3048]
+      A: 
+p1 y= 518.8 x= 551.2 w= 44.1 h=13.2 Tx 29
+      T: Petition – Appoint Conservator of Person & Estate (Initial) [3048]: Other statutory authority
+      L: 
+      A: 
+p1 y= 519.6 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Appoint Conservator of Person & Estate (Initial) [3048]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p1 y= 532.5 x= 381.7 w= 48.6 h=13.3 Tx 30
+      T: Petition – Appoint Ltd Conservator of Person/Person & Estate (Initial) [3198]: District where proposed conservatee, pers
+      L: Conservator of Person/Person & Estate (Initial) [3198]
+      A: 
+p1 y= 532.5 x= 551.2 w= 44.1 h=13.3 Tx 31
+      T: Petition – Appoint Ltd Conservator of Person/Person & Estate (Initial) [3198]: Other statutory authority
+      L: (Initial) [3198]
+      A: 
+p1 y= 533.2 x=  18.3 w= 10.2 h=10.2 Btn[/Petition  Appoint Ltd Conservator of Person/Person & Estate (Initial) [3198]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p1 y= 562.0 x= 381.7 w= 48.6 h=13.3 Tx 33
+      T: Petition – Appoint Guardian of Estate Only (Initial) [3049]: District where proposed conservatee, person w/o capacity or
+      L: Guardian of Estate Only (Initial) [3049]
+      A: 
+p1 y= 562.0 x= 480.2 w= 35.1 h=13.3 Tx 34
+      T: Petition – Appoint Guardian of Estate Only (Initial) [3049]: Decedent, conservatee or minor not CA resident but property
+      L: (Initial) [3049]
+      A: 
+p1 y= 562.0 x= 551.2 w= 44.1 h=13.3 Tx 35
+      T: Petition – Appoint Guardian of Estate Only (Initial) [3049]: Other statutory authority 1
+      L: 
+      A: 
+p1 y= 564.2 x=  21.0 w= 10.2 h=10.2 Btn[/Petition  Appoint Guardian of Estate Only (Initial) [3049]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: Guardianship
+p1 y= 575.8 x= 381.7 w= 48.5 h=144.7 Tx 39
+      T: Petition – Appoint Guardian of Estate Only (Initial) [3049]: District where proposed conservatee, person w/o capacity or
+      L: noitceS □Non-Relative noitceS
+      A: 
+p1 y= 575.8 x= 551.2 w= 44.1 h=144.7 Tx 40
+      T: Petition – Appoint Guardian of Estate Only (Initial) [3049]: Other statutory authority 2
+      L: 
+      A: 
+p1 y= 586.8 x=  51.9 w= 10.2 h=10.2 Btn[/Petition 匒ppoint Guardian of Person Only (Initial) [3051]] 36
+      T: Section A
+      L: 
+      A: 
+p1 y= 617.5 x= 277.5 w= 10.2 h=10.2 Btn[/Under 18 years old] 38
+      T: Section B
+      L: Person Only □Relative
+      A: Ward(s)
+p1 y= 621.1 x= 166.1 w= 10.2 h=10.2 Btn[/Relative] 37
+      T: Section B
+      L: A )enO Person Only B
+      A: considered
+p1 y= 643.0 x= 166.0 w= 10.2 h=10.2 Btn[/Non-Relative] 37
+      T: Section B
+      L: noitceS noitceS
+      A: )enO □Relative
+p1 y= 648.8 x=  51.9 w= 10.2 h=10.2 Btn[/Petition 匒ppoint Guardian of Person & Estate (Initial)[3050]] 36
+      T: Section A
+      L: noitceS kcehC(
+      A: )enO (Initial)
+p1 y= 651.4 x= 277.5 w= 10.2 h=10.2 Btn[/Age 18 to under 21] 38
+      T: Section B
+      L: kcehC( □Petition – kcehC( (Pursuant to kcehC(
+      A: )enO old
+p2 y= 146.0 x= 430.7 w= 22.1 h=13.3 Tx 42
+      T: Accounting – Trust (Initial) [3229]: District where petitioner resides
+      L: 
+      A: 
+p2 y= 146.0 x= 515.7 w= 35.0 h=13.3 Tx 43
+      T: Accounting – Trust (Initial) [3229]: Principal place of trust administration
+      L: 
+      A: 
+p2 y= 146.0 x= 551.2 w= 44.1 h=13.3 Tx 44
+      T: Accounting – Trust (Initial) [3229]: Other statutory authority
+      L: 
+      A: 
+p2 y= 146.7 x=  19.4 w= 10.2 h=10.2 Btn[/Accounting  Trust (Initial) [3229]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: Trust
+p2 y= 159.6 x= 430.7 w= 22.1 h=13.3 Tx 45
+      T: Notice – Initial Trust Filing & Notice to Creditors [3038]: District where petitioner resides
+      L: Notice to Creditors [3038]
+      A: 
+p2 y= 159.6 x= 515.7 w= 35.0 h=13.3 Tx 46
+      T: Notice – Initial Trust Filing & Notice to Creditors [3038]: Principal place of trust administration
+      L: 
+      A: 
+p2 y= 159.6 x= 551.2 w= 44.1 h=13.3 Tx 47
+      T: Notice – Initial Trust Filing & Notice to Creditors [3038]: Other statutory authority
+      L: 
+      A: 
+p2 y= 160.4 x=  19.4 w= 10.2 h=10.2 Btn[/Notice  Initial Trust Filing & Notice to Creditors [3038]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Accounting
+p2 y= 173.4 x= 430.7 w= 22.1 h=13.2 Tx 48
+      T: Petition – Special Needs Trust (Initial) [3297]: District where petitioner resides
+      L: (Initial) [3297]
+      A: 
+p2 y= 173.4 x= 515.7 w= 35.0 h=13.2 Tx 49
+      T: Petition – Special Needs Trust (Initial) [3297]: Principal place of trust administration
+      L: 
+      A: 
+p2 y= 173.4 x= 551.2 w= 44.1 h=13.2 Tx 50
+      T: Petition – Special Needs Trust (Initial) [3297]: Other statutory authority
+      L: 
+      A: 
+p2 y= 174.1 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Special Needs Trust (Initial) [3297]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Notice
+p2 y= 187.1 x= 430.7 w= 22.1 h=13.2 Tx 51
+      T: Petition – Trust/Pursuant Prob Code Sec 17200 (Initial) [3076]: District where petitioner resides
+      L: Code Sec 17200 (Initial) [3076]
+      A: 
+p2 y= 187.1 x= 515.7 w= 35.0 h=13.2 Tx 52
+      T: Petition – Trust/Pursuant Prob Code Sec 17200 (Initial) [3076]: Principal place of trust administration
+      L: [3076]
+      A: 
+p2 y= 187.1 x= 551.2 w= 44.1 h=13.2 Tx 53
+      T: Petition – Trust/Pursuant Prob Code Sec 17200 (Initial) [3076]: Other statutory authority
+      L: 
+      A: 
+p2 y= 187.9 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Trust/Pursuant Prob Code Sec 17200 (Initial) [3076]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 216.7 x= 354.2 w= 27.0 h=13.2 Tx 55
+      T: Petition – Approve Minor's Compromise (Initial) [3058]: District where one or more parties resides
+      L: Approve Minor's Compromise (Initial) [3058]
+      A: 
+p2 y= 216.7 x= 381.6 w= 48.6 h=13.2 Tx 56
+      T: Petition – Approve Minor's Compromise (Initial) [3058]: District where proposed conservatee, person w/o capacity or mino
+      L: Minor's Compromise (Initial) [3058]
+      A: 
+p2 y= 216.7 x= 430.7 w= 22.1 h=13.2 Tx 57
+      T: Petition – Approve Minor's Compromise (Initial) [3058]: District where petitioner resides
+      L: Compromise (Initial) [3058]
+      A: 
+p2 y= 216.7 x= 551.2 w= 44.1 h=13.2 Tx 58
+      T: Petition – Approve Minor's Compromise (Initial) [3058]: Other statutory authority
+      L: 
+      A: 
+p2 y= 217.5 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Approve Minor's Compromise (Initial) [3058]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: Minor’s
+p2 y= 230.4 x= 354.2 w= 27.0 h=13.3 Tx 59
+      T: Petition – Approve Minor's Compromise (Expedited) [3154]: District where one or more parties resides
+      L: Approve Minor's Compromise (Expedited) [3154]
+      A: 
+p2 y= 230.4 x= 381.6 w= 48.8 h=13.3 Tx 60
+      T: Petition – Approve Minor's Compromise (Expedited) [3154]: District where proposed conservatee, person w/o capacity or mi
+      L: Minor's Compromise (Expedited) [3154]
+      A: 
+p2 y= 230.4 x= 430.7 w= 22.1 h=13.3 Tx 61
+      T: Petition – Approve Minor's Compromise (Expedited) [3154]: District where petitioner resides
+      L: Compromise (Expedited) [3154]
+      A: 
+p2 y= 230.4 x= 551.2 w= 44.1 h=13.3 Tx 62
+      T: Petition – Approve Minor's Compromise (Expedited) [3154]: Other statutory authority
+      L: 
+      A: 
+p2 y= 231.1 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Approve Minor's Compromise (Expedited) [3154]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 275.6 x= 551.2 w= 44.1 h=13.7 Tx 66
+      T: Petition – Advance Health Care Directive (Initial) [3044]: Other statutory authority
+      L: 
+      A: 
+p2 y= 275.8 x= 430.7 w= 22.1 h=13.2 Tx 65
+      T: Petition – Advance Health Care Directive (Initial) [3044]: District where petitioner resides
+      L: Directive (Initial) [3044]
+      A: 
+p2 y= 276.6 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Advance Health Care Directive (Initial) [3044]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: Other
+p2 y= 289.3 x= 453.1 w= 26.9 h=13.7 Tx 67
+      T: Petition – Appoint Successor Custodian/CUTMA (Initial) [3052]: District where decedent resided
+      L: Custodian/CUTMA (Initial) [3052]
+      A: 
+p2 y= 289.5 x= 551.2 w= 44.1 h=13.7 Tx 68
+      T: Petition – Appoint Successor Custodian/CUTMA (Initial) [3052]: Other statutory authority
+      L: 
+      A: 
+p2 y= 290.3 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Appoint Successor Custodian/CUTMA (Initial) [3052]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 303.1 x= 381.7 w= 48.6 h=13.3 Tx 69
+      T: Petition – Authority to Give Medical Consent w/o Conservatorship (Initial) [3059]: District where proposed conservatee, 
+      L: Give Medical Consent w/o Conservatorship (Initial) [3059]
+      A: 
+p2 y= 303.1 x= 430.7 w= 22.1 h=13.5 Tx 70
+      T: Petition – Authority to Give Medical Consent w/o Conservatorship (Initial) [3059]: District where petitioner resides
+      L: Consent w/o Conservatorship (Initial) [3059]
+      A: 
+p2 y= 303.3 x= 551.2 w= 44.1 h=13.5 Tx 71
+      T: Petition – Authority to Give Medical Consent w/o Conservatorship (Initial) [3059]: Other statutory authority
+      L: (Initial) [3059]
+      A: 
+p2 y= 304.0 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Authority to Give Medical Consent w/o Conservatorship (Initial) [3059]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 316.9 x= 453.2 w= 26.5 h=13.3 Tx 72
+      T: Petition – Determine Succession to Primary Residence (Initial) [3301]: District where decedent resided
+      L: Primary Residence (Initial) [3301]
+      A: 
+p2 y= 316.9 x= 480.3 w= 35.0 h=13.3 Tx 73
+      T: Petition – Determine Succession to Primary Residence (Initial) [3301]: Decedent, conservatee or minor not CA resident bu
+      L: Residence (Initial) [3301]
+      A: 
+p2 y= 316.9 x= 551.2 w= 44.1 h=13.3 Tx 74
+      T: Petition – Determine Succession to Primary Residence (Initial) [3301]: Other statutory authority
+      L: [3301]
+      A: 
+p2 y= 317.7 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Determine Succession to Primary Residence (Initial) [3301]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 330.6 x= 430.7 w= 22.1 h=13.3 Tx 75
+      T: Petition – Establish Fact of: Birth [3065],Death [3066], or Marriage [3067]: District where petitioner resides
+      L: [3065], □ Death [3066], or □ Marriage [3067]
+      A: 
+p2 y= 330.6 x= 453.1 w= 26.6 h=13.3 Tx 76
+      T: Petition – Establish Fact of: Birth [3065],Death [3066], or Marriage [3067]: District where decedent resided
+      L: [3065], □ Death [3066], or □ Marriage [3067]
+      A: 
+p2 y= 330.6 x= 551.2 w= 44.1 h=13.3 Tx 77
+      T: Petition – Establish Fact of: Birth [3065],Death [3066], or Marriage [3067]: Other statutory authority
+      L: Marriage [3067]
+      A: 
+p2 y= 331.4 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Establish Fact of] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 332.4 x= 140.6 w=  8.7 h= 8.7 Btn[/Birth [3065]] 63
+      T: Other Probate With At Least One Hearing
+      L: □Petition – Establish Fact of:
+      A: Succession
+p2 y= 332.4 x= 200.2 w=  8.7 h= 8.7 Btn[/Death [3066]] 63
+      T: Other Probate With At Least One Hearing
+      L: □Petition – Establish Fact of: □ Birth [3065],
+      A: Primary Residence
+p2 y= 332.4 x= 274.5 w=  9.4 h= 8.7 Btn[/Marriage [3067]] 63
+      T: Other Probate With At Least One Hearing
+      L: □Petition – Establish Fact of: □ Birth [3065], □ Death [3066], or
+      A: (Initial) [3301]
+p2 y= 344.3 x= 453.2 w= 26.6 h=13.2 Tx 78
+      T: Petition – Release of Decedent’s Remains (Initial) [3077]: District where decedent resided
+      L: Remains (Initial) [3077]
+      A: 
+p2 y= 344.3 x= 551.2 w= 44.1 h=13.2 Tx 79
+      T: Petition – Release of Decedent’s Remains (Initial) [3077]: Other statutory authority
+      L: 
+      A: 
+p2 y= 345.1 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Release of Decedents Remains (Initial) [3077]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 358.0 x= 453.2 w= 26.6 h=13.3 Tx 80
+      T: Petition – Spousal/Domestic Partner Property (Initial) [3179]: District where decedent resided
+      L: Property (Initial) [3179]
+      A: 
+p2 y= 358.0 x= 480.3 w= 35.0 h=13.3 Tx 81
+      T: Petition – Spousal/Domestic Partner Property (Initial) [3179]: District where decedent resided
+      L: (Initial) [3179]
+      A: 
+p2 y= 358.0 x= 551.2 w= 44.1 h=13.3 Tx 82
+      T: Petition – Spousal/Domestic Partner Property (Initial) [3179]: District where decedent resided
+      L: 
+      A: 
+p2 y= 358.8 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Spousal/Domestic Partner Property (Initial) [3179]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 371.7 x= 381.7 w= 48.6 h=13.3 Tx 83
+      T: Petition – Transaction Where Spouse Lacks Capacity (Initial) [3082]: District where proposed conservatee, person w/o cap
+      L: Where Spouse Lacks Capacity (Initial) [3082]
+      A: 
+p2 y= 371.7 x= 430.7 w= 22.1 h=13.3 Tx 84
+      T: Petition – Transaction Where Spouse Lacks Capacity (Initial) [3082]: District where petitioner resides
+      L: Spouse Lacks Capacity (Initial) [3082]
+      A: 
+p2 y= 371.7 x= 551.2 w= 44.1 h=13.3 Tx 85
+      T: Petition – Transaction Where Spouse Lacks Capacity (Initial) [3082]: Other statutory authority
+      L: [3082]
+      A: 
+p2 y= 372.5 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Transaction Where Spouse Lacks Capacity (Initial) [3082]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 385.4 x= 453.2 w= 26.6 h=13.3 Tx 86
+      T: Petition – Tuberculosis Matter [3083]: District where decedent resided
+      L: 
+      A: 
+p2 y= 385.4 x= 551.2 w= 44.1 h=13.3 Tx 87
+      T: Petition – Tuberculosis Matter [3083]: Other statutory authority
+      L: 
+      A: 
+p2 y= 386.3 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Tuberculosis Matter [3083]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 399.1 x= 453.2 w= 26.5 h=13.2 Tx 88
+      T: Other Probate matter: District where decedent resided
+      L: 
+      A: 
+p2 y= 399.1 x= 551.2 w= 44.1 h=13.2 Tx 89
+      T: Other Probate matter: Other statutory authority
+      L: 
+      A: 
+p2 y= 399.9 x=  19.4 w= 10.2 h=10.2 Btn[/Other Probate matter] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 400.9 x= 157.0 w=135.0 h= 9.0 Tx 64
+      T: Specify Other Probate matter
+      L: □Other Probate matter (specify):
+      A: Matter [3083]
+p2 y= 428.7 x= 453.2 w= 26.5 h=13.2 Tx 91
+      T: Affidavit – Real Property of Small Value - 13200 PR Code [3001]: District where decedent resided
+      L: - 13200 PR Code [3001]
+      A: 
+p2 y= 428.7 x= 480.3 w= 35.0 h=13.2 Tx 92
+      T: Affidavit – Real Property of Small Value - 13200 PR Code [3001]: Decedent, conservatee or minor not CA resident but prop
+      L: 13200 PR Code [3001]
+      A: 
+p2 y= 428.7 x= 551.1 w= 44.2 h=13.2 Tx 93
+      T: Affidavit – Real Property of Small Value - 13200 PR Code [3001]: Other statutory authority
+      L: 
+      A: 
+p2 y= 429.6 x=  19.4 w= 10.2 h=10.2 Btn[/Affidavit  Real Property of Small Value - 13200 PR Code [3001]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: Other
+p2 y= 442.3 x= 453.2 w= 26.5 h=13.2 Tx 94
+      T: Petition – Order Setting Aside Est. of Small Val. (Probate Code § 6602) [3292]: District where decedent resided
+      L: Small Val. (Probate Code § 6602) [3292]
+      A: 
+p2 y= 442.3 x= 480.3 w= 35.0 h=13.2 Tx 95
+      T: Petition – Order Setting Aside Est. of Small Val. (Probate Code § 6602) [3292]: Decedent, conservatee or minor not CA re
+      L: (Probate Code § 6602) [3292]
+      A: 
+p2 y= 442.3 x= 551.1 w= 44.2 h=13.2 Tx 96
+      T: Petition – Order Setting Aside Est. of Small Val. (Probate Code § 6602) [3292]: Other statutory authority
+      L: 6602) [3292]
+      A: 
+p2 y= 443.2 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Order Setting Aside Est. of Small Val. (Probate Code § 6602) [3292]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Affidavit
+p2 y= 456.1 x= 453.2 w= 26.5 h=13.3 Tx 97
+      T: Petition – Summary Probate (Public Administrator) [3081]t: District where decedent resided
+      L: Administrator) [3081]
+      A: 
+p2 y= 456.1 x= 480.3 w= 35.0 h=13.3 Tx 98
+      T: Petition – Summary Probate (Public Administrator) [3081]: Decedent, conservatee or minor not CA resident but property is
+      L: Administrator) [3081]
+      A: 
+p2 y= 456.1 x= 551.1 w= 44.2 h=13.3 Tx 99
+      T: Petition – Summary Probate (Public Administrator) [3081]: Other statutory authority
+      L: 
+      A: 
+p2 y= 456.9 x=  19.4 w= 10.2 h=10.2 Btn[/Petition  Summary Probate (Public Administrator) [3081]] 03
+      T: TYPE OF ACTION
+      L: 
+      A: □Petition
+p2 y= 509.6 x=  40.3 w= 10.2 h=10.2 Btn[/Central] 100
+      T: Select the appropriate district
+      L: 
+      A: Step
+p2 y= 509.6 x=  86.8 w= 10.2 h=10.2 Btn[/North (Antelope Valley)] 100
+      T: Select the appropriate district
+      L: □Central
+      A: 3: Select
+p2 y= 525.8 x= 488.7 w= 82.3 h=16.0 Tx 101
+      T: The undersigned hereby certifies that the above entitled matter is properly filed for assignment to the
+      L: above entitled matter is properly filed for assignment to the
+      A: 
+p2 y= 565.7 x= 301.8 w=124.5 h=11.8 Tx 102
+      T: Date
+      L: true and correct and that this declaration was executed on
+      A: perjury the under California the laws Probate of the Code State and of
+p2 y= 596.1 x= 272.3 w=280.7 h=17.5 ? 103
+      T: Signature of Attorney or Self-Represented Party
+      L: 
+      A: (Date)
+p2 y= 688.7 x=  82.9 w= 10.2 h=10.2 Btn[/Yes] 104
+      T: Does the person(s) filing this petition require an interpreter?
+      L: 
+      A:  Does
+p2 y= 688.7 x= 154.9 w= 10.2 h=10.2 Btn[/No] 104
+      T: Does the person(s) filing this petition require an interpreter?
+      L: □ Yes
+      A: person(s)
+p2 y= 693.8 x= 186.1 w=198.4 h=17.6 Tx 105
+      T: If yes, what language?
+      L: If yes, what language?
+      A: filing this petition require an interpreter?
+p3 y=  50.6 x=  90.9 w= 10.2 h=10.2 Btn[/Yes] 106
+      T: Does the subject(s) of this petition require an interpreter?
+      L: 
+      A:  Does
+p3 y=  50.6 x= 163.0 w= 10.2 h=10.2 Btn[/No] 106
+      T: Does the subject(s) of this petition require an interpreter?
+      L: □ Yes
+      A: subject(s)
+p3 y=  57.3 x= 194.6 w=176.5 h=17.8 Tx 107
+      T: If yes, what language?
+      L: If yes, what language?
+      A: of this petition require an interpreter?
+p3 y= 118.4 x= 458.1 w= 67.0 h=14.0 Tx 109
+      T: Describe Other
+      L: □ Trustor □ Other:
+      A: 
+p3 y= 123.2 x=  55.4 w= 10.2 h=10.2 Btn[/Conservatee] 108
+      T: The following information is required for the proposed conservatee, ward, trustor or decedent
+      L: 
+      A: the
+p3 y= 123.2 x= 265.1 w= 10.2 h=10.2 Btn[/Trustor] 108
+      T: The following information is required for the proposed conservatee, ward, trustor or decedent
+      L: □ Conservatee
+      A: case:
+p3 y= 123.2 x= 413.7 w= 10.2 h=10.2 Btn[/Other] 108
+      T: The following information is required for the proposed conservatee, ward, trustor or decedent
+      L: □ Trustor
+      A: 
+p3 y= 144.7 x= 265.1 w= 10.2 h=10.2 Btn[/Decedent] 108
+      T: The following information is required for the proposed conservatee, ward, trustor or decedent
+      L: □ Ward (minor in a guardianship case)
+      A: □
+p3 y= 144.7 x=  55.4 w= 10.2 h=10.2 Btn[/Ward] 108
+      T: The following information is required for the proposed conservatee, ward, trustor or decedent
+      L: 
+      A: □
+p3 y= 221.8 x=  52.7 w=192.1 h=19.9 Tx 110
+      T: First Name
+      L: 
+      A: First Name
+p3 y= 221.8 x= 245.3 w=184.4 h=19.9 Tx 111
+      T: Last Name
+      L: 
+      A: Last Name
+p3 y= 221.8 x= 430.1 w=126.2 h=19.9 Tx 112
+      T: Middle Name
+      L: 
+      A: Middle Name
+p3 y= 221.8 x= 556.7 w= 31.2 h=19.9 Tx 113
+      T: Suffix
+      L: 
+      A: Suffix
+p3 y= 252.6 x=  52.7 w=535.1 h=19.9 Tx 114
+      T: A.K.A(s)
+      L: 
+      A: A.K.A(s)
+p3 y= 283.3 x=  52.7 w=535.1 h=19.9 Tx 115
+      T: Email Address
+      L: 
+      A: 
+p3 y= 313.9 x=  52.7 w=535.1 h=19.9 Tx 116
+      T: Cell Phone
+      L: 
+      A: 
+p3 y= 335.1 x= 298.3 w= 10.2 h=10.2 Btn[/On] 117
+      T: Email
+      L: I accept service and notices to be delivered to me by
+      A: 
+p3 y= 335.1 x= 345.0 w= 10.2 h=10.2 Btn[/On] 118
+      T: Cell Phone
+      L: accept service and notices to be delivered to me by [ ] Email
+      A: 
+p3 y= 391.7 x=  52.7 w=462.1 h=19.9 Tx 119
+      T: Home Address: Street
+      L: 
+      A: Street
+p3 y= 391.7 x= 515.2 w= 72.6 h=19.9 Tx 120
+      T: Home Address: Apt./Suite/Unit Number
+      L: 
+      A: Apt./Suite/Unit #
+p3 y= 422.2 x=  52.7 w=395.0 h=19.9 Tx 121
+      T: Home Address: City
+      L: 
+      A: City
+p3 y= 422.2 x= 448.0 w= 66.8 h=19.9 Tx 122
+      T: Home Address: State
+      L: 
+      A: State
+p3 y= 422.2 x= 515.0 w= 73.0 h=19.9 Tx 123
+      T: Home Address: Zip Code
+      L: 
+      A: Zip Code
+p3 y= 446.5 x= 147.3 w=  8.7 h= 8.7 Btn[/On] 124
+      T: Mailing Address: same as above
+      L: Mailing Address:
+      A: 
+p3 y= 469.3 x=  52.7 w=462.1 h=19.9 Tx 125
+      T: Mailing Address: Street
+      L: 
+      A: Street
+p3 y= 469.3 x= 515.2 w= 72.8 h=19.9 Tx 126
+      T: Mailing Address: Apt./Suite/Unit Number
+      L: 
+      A: Apt./Suite/Unit #
+p3 y= 500.8 x= 515.2 w= 72.6 h=19.9 Tx 129
+      T: Mailing Address: Zip Code
+      L: 
+      A: Zip Code
+p3 y= 500.8 x=  52.7 w=395.0 h=19.9 Tx 127
+      T: Mailing Address: City
+      L: 
+      A: City
+p3 y= 500.8 x= 448.0 w= 66.8 h=19.9 Tx 128
+      T: Mailing Address: State
+      L: 
+      A: State
+p3 y= 558.4 x= 497.7 w= 40.2 h=14.0 Tx 133
+      T: Date of Birth (yyyy)
+      L: / /
+      A: (mm/dd/yyyy)
+p3 y= 558.4 x= 426.0 w= 28.9 h=14.0 Tx 131
+      T: Date of Birth (mm)
+      L: Female
+      A: Date of Birth:
+p3 y= 558.4 x= 458.9 w= 35.0 h=14.0 Tx 132
+      T: Date of Birth (dd)
+      L: Female /
+      A: Date of Birth: (mm/dd/yyyy)
+p3 y= 559.2 x= 189.4 w= 10.6 h=10.5 Btn[/Male] 130
+      T: Gender
+      L: Male
+      A: 
+p3 y= 559.3 x=  94.1 w= 10.6 h=10.5 Btn[/Female] 130
+      T: Gender
+      L: 
+      A: Gender:

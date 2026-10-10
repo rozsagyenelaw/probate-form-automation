@@ -1,0 +1,328 @@
+p1 y=  49.3 x= 308.8 w= 85.2 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].BarNo[0]
+      T: STATE BAR NUMBER:
+      L: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NUMBER:
+      A: 
+p1 y=  60.8 x=  57.6 w=336.4 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].AttyName[0]
+      T: NAME:
+      L: NAME:
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NUMBER:
+p1 y=  72.4 x=  73.7 w=320.3 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].AttyFirm[0]
+      T: FIRM NAME:
+      L: FIRM NAME:
+      A: NAME:
+p1 y=  84.0 x=  95.6 w=298.4 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].AttyStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: 
+p1 y=  95.6 x=  54.3 w=186.1 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].AttyCity[0]
+      T: CITY:
+      L: CITY:
+      A: STREET ADDRESS:
+p1 y=  95.6 x= 263.5 w= 30.2 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].AttyState[0]
+      T: STATE:
+      L: CITY: STATE:
+      A: 
+p1 y=  95.6 x= 326.8 w= 67.2 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].AttyZip[0]
+      T: ZIP CODE:
+      L: STATE: ZIP CODE:
+      A: 
+p1 y= 107.1 x=  89.8 w=127.1 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].Phone[0]
+      T: TELEPHONE NO.:
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 107.1 x= 266.1 w=127.9 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].Fax[0]
+      T: FAX NO.:
+      L: TELEPHONE NO.: FAX NO.:
+      A: STATE: ZIP CODE:
+p1 y= 118.7 x=  91.1 w=302.9 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].Email[0]
+      T: E-MAIL ADDRESS:
+      L: E-MAIL ADDRESS:
+      A: TELEPHONE NO.: FAX NO.:
+p1 y= 130.3 x= 107.8 w=286.2 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].AttyInfo[0].AttyFor[0]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: ADDRESS:
+p1 y= 145.2 x= 227.7 w=166.3 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].CourtInfo[0].CrtCounty[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 156.2 x=  97.0 w=297.0 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].CourtInfo[0].Street[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 167.1 x=  97.0 w=297.0 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].CourtInfo[0].MailingAdd[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 178.1 x=  97.0 w=297.0 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].CourtInfo[0].CityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 189.7 x=  97.0 w=297.0 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].CourtInfo[0].Branch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 204.6 x=  89.5 w=304.9 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].TitlePartyName[0].Party1[0]
+      T: PLAINTIFF:
+      L: PLAINTIFF:
+      A: BRANCH NAME:
+p1 y= 215.6 x=  89.5 w=304.9 h= 9.3 Tx CIV-150[0].Page1[0].p1Caption[0].TitlePartyName[0].Party2[0]
+      T: DEFENDANT:
+      L: DEFENDANT:
+      A: PLAINTIFF:
+p1 y= 222.2 x= 400.0 w=172.8 h=14.4 Tx CIV-150[0].Page1[0].p1Caption[0].captionSub[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p1 y= 227.8 x=  89.5 w=304.9 h= 9.3 Tx CIV-150[0].Page1[0].p1Caption[0].TitlePartyName[0].Party3[0]
+      T: OTHER:
+      L: OTHER:
+      A: DEFENDANT:
+p1 y= 244.5 x= 425.3 w=147.6 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].captionSub[0].HearingInfosf[0].JudOfficer[0]
+      T: JUDGE:
+      L: LIMITED SCOPE REPRESENTATION JUDGE:
+      A: 
+p1 y= 256.4 x= 425.3 w=147.6 h= 9.0 Tx CIV-150[0].Page1[0].p1Caption[0].captionSub[0].HearingInfosf[0].Department[0]
+      T: DEPT.:
+      L: Amended DEPT.:
+      A: JUDGE:
+p1 y= 257.1 x= 117.0 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].p1Caption[0].FormTitle[0].Amended_cb[0]
+      T: Amended
+      L: 
+      A: NOTICE
+p1 y= 298.8 x= 122.1 w=175.9 h= 9.0 Tx CIV-150[0].Page1[0].List1[0].LI1[0].FillText1[0]
+      T: Attorney (name):
+      L: 1. Attorney (name):
+      A: [Note: This form is for use in civil cases other than
+p1 y= 312.4 x= 125.8 w=176.2 h= 9.0 Tx CIV-150[0].Page1[0].List1[0].LI1[0].FillText2[0]
+      T: and party (name):
+      L: and party (name):
+      A: (name):
+p1 y= 325.9 x= 103.8 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List1[0].LI1[0].PartyIndicate_cb[0]
+      T: petitioner/plaintiff
+      L: who is the
+      A: party (name):
+p1 y= 325.9 x= 209.5 w=  9.0 h= 9.0 Btn[/2] CIV-150[0].Page1[0].List1[0].LI1[0].PartyIndicate_cb1[0]
+      T: respondent/defendant
+      L: who is the petitioner/plaintiff
+      A: 
+p1 y= 325.9 x= 330.6 w=  9.0 h= 9.0 Btn[/3] CIV-150[0].Page1[0].List1[0].LI1[0].PartyIndicate_cb2[0]
+      T: other
+      L: is the petitioner/plaintiff respondent/defendant
+      A: 
+p1 y= 326.0 x= 419.2 w=156.3 h= 9.0 Tx CIV-150[0].Page1[0].List1[0].LI1[0].FillText3[0]
+      T: (describe):
+      L: petitioner/plaintiff respondent/defendant other (describe):
+      A: 
+p1 y= 381.1 x= 186.7 w=161.9 h= 9.0 Tx CIV-150[0].Page1[0].List2[0].LI1[0].FillText1[0]
+      T: on (date):
+      L: a. at the hearing on (date):
+      A: the party
+p1 y= 381.1 x=  69.7 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List2[0].LI1[0].CheckBox1[0]
+      T: at the hearing 
+      L: a.
+      A: The attorney
+p1 y= 394.5 x=  69.7 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List2[0].LI1[0].CheckBox2[0]
+      T: and at any continuance of that hearing
+      L: 
+      A: a.
+p1 y= 408.8 x=  69.7 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List2[0].LI1[0].CheckBox3[0]
+      T: until submission of the order after hearing
+      L: 
+      A: 
+p1 y= 432.0 x= 170.6 w=161.9 h= 9.0 Tx CIV-150[0].Page1[0].List2[0].LI2[0].FillText[0]
+      T: on (date):
+      L: b. at the trial on (date):
+      A: 
+p1 y= 432.0 x=  69.8 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List2[0].LI2[0].CheckBox1[0]
+      T: at the trial 
+      L: b.
+      A: 
+p1 y= 445.5 x=  69.8 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List2[0].LI2[0].CheckBox2[0]
+      T: and at any continuance of that trial
+      L: 
+      A: b.
+p1 y= 459.7 x=  69.7 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List2[0].LI2[0].CheckBox3[0]
+      T: until judgment
+      L: 
+      A: 
+p1 y= 483.2 x=  69.7 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page1[0].List2[0].LI3[0].OtherScope_cb[0]
+      T: other
+      L: c.
+      A: 
+p1 y= 492.9 x=  88.9 w=485.2 h=129.3 Tx ML CIV-150[0].Page1[0].List2[0].LI3[0].FillText1[0]
+      T: (specify nature and duration of representation):
+      L: 
+      A: other(specify nature and duration of representation):
+p2 y=  49.0 x=  89.5 w=304.9 h= 9.0 Tx F68 CIV-150[0].Page2[0].pXCaption[0].TitlePartyName[0].Party1[0]
+      T: PLAINTIFF:
+      L: PLAINTIFF:
+      A: 
+p2 y=  60.0 x=  89.5 w=304.9 h= 9.3 Tx F68 CIV-150[0].Page2[0].pXCaption[0].TitlePartyName[0].Party2[0]
+      T: DEFENDANT:
+      L: DEFENDANT:
+      A: PLAINTIFF:
+p2 y=  62.1 x= 400.0 w=172.8 h=14.4 Tx F68 CIV-150[0].Page2[0].pXCaption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p2 y=  72.2 x=  89.5 w=304.9 h= 9.3 Tx F68 CIV-150[0].Page2[0].pXCaption[0].TitlePartyName[0].Party3[0]
+      T: OTHER:
+      L: OTHER:
+      A: DEFENDANT:
+p2 y= 140.8 x=  81.3 w=216.7 h= 9.0 Tx CIV-150[0].Page2[0].List4[0].LI1[0].FillText1[0]
+      T: Name:
+      L: Name:
+      A: the party. (Cal. Rules of Court, rule 3.36.) The party's name and
+p2 y= 166.3 x=  50.7 w=247.3 h=42.5 Tx ML CIV-150[0].Page2[0].List4[0].LI1[0].FillText2[0]
+      T: Address (for the purpose of service):
+      L: 
+      A: Address (for the purpose of service):
+p2 y= 217.5 x=  99.3 w=111.7 h= 9.0 Tx CIV-150[0].Page2[0].List4[0].LI1[0].FillText3[0]
+      T: Telephone:
+      L: Telephone:
+      A: 
+p2 y= 233.0 x=  73.7 w=105.3 h= 9.0 Tx CIV-150[0].Page2[0].List4[0].LI1[0].FillText4[0]
+      T: Fax:
+      L: Fax:
+      A: Telephone:
+p2 y= 584.4 x=  61.2 w=108.0 h= 9.0 Tx CIV-150[0].Page2[0].SigSub[0].PartySigDate[0]
+      T: Date:
+      L: Date:
+      A: 
+p2 y= 607.1 x=  36.0 w=239.9 h=14.1 Tx CIV-150[0].Page2[0].SigSub[0].PartyPrintName[0]
+      T: (TYPE OR PRINT NAME OF PARTY)
+      L: 
+      A: 
+p2 y= 664.8 x=  61.2 w=108.0 h= 9.0 Tx CIV-150[0].Page2[0].SigSub1[0].AttySigDate[0]
+      T: Date:
+      L: Date:
+      A: 
+p2 y= 687.6 x=  36.0 w=239.9 h=14.1 Tx CIV-150[0].Page2[0].SigSub1[0].AttyPrintName[0]
+      T: (TYPE OR PRINT NAME OF ATTORNEY)
+      L: 
+      A: 
+p3 y=  49.0 x=  89.5 w=304.9 h= 9.0 Tx F68 CIV-150[0].Page3[0].pXCaption[0].TitlePartyName[0].Party1[0]
+      T: PLAINTIFF:
+      L: PLAINTIFF:
+      A: 
+p3 y=  60.0 x=  89.5 w=304.9 h= 9.3 Tx F68 CIV-150[0].Page3[0].pXCaption[0].TitlePartyName[0].Party2[0]
+      T: DEFENDANT:
+      L: DEFENDANT:
+      A: PLAINTIFF:
+p3 y=  62.1 x= 400.0 w=172.8 h=14.4 Tx F68 CIV-150[0].Page3[0].pXCaption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p3 y=  72.2 x=  89.5 w=304.9 h= 9.3 Tx F68 CIV-150[0].Page3[0].pXCaption[0].TitlePartyName[0].Party3[0]
+      T: OTHER:
+      L: OTHER:
+      A: DEFENDANT:
+p3 y= 133.4 x=  50.7 w=524.0 h=35.5 Tx ML CIV-150[0].Page3[0].List1[0].LI1[0].FillText1[0]
+      T: I am at least 18 years old and not a party to this action. I am a resident of or employed in the county where the mailin
+      L: 
+      A: 1. I place, am at and least my 18 residence years old or and business not a party address 
+p3 y= 202.8 x=  69.7 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page3[0].List2[0].LI1[0].Mail_cb[0]
+      T: deposited the sealed envelopes with the United States Postal Service.
+      L: a.
+      A: first-class
+p3 y= 216.5 x=  69.7 w=  9.0 h= 9.0 Btn[/2] CIV-150[0].Page3[0].List2[0].LI2[0].Mail_cb[0]
+      T: placed the sealed envelopes for collection and processing for mailing, following this business's usual practices, with w
+      L: b.
+      A: a.
+p3 y= 273.5 x= 109.3 w=116.8 h= 9.0 Tx CIV-150[0].Page3[0].List3[0].LI1[0].FillText1[0]
+      T: on (date):
+      L: a. on (date):
+      A: the Notice of Limited Scope Representation
+p3 y= 287.6 x= 154.3 w=295.2 h= 9.0 Tx CIV-150[0].Page3[0].List3[0].LI2[0].FillText1[0]
+      T: from (city and state):
+      L: b. from (city and state):
+      A: 
+p3 y= 328.2 x=  65.8 w=217.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI1[0].FillText1[0]
+      T: Name of person served:
+      L: 
+      A: The envelopes were addressed and mailed as follows:
+p3 y= 328.2 x= 358.7 w=217.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI3[0].FillText1[0]
+      T: Name of person served:
+      L: 
+      A: 
+p3 y= 342.0 x= 129.8 w=153.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI1[0].FillText2[0]
+      T: Street address:
+      L: Street address:
+      A: 
+p3 y= 342.0 x= 422.7 w=153.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI3[0].FillText2[0]
+      T: Street address:
+      L: Street address:
+      A: 
+p3 y= 357.6 x=  88.8 w=194.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI1[0].FillText3[0]
+      T: City:
+      L: City:
+      A: Street address:
+p3 y= 357.6 x= 381.7 w=194.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI3[0].FillText3[0]
+      T: City:
+      L: City:
+      A: Street address:
+p3 y= 372.8 x= 145.3 w=137.8 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI1[0].FillText4[0]
+      T: State and zip code:
+      L: State and zip code:
+      A: 
+p3 y= 372.8 x= 438.2 w=137.8 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI3[0].FillText4[0]
+      T: State and zip code:
+      L: State and zip code:
+      A: 
+p3 y= 408.8 x=  65.8 w=217.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI2[0].FillText1[0]
+      T: Name of person served:
+      L: 
+      A: 
+p3 y= 408.8 x= 358.7 w=217.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI4[0].FillText1[0]
+      T: Name of person served:
+      L: 
+      A: 
+p3 y= 422.6 x= 129.8 w=153.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI2[0].FillText2[0]
+      T: Street address:
+      L: Street address:
+      A: 
+p3 y= 422.6 x= 422.7 w=153.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI4[0].FillText2[0]
+      T: Street address:
+      L: Street address:
+      A: 
+p3 y= 438.1 x=  88.8 w=194.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI2[0].FillText3[0]
+      T: City:
+      L: City:
+      A: Street address:
+p3 y= 438.1 x= 381.7 w=194.3 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI4[0].FillText3[0]
+      T: City:
+      L: City:
+      A: Street address:
+p3 y= 453.4 x= 145.3 w=137.8 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI2[0].FillText4[0]
+      T: State and zip code:
+      L: State and zip code:
+      A: 
+p3 y= 453.4 x= 438.2 w=137.8 h= 9.0 Tx CIV-150[0].Page3[0].List4[0].LI4[0].FillText4[0]
+      T: State and zip code:
+      L: State and zip code:
+      A: 
+p3 y= 498.3 x=  39.9 w=  9.0 h= 9.0 Btn[/1] CIV-150[0].Page3[0].CheckBox1[0]
+      T: Names and addresses of additional persons served are attached. (You may use form POS-030(P).)
+      L: 
+      A: 
+p3 y= 664.8 x=  61.2 w=108.0 h= 9.0 Tx CIV-150[0].Page3[0].SigSub[0].DeclarantDate[0]
+      T: Date:
+      L: Date:
+      A: 
+p3 y= 687.6 x=  36.0 w=239.9 h=14.1 Tx CIV-150[0].Page3[0].SigSub[0].DeclarantPrintName[0]
+      T: (TYPE OR PRINT NAME OF DECLARANT)
+      L: 
+      A: 
+p3 y= 768.4 x= 258.7 w= 81.0 h=17.0 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] CIV-150[0].#pageSet[0].MPLast[0].Print[0]
+      T: Print
+      L: button after you have printed the form.
+      A: OF LIMITED SCOPE REPRESENTATION
+p3 y= 768.4 x= 345.2 w= 81.1 h=17.0 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] CIV-150[0].#pageSet[0].MPLast[0].Save[0]
+      T: Save
+      L: you have printed the form.
+      A: REPRESENTATION
+p3 y= 768.4 x= 494.9 w= 81.0 h=17.0 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] CIV-150[0].#pageSet[0].MPLast[0].Reset[0]
+      T: Clear
+      L: 
+      A: 
