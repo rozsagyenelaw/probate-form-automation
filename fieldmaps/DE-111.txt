@@ -1,0 +1,708 @@
+p1 y=  47.1 x= 271.6 w=122.0 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyBarNo_dc[0]
+      T: STATE BAR NO.:
+      L: ATTORNEY OR PARTY WITHOUT ATTORNEY: STATE BAR NO.:
+      A: 
+p1 y=  59.2 x=  57.6 w=336.1 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyName_ft[0]
+      T: NAME:
+      L: NAME:
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY: STATE BAR NO.:
+p1 y=  70.9 x=  72.6 w=321.4 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyFirm_ft[0]
+      T: FIRM NAME:
+      L: FIRM NAME:
+      A: NAME:
+p1 y=  82.1 x=  93.6 w=300.4 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyStreet_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: 
+p1 y=  93.5 x=  53.6 w=186.8 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyCity_ft[0]
+      T: CITY:
+      L: CITY:
+      A: STREET ADDRESS:
+p1 y=  93.5 x= 264.3 w= 29.4 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyState_ft[0]
+      T: STATE:
+      L: CITY: STATE:
+      A: 
+p1 y=  93.5 x= 326.5 w= 67.5 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyZip_ft[0]
+      T: ZIP CODE:
+      L: STATE: ZIP CODE:
+      A: 
+p1 y= 104.9 x=  88.6 w=128.2 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].Phone_ft[0]
+      T: TELEPHONE NO.:
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 104.9 x= 265.6 w=128.4 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].Fax_ft[0]
+      T: FAX NO.:
+      L: TELEPHONE NO.: FAX NO.:
+      A: STATE: ZIP CODE:
+p1 y= 117.1 x=  90.6 w=303.4 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].Email_ft[0]
+      T: E-MAIL ADDRESS:
+      L: E-MAIL ADDRESS:
+      A: TELEPHONE NO.: FAX NO.:
+p1 y= 129.2 x= 107.6 w=286.4 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].AttyInfo[0].AttyFor_ft[0]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: ADDRESS:
+p1 y= 145.1 x= 227.7 w=166.3 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].CrtCounty_ft[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 156.0 x=  97.0 w=297.0 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].Street_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 167.0 x=  97.0 w=297.0 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].MailingAdd_ft[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 177.9 x=  97.0 w=297.0 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].CityZip_ft[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 188.9 x=  97.0 w=297.0 h= 9.0 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].Branch_ft[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 206.0 x= 124.4 w=270.0 h=11.5 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: ESTATE OF (name):
+      A: 
+p1 y= 233.3 x= 109.5 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox23[0]
+      T: Probate of 
+      L: PETITION FOR
+      A: 
+p1 y= 233.3 x= 184.8 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox23[1]
+      T: Lost     Will and for Letters Testamentary
+      L: PETITION FOR Probate of
+      A: 
+p1 y= 243.7 x= 109.5 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox22[0]
+      T: Probate of 
+      L: 
+      A: FOR
+p1 y= 244.2 x= 184.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox23[2]
+      T: Lost Will and for Letters of Administration 
+      L: Probate of
+      A: of
+p1 y= 247.3 x= 400.0 w=172.8 h=14.4 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: Probate with Will of Annexed Lost Will and for Letters of Administration
+      A: CASE NUMBER:
+p1 y= 264.6 x= 109.5 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox21[0]
+      T: Letters of Administration
+      L: 
+      A: 
+p1 y= 274.7 x= 109.5 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox20[0]
+      T: Letters of Special Administration
+      L: 
+      A: 
+p1 y= 274.7 x= 283.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox17[0]
+      T: with general powers
+      L: Letters of Special Administration
+      A: 
+p1 y= 284.7 x= 109.5 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox19[0]
+      T: Authorization to Administer Under the Independent Administration of Estates Act
+      L: 
+      A: 
+p1 y= 285.3 x= 399.6 w=140.4 h=11.1 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CaseNumber[1].CaseNumber_ft[0]
+      T: HEARING DATE AND TIME:
+      L: Authorization to Administer Under the Independent
+      A: powers HEARING DATE AND TIME:
+p1 y= 285.3 x= 543.7 w= 32.3 h=11.1 Tx topmostSubform[0].Page1[0].StdP1Header_sf[0].CaseNumber[1].FillText121[0]
+      T: DEPT.:
+      L: the Independent
+      A: DEPT.:
+p1 y= 294.1 x= 270.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].StdP1Header_sf[0].FormTitle[0].CheckBox18[0]
+      T: with limited authority
+      L: Administration of Estates Act
+      A: Administration
+p1 y= 316.3 x= 255.4 w=314.0 h= 9.0 Tx topmostSubform[0].Page1[0].FillText141[0]
+      T: Publication will be in (specify name of newspaper): 
+      L: 1. Publication will be in (specify name of newspaper):
+      A: Estates Act with limited authority
+p1 y= 328.3 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox1[0]
+      T: Publication requested.
+      L: a.
+      A: Publication
+p1 y= 341.9 x=  71.0 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox1[1]
+      T: Publication to be arranged.
+      L: b.
+      A: a.
+p1 y= 364.5 x=  50.9 w=524.9 h=21.8 Tx ML topmostSubform[0].Page1[0].FillText142[0]
+      T: Petitioner (name each):
+      L: 
+      A: 2. Petitioner (name each):
+p1 y= 400.0 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox3[0]
+      T: decedent's will and codicils, if any, be admitted to probate.
+      L: a.
+      A: requests
+p1 y= 413.3 x= 101.0 w=360.0 h= 9.0 Tx topmostSubform[0].Page1[0].FillText143[0]
+      T: (name):
+      L: b. (name):
+      A: decedent's will and codicils, if any, be admitted to probate.
+p1 y= 425.0 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox5[0]
+      T: executor
+      L: (1)
+      A: (name):
+p1 y= 437.5 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox6[0]
+      T: administrator with will annexed
+      L: (2)
+      A: (1)
+p1 y= 449.9 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox7[0]
+      T: administrator
+      L: (3)
+      A: (2)
+p1 y= 462.4 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox8[0]
+      T: special administrator
+      L: (4)
+      A: (3)
+p1 y= 462.4 x= 218.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox9[0]
+      T: with general powers     
+      L: (4) special administrator
+      A: 
+p1 y= 489.1 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox12[0]
+      T: full
+      L: c.
+      A: and
+p1 y= 489.1 x= 122.3 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox12[1]
+      T: limited authority   
+      L: c. full
+      A: Letters issue
+p1 y= 500.5 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox11[0]
+      T: bond not be required for the reasons stated in item 3e.
+      L: d. (1)
+      A: full
+p1 y= 513.0 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox13[0]
+      T:  bond be fixed. The bond will be furnished by an admitted surety insurer or as otherwise provided by law. (Specify reaso
+      L: (2)
+      A: (1)
+p1 y= 513.0 x= 114.3 w=105.8 h= 9.0 Tx topmostSubform[0].Page1[0].FillText144[0]
+      T: $
+      L: (2) $
+      A: bond not be required for the
+p1 y= 544.7 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox14[0]
+      T:                                               in deposits in a blocked account be allowed.  Receipts will be filed. 
+      L: (3)
+      A: 
+p1 y= 544.7 x= 114.3 w=105.8 h= 9.0 Tx topmostSubform[0].Page1[0].FillText145[0]
+      T: $
+      L: (3) $
+      A: Code, provided § 8482.) by law. (Specify reasons
+p1 y= 564.1 x= 108.7 w=466.1 h=21.9 Tx ML topmostSubform[0].Page1[0].FillText161[0]
+      T: (Specify institution and location):
+      L: 
+      A: $ (Specify institution and location): in deposits in a blocked account be allowed. Receipt
+p1 y= 590.4 x= 168.8 w=103.2 h= 9.0 Tx topmostSubform[0].Page1[0].FillText146[0]
+      T: Decedent died on (date):
+      L: 3. a. Decedent died on (date):
+      A: 
+p1 y= 590.4 x= 313.0 w=263.0 h= 9.0 Tx topmostSubform[0].Page1[0].FillText147[0]
+      T: at (place):
+      L: a. Decedent died on (date): at (place):
+      A: 
+p1 y= 603.7 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox15[0]
+      T: a resident of the county named above.
+      L: (1)
+      A: Decedent
+p1 y= 616.8 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox15[1]
+      T: a nonresident of California and left an estate in the county named above located at 
+      L: (2)
+      A: (1)
+p1 y= 637.3 x= 108.7 w=466.1 h=28.7 Tx ML topmostSubform[0].Page1[0].FillText148[0]
+      T: (specify location permitting publication in the newspaper named in item 1):
+      L: 
+      A: a publication nonresident in the of California newspaper and named left an in estate item 
+p1 y= 668.5 x=  70.9 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox81[0]
+      T: Decedent was a citizen of a country other than the United States (specify country):
+      L: b.
+      A: 
+p1 y= 669.1 x= 421.6 w=142.7 h= 9.0 Tx topmostSubform[0].Page1[0].TextField3g5[0]
+      T: TextField3g5
+      L: citizen of a country other than the United States (specify country):
+      A: 
+p1 y= 695.8 x=  66.2 w=507.0 h=25.3 Tx ML topmostSubform[0].Page1[0].FillText149[0]
+      T: Street address, city, and county of decedent's residence at time of death (specify):
+      L: 
+      A: c. Street address, city, and county of decedent's residence at time of death (specify):
+p2 y=  52.4 x= 124.4 w=270.0 h=11.5 Tx F68 topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: ESTATE OF (name):
+      A: 
+p2 y=  59.4 x= 400.0 w=172.8 h=14.4 Tx F68 topmostSubform[0].Page2[0].Page2[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: DECEDENT
+      A: CASE NUMBER: DE-111
+p2 y=  98.5 x= 264.4 w=113.6 h= 9.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText162[0]
+      T: $
+      L: (1) Personal property: $
+      A: property of the estate (complete in all
+p2 y= 127.8 x= 267.2 w=110.7 h= 9.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText165[0]
+      T: $
+      L: (a) real property: $
+      A: 
+p2 y= 144.2 x= 266.4 w=111.6 h= 9.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText164[0]
+      T: $
+      L: (b) personal property: $
+      A: $
+p2 y= 159.1 x= 266.4 w=111.6 h=10.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText163[0]
+      T: $
+      L: (3) Subtotal (add (1) and (2)): $
+      A: $
+p2 y= 174.6 x= 266.2 w=111.7 h= 9.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText173[0]
+      T: $
+      L: (4) Gross fair market value of real property: $
+      A: $
+p2 y= 190.2 x= 266.2 w=111.7 h=10.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText173[1]
+      T: $
+      L: (5) (Less) Encumbrances: ($
+      A: $
+p2 y= 205.4 x= 267.2 w=110.7 h=10.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText178[0]
+      T: $
+      L: (6) Net value of real property: $
+      A: ($
+p2 y= 220.6 x= 432.1 w=110.7 h=10.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText177[0]
+      T: $
+      L: (6)): $
+      A: 
+p2 y= 234.2 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox73[0]
+      T: Will waives bond.
+      L: e. (1)
+      A: (7) Total
+p2 y= 234.2 x= 207.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox72[0]
+      T: Special administrator is the named executor, and the will waives bond.
+      L: e. (1) Will waives bond.
+      A: 
+p2 y= 245.9 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox74[0]
+      T: All beneficiaries are adults and have waived bond, and the will does not require a bond. (Affix waiver as Attachment 3e(
+      L: (2)
+      A: (1)
+p2 y= 268.7 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox75[0]
+      T: All heirs at law are adults and have waived bond. (Affix waiver as Attachment 3e(3).)
+      L: (3)
+      A: 
+p2 y= 280.8 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox76[0]
+      T: Sole personal representative is a corporate fiduciary or an exempt government agency.
+      L: (4)
+      A: (3)
+p2 y= 295.1 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox77[0]
+      T: Decedent died intestate.
+      L: f. (1)
+      A: (4)
+p2 y= 306.9 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox78[0]
+      T: Copy of decedent's will
+      L: (2)
+      A: (1)
+p2 y= 306.9 x= 230.0 w= 70.4 h= 9.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText179[0]
+      T: dated:
+      L: (2) Copy of decedent's willdated:
+      A: 
+p2 y= 306.9 x= 317.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox79[0]
+      T: codicil dated 
+      L: (2) Copy of decedent's willdated:
+      A: 
+p2 y= 316.4 x= 108.9 w=455.9 h=11.0 Tx topmostSubform[0].Page2[0].Page2[0].FillText181[0]
+      T: (specify for each):
+      L: 
+      A: Decedent Copy of decedent's died intestate. willdated: codicil dated (specify for each):
+p2 y= 350.6 x= 113.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox57[0]
+      T: The will and all codicils are self-proving (Prob. Code, § 8220).
+      L: 
+      A: language
+p2 y= 365.9 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox57[1]
+      T: The original of the will and/or codicil identified above has been lost.
+      L: (3)
+      A: 
+p2 y= 431.4 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox58[0]
+      T: Proposed executor is named as executor in the will and consents to act.
+      L: (a)
+      A: Appointment
+p2 y= 443.3 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox59[0]
+      T: No executor is named in the will.
+      L: (b)
+      A: (a)
+p2 y= 455.3 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox60[0]
+      T: Proposed personal representative is a nominee of a person entitled to Letters. (Affix nomination as Attachment 3g(1)(c).
+      L: (c)
+      A: (b)
+p2 y= 477.9 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox61[0]
+      T: Other named executors will not act because of
+      L: (d)
+      A: 
+p2 y= 477.9 x= 331.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox63[0]
+      T: death
+      L: (d) Other named executors will not act because of
+      A: 
+p2 y= 477.9 x= 391.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox62[0]
+      T: declination
+      L: Other named executors will not act because of death
+      A: 
+p2 y= 490.3 x= 132.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox64[0]
+      T: other reasons 
+      L: 
+      A: Other
+p2 y= 499.6 x= 151.2 w=421.4 h=34.2 Tx ML topmostSubform[0].Page2[0].Page2[0].FillText182[0]
+      T: (specify):
+      L: 
+      A: Other named other reasons executors (specify): will not act because of death declination
+p2 y= 536.2 x= 157.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox65[0]
+      T: Continued in Attachment 3g(1)(d).
+      L: 
+      A: 
+p2 y= 559.5 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox66[0]
+      T: Petitioner is a person entitled to Letters. (If necessary, explain priority in Attachment 3g(2)(a).)
+      L: (a)
+      A: Appointment
+p2 y= 571.5 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox67[0]
+      T: Petitioner is a nominee of a person entitled to Letters. (Affix nomination as Attachment 3g(2)(b).)
+      L: (b)
+      A: (a)
+p2 y= 583.4 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox68[0]
+      T: Petitioner is related to the decedent as 
+      L: (c)
+      A: (b)
+p2 y= 583.4 x= 325.0 w=249.5 h= 9.0 Tx topmostSubform[0].Page2[0].Page2[0].FillTxt181[0]
+      T: (specify):
+      L: (c) Petitioner is related to the decedent as (specify):
+      A: to Letters. (Affix nomination as Attachment 3g(2)(b).)
+p2 y= 598.6 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox69[0]
+      T: Appointment of special administrator requested. (Specify grounds and requested powers in Attachment 3g(3).)
+      L: (3)
+      A: (c)
+p2 y= 612.1 x=  89.9 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox61[1]
+      T: Proposed personal representative would be a successor personal representative.
+      L: (4)
+      A: (3)
+p2 y= 637.3 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox70[0]
+      T: resident of California.
+      L: (1)
+      A: Proposed
+p2 y= 650.7 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page2[0].Page2[0].CheckBox70[1]
+      T: nonresident of California 
+      L: (2)
+      A: (1)
+p2 y= 659.9 x= 108.4 w=467.6 h=33.8 Tx ML topmostSubform[0].Page2[0].Page2[0].FillText183[0]
+      T: (specify permanent address):
+      L: 
+      A: nonresident of California
+p2 y= 698.0 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].Page2[0].CheckBox81[0]
+      T: resident of the United States.
+      L: (3)
+      A: 
+p2 y= 711.2 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page2[0].Page2[0].CheckBox81[1]
+      T: nonresident of the United States.
+      L: (4)
+      A: (3)
+p3 y=  52.1 x= 124.4 w=270.0 h=11.5 Tx F68 topmostSubform[0].Page3[0].PxCaption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: ESTATE OF (name):
+      A: 
+p3 y=  59.1 x= 400.0 w=172.8 h=14.4 Tx F68 topmostSubform[0].Page3[0].PxCaption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: DECEDENT
+      A: CASE NUMBER: DE-111
+p3 y= 100.6 x=  57.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox56[0]
+      T: Decedent's will does not preclude administration of this estate under the Independent Administration of Estates Act.
+      L: 4.
+      A: 
+p3 y= 128.2 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox55[0]
+      T: spouse.     
+      L: (1)
+      A: Decedent
+p3 y= 140.3 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page3[0].CheckBox55[1]
+      T: no spouse as follows:
+      L: (2)
+      A: (1)
+p3 y= 153.6 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox53[0]
+      T: divorced or never married.
+      L: (a)
+      A: no
+p3 y= 165.5 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox52[0]
+      T: spouse deceased.
+      L: (b)
+      A: (a)
+p3 y= 179.4 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox51[0]
+      T: registered domestic partner.
+      L: (3)
+      A: (b)
+p3 y= 191.3 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page3[0].CheckBox51[1]
+      T: no registered domestic partner. (See Fam. Code, § 297.5(c); Prob. Code, §§ 37(b), 6401(c), and 6402.)
+      L: (4)
+      A: (3)
+p3 y= 204.6 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox49[0]
+      T: child as follows:
+      L: (5)
+      A: (4)
+p3 y= 218.0 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox48[0]
+      T: natural or adopted.
+      L: (a)
+      A: child
+p3 y= 232.1 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox47[0]
+      T: natural adopted by a third party.
+      L: (b)
+      A: (a)
+p3 y= 245.6 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page3[0].CheckBox49[1]
+      T: no child.
+      L: (6)
+      A: (b)
+p3 y= 258.3 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox45[0]
+      T: issue of a predeceased child.
+      L: (7)
+      A: (6)
+p3 y= 273.3 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page3[0].CheckBox45[1]
+      T: no issue of a predeceased child.
+      L: (8)
+      A: (7)
+p3 y= 288.7 x= 115.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox43[0]
+      T: was    
+      L: b. Decedent
+      A: no issue
+p3 y= 288.7 x= 173.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page3[0].CheckBox43[1]
+      T: was not  
+      L: b. Decedent w a s
+      A: a predeceased
+p3 y= 341.5 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox41[0]
+      T: Decedent was survived by a parent or parents who are listed in item 8.
+      L: a.
+      A: spouse,
+p3 y= 354.9 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox40[0]
+      T: Decedent was survived by issue of deceased parents, all of whom are listed in item 8.
+      L: b.
+      A: a.
+p3 y= 368.4 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox39[0]
+      T: Decedent was survived by a grandparent or grandparents who are listed in item 8.
+      L: c.
+      A: b.
+p3 y= 381.9 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox38[0]
+      T: Decedent was survived by issue of grandparents, all of whom are listed in item 8.
+      L: d.
+      A: c.
+p3 y= 395.4 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox37[0]
+      T: Decedent was survived by issue of a predeceased spouse, all of whom are listed in item 8.
+      L: e.
+      A: d.
+p3 y= 407.4 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox36[0]
+      T: Decedent was survived by next of kin, all of whom are listed in item 8.
+      L: f.
+      A: e.
+p3 y= 419.3 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox35[0]
+      T: Decedent was survived by parents of a predeceased spouse or issue of those parents, if both are predeceased, all of  who
+      L: g.
+      A: f.
+p3 y= 443.7 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox34[0]
+      T: Decedent was survived by no known next of kin.
+      L: h.
+      A: 
+p3 y= 472.6 x=  71.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox33[0]
+      T: Decedent had no predeceased spouse.
+      L: a.
+      A: (Complete
+p3 y= 486.9 x=  71.0 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page3[0].CheckBox33[1]
+      T: Decedent had a predeceased spouse who
+      L: b.
+      A: a.
+p3 y= 500.7 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox31[0]
+      T: died not more than 15 years before decedent and who owned an interest in real property that passed to decedent,
+      L: (1)
+      A: Decedent
+p3 y= 515.2 x=  89.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page3[0].CheckBox31[1]
+      T: died not more than five years before decedent and who owned personal property valued at $10,000 or more that passed to d
+      L: (2)
+      A: (1)
+p3 y= 540.1 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox29[0]
+      T: Decedent was survived by issue of a predeceased spouse, all of whom are listed in item 8.
+      L: (a)
+      A: passed
+p3 y= 552.6 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox28[0]
+      T: Decedent was survived by a parent or parents of the predeceased spouse who are listed in item 8.
+      L: (b)
+      A: (a)
+p3 y= 564.6 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox27[0]
+      T: Decedent was survived by issue of a parent of the predeceased spouse, all of whom are listed in item 8.
+      L: (c)
+      A: (b)
+p3 y= 576.7 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox26[0]
+      T: Decedent was survived by next of kin of the decedent, all of whom are listed in item 8.
+      L: (d)
+      A: (c)
+p3 y= 588.6 x= 107.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox25[0]
+      T: Decedent was survived by next of kin of the predeceased spouse, all of whom are listed in item 8.
+      L: (e)
+      A: (d)
+p3 y= 604.9 x=  89.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page3[0].CheckBox24[0]
+      T: neither (1) nor (2) apply.
+      L: (3)
+      A: (e)
+p4 y=  52.1 x= 124.4 w=270.0 h=11.5 Tx F68 topmostSubform[0].Page4[0].CaptionPx_sf[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: ESTATE OF (name):
+      A: 
+p4 y=  59.1 x= 400.0 w=172.8 h=14.4 Tx F68 topmostSubform[0].Page4[0].CaptionPx_sf[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: DECEDENT
+      A: CASE NUMBER: DE-111
+p4 y= 114.8 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[0]
+      T: FillText352
+      L: 
+      A: 8. Name and relationship to decedent
+p4 y= 114.8 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[0]
+      T: FillText351
+      L: 
+      A: Age
+p4 y= 114.8 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[0]
+      T: FillText350
+      L: 
+      A: Address
+p4 y= 150.3 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[9]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 150.3 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[9]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 150.3 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[9]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 185.7 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[8]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 185.7 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[8]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 185.7 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[8]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 221.2 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[7]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 221.2 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[7]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 221.2 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[7]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 256.7 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[6]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 256.7 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[6]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 256.7 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[6]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 292.2 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[5]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 292.2 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[5]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 292.2 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[5]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 327.6 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[4]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 327.6 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[4]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 327.6 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[4]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 363.1 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[3]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 363.1 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[3]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 363.1 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[3]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 398.6 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[2]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 398.6 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[2]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 398.6 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[2]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 434.0 x=  51.5 w=186.0 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText352[1]
+      T: FillText352
+      L: 
+      A: 
+p4 y= 434.0 x= 250.7 w= 59.5 h=15.7 Tx topmostSubform[0].Page4[0].FillText351[1]
+      T: FillText351
+      L: 
+      A: 
+p4 y= 434.0 x= 323.4 w=252.6 h=35.5 Tx ML topmostSubform[0].Page4[0].FillText350[1]
+      T: FillText350
+      L: 
+      A: 
+p4 y= 479.4 x=  56.9 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page4[0].CheckBox83[0]
+      T: Continued on Attachment 8.
+      L: 
+      A: 
+p4 y= 497.4 x= 163.7 w= 38.5 h=10.0 Tx topmostSubform[0].Page4[0].FillText277[0]
+      T: Number of pages attached: 
+      L: 9. Number of pages attached:
+      A: Attachment 8.
+p4 y= 523.6 x=  61.2 w=108.0 h= 9.0 Tx topmostSubform[0].Page4[0].FillText276[0]
+      T: Date:
+      L: Date:
+      A: 
+p4 y= 546.8 x=  36.0 w=254.0 h=10.3 Tx topmostSubform[0].Page4[0].FillText358[0]
+      T: (TYPE OR PRINT NAME  OF ATTORNEY )
+      L: 
+      A: 
+p4 y= 613.5 x=  61.2 w=108.0 h= 9.0 Tx topmostSubform[0].Page4[0].FillText276[1]
+      T: Date:
+      L: Date:
+      A: 
+p4 y= 630.6 x=  36.0 w=254.0 h=11.8 Tx topmostSubform[0].Page4[0].FillText357[0]
+      T: (TYPE OR PRINT NAME OF PETITIONER)
+      L: 
+      A: Date:
+p4 y= 657.7 x=  36.7 w=254.0 h=11.8 Tx topmostSubform[0].Page4[0].FillText357[1]
+      T: (TYPE OR PRINT NAME OF PETITIONER)
+      L: 
+      A: (TYPE OR PRINT NAME OF PETITIONER)
+p4 y= 687.8 x=  36.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page4[0].CheckBox82[0]
+      T: Signatures of additional petitioners follow last attachment.
+      L: 
+      A: 
+p4 y= 756.5 x=  37.0 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] topmostSubform[0].Page4[0].T23[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: (Probate—Decedents
+p4 y= 762.7 x= 259.7 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] topmostSubform[0].Page4[0].Print_bt[0]
+      T: Print this form
+      L: 
+      A: (Probate—Decedents Estates
+p4 y= 762.7 x= 346.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] topmostSubform[0].Page4[0].Save_bt[0]
+      T: Save this form
+      L: 
+      A: (Probate—Decedents Estates
+p4 y= 762.7 x= 496.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] topmostSubform[0].Page4[0].Reset_bt[0]
+      T: Clear this form
+      L: 
+      A: 

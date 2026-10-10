@@ -1,0 +1,240 @@
+p1 y=  55.2 x=  38.0 w=356.3 h=51.5 Tx ML DE-160[0].Page1[0].P1Caption[0].AttyPartyInfo[0].TextField1[0]
+      T: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+p1 y= 109.2 x= 120.2 w=114.4 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]
+      T: Phone number
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 109.2 x= 296.1 w= 98.2 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Fax[0]
+      T: Fax number
+      L: TELEPHONE NO.: FAX NO. (Optional):
+      A: 
+p1 y= 120.7 x= 120.2 w=274.2 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[0]
+      T: E-MAIL ADDRESS (Optional):
+      L: E-MAIL ADDRESS (Optional):
+      A: TELEPHONE NO.: FAX NO. (Optional):
+p1 y= 132.1 x= 120.2 w=274.2 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[1]
+      T:  ATTORNEY FOR (Name):
+      L: ATTORNEY FOR (Name):
+      A: (Optional):
+p1 y= 145.2 x= 227.7 w=166.3 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCounty[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 156.2 x=  97.0 w=297.0 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].CourtInfo[0].CrtStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 167.1 x=  97.0 w=297.0 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].CourtInfo[0].CrtMailingAdd[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 178.4 x=  97.0 w=297.0 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 189.7 x=  97.0 w=297.0 h= 9.0 Tx DE-160[0].Page1[0].P1Caption[0].CourtInfo[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 218.4 x=  37.6 w=355.9 h=12.3 Tx DE-160[0].Page1[0].P1Caption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p1 y= 233.2 x= 109.1 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].TitlePartyName[0].#area[0].petitioner_cb1[0]
+      T: DECEDENT
+      L: 
+      A: 
+p1 y= 233.2 x= 191.2 w=  9.0 h= 9.0 Btn[/2] DE-160[0].Page1[0].P1Caption[0].TitlePartyName[0].#area[0].petitioner_cb1[1]
+      T: CONSERVATEE
+      L: DECEDENT
+      A: 
+p1 y= 233.2 x= 288.6 w=  9.0 h= 9.0 Btn[/3] DE-160[0].Page1[0].P1Caption[0].TitlePartyName[0].#area[0].petitioner_cb1[2]
+      T: MINOR
+      L: DECEDENT CONSERVATEE
+      A: 
+p1 y= 256.8 x= 398.2 w=176.9 h=14.4 Tx DE-160[0].Page1[0].P1Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: INVENTORY AND APPRAISAL
+      A: CASE NUMBER:
+p1 y= 266.4 x= 140.4 w= 94.2 h=11.0 Tx DE-160[0].Page1[0].P1Caption[0].FormTitle[0].TextField[0]
+      T: Partial No.:
+      L: Partial No.:
+      A: INVENTORY AND
+p1 y= 266.8 x= 246.8 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].FormTitle[0].#area[2].CheckBoxCaption[2]
+      T: Corrected
+      L: Partial No.:
+      A: AND APPRAISAL
+p1 y= 268.3 x=  69.8 w=  9.0 h= 9.0 Btn[/Yes] DE-160[0].Page1[0].P1Caption[0].FormTitle[0].Checkbox[0]
+      T: Checkbox
+      L: 
+      A: 
+p1 y= 278.4 x= 246.8 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].FormTitle[0].#area[3].CheckBoxCaption[3]
+      T: Reappraisal for Sale
+      L: Final
+      A: 
+p1 y= 279.8 x=  69.4 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].FormTitle[0].#area[0].CheckBoxCaption[0]
+      T: Final
+      L: 
+      A: 
+p1 y= 289.2 x= 398.8 w=175.8 h=15.7 Tx DE-160[0].Page1[0].P1Caption[0].CaseNumber[0].TextField[0]
+      T: Date of Death of Decedent or of Appointment of Guardian or Conservator:
+      L: Supplemental Property Tax Certificate
+      A: Date Conservator: of Death of Decedent or of Appointment of Guardian or
+p1 y= 291.4 x=  69.6 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].FormTitle[0].#area[1].CheckBoxCaption[1]
+      T: Supplemental
+      L: 
+      A: 
+p1 y= 291.8 x= 246.8 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].FormTitle[0].#area[4].CheckBoxCaption[4]
+      T: Property Tax Certificate
+      L: Supplemental
+      A: 
+p1 y= 324.4 x= 368.9 w=131.9 h=12.5 Tx DE-160[0].Page1[0].DecimalField3[0]
+      T: $ 
+      L: by representative, guardian, or conservator (Attachment 1): $
+      A: 
+p1 y= 338.6 x= 368.9 w=131.9 h=12.5 Tx DE-160[0].Page1[0].DecimalField2[0]
+      T: $ 
+      L: by referee (Attachment 2): $
+      A: $
+p1 y= 352.8 x= 368.9 w=131.9 h=12.5 Tx F68 DE-160[0].Page1[0].DecimalField1[0]
+      T: TOTAL:  $ 
+      L: TOTAL: $
+      A: $
+p1 y= 396.6 x= 398.0 w=177.2 h=11.4 Tx DE-160[0].Page1[0].TextField6[0]
+      T: TextField6
+      L: together with all prior inventories filed contain a true statement of
+      A: CONSERVATOR, OR SMALL ESTATE CLAIMANT
+p1 y= 410.1 x=  55.9 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[0].CheckBoxCaption[0]
+      T: all
+      L: 
+      A: 3. Attachments
+p1 y= 410.1 x= 100.5 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[0].#area[1].CheckBoxCaption[1]
+      T: a portion
+      L: all
+      A: Attachments 1
+p1 y= 444.7 x= 381.4 w=193.6 h=11.4 Tx DE-160[0].Page1[0].P1Caption[0].TextField6[0]
+      T: (specify):
+      L: probate referee is required by order of the court dated (specify):
+      A: 
+p1 y= 445.6 x=  55.9 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[2].CheckBoxCaption[2]
+      T: No probate referee is required
+      L: 4.
+      A: Attachment
+p1 y= 445.6 x= 211.8 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[2].#area[3].CheckBoxCaption[3]
+      T: by order of the court dated 
+      L: 4. No probate referee is required
+      A: 
+p1 y= 473.1 x=  65.7 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[4].CheckBoxCaption[4]
+      T: are not applicable because the decedent owned no real property in California at the time of death.
+      L: a.
+      A: Property
+p1 y= 485.7 x=  65.6 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[5].CheckBox19[0]
+      T: have been satisfied by the filing of a change of ownership statement with the county recorder or assessor of each county
+      L: b.
+      A: a.
+p1 y= 529.0 x=  61.2 w=108.0 h=10.1 Tx DE-160[0].Page1[0].P1Caption[0].#area[6].Date[0]
+      T: Date:
+      L: Date:
+      A: declare under penalty of perjury
+p1 y= 542.9 x=  36.0 w=239.9 h=14.1 Tx DE-160[0].Page1[0].P1Caption[0].#area[6].PrintName[0]
+      T: (TYPE OR PRINT NAME; INCLUDE TITLE IF CORPORATE OFFICER)
+      L: 
+      A: Date:
+p1 y= 607.4 x=  55.9 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[7].CheckBoxCaption[5]
+      T: Bond is waived, or the sole fiduciary is a corporate fiduciary or an exempt government agency.
+      L: 6.
+      A: 
+p1 y= 618.7 x= 199.4 w=120.8 h=11.0 Tx DE-160[0].Page1[0].P1Caption[0].DecimalField8[0]
+      T: in the amount of: $
+      L: 7. Bond filed in the amount of: $
+      A: sole fiduciary is a corporate fiduciary or
+p1 y= 620.1 x=  55.9 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[8].CheckBoxCaption[6]
+      T: Bond filed
+      L: 7.
+      A: 6.
+p1 y= 620.1 x= 327.6 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[9].petitioner_cb[0]
+      T: Sufficient
+      L: Bond filed in the amount of: $
+      A: fiduciary or an
+p1 y= 620.1 x= 396.5 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[10].petitioner_cb[1]
+      T: Insufficient
+      L: the amount of: $ Sufficient
+      A: government
+p1 y= 632.5 x= 143.0 w= 74.9 h=11.0 Tx DE-160[0].Page1[0].P1Caption[0].DecimalField7[0]
+      T: $
+      L: 8. Receipts for: $
+      A: in the amount of: $
+p1 y= 633.9 x=  55.9 w=  9.0 h= 9.0 Btn[/1] DE-160[0].Page1[0].P1Caption[0].#area[11].CheckBoxCaption[7]
+      T: Receipts for:
+      L: 8.
+      A: 7.
+p1 y= 656.4 x=  77.1 w=498.2 h=12.7 Tx DE-160[0].Page1[0].P1Caption[0].TextField6[1]
+      T: (specify institution and location here
+      L: 
+      A: institution and location):
+p1 y= 673.2 x=  61.2 w=108.0 h=10.1 Tx DE-160[0].Page1[0].P1Caption[0].#area[12].Date[1]
+      T: Date:
+      L: Date:
+      A: 
+p1 y= 686.4 x=  36.0 w=239.9 h=14.1 Tx DE-160[0].Page1[0].P1Caption[0].#area[12].PrintName[1]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: Date:
+p2 y=  55.8 x=  37.9 w=357.9 h=12.5 Tx F68 DE-160[0].Page2[0].PxCaption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p2 y=  59.1 x= 397.3 w=176.9 h=13.0 Tx F68 DE-160[0].Page2[0].PxCaption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER: DE-160/GC-040
+p2 y=  68.4 x= 142.4 w=  9.0 h= 9.0 Btn[/1] F68 DE-160[0].Page2[0].PxCaption[0].TitlePartyName[0].#area[0].petitioner_cb1[0]
+      T: DECEDENT
+      L: 
+      A: 
+p2 y=  68.5 x= 224.5 w=  9.0 h= 9.0 Btn[/2] F68 DE-160[0].Page2[0].PxCaption[0].TitlePartyName[0].#area[0].petitioner_cb1[1]
+      T: CONSERVATEE
+      L: DECEDENT
+      A: 
+p2 y=  68.5 x= 321.9 w=  9.0 h= 9.0 Btn[/3] F68 DE-160[0].Page2[0].PxCaption[0].TitlePartyName[0].#area[0].petitioner_cb1[2]
+      T: MINOR
+      L: DECEDENT CONSERVATEE
+      A: 
+p2 y= 123.6 x= 178.8 w=127.5 h=11.0 Tx DE-160[0].Page2[0].DecimalField6[0]
+      T: Statutory commission: $
+      L: Statutory commission: $
+      A: commission and expenses actually and
+p2 y= 137.1 x= 179.3 w=127.0 h=11.0 Tx DE-160[0].Page2[0].DecimalField5[0]
+      T: Expenses (specify):  $
+      L: Expenses (specify): $
+      A: $
+p2 y= 150.0 x= 179.7 w=125.6 h=11.0 Tx F68 DE-160[0].Page2[0].DecimalField4[0]
+      T:  TOTAL: $
+      L: TOTAL: $
+      A: $
+p2 y= 185.8 x=  61.2 w=108.0 h=10.1 Tx DE-160[0].Page2[0].#area[0].Date[0]
+      T: Date:
+      L: Date:
+      A: declare under penalty of perjury
+p2 y= 206.4 x=  36.0 w=239.9 h=14.1 Tx DE-160[0].Page2[0].#area[0].PrintName[0]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: Date:
+p2 y= 732.8 x=  36.1 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-160[0].Page2[0].PXFooter[0].#area[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: DE-160/GC-040 [Rev. January 1, 2007] INVENTORY
+p2 y= 739.0 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-160[0].Page2[0].PXFooter[0].#area[0].Print[0]
+      T: Print this form
+      L: 
+      A: INVENTORY AND APPRAISAL
+p2 y= 739.0 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-160[0].Page2[0].PXFooter[0].#area[0].Save[0]
+      T: Save this form
+      L: 
+      A: APPRAISAL
+p2 y= 739.0 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-160[0].Page2[0].PXFooter[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

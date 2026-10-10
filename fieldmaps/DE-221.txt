@@ -1,0 +1,324 @@
+p1 y=  55.0 x=  37.1 w=356.3 h=51.5 Tx ML DE-221[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Attorney[0]
+      T: Attorney or Party Without Attorney (Name, State Bar number, and address)
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+p1 y= 109.0 x= 119.3 w=114.4 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]
+      T: Phone number
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 109.0 x= 295.2 w= 98.2 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Fax[0]
+      T: Fax number
+      L: TELEPHONE NO.: FAX NO. (Optional):
+      A: 
+p1 y= 120.6 x= 119.3 w=274.2 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[0]
+      T: E-Mail Address (optional)
+      L: E-MAIL ADDRESS (Optional):
+      A: TELEPHONE NO.: FAX NO. (Optional):
+p1 y= 132.0 x= 119.3 w=274.2 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttorneyFor[0]
+      T: Attorney For (Name)
+      L: ATTORNEY FOR (Name):
+      A: (Optional):
+p1 y= 145.2 x= 227.7 w=166.3 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCounty[0]
+      T: Superior Court of California, County of
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 156.2 x=  97.0 w=297.0 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].CourtInfo[0].CrtStreet[0]
+      T: Street Address
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 167.1 x=  97.0 w=297.0 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].CourtInfo[0].CrtMailingAdd[0]
+      T: Mailing Address
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 178.4 x=  97.0 w=297.0 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCityZip[0]
+      T: City and Zip Code
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 189.7 x=  97.0 w=297.0 h= 9.0 Tx DE-221[0].Page1[0].P1Caption[0].CourtInfo[0].CrtBranch[0]
+      T: Branch Name
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 190.7 x= 400.0 w=172.8 h=14.4 Tx DE-221[0].Page1[0].P1Caption[0].Stamp[0].CaseNumber[0].CaseNumber[0]
+      T: Case Number
+      L: 
+      A: CASE NUMBER:
+p1 y= 203.3 x= 119.4 w=227.2 h=21.4 Tx ML DE-221[0].Page1[0].P1Caption[0].TitlePartyName[0].Name1[0]
+      T: Name
+      L: ESTATE OF(Name):
+      A: 
+p1 y= 220.1 x= 400.0 w=172.8 h=14.4 Tx DE-221[0].Page1[0].P1Caption[0].Stamp[0].HearingDate[0].HearingDate[0]
+      T: Hearing Date
+      L: DECEDENT
+      A: HEARING DATE:
+p1 y= 239.2 x=  48.2 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].P1Caption[0].FormTitle[0].#area[0].CheckBoxCaption[0]
+      T: Spousal
+      L: 
+      A: 
+p1 y= 239.2 x= 136.8 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].P1Caption[0].FormTitle[0].#area[1].CheckBoxCaption[1]
+      T: Domestic Partner
+      L: SPOUSAL
+      A: 
+p1 y= 243.4 x= 420.3 w= 53.3 h=11.0 Tx DE-221[0].Page1[0].P1Caption[0].Dept[0].dept[0]
+      T: Department
+      L: DOMESTIC PARTNER PROPERTY PETITION DEPT.:
+      A: 
+p1 y= 243.4 x= 503.5 w= 68.3 h=11.0 Tx DE-221[0].Page1[0].P1Caption[0].Dept[0].time[0]
+      T: Time
+      L: PARTNER PROPERTY PETITION DEPT.: TIME:
+      A: 
+p1 y= 263.2 x= 128.5 w=389.3 h=11.0 Tx DE-221[0].Page1[0].List1[0].TextField[0]
+      T: Petitioner Name
+      L: 1. Petitioner (name):
+      A: DEPT.: TIME:
+p1 y= 276.2 x=  69.9 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List1[0].LI1[0].#area[0].CheckBox1[0]
+      T: determination of property passing to the surviving spouse or surviving registered domestic partner without administratio
+      L: a.
+      A: Petitioner
+p1 y= 299.2 x=  69.9 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List1[0].LI2[0].#area[0].CheckBox2[0]
+      T: confirmation of property belonging to the surviving spouse or surviving registered domestic partner (Family Code, sectio
+      L: b.
+      A: 
+p1 y= 321.6 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List1[0].LI3[0].#area[0].CheckBox3[0]
+      T: immediate appointment of a probate referee
+      L: c.
+      A: 
+p1 y= 347.8 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List2[0].Itema[0].#area[0].CheckBox1[0]
+      T: surviving spouse of the decedent
+      L: a.
+      A: Petitioner
+p1 y= 357.8 x= 234.2 w=244.8 h=11.0 Tx DE-221[0].Page1[0].List2[0].Itemb[0].name[0]
+      T: Name
+      L: b. personal representative of (name):
+      A: decedent.
+p1 y= 358.7 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List2[0].Itemb[0].CheckBox1[0]
+      T: personal representative of
+      L: b.
+      A: a.
+p1 y= 369.7 x= 286.3 w=196.2 h=11.0 Tx DE-221[0].Page1[0].List2[0].Itemc[0].#area[0].name[0]
+      T: Name
+      L: c. guardian or conservator of the estate of (name):
+      A: ,
+p1 y= 370.5 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List2[0].Itemc[0].#area[0].CheckBox1[0]
+      T: guardian or conservator of the estate of
+      L: c.
+      A: b.
+p1 y= 382.5 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List2[0].Itemd[0].#area[0].CheckBox1[0]
+      T: surviving registered domestic partner of the decedent
+      L: d.
+      A: c.
+p1 y= 393.2 x= 237.3 w=161.4 h=11.0 Tx DE-221[0].Page1[0].List2[0].Iteme[0].TextField[0]
+      T: Name
+      L: e. personal representative of (name):
+      A: partner of the decedent.
+p1 y= 395.1 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List2[0].Iteme[0].CheckBox1[0]
+      T: personal representative of
+      L: e.
+      A: d.
+p1 y= 406.5 x= 240.0 w=160.1 h=11.8 Tx DE-221[0].Page1[0].List2[0].Itemf[0].name[0]
+      T: Name
+      L: f. conservator of the estate of (name):
+      A: (name):
+p1 y= 407.8 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List2[0].Itemf[0].CheckBox1[0]
+      T: conservator of the estate of 
+      L: f.
+      A: e.
+p1 y= 419.6 x= 152.1 w=115.2 h=11.0 Tx DE-221[0].Page1[0].List3[0].Item[0].on_date[0]
+      T: Decedent died on (date)
+      L: 3. Decedent died on (date):
+      A: conservator of the estate of (name):
+p1 y= 445.2 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List4[0].Itema[0].#area[0].CheckBox1[0]
+      T: a resident of the California county named above
+      L: a.
+      A: Decedent
+p1 y= 455.6 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List4[0].Itemb[0].#area[0].CheckBox1[0]
+      T: a nonresident of California and left an estate in the county named above
+      L: b.
+      A: a.
+p1 y= 466.3 x= 140.4 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List4[0].Itemc[0].#area[0].#area[1].CheckBox2[0]
+      T: testate and a copy of the will and any codicil is affixed as Attachment 4c.(Attach copies of will and any codicil, a ty
+      L: c. intestate
+      A: resident nonresident of the of
+p1 y= 466.7 x=  70.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List4[0].Itemc[0].#area[0].CheckBox1[0]
+      T: intestate
+      L: c.
+      A: a. b.
+p1 y= 511.8 x= 364.9 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItemaSub[0].List5a1Sub[0].ItemsSub[0].#area[3].CheckBox4[0]
+      T: natural, adopted by a third party
+      L: no child. child as follows: natural or adopted
+      A: 
+p1 y= 511.8 x= 254.4 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItemaSub[0].List5a1Sub[0].ItemsSub[0].#area[2].CheckBox3[0]
+      T: natural or adopted
+      L: (1) no child. child as follows:
+      A: survived by
+p1 y= 512.3 x=  87.6 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItemaSub[0].List5a1Sub[0].ItemsSub[0].#area[0].CheckBox1[0]
+      T: no child
+      L: (1)
+      A: (Complete
+p1 y= 512.3 x= 155.6 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItemaSub[0].List5a1Sub[0].ItemsSub[0].#area[1].CheckBox2[0]
+      T: child as follows
+      L: (1) no child.
+      A: cases) The
+p1 y= 523.3 x=  87.6 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItemaSub[0].List5a2Sub[0].Item[0].#area[0].CheckBox1[0]
+      T: no issue of a predeceased child
+      L: (2)
+      A: (1) (Complete
+p1 y= 523.3 x= 254.4 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItemaSub[0].List5a2Sub[0].Item[0].#area[1].CheckBox2[0]
+      T: issue of a predeceased child
+      L: (2) no issue of a predeceased child.
+      A: follows: survived by
+p1 y= 535.5 x= 111.8 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItembSub[0].#area[0].CheckBox1[0]
+      T: Decedent is
+      L: b. Decedent
+      A: no
+p1 y= 535.5 x= 155.6 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List5[0].ItembSub[0].#area[1].CheckBox2[0]
+      T: is not
+      L: b. Decedent is
+      A: issue of a predeceased
+p1 y= 573.4 x=  70.2 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List6[0].ItemaSub[0].#area[0].CheckBox1[0]
+      T: The decedent is survived by a parent or parents who are listed in item 9
+      L: a.
+      A: (Complete
+p1 y= 585.3 x=  70.2 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List6[0].ItembSub[0].#area[0].CheckBox2[0]
+      T: The decedent is survived by a brother, sister, or issue of a deceased brother or sister, all of whom are listed in item 
+      L: b.
+      A: a.
+p1 y= 641.1 x=  70.0 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page1[0].List7[0].ItemaSub[0].#area[0].CheckBox1[0]
+      T: Attachment 7a contains the legal description (if real property add Assessor's Parcel Number) of the deceased spouse'sor
+      L: a.
+      A: described domestic
+p2 y=  49.8 x= 113.8 w=233.1 h=23.5 Tx ML F68 DE-221[0].Page2[0].PxCaption[0].TitlePartyName[0].Name1[0]
+      T: Name
+      L: 
+      A: 
+p2 y=  58.9 x= 400.0 w=172.8 h=14.4 Tx F68 DE-221[0].Page2[0].PxCaption[0].CaseNumber[0].CaseNumber[0]
+      T: Case Number
+      L: 
+      A: CASE NUMBER: DE-221
+p2 y=  88.2 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List7[0].ItembSub[0].#area[0].CheckBox1[0]
+      T: Attachment 7b contains the legal description (if real property add Assessor's Parcel Number) of the community or quasi- 
+      L: 7. b.
+      A: 
+p2 y= 159.3 x=  82.7 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List8[0].Item[0].#area[0].CheckBoxCaption[0]
+      T: Exists
+      L: 8. There
+      A: quasi-community
+p2 y= 159.3 x= 141.3 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List8[0].Item[0].#area[1].CheckBoxCaption[1]
+      T: does not exist
+      L: 8. There exists
+      A: quasi-community
+p2 y= 258.7 x=  55.1 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List9[0].List[0].#area[0].CheckBox1[0]
+      T: are listed below
+      L: 
+      A: of (1)
+p2 y= 258.7 x= 153.4 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List9[0].List[0].#area[1].CheckBox2[0]
+      T: are listed in Attachment 9.
+      L: are listed below
+      A: named in decedent's
+p2 y= 286.2 x=  50.6 w=247.5 h=11.0 Tx DE-221[0].Page2[0].List9[0].List[0].TextField1[0]
+      T: Name and relationship
+      L: 
+      A: Name and relationship
+p2 y= 286.2 x= 299.4 w= 75.5 h=11.0 Tx DE-221[0].Page2[0].List9[0].List[0].TextField2[0]
+      T: Age
+      L: 
+      A: Age
+p2 y= 286.2 x= 376.3 w=199.7 h=28.9 Tx ML DE-221[0].Page2[0].List9[0].List[0].TextField3[0]
+      T: Residence or mailing address
+      L: 
+      A: Residence or mailing address
+p2 y= 316.4 x=  50.6 w=247.5 h=11.0 Tx DE-221[0].Page2[0].List9[0].List[0].TextField4[0]
+      T: Name and relationship
+      L: 
+      A: 
+p2 y= 316.4 x= 299.4 w= 75.5 h=11.0 Tx DE-221[0].Page2[0].List9[0].List[0].TextField5[0]
+      T: Age
+      L: 
+      A: 
+p2 y= 316.4 x= 376.7 w=198.4 h=28.9 Tx ML DE-221[0].Page2[0].List9[0].List[0].TextField6[0]
+      T: Residence or mailing address
+      L: 
+      A: 
+p2 y= 346.8 x=  50.6 w=247.5 h=11.0 Tx DE-221[0].Page2[0].List9[0].List[0].TextField7[0]
+      T: Name and relationship
+      L: 
+      A: 
+p2 y= 346.8 x= 299.4 w= 75.5 h=11.0 Tx DE-221[0].Page2[0].List9[0].List[0].TextField8[0]
+      T: Age
+      L: 
+      A: 
+p2 y= 346.8 x= 376.7 w=198.1 h=28.9 Tx ML DE-221[0].Page2[0].List9[0].List[0].TextField9[0]
+      T: Residence or mailing address
+      L: 
+      A: 
+p2 y= 394.5 x= 217.9 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List10[0].Item[0].#area[0].CheckBox1[0]
+      T: are listed below
+      L: representatives of the decedent's estate
+      A: persons named
+p2 y= 394.5 x= 316.2 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List10[0].Item[0].#area[1].CheckBox2[0]
+      T: are listed in Attachment 10
+      L: representatives of the decedent's estate are listed below
+      A: executors in the decedent's
+p2 y= 394.5 x= 459.7 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List10[0].Item[0].#area[2].CheckBox3[0]
+      T: none
+      L: estate are listed below are listed in Attachment 10
+      A: codicil or appointed
+p2 y= 407.7 x=  50.7 w=525.1 h=53.9 Tx ML DE-221[0].Page2[0].List10[0].Item[0].TextField[0]
+      T: Enter Names and Addresses
+      L: 
+      A: representatives of the decedent's estate are listed below are listed in Attachment 10 none
+p2 y= 470.6 x=  55.0 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List11[0].Item[0].#area[0].CheckBox[0]
+      T: The petitioner is the trustee of a trust that is a devisee under decedent's will. The names and addresses of all persons
+      L: 11.
+      A: 
+p2 y= 514.1 x=  69.1 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List12[0].Item1[0].#area[0].CheckBox1[0]
+      T: is being filed with this petition.
+      L: a.
+      A: A petition
+p2 y= 526.5 x= 168.5 w=143.4 h=11.0 Tx DE-221[0].Page2[0].List12[0].Item2[0].on_date_ft[0]
+      T: on date
+      L: b. was filedon (date):
+      A: with this petition.
+p2 y= 527.5 x=  69.1 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List12[0].Item2[0].#area[0].CheckBox2[0]
+      T: was filed
+      L: b.
+      A: a.
+p2 y= 541.7 x=  69.1 w=  9.0 h= 9.0 Btn[/1] DE-221[0].Page2[0].List12[0].Item3[0].#area[0].CheckBox3[0]
+      T: has not been filed and is not being filed with this petition.
+      L: c.
+      A: b.
+p2 y= 559.8 x= 160.7 w= 37.2 h=11.0 Tx DE-221[0].Page2[0].List13[0].Item[0].TextField[0]
+      T: Number of pages attached:
+      L: 13. Number of pages attached:
+      A: been filed and is not
+p2 y= 579.5 x=  61.2 w=108.0 h=10.0 Tx DE-221[0].Page2[0].Signature[0].SigDate1[0]
+      T: Date
+      L: Date:
+      A: 13. Number of pages attached:
+p2 y= 602.3 x=  36.0 w=239.9 h=14.1 Tx DE-221[0].Page2[0].Signature[0].SigName1[0]
+      T: Type or Print Name
+      L: 
+      A: 
+p2 y= 653.3 x=  61.2 w=108.0 h=10.0 Tx DE-221[0].Page2[0].Signature[0].SigDate[0]
+      T: Date
+      L: Date:
+      A: declare under penalty of perjury
+p2 y= 675.4 x=  36.0 w=239.9 h=14.1 Tx DE-221[0].Page2[0].Signature[0].SigName[0]
+      T: Type or Print Name
+      L: 
+      A: Date:
+p2 y= 756.0 x=  36.0 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-221[0].#pageSet[0].LastPage[0].FooterButtons[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: (Probate—Decedents
+p2 y= 762.2 x= 258.7 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-221[0].#pageSet[0].LastPage[0].FooterButtons[0].Print[0]
+      T: Print this form
+      L: 
+      A: (Probate—Decedents Estates)
+p2 y= 762.2 x= 345.2 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-221[0].#pageSet[0].LastPage[0].FooterButtons[0].Save[0]
+      T: Save this form
+      L: 
+      A: (Probate—Decedents Estates)
+p2 y= 762.2 x= 494.9 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-221[0].#pageSet[0].LastPage[0].FooterButtons[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

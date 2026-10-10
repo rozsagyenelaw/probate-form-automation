@@ -1,0 +1,8 @@
+{
+  "creditorClaims": [
+    { "claimantName": "Example Card Services", "claimantAddress": { "street": "PO Box 1000", "city": "Wilmington", "state": "DE", "zip": "19850" }, "amountClaimed": "4200", "dateFiled": "2026-06-20" }
+  ],
+  "proposedActions": [
+    { "title": "Sale of residence", "description": "Sell the real property commonly known as 100 Example Ave., Burbank, CA 91501 (APN 0000-000-000) to Test Buyer for $880,000.00, all cash, close of escrow within 45 days, with a broker commission of 5 percent ($44,000.00) to be split equally between Example Realty (listing) and Sample Homes (buyer's broker).", "date": "2026-08-15", "isRealProperty": true, "inventoryValue": "900000" }
+  ]
+}

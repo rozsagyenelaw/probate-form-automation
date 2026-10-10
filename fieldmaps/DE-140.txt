@@ -1,0 +1,233 @@
+p1 y=  54.4 x=  38.3 w=252.8 h=43.4 Tx ML DE-140[0].Page1[0].P1Caption[0].AttyPartyInfo[0].TextField1[0]
+      T: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, state bar number, and address):
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, state bar number, and address):
+p1 y=  54.8 x= 292.6 w=102.4 h=39.1 Tx ML DE-140[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]
+      T: Phone number
+      L: 
+      A: address): TELEPHONE AND FAX NOS.:
+p1 y= 100.4 x= 120.5 w=274.2 h= 9.0 Tx DE-140[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[0]
+      T:  ATTORNEY FOR (Name):
+      L: ATTORNEY FOR (Name):
+      A: 
+p1 y= 114.0 x= 227.7 w=166.3 h= 9.0 Tx DE-140[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCounty[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 125.0 x=  97.0 w=297.0 h= 9.0 Tx DE-140[0].Page1[0].P1Caption[0].CourtInfo[0].CrtStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 135.9 x=  97.0 w=297.0 h= 9.0 Tx DE-140[0].Page1[0].P1Caption[0].CourtInfo[0].CrtMailingAdd[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 146.9 x=  97.0 w=297.0 h= 9.0 Tx DE-140[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 158.5 x=  97.0 w=297.0 h= 9.0 Tx DE-140[0].Page1[0].P1Caption[0].CourtInfo[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 184.5 x=  37.9 w=354.6 h=11.5 Tx DE-140[0].Page1[0].P1Caption[0].TitlePartyName[0].Party1_ft[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p1 y= 223.1 x= 121.3 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox23[0]
+      T: Executor
+      L: ORDER
+      A: 
+p1 y= 224.9 x= 400.0 w=172.8 h=14.4 Tx DE-140[0].Page1[0].P1Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: Executor
+      A: CASE NUMBER:
+p1 y= 234.2 x= 121.3 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox22[0]
+      T: Administrator with Will Annexed
+      L: APPOINTING
+      A: 
+p1 y= 245.5 x= 121.3 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox21[0]
+      T: Administrator
+      L: 
+      A: 
+p1 y= 246.2 x= 210.7 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox20[0]
+      T: Special Administrator
+      L: Administrator
+      A: Administrator with
+p1 y= 257.9 x=  42.5 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox17[0]
+      T: Order Authorizing Independent Administration of Estate
+      L: 
+      A: APPOINTING
+p1 y= 271.3 x=  66.6 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox18[1]
+      T: with full authority
+      L: 
+      A: Order
+p1 y= 271.5 x= 201.2 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox18[0]
+      T: with limited authority
+      L: with full authority
+      A: Independent Administration
+p1 y= 301.4 x= 118.1 w= 95.5 h= 9.6 Tx DE-140[0].Page1[0].HearingDate[0]
+      T: Date of hearing:
+      L: 1. Date of hearing:
+      A: WARNING: THIS APPOINTMENT
+p1 y= 301.4 x= 241.7 w= 80.5 h= 9.6 Tx DE-140[0].Page1[0].HearingTime[0]
+      T: Time:
+      L: 1. Date of hearing: Time:
+      A: APPOINTMENT IS NOT EFFECTIVE
+p1 y= 301.4 x= 377.2 w= 64.3 h= 9.6 Tx DE-140[0].Page1[0].HearingDept[0]
+      T: Dept./Room:
+      L: Time: Dept./Room:
+      A: EFFECTIVE UNTIL LETTERS
+p1 y= 301.4 x= 472.2 w=102.3 h= 9.6 Tx DE-140[0].Page1[0].HearingRm[0]
+      T: Judge:
+      L: Time: Dept./Room: Judge:
+      A: LETTERS HAVE ISSUED.
+p1 y= 335.1 x= 168.1 w=404.1 h= 9.0 Tx DE-140[0].Page1[0].FillText143[0]
+      T: Decedent died on (date):
+      L: b. D ecedent died on (date):
+      A: by law have been given.
+p1 y= 346.7 x=  88.6 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox45[0]
+      T: a resident of the California county named above.
+      L: (1)
+      A: D A ll ecedent notices
+p1 y= 359.2 x=  88.6 w=  9.0 h= 9.0 Btn[/2] DE-140[0].Page1[0].CheckBox45[1]
+      T: a nonresident of California and left an estate in the county named above.
+      L: (2)
+      A: (1)
+p1 y= 381.9 x=  88.4 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox89[0]
+      T: intestate
+      L: (1)
+      A: Decedent
+p1 y= 393.0 x=  88.4 w=  9.0 h= 9.0 Btn[/2] DE-140[0].Page1[0].CheckBox89[1]
+      T: testate
+      L: (2)
+      A: (1)
+p1 y= 404.5 x= 173.6 w=146.3 h= 9.0 Tx DE-140[0].Page1[0].FillText1[0]
+      T: and decedent's will dated:
+      L: and decedent's will dated:
+      A: 
+p1 y= 404.5 x= 418.3 w=155.2 h= 9.0 Tx DE-140[0].Page1[0].FillText1[1]
+      T: and each codicil dated:
+      L: dated: and each codicil dated:
+      A: 
+p1 y= 415.0 x= 272.9 w=300.7 h= 9.0 Tx DE-140[0].Page1[0].FillText1[2]
+      T: was admitted to probate by Minute Order on (date):
+      L: was admitted to probate by Minute Order on (date):
+      A: and each codicil dated:
+p1 y= 436.8 x=  86.0 w=487.6 h= 9.0 Tx DE-140[0].Page1[0].FillText1[3]
+      T: (Name):
+      L: 3. (Name):
+      A: COURT was admitted ORDERS to probate by Minute Order on (date):
+p1 y= 457.2 x=  69.0 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice1[0]
+      T: executor of the decedent's will
+      L: a.
+      A: is (Name): appointed
+p1 y= 457.6 x= 290.5 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice2[0]
+      T: special administrator
+      L: a. executor of the decedent's will d.
+      A: 
+p1 y= 470.1 x=  69.2 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice1[1]
+      T: administrator with will annexed
+      L: b.
+      A: a.
+p1 y= 470.4 x= 333.0 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox5[0]
+      T: with general powers
+      L: administrator with will annexed (1)
+      A: special administrator
+p1 y= 482.6 x=  69.2 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice1[2]
+      T: administrator
+      L: c.
+      A: b.
+p1 y= 482.8 x= 333.0 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox6[0]
+      T: with special powers as specified in Attachment 3d(2)
+      L: administrator (2)
+      A: (1)
+p1 y= 495.3 x= 333.0 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox7[0]
+      T: without notice of hearing
+      L: (3)
+      A: (2)
+p1 y= 507.7 x= 463.0 w=112.2 h=10.0 Tx DE-140[0].Page1[0].SigDate[1]
+      T: (date):
+      L: (4) letters will expire on(date):
+      A: hearing
+p1 y= 507.8 x= 333.0 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox8[0]
+      T: letters will expire on
+      L: (4)
+      A: (3)
+p1 y= 526.6 x=  70.8 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox41[0]
+      T: Full authority is granted to administer the estate under the Independent Administration of Estates Act.
+      L: 4. a.
+      A: and letters
+p1 y= 537.1 x=  70.8 w=  9.0 h= 9.0 Btn[/2] DE-140[0].Page1[0].CheckBox41[1]
+      T: Limited authority is granted to administer the estate under the Independent Administration of Estates Act (there is no
+a
+      L: b.
+      A: and a. letters
+p1 y= 571.8 x=  69.2 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice1[3]
+      T: Bond is not required.
+      L: 5. a.
+      A: 
+p1 y= 582.8 x= 161.5 w=136.2 h= 9.6 Tx DE-140[0].Page1[0].HearingTime[1]
+      T: $
+      L: b. Bond is fixed at: $
+      A: required.
+p1 y= 582.8 x=  69.2 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice1[4]
+      T: Bond is fixed at:
+      L: b.
+      A: a.
+p1 y= 606.5 x= 144.5 w=136.2 h= 9.6 Tx DE-140[0].Page1[0].HearingTime[2]
+      T: $
+      L: c. Deposits of:$
+      A: by law.
+p1 y= 606.5 x=  69.2 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice1[5]
+      T: Deposits of:
+      L: c.
+      A: 
+p1 y= 617.3 x= 104.9 w=469.4 h= 9.0 Tx DE-140[0].Page1[0].FillText1[4]
+      T: location):
+      L: location):
+      A: Deposits of:$ are ordered to be placed in a blocked account at (specify institution and
+p1 y= 628.1 x= 387.5 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].limited[0]
+      T: Additional orders in Attachment 5c.
+      L: shall be filed. No withdrawals shall be made without a court order.
+      A: placed in a
+p1 y= 639.4 x=  69.2 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].Choice1[6]
+      T: The personal representative is not authorized to take possession of money or any other property without a specific court
+      L: d.
+      A: location): and
+p1 y= 662.5 x= 115.0 w=248.6 h= 9.3 Tx DE-140[0].Page1[0].FillText1[5]
+      T: (Name):
+      L: 6. (Name):
+      A: order.
+p1 y= 662.8 x=  62.5 w=  9.0 h= 9.0 Btn[/1] DE-140[0].Page1[0].CheckBox5[1]
+      T: CheckBox5
+      L: 6.
+      A: 
+p1 y= 675.2 x=  61.2 w=108.0 h=10.0 Tx DE-140[0].Page1[0].SigDate[0]
+      T: Date:
+      L: Date:
+      A: 6. (Name):
+p1 y= 687.8 x= 160.7 w= 37.4 h=11.0 Tx DE-140[0].Page1[0].NumericField1[0]
+      T: Number of pages attached:
+      L: 7. Number of pages attached:
+      A: 
+p1 y= 692.4 x= 385.7 w=  9.0 h= 9.0 Btn[/1] F68 DE-140[0].Page1[0].limited[1]
+      T: SIGNATURE FOLLOWS LAST ATTACHMENT
+      L: attached:
+      A: 
+p1 y= 732.8 x=  36.1 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-140[0].Page1[0].#area[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: DE-140 Mandatory [Rev. Form January [1/1/2000] 1, 1998]
+p1 y= 739.0 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-140[0].Page1[0].#area[0].Print[0]
+      T: Print this form
+      L: 
+      A: 
+p1 y= 739.0 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-140[0].Page1[0].#area[0].Save[0]
+      T: Save this form
+      L: 
+      A: 
+p1 y= 739.0 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-140[0].Page1[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

@@ -1,0 +1,166 @@
+p1 y=  54.4 x=  38.3 w=252.8 h=43.4 Tx ML DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].TextField1[0]
+      T: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, state bar number, and address):
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, state bar number, and address):
+p1 y=  54.8 x= 292.6 w=102.4 h=39.1 Tx ML DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]
+      T: Phone number
+      L: 
+      A: address): TELEPHONE AND FAX NOS.:
+p1 y= 100.4 x= 120.5 w=274.2 h= 9.0 Tx DE-150[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[0]
+      T:  ATTORNEY FOR (Name):
+      L: ATTORNEY FOR (Name):
+      A: 
+p1 y= 114.0 x= 227.7 w=166.3 h= 9.0 Tx DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCounty[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 125.0 x=  97.0 w=297.0 h= 9.0 Tx DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 135.9 x=  97.0 w=297.0 h= 9.0 Tx DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtMailingAdd[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 146.9 x=  97.0 w=297.0 h= 9.0 Tx DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 158.5 x=  97.0 w=297.0 h= 9.0 Tx DE-150[0].Page1[0].P1Caption[0].CourtInfo[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 183.2 x=  37.9 w=354.6 h=12.9 Tx DE-150[0].Page1[0].P1Caption[0].TitlePartyName[0].Party1_ft[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p1 y= 221.7 x= 400.0 w=172.8 h=14.7 Tx DE-150[0].Page1[0].P1Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: OF ADMINISTRATION
+      A: CASE NUMBER:
+p1 y= 221.9 x=  42.5 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox23[0]
+      T: TESTAMENTARY
+      L: 
+      A: 
+p1 y= 221.9 x= 256.8 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox21[0]
+      T: OF ADMINISTRATION
+      L: TESTAMENTARY
+      A: 
+p1 y= 234.4 x=  42.5 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox22[0]
+      T: OF ADMINISTRATION WITH WILL ANNEXED
+      L: 
+      A: 
+p1 y= 234.4 x= 256.8 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].P1Caption[0].FormTitle[0].CheckBox20[0]
+      T: SPECIAL ADMINISTRATION
+      L: OF ADMINISTRATION WITH WILL ANNEXED
+      A: 
+p1 y= 262.8 x=  55.6 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[4]
+      T: The last will of the decedent named above having been proved, the court appoints
+      L: 1.
+      A: 
+p1 y= 262.8 x= 342.5 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[8]
+      T: PUBLIC ADMINISTRATOR: No affirmation required (Prob. Code, § 7621(c)).
+      L: The last will of the decedent named above having 1.
+      A: 
+p1 y= 282.9 x=  74.8 w=243.5 h= 9.0 Tx DE-150[0].Page1[0].FillText1[0]
+      T:  (name):
+      L: 
+      A: The b e e n last p r o will v e d of , t h the e c decedent o u r t a p p o i named n t s 
+p1 y= 293.9 x= 342.5 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[9]
+      T: INDIVIDUAL: I solemnly affirm that I will perform the
+duties of personal representative according to law.
+      L: executor. 2.
+      A: 
+p1 y= 294.2 x=  93.2 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[0]
+      T: executor.
+      L: a.
+      A: b e e n p r
+p1 y= 306.7 x=  93.2 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[1]
+      T: administrator with will annexed.
+      L: b.
+      A: a.
+p1 y= 324.9 x= 342.5 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[10]
+      T: INSTITUTIONAL FIDUCIARY
+      L: h e c o u r t a p p o in t s (name): 3.
+      A: 
+p1 y= 326.9 x=  55.1 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[5]
+      T: The court appoints
+      L: 2.
+      A: 
+p1 y= 333.7 x= 362.5 w=212.1 h=10.9 Tx DE-150[0].Page1[0].FillText1[4]
+      T:  (name):
+      L: 
+      A: (name):
+p1 y= 335.9 x=  74.2 w=243.5 h= 9.0 Tx DE-150[0].Page1[0].FillText1[2]
+      T:  (name):
+      L: 
+      A: 
+p1 y= 346.7 x=  92.7 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[6]
+      T: administrator of the decedent's estate.
+      L: a.
+      A: T h e c o u
+p1 y= 359.2 x=  92.7 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[7]
+      T: special administrator of decedent's estate
+      L: b.
+      A: a.
+p1 y= 369.1 x= 134.3 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].CheckBox5[0]
+      T: with the special powers specified
+in the Order for Probate.
+      L: (1)
+      A: special administrator
+p1 y= 391.9 x= 134.3 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].CheckBox6[0]
+      T: with the powers of a general administrator.
+      L: (2)
+      A: 
+p1 y= 399.9 x= 362.2 w=211.9 h=77.3 Tx ML DE-150[0].Page1[0].FillText1[1]
+      T: (Name and title):
+      L: 
+      A: (Name on behalf and of title): the institution as an officer.
+p1 y= 416.1 x= 134.3 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].CheckBox7[0]
+      T: letters will expire on
+      L: (3)
+      A: 
+p1 y= 424.9 x= 153.3 w=162.4 h= 9.0 Tx DE-150[0].Page1[0].FillText1[3]
+      T:  (date):
+      L: 
+      A: 
+p1 y= 444.3 x=  55.1 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[2]
+      T: The personal representative is authorized to administer the estate under the Independent Administration of Estates Act
+      L: 3.
+      A: 
+p1 y= 466.3 x= 138.2 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice2[0]
+      T: with full authority
+      L: Estates Act
+      A: personal under representative the
+p1 y= 478.2 x=  78.2 w=  9.0 h= 9.0 Btn[/2] DE-150[0].Page1[0].Choice2[1]
+      T: with limited authority
+      L: 
+      A: Estates
+p1 y= 479.6 x= 421.3 w=153.8 h= 9.6 Tx DE-150[0].Page1[0].HearingTime[0]
+      T: Executed on (date):
+      L: authority (no authority, without 4. Executed on (date):
+      A: 
+p1 y= 491.9 x= 381.8 w=144.2 h= 9.6 Tx DE-150[0].Page1[0].HearingTime[1]
+      T: at (place):
+      L: supervision, to (1) sell or exchange real property at (place):
+      A: Executed on (date):
+p1 y= 540.0 x=  55.1 w=  9.0 h= 9.0 Btn[/1] DE-150[0].Page1[0].Choice1[3]
+      T: The personal representative is not authorized to take possession of money or any other property without a specific court
+      L: 4.
+      A: 
+p1 y= 732.8 x=  36.1 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-150[0].Page1[0].#area[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: DE-150 Mandatory [Rev. Form January [1/1/2000] 1, 1998]
+p1 y= 739.0 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-150[0].Page1[0].#area[0].Print[0]
+      T: Print this form
+      L: 
+      A: (Probate)
+p1 y= 739.0 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-150[0].Page1[0].#area[0].Save[0]
+      T: Save this form
+      L: 
+      A: (Probate)
+p1 y= 739.0 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-150[0].Page1[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: Code of Civil Procedure, § 2015.6

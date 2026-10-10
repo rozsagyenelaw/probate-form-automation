@@ -1,0 +1,152 @@
+p1 y=  54.9 x=  38.3 w=252.8 h=70.3 Tx ML DE-165[0].Page1[0].StdP1Header_sf[0].AttyPartyInfo[0].TextField1[0]
+      T: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, state bar number, and address):
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, state bar number, and address):
+p1 y=  55.4 x= 292.7 w=102.4 h=54.3 Tx ML DE-165[0].Page1[0].StdP1Header_sf[0].AttyPartyInfo[0].Phone[0]
+      T: Phone number
+      L: 
+      A: address): TELEPHONE AND FAX NOS.:
+p1 y= 128.2 x= 120.5 w=274.2 h= 9.0 Tx DE-165[0].Page1[0].StdP1Header_sf[0].AttyPartyInfo[0].Email[0]
+      T:  ATTORNEY FOR (Name):
+      L: ATTORNEY FOR (Name):
+      A: 
+p1 y= 144.4 x= 227.0 w=167.3 h= 9.0 Tx DE-165[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].CrtCounty_ft[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 155.3 x=  97.4 w=297.0 h= 9.0 Tx DE-165[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].Street_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 166.2 x=  97.4 w=297.0 h= 9.0 Tx DE-165[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].MailingAdd_ft[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 177.2 x=  97.4 w=297.0 h= 9.0 Tx DE-165[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].CityZip_ft[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 188.1 x=  97.4 w=297.0 h= 9.0 Tx DE-165[0].Page1[0].StdP1Header_sf[0].CourtInfo[0].Branch_ft[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 217.9 x=  37.8 w=356.2 h= 9.2 Tx DE-165[0].Page1[0].StdP1Header_sf[0].TitlePartyName[0].Party_ft[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p1 y= 256.8 x= 400.0 w=172.8 h=17.4 Tx DE-165[0].Page1[0].StdP1Header_sf[0].CaseNumber[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: Independent Administration of Estates Act
+      A: CASE NUMBER:
+p1 y= 269.4 x= 151.6 w=  9.0 h= 9.0 Btn[/1] DE-165[0].Page1[0].StdP1Header_sf[0].FormTitle[0].#area[0].ch[0]
+      T: Objection
+      L: 
+      A: Independent
+p1 y= 269.4 x= 232.3 w=  9.0 h= 9.0 Btn[/2] DE-165[0].Page1[0].StdP1Header_sf[0].FormTitle[0].#area[0].ch[1]
+      T: Consent
+      L: Objection
+      A: Administration
+p1 y= 350.4 x=  50.8 w=522.8 h=27.2 Tx ML DE-165[0].Page1[0].TextField2[0]
+      T: The personal representative (executor or administrator) of the estate of the deceased is (names):
+      L: 
+      A: 1. The personal representative (executor or administrator) of the estate of the deceased i
+p1 y= 408.3 x=  71.1 w=  9.0 h= 9.0 Btn[/1] DE-165[0].Page1[0].Authority[0]
+      T: with full authority under the act.
+      L: a.
+      A: of Estates
+p1 y= 421.6 x=  71.1 w=  9.0 h= 9.0 Btn[/2] DE-165[0].Page1[0].Authority[1]
+      T: with limited authority under the act (there is no authority, without court supervision, to (1) sell or exchange real pro
+      L: b.
+      A: a.
+p1 y= 461.0 x= 126.8 w=143.2 h=10.5 Tx DE-165[0].Page1[0].DateField1[0]
+      T: On or after (date):
+      L: 3. On or after (date):
+      A: property).
+p1 y= 488.2 x=  55.9 w=  9.0 h= 9.0 Btn[/1] DE-165[0].Page1[0].Three[0]
+      T: The proposed action is described in an attachment labeled Attachment 3.
+      L: 
+      A: supervision
+p1 y= 499.5 x=  74.2 w=499.3 h=104.6 Tx ML DE-165[0].Page1[0].TEXT\.0\.19\.0[0]
+      T: describe in specific terms , the personal representative will take the following action without court supervision
+      L: 
+      A: The proposed action is described in an attachment labeled Attachment 3.
+p1 y= 608.6 x=  55.2 w=  9.0 h= 9.0 Btn[/1] DE-165[0].Page1[0].Four[0]
+      T: Real property transaction (Check this box and complete item 4b if the proposed action involves a sale or exchange or a  
+      L: 4.
+      A: 
+p1 y= 658.9 x=  77.6 w=125.3 h=11.0 Tx DE-165[0].Page1[0].DecimalField1[0]
+      T: $
+      L: b. $
+      A: calculating any commission or compensation
+p1 y= 659.7 x= 472.6 w=  9.0 h= 9.0 Btn[/1] DE-165[0].Page1[0].FourB[0]
+      T: No inventory yet.
+      L: the value of the subject property in the probate inventory.
+      A: 
+p2 y=  46.6 x= 406.9 w=165.5 h=21.4 Tx F68 DE-165[0].Page2[0].sub2[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p2 y=  47.8 x=  39.7 w=362.3 h=11.5 Tx F68 DE-165[0].Page2[0].sub2[0].Party_ft[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p2 y= 111.5 x=  63.6 w=512.4 h=34.6 Tx ML DE-165[0].Page2[0].TextField2[0]
+      T: Sign the objection form below and deliver or mail it to the personal representative at the following address (specify na
+      L: 
+      A: a. address): Sign the objection form below and deliver or mail it to the personal represen
+p2 y= 301.6 x= 243.2 w=331.0 h=11.2 Tx DE-165[0].Page2[0].TextField2[1]
+      T: If you need more INFORMATION, call (name):
+      L: 7. If you need more INFORMATION, call (name):
+      A: you will be treated as if you consented to the proposed action.
+p2 y= 318.5 x= 247.3 w=327.0 h=13.0 Tx DE-165[0].Page2[0].TextField3[0]
+      T: (telephone):
+      L: (telephone):
+      A: (name):
+p2 y= 336.7 x=  63.8 w=122.0 h=10.3 Tx DE-165[0].Page2[0].HearingDate[0]
+      T: Hearing date
+      L: Date:
+      A: 
+p2 y= 359.4 x=  36.0 w=256.7 h=15.9 Tx DE-165[0].Page2[0].T14[0]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: Date:
+p2 y= 432.4 x=  40.8 w= 10.0 h=10.0 Btn[/1] DE-165[0].Page2[0].CheckBox61[1]
+      T: I OBJECT to the action proposed in item 3.
+      L: 
+      A: 
+p2 y= 513.8 x=  64.1 w=122.0 h= 9.0 Tx DE-165[0].Page2[0].HearingDate[1]
+      T: Hearing date
+      L: Date:
+      A: 
+p2 y= 536.5 x=  36.3 w=256.7 h=15.9 Tx DE-165[0].Page2[0].T14[1]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: 
+p2 y= 610.0 x=  41.3 w= 10.0 h=10.0 Btn[/1] DE-165[0].Page2[0].CheckBox61[0]
+      T: I CONSENT to the action proposed in item 3.
+      L: 
+      A: 
+p2 y= 668.1 x=  63.8 w=122.0 h= 9.4 Tx DE-165[0].Page2[0].HearingDate[2]
+      T: Hearing date
+      L: Date:
+      A: do not object in writing or
+p2 y= 690.8 x=  36.0 w=256.7 h=15.9 Tx DE-165[0].Page2[0].T14[2]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: 
+p2 y= 762.6 x=  36.0 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-165[0].#area[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: 
+p2 y= 768.8 x= 258.7 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-165[0].#area[0].Print[0]
+      T: Print this form
+      L: 
+      A: (Probate)
+p2 y= 768.8 x= 345.2 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-165[0].#area[0].Save[0]
+      T: Save this form
+      L: 
+      A: (Probate)
+p2 y= 768.8 x= 494.9 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-165[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

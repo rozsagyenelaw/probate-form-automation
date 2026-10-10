@@ -1,0 +1,270 @@
+p1 y=  48.7 x= 308.8 w= 85.2 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].AttyBarNo[0]
+      T: STATE BAR NUMBER:
+      L: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NUMBER:
+      A: 
+p1 y=  60.2 x=  57.6 w=336.4 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Name[0]
+      T: NAME:
+      L: NAME:
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NUMBER:
+p1 y=  71.8 x=  73.7 w=320.3 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].AttyFirm[0]
+      T: FIRM NAME:
+      L: FIRM NAME:
+      A: NAME:
+p1 y=  83.4 x=  95.6 w=298.4 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Street[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: 
+p1 y=  95.0 x=  54.3 w=186.1 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].City[0]
+      T: CITY:
+      L: CITY:
+      A: STREET ADDRESS:
+p1 y=  95.0 x= 263.5 w= 30.2 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].State[0]
+      T: STATE:
+      L: CITY: STATE:
+      A: 
+p1 y=  95.0 x= 326.8 w= 67.2 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Zip[0]
+      T: ZIP CODE:
+      L: STATE: ZIP CODE:
+      A: 
+p1 y= 106.5 x=  89.8 w=127.1 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Phone[0]
+      T: TELEPHONE NUMBER
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 106.5 x= 266.1 w=127.9 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Fax[0]
+      T: FAX NUMBER
+      L: TELEPHONE NO.: FAX NO.:
+      A: STATE: ZIP CODE:
+p1 y= 118.1 x=  91.1 w=302.9 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Email[0]
+      T: EMAIL ADDRESS:
+      L: EMAIL ADDRESS:
+      A: TELEPHONE NO.: FAX NO.:
+p1 y= 129.7 x= 107.8 w=286.2 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].AttyPartyInfo[0].AttyFor[0]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: ADDRESS:
+p1 y= 144.9 x= 227.7 w=166.3 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].CourtInfo[0].CrtCounty[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 155.9 x=  97.0 w=297.0 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].CourtInfo[0].CrtStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 166.8 x=  97.0 w=297.0 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].CourtInfo[0].CrtMailingAdd[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 177.7 x=  97.0 w=297.0 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].CourtInfo[0].CrtCityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 189.4 x=  97.0 w=297.0 h= 9.0 Tx DE-120[0].Page1[0].p1Caption[0].CourtInfo[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 202.9 x=  41.9 w= 10.0 h=10.0 Btn[/1] DE-120[0].Page1[0].p1Caption[0].TitlePartyName[0].name_cb[0]
+      T: ESTATE OF (name):
+      L: 
+      A: BRANCH
+p1 y= 203.4 x= 157.7 w=  9.0 h= 9.0 Btn[/5] DE-120[0].Page1[0].p1Caption[0].TitlePartyName[0].name_cb[1]
+      T: IN THE MATTER OF (name):
+      L: ESTATE OF (name):
+      A: 
+p1 y= 213.1 x=  60.6 w=331.7 h=10.0 Tx DE-120[0].Page1[0].p1Caption[0].TitlePartyName[0].name_tf[0]
+      T: name:
+      L: 
+      A: ESTATE OF (name): IN THE MATTER OF (name):
+p1 y= 224.6 x= 180.1 w=  9.0 h= 9.0 Btn[/1] DE-120[0].Page1[0].p1Caption[0].TitlePartyName[0].status_cb[0]
+      T: DECEDENT
+      L: 
+      A: 
+p1 y= 224.6 x= 267.0 w=  9.0 h= 9.0 Btn[/3] DE-120[0].Page1[0].p1Caption[0].TitlePartyName[0].status_cb[1]
+      T: TRUST
+      L: DECEDENT
+      A: 
+p1 y= 224.6 x= 336.0 w=  9.0 h= 9.0 Btn[/5] DE-120[0].Page1[0].p1Caption[0].TitlePartyName[0].status_cb[2]
+      T: OTHER
+      L: DECEDENT TRUST
+      A: 
+p1 y= 245.0 x= 399.6 w=172.8 h=12.6 Tx DE-120[0].Page1[0].p1Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: HEARING—DECEDENT'S ESTATE OR TRUST
+      A: OTHER CASE NUMBER:
+p1 y= 297.3 x= 171.3 w=404.6 h= 9.0 Tx DE-120[0].Page1[0].List1[0].LI1[0].Name1[0]
+      T: NOTICE is given that (name):
+      L: 1. NOTICE is given that (name):
+      A: you do not respond or attend the hearing, the court may act on the filing without you.
+p1 y= 308.1 x= 227.2 w=348.7 h= 9.0 Tx DE-120[0].Page1[0].List1[0].LI1[0].Capacity1[0]
+      T: (fiduciary or representative capacity, if any):
+      L: (fiduciary or representative capacity, if any):
+      A: 
+p1 y= 327.9 x=  50.7 w=525.2 h=109.8 Tx ML DE-120[0].Page1[0].List1[0].LI1[0].Description1[0]
+      T: has filed a petition, application, report, or account (specify complete title and briefly describe):*
+      L: 
+      A: (fiduciary or representative capacity, if any):
+p1 y= 440.7 x=  55.5 w=  9.0 h= 9.0 Btn[/1] DE-120[0].Page1[0].List1[0].LI1[0].CheckBoxCopy[0]
+      T: The filing is a report of the status of a decedent's estate administration made under Probate Code section 12200. See th
+      L: 
+      A: 
+p1 y= 510.0 x= 136.1 w= 70.6 h= 9.0 Tx DE-120[0].Page1[0].List2[0].LI1[0].HearingInfo[0].HearingDate[1]
+      T: Date:
+      L: Hearing Date:
+      A: 
+p1 y= 510.0 x= 246.8 w= 49.9 h= 9.0 Tx DE-120[0].Page1[0].List2[0].LI1[0].HearingInfo[0].HearingTime[0]
+      T: Time:
+      L: Hearing Date: Time:
+      A: 
+p1 y= 510.7 x= 307.4 w=266.4 h=29.9 Tx ML DE-120[0].Page1[0].List2[0].LI1[0].HearingInfo[0].HearingCourtAdd[0]
+      T: Name and address of court, if different from above:
+      L: Date
+      A: Name and address of court, if different from above:
+p1 y= 527.1 x= 138.9 w= 67.7 h= 9.0 Tx DE-120[0].Page1[0].List2[0].LI1[0].HearingInfo[0].HearingDept[0]
+      T: Dept.:
+      L: Date Dept.:
+      A: Date:
+p1 y= 527.1 x= 250.2 w= 46.5 h= 9.0 Tx DE-120[0].Page1[0].List2[0].LI1[0].HearingInfo[0].HearingRm[0]
+      T: Room:
+      L: Date Dept.: Room:
+      A: Time:
+p1 y= 674.1 x= 337.8 w= 56.4 h=10.8 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-120[0].Page1[0].#area[0].Button1[0]
+      T: form MC-410
+      L: Accommodations by Persons With Disabilities and Response (
+      A: captioning, or sign language
+p2 y=  46.5 x=  42.6 w= 10.0 h=10.0 Btn[/1] F68 DE-120[0].Page2[0].TitlePartyName[0].name_cb[0]
+      T: ESTATE OF (name):
+      L: 
+      A: 
+p2 y=  47.0 x= 158.3 w=  9.0 h= 9.0 Btn[/5] F68 DE-120[0].Page2[0].TitlePartyName[0].name_cb[1]
+      T: IN THE MATTER OF (name):
+      L: ESTATE OF (name):
+      A: 
+p2 y=  55.6 x= 399.6 w=172.8 h=14.4 Tx F68 DE-120[0].Page2[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER: DE-120
+p2 y=  56.8 x=  61.3 w=331.7 h=10.0 Tx F68 DE-120[0].Page2[0].TitlePartyName[0].name_tf[0]
+      T: name:
+      L: 
+      A: ESTATE OF (name): IN THE MATTER OF (name):
+p2 y=  68.3 x= 180.7 w=  9.0 h= 9.0 Btn[/1] F68 DE-120[0].Page2[0].TitlePartyName[0].status_cb[0]
+      T: DECEDENT
+      L: 
+      A: 
+p2 y=  68.3 x= 267.6 w=  9.0 h= 9.0 Btn[/3] F68 DE-120[0].Page2[0].TitlePartyName[0].status_cb[1]
+      T: TRUST
+      L: DECEDENT
+      A: 
+p2 y=  68.3 x= 336.6 w=  9.0 h= 9.0 Btn[/5] F68 DE-120[0].Page2[0].TitlePartyName[0].status_cb[2]
+      T: OTHER
+      L: DECEDENT TRUST
+      A: 
+p2 y= 140.5 x=  65.4 w=510.6 h=32.4 Tx ML DE-120[0].Page2[0].PostingList2[0].LI1[0].postataddy[0]
+      T: was posted at (address):
+      L: 
+      A: 
+p2 y= 178.3 x= 154.0 w=119.0 h= 9.0 Tx DE-120[0].Page2[0].PostingList2[0].LI2[0].poston_date[0]
+      T: was posted on (date):
+      L: b. was posted on (date):
+      A: 
+p2 y= 198.1 x=  61.3 w=108.0 h= 9.0 Tx DE-120[0].Page2[0].ClerkSigDate[0]
+      T: Date:
+      L: Date:
+      A: b. was posted on (date):
+p2 y= 198.1 x= 340.6 w=197.8 h=12.0 Tx DE-120[0].Page2[0].Clerk[0]
+      T: Clerk, by
+      L: Clerk, by
+      A: 
+p2 y= 265.0 x=  50.7 w=525.2 h=32.4 Tx ML DE-120[0].Page2[0].ServiceList2[0].LI1[0].Field2[0]
+      T: My residence or business address is (specify):
+      L: 
+      A: 2.
+p2 y= 329.9 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-120[0].Page2[0].ServiceList3[0].LI1[0].CheckBox3a[0]
+      T: depositing the sealed envelope on the date and at the place shown in item 4 with the U.S. Postal Service with the postag
+      L: a.
+      A: envelope
+p2 y= 355.5 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-120[0].Page2[0].ServiceList3[0].LI2[0].CheckBox3b[0]
+      T: placing the envelope for collection and mailing on the date and at the place shown in item 4 following our ordinary
+busi
+      L: b.
+      A: 
+p2 y= 405.1 x= 118.8 w=111.3 h= 9.0 Tx DE-120[0].Page2[0].ServiceList4[0].LI1[0].Datemail[0]
+      T: Date mailed:
+      L: 4. a. Date mailed:
+      A: course of business with the U.S. Postal
+p2 y= 419.7 x= 169.2 w=283.5 h= 9.0 Tx DE-120[0].Page2[0].ServiceList4[0].LI2[0].placemail[0]
+      T: Place mailed (city, state):
+      L: b. Place mailed (city, state):
+      A: 
+p2 y= 435.3 x=  55.5 w=  9.0 h= 9.0 Btn[/1] DE-120[0].Page2[0].ServiceList5[0].LI1[0].CheckBoxCopy[0]
+      T: I served with the Notice of Hearing—Decedent's Estate or Trust a copy of the petition or other document referred to in i
+      L: 5.
+      A: b.
+p2 y= 478.2 x=  61.2 w=108.0 h= 9.0 Tx DE-120[0].Page2[0].#area[0].Date[0]
+      T: Date:
+      L: Date:
+      A: declare under penalty of perjury
+p2 y= 501.0 x=  36.0 w=239.9 h=14.1 Tx DE-120[0].Page2[0].#area[0].PrintName[0]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: 
+p2 y= 561.6 x=  50.7 w=144.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI1[0].servname1[0]
+      T: Name 1
+      L: 
+      A: Name
+p2 y= 561.6 x= 202.5 w=360.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI1[0].servaddy1[0]
+      T: Address 1 (street & number, city, state, zip code)
+      L: 
+      A: Address (street & number, city, state, zip code)
+p2 y= 588.6 x=  50.7 w=144.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI2[0].servname2[0]
+      T: Name 2
+      L: 
+      A: 
+p2 y= 588.6 x= 202.5 w=360.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI2[0].servaddy2[0]
+      T: Address 2 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 615.6 x=  50.7 w=144.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI3[0].servname3[0]
+      T: Name 3
+      L: 
+      A: 
+p2 y= 615.6 x= 202.5 w=360.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI3[0].servaddy3[0]
+      T: Address 3 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 642.6 x=  50.7 w=144.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI4[0].servname4[0]
+      T: Name 4
+      L: 
+      A: 
+p2 y= 642.6 x= 202.5 w=360.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI4[0].servaddy4[0]
+      T: Address 4 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 669.6 x=  50.7 w=144.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI5[0].servname5[0]
+      T: Name 5
+      L: 
+      A: 
+p2 y= 669.6 x= 202.5 w=360.0 h=25.2 Tx ML DE-120[0].Page2[0].NoticeList[0].LI5[0].servaddy5[0]
+      T: Address 5 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 697.1 x=  55.5 w=  9.0 h= 9.0 Btn[/1] DE-120[0].Page2[0].CheckBoxAttach[0]
+      T: Continued on an attachment. (You may use Attachment to Notice of Hearing Proof of Service by Mail, 
+form DE-120(MA)/GC-0
+      L: 
+      A: 
+p2 y= 751.6 x=  36.1 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-120[0].Page2[0].#area[1].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: DE-120 [Rev. January 1, 2020] NOTICE OF HEARING—DECEDENT'S
+p2 y= 757.8 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-120[0].Page2[0].#area[1].Print[0]
+      T: Print this form
+      L: 
+      A: HEARING—DECEDENT'S
+p2 y= 757.8 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-120[0].Page2[0].#area[1].Save[0]
+      T: Save this form
+      L: 
+      A: HEARING—DECEDENT'S ESTATE OR TRUST
+p2 y= 757.8 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-120[0].Page2[0].#area[1].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

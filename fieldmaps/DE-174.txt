@@ -1,0 +1,248 @@
+p1 y=  47.9 x= 418.2 w=145.5 h=44.6 Tx ML F0 WhiteOut
+      T: 
+      L: 
+      A: DE-174
+p1 y=  51.2 x= 410.0 w=162.2 h=79.3 Tx ML F0 NoticeHeader1
+      T: 
+      L: 
+      A: DE-174
+p1 y=  55.0 x=  44.6 w=360.3 h=14.9 Tx FillText25
+      T: 
+      L: 
+      A: 
+p1 y=  66.1 x=  44.6 w=360.3 h=14.9 Tx FillText180
+      T: 
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+p1 y=  76.9 x=  44.6 w=360.3 h=14.9 Tx FillText17
+      T: 
+      L: 
+      A: 
+p1 y=  86.8 x=  44.6 w=360.3 h=14.9 Tx FillText21
+      T: 
+      L: 
+      A: 
+p1 y=  95.6 x= 125.3 w=132.5 h=15.7 Tx FillText26
+      T: 
+      L: TELEPHONE NO.:
+      A: 
+p1 y=  95.6 x= 314.9 w= 90.1 h=15.7 Tx FillText42
+      T: 
+      L: TELEPHONE NO.: FAX NO. (Optional):
+      A: 
+p1 y= 123.1 x= 125.3 w=279.6 h=-15.7 Tx FillText30
+      T: 
+      L: E-MAIL ADDRESS (Optional):
+      A: (Optional):
+p1 y= 133.2 x= 253.7 w=151.2 h=15.7 Tx FillText63
+      T: 
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 134.7 x= 125.3 w=279.6 h=-15.7 Tx FillText34
+      T: 
+      L: ATTORNEY FOR (Name):
+      A: (Name):
+p1 y= 144.5 x= 125.3 w=279.6 h=15.7 Tx FillText38
+      T: 
+      L: STREET ADDRESS:
+      A: 
+p1 y= 171.9 x= 125.3 w=279.6 h=-15.7 Tx FillText51
+      T: 
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 179.3 x= 125.3 w=279.6 h=15.7 Tx FillText59
+      T: 
+      L: BRANCH NAME:
+      A: ADDRESS:
+p1 y= 183.5 x= 125.3 w=279.6 h=-15.7 Tx FillText55
+      T: 
+      L: CITY AND ZIP CODE:
+      A: CODE:
+p1 y= 205.1 x=  70.8 w=334.2 h=15.7 Tx FillText67
+      T: 
+      L: (Name):
+      A: ESTATE OF
+p1 y= 240.5 x= 412.4 w=162.8 h=14.9 Tx FillText71
+      T: 
+      L: ALLOWANCE OR REJECTION OF CREDITOR’S CLAIM
+      A: CASE NUMBER:
+p1 y= 316.5 x= 160.3 w=415.7 h=15.7 Tx FillText75
+      T: 
+      L: 1. Name of creditor (specify):
+      A: PERSONAL REPRESENTATIVE’S ALLOWANCE OR REJECTION
+p1 y= 330.6 x= 173.8 w=148.0 h=15.7 Tx FillText79
+      T: 
+      L: 2. The claim was filed on (date):
+      A: (specify):
+p1 y= 343.0 x= 180.5 w=148.0 h=15.7 Tx FillText83
+      T: 
+      L: 3. Date of first issuance of letters:
+      A: (date):
+p1 y= 355.4 x= 185.5 w=148.0 h=15.7 Tx FillText87
+      T: 
+      L: 4. Date of Notice of Administration:
+      A: (date): letters:
+p1 y= 368.6 x= 159.0 w=148.0 h=15.7 Tx FillText91
+      T: 
+      L: 5. Date of decedent’s death:
+      A: Administration:
+p1 y= 381.2 x= 164.5 w=155.4 h=15.7 Tx FillText95
+      T: 
+      L: 6. Estimated value of estate: $
+      A: Administration:
+p1 y= 393.7 x= 164.5 w=155.4 h=15.7 Tx FillText99
+      T: 
+      L: 7. Total amount of the claim: $
+      A: death:
+p1 y= 407.0 x= 166.1 w=119.0 h=15.7 Tx FillText103
+      T: 
+      L: 8. Claim is allowed for: $
+      A: claim: $
+p1 y= 409.1 x=  52.9 w= 18.2 h=10.7 Btn[/1] CheckBox23
+      T: 
+      L: 8.
+      A: 7. Total
+p1 y= 420.2 x= 167.8 w=117.4 h=15.7 Tx FillText107
+      T: 
+      L: 9. Claim is rejected for: $
+      A: for: $ (The
+p1 y= 421.5 x=  52.9 w= 18.2 h=10.7 Btn[/1] CheckBox1
+      T: 
+      L: 9.
+      A: 8.
+p1 y= 448.8 x=  52.9 w= 18.2 h=10.7 Btn[/1] CheckBox2
+      T: 
+      L: 11.
+      A: 10. Notice
+p1 y= 448.8 x= 244.6 w=148.0 h=-15.7 Tx FillText111
+      T: 
+      L: 10. Notice of allowance or rejection given on (date):
+      A: (date):
+p1 y= 465.5 x=  58.7 w=148.0 h=15.7 Tx FillText115
+      T: 
+      L: Date:
+      A: 11. The personal representative is authorized
+p1 y= 484.3 x=  34.7 w=245.5 h=15.7 Tx FillText119
+      T: 
+      L: 
+      A: Date:
+p1 y= 626.0 x= 140.5 w=114.9 h=15.7 Tx FillText123
+      T: 
+      L: 12. Approved for: $
+      A: COURT’S APPROVAL
+p1 y= 627.3 x=  52.9 w= 18.2 h=10.7 Btn[/1] CheckBox217
+      T: 
+      L: 12.
+      A: 
+p1 y= 640.7 x= 139.7 w=114.9 h=15.7 Tx FillText127
+      T: 
+      L: 13. Rejected for: $
+      A: for: $
+p1 y= 641.3 x=  52.9 w= 18.2 h=10.7 Btn[/1] CheckBox16
+      T: 
+      L: 13.
+      A: 12.
+p1 y= 677.7 x=  58.7 w=148.0 h=-15.7 Tx FillText131
+      T: 
+      L: Date:
+      A: Date:
+p1 y= 687.6 x= 171.1 w= 36.4 h=15.7 Tx FillText135
+      T: 
+      L: 14. Number of pages attached:
+      A: 
+p1 y= 691.7 x= 320.7 w= 18.2 h=10.7 Btn[/1] CheckBox218
+      T: 
+      L: Number of pages attached:
+      A: 
+p2 y=  64.5 x=  74.4 w=330.6 h=15.7 Tx FillText67
+      T: 
+      L: (Name):
+      A: ESTATE OF
+p2 y=  64.5 x= 412.4 w=162.8 h=15.7 Tx FillText71
+      T: 
+      L: 
+      A: CASE NUMBER:
+p2 y= 101.7 x= 190.1 w= 19.0 h=10.7 Btn[/1] CheckBox3
+      T: 
+      L: PROOF OF
+      A: 
+p2 y= 101.7 x= 271.1 w= 19.0 h=10.7 Btn[/2] CheckBox3
+      T: 
+      L: PROOF OF MAILING
+      A: 
+p2 y= 145.5 x=  54.5 w=519.0 h=49.6 Tx ML FillText148
+      T: 
+      L: 
+      A: 
+p2 y= 213.2 x=  63.6 w= 18.2 h=10.7 Btn[/1] CheckBox219
+      T: 
+      L: a.
+      A: 3. I mailed
+p2 y= 239.7 x= 128.1 w= 19.0 h=10.7 Btn[/1] CheckBox221
+      T: 
+      L: (a)
+      A: I enclosed
+p2 y= 252.9 x= 128.1 w= 19.0 h= 9.9 Btn[/2] CheckBox221
+      T: 
+      L: (b)
+      A: (a)
+p2 y= 325.8 x= 230.8 w=336.1 h=15.7 Tx FillText152
+      T: 
+      L: (a) Name of creditor served:
+      A: addressed and mailed first-class as follows:
+p2 y= 349.4 x= 128.1 w=439.7 h=33.9 Tx ML FillText156
+      T: 
+      L: 
+      A: (a) Name of creditor served:
+p2 y= 378.5 x= 196.8 w=127.9 h=15.7 Tx FillText160
+      T: 
+      L: (c) Date of mailing:
+      A: 
+p2 y= 389.3 x= 261.2 w=302.4 h=15.7 Tx FillText164
+      T: 
+      L: (d) Place of mailing (city and state):
+      A: 
+p2 y= 410.7 x=  63.6 w= 18.2 h=10.7 Btn[/2] CheckBox219
+      T: 
+      L: b.
+      A: 
+p2 y= 426.6 x= 210.6 w=352.2 h=15.7 Tx FillText168
+      T: 
+      L: (1) Name of creditor served:
+      A: personally delivered a copy to the creditor as follows:
+p2 y= 485.5 x= 172.1 w=127.9 h=15.7 Tx FillText176
+      T: 
+      L: (3) Date delivered:
+      A: 
+p2 y= 489.3 x= 106.6 w=454.5 h=-33.9 Tx ML FillText172
+      T: 
+      L: 
+      A: 
+p2 y= 498.7 x= 172.1 w=390.9 h=15.7 Tx FillText6
+      T: 
+      L: (4) Time delivered:
+      A: delivered:
+p2 y= 546.6 x=  60.3 w=127.9 h=15.7 Tx FillText181
+      T: 
+      L: Date:
+      A: declare under penalty of perjury under
+p2 y= 598.3 x=  33.1 w=247.9 h=15.7 Tx FillText18
+      T: 
+      L: 
+      A: 
+p2 y= 765.8 x=  33.7 w=243.0 h=24.7 Tx ML F0 NoticeFooter1
+      T: 
+      L: 
+      A: 
+p2 y= 773.4 x= 305.9 w= 85.4 h=17.1 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] F0 Save
+      T: 
+      L: 
+      A: 
+p2 y= 773.4 x= 400.1 w= 85.4 h=17.1 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] F0 Print
+      T: 
+      L: 
+      A: 
+p2 y= 773.4 x= 492.0 w= 85.4 h=17.1 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] F0 ResetForm
+      T: 
+      L: 
+      A: 

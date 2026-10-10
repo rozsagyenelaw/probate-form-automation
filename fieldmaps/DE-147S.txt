@@ -1,0 +1,40 @@
+p1 y=  73.7 x=  44.0 w=353.6 h=12.2 Tx DE-147S[0].Page1[0].P1Header[0].CaptionSub[0].Estate[0].Party_ft[0]
+      T: ESTATE OF (Name)
+      L: 
+      A: ESTATE OF (Name):
+p1 y=  74.2 x= 409.8 w=162.0 h=10.7 Tx DE-147S[0].Page1[0].P1Header[0].CaptionSub[0].CaseNumSub[0].CaseNumber_ft[0]
+      T: Case Number
+      L: 
+      A: CASE NUMBER: DE-147S
+p1 y= 319.1 x=  83.8 w=489.9 h=10.0 Tx DE-147S[0].Page1[0].SubformSet[0].List1[0].LI1[0].TextField2[0]
+      T: Name
+      L: 1. Name:
+      A: 
+p1 y= 350.0 x= 108.6 w=461.7 h= 9.0 Tx DE-147S[0].Page1[0].SubformSet[0].List1[0].LI2[0].DateField1[0]
+      T: Date of birth
+      L: 2. Date of birth:
+      A: 
+p1 y= 377.4 x= 153.8 w=199.3 h=10.0 Tx DE-147S[0].Page1[0].SubformSet[0].List1[0].LI3[0].TextField1[0]
+      T: Driver's license number
+      L: 3. Driver's license number:
+      A: 
+p1 y= 377.4 x= 386.6 w=186.5 h=10.0 Tx DE-147S[0].Page1[0].SubformSet[0].List1[0].LI3[0].TextField2[0]
+      T: State
+      L: number: State:
+      A: 
+p1 y= 732.1 x=  36.1 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147S[0].#pageSet[0].Page1[0].P1Footer[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: 
+p1 y= 738.3 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147S[0].#pageSet[0].Page1[0].P1Footer[0].Print[0]
+      T: Print this form
+      L: 
+      A: (Probate)
+p1 y= 738.3 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147S[0].#pageSet[0].Page1[0].P1Footer[0].Save[0]
+      T: Save this form
+      L: 
+      A: (Probate)
+p1 y= 738.3 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147S[0].#pageSet[0].Page1[0].P1Footer[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

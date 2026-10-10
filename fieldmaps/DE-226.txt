@@ -1,0 +1,204 @@
+p1 y=  60.4 x=  38.4 w=243.0 h= 9.0 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].Add1_ft[0]
+      T: Add1_ft
+      L: 
+      A: ATTORNEY After recording, OR return PARTY to: WITHOUT ATTORNEY (name, address, and State B
+p1 y=  70.2 x=  38.4 w=243.0 h= 9.0 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].Add2_ft[0]
+      T: Add2_ft
+      L: 
+      A: After recording, return to:
+p1 y=  79.9 x=  38.4 w=243.0 h= 9.0 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].Add3_ft[0]
+      T: Add3_ft
+      L: 
+      A: 
+p1 y=  89.7 x=  38.4 w=243.0 h= 9.0 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].Add4_ft[0]
+      T: Add4_ft
+      L: 
+      A: 
+p1 y=  99.4 x=  38.4 w=243.0 h= 9.0 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].Add5_ft[0]
+      T: Add5_ft
+      L: 
+      A: 
+p1 y= 109.9 x=  66.2 w= 72.3 h= 9.0 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].Tel_ft[0]
+      T: TEL NO.:
+      L: TEL NO.:
+      A: 
+p1 y= 109.9 x= 198.3 w= 83.1 h= 9.0 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].Fax_ft[0]
+      T: FAX NO. (optional):
+      L: TEL NO.: FAX NO. (optional):
+      A: 
+p1 y= 121.1 x= 121.7 w=159.1 h= 9.9 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].EMail_ft[0]
+      T: E-MAIL ADDRESS (optional):
+      L: E-MAIL ADDRESS (optional):
+      A: FAX NO. (optional):
+p1 y= 132.8 x= 108.0 w=172.8 h= 9.9 Tx topmostSubform[0].Page1[0].P1Header_sf[0].AttyPartyInfo_sf[0].EMail_ft[1]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: ADDRESS (optional):
+p1 y= 149.6 x= 179.3 w=102.1 h=11.4 Tx topmostSubform[0].Page1[0].P1Header_sf[0].CrtInfo_sf[0].Crtname_ft[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 163.1 x=  98.9 w=182.5 h=10.9 Tx topmostSubform[0].Page1[0].P1Header_sf[0].CrtInfo_sf[0].CrtStreetAdd_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: COURT OF CALIFORNIA, COUNTY OF
+p1 y= 176.0 x=  98.9 w=182.5 h=11.4 Tx topmostSubform[0].Page1[0].P1Header_sf[0].CrtInfo_sf[0].CrtMail_ft[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 189.4 x= 100.4 w=181.0 h=11.4 Tx topmostSubform[0].Page1[0].P1Header_sf[0].CrtInfo_sf[0].CrtCityZip_ft[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 202.9 x=  88.1 w=193.3 h=11.4 Tx topmostSubform[0].Page1[0].P1Header_sf[0].CrtInfo_sf[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: ZIP CODE:
+p1 y= 230.3 x= 383.3 w=185.7 h=16.5 Tx topmostSubform[0].Page1[0].P1Header_sf[0].CaseNumber_sf_sf[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p1 y= 230.4 x=  38.0 w=331.4 h=11.5 Tx topmostSubform[0].Page1[0].P1Header_sf[0].Party_sf[0].Party_ft[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p1 y= 258.3 x=  47.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].P1Header_sf[0].Title_sf[0].#area[0].CheckBox21[0]
+      T: SPOUSAL
+      L: 
+      A: 
+p1 y= 258.3 x= 129.5 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].P1Header_sf[0].Title_sf[0].#area[0].CheckBox21[1]
+      T: DOMESTIC PARTNER     
+      L: SPOUSAL
+      A: 
+p1 y= 278.1 x= 116.8 w= 99.2 h=10.1 Tx topmostSubform[0].Page1[0].FillText103[0]
+      T: Date of hearing:
+      L: 1. Date of hearing:
+      A: SPOUSAL DOMESTIC PARTNER
+p1 y= 278.1 x= 252.3 w=103.9 h= 9.0 Tx topmostSubform[0].Page1[0].FillText102[0]
+      T: Time:
+      L: 1. Date of hearing: Time:
+      A: PARTNER PROPERTY ORDER
+p1 y= 290.2 x=  77.0 w=140.5 h= 9.0 Tx topmostSubform[0].Page1[0].FillText100[0]
+      T: Dept.:
+      L: Dept.:
+      A: Date of hearing:
+p1 y= 290.2 x= 257.1 w= 72.1 h= 9.5 Tx ML topmostSubform[0].Page1[0].FillText101[0]
+      T: Room:
+      L: Dept.: Room:
+      A: Time:
+p1 y= 332.5 x= 153.4 w=209.6 h=10.1 Tx topmostSubform[0].Page1[0].FillText99[0]
+      T: Decedent died on (date):
+      L: 3. Decedent died on (date):
+      A: by law have been given.
+p1 y= 345.7 x=  70.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox17[0]
+      T: a resident of the California county named above. 
+      L: a.
+      A: Decedent
+p1 y= 358.8 x=  70.6 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox17[1]
+      T: a nonresident of California and left an estate in the county named above.
+      L: b.
+      A: a.
+p1 y= 383.8 x= 146.6 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox18[1]
+      T: testate.
+      L: c. intestate.
+      A: 
+p1 y= 383.9 x=  70.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox18[0]
+      T: intestate.
+      L: c.
+      A: 
+p1 y= 399.4 x= 216.2 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox14[1]
+      T: surviving registered domestic partner
+      L: 4. Decedent's surviving spouse
+      A: testate.
+p1 y= 399.6 x= 105.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox14[0]
+      T: surviving spouse
+      L: 4. Decedent's
+      A: intestate.
+p1 y= 410.5 x=  92.9 w=483.1 h= 9.0 Tx topmostSubform[0].Page1[0].FillText98[0]
+      T: is (name):
+      L: is (name):
+      A: Decedent's surviving spouse surviving registered domestic partner
+p1 y= 442.1 x=  70.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox11[0]
+      T: The property described in Attachment 5a is property passing to the surviving spouse or surviving registered domestic par
+      L: 5. a.
+      A: THE COURT
+p1 y= 464.4 x=  70.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox10[0]
+      T: See Attachment 5b for further order(s) respecting transfer of the property to the surviving spouse or surviving register
+      L: b.
+      A: a.
+p1 y= 485.3 x= 314.0 w=256.9 h=10.5 Tx topmostSubform[0].Page1[0].FillText97[0]
+      T: (business name):
+      L: To protect the interests of the creditors of (business name):
+      A: transfer of the property to the surviving spouse or surviving registered
+p1 y= 486.0 x=  55.9 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox9[0]
+      T: To protect the interests of the creditors of 
+      L: 6.
+      A: 
+p1 y= 509.1 x= 182.4 w= 41.3 h= 9.0 Tx topmostSubform[0].Page1[0].FillText96[0]
+      T: (specify):
+      L: a. Within ( s p e c i f y ) :
+      A: trade or business,
+p1 y= 509.1 x=  96.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox7[0]
+      T: Within                                  days from this date, the surviving spouse or surviving registered domestic partn
+      L: a.
+      A: an unincorporated
+p1 y= 519.1 x= 356.6 w=211.2 h= 9.8 Tx topmostSubform[0].Page1[0].FillText95[0]
+      T: $
+      L: named in item 4 shall file an undertaking in the amount of $
+      A: surviving spouse or surviving registered domestic partner
+p1 y= 530.5 x=  96.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox8[0]
+      T: See Attachment 6b for further order(s) protecting the interests of creditors of the business.
+      L: b.
+      A: a.
+p1 y= 542.9 x=  70.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox6[0]
+      T: The property described in Attachment 7a is property that belonged to the surviving spouse or surviving registered  domes
+      L: 7. a.
+      A: b.
+p1 y= 576.0 x=  70.6 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox5[0]
+      T: See Attachment 7b for further order(s) respecting transfer of the property to the surviving spouse or surviving domestic
+      L: b.
+      A: 
+p1 y= 597.0 x=  55.9 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox4[0]
+      T: All property described in the Spousal or Domestic Partner Property Petition that is not determined to be property passin
+      L: 8.
+      A: b.
+p1 y= 628.8 x= 318.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox1[0]
+      T: All of such property is described in Attachment 8.
+      L: to administration in the estate of decedent.
+      A: domestic partner partner under
+p1 y= 643.2 x= 137.7 w=435.2 h=26.5 Tx ML topmostSubform[0].Page1[0].FillText141[0]
+      T: (specify):
+      L: 
+      A: administration in the estate of decedent. All of such property is described in Attachment 
+p1 y= 643.2 x=  55.9 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox3[0]
+      T: Other 
+      L: 9.
+      A: 
+p1 y= 669.7 x= 161.8 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox2[0]
+      T: Continued in Attachment 9.
+      L: 
+      A: 
+p1 y= 685.2 x= 160.7 w= 31.2 h= 9.0 Tx topmostSubform[0].Page1[0].FillText140[0]
+      T: Number of pages attached:
+      L: 10.Number of pages attached:
+      A: Continued
+p1 y= 699.8 x=  57.8 w=154.5 h= 9.0 Tx topmostSubform[0].Page1[0].T206[0]
+      T: Date:
+      L: Date:
+      A: 10.Number of pages attached:
+p1 y= 709.2 x= 318.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox19[0]
+      T: SIGNATURE FOLLOWS LAST ATTACHMENT
+      L: 
+      A: 
+p1 y= 770.1 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] topmostSubform[0].Page1[0].BtnFooter_gp[0].Print_bt[0]
+      T: Print this form
+      L: This Form button after you have printed the form.
+      A: 
+p1 y= 770.1 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] topmostSubform[0].Page1[0].BtnFooter_gp[0].Save_bt[0]
+      T: Save this form
+      L: Form button after you have printed the form.
+      A: 
+p1 y= 770.1 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] topmostSubform[0].Page1[0].BtnFooter_gp[0].Reset_bt[0]
+      T: Clear this form
+      L: form.
+      A: 

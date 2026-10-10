@@ -1,0 +1,208 @@
+p1 y=  47.9 x= 217.8 w= 68.2 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].AttyBarNo_dc[0]
+      T: STATE BAR NUMBER.:
+      L: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NO.:
+      A: DE-305
+p1 y=  63.7 x=  56.8 w=229.2 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].Name_ft[0]
+      T: NAME:
+      L: NAME:
+      A: ATTORNEY After recording, OR return PARTY to: WITHOUT ATTORNEY STATE BAR NO.:
+p1 y=  74.9 x=  73.5 w=212.4 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].Firm_ft[0]
+      T: FIRM NAME:
+      L: FIRM NAME:
+      A: NAME:
+p1 y=  86.0 x=  93.7 w=192.3 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].StAdd_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: 
+p1 y=  97.2 x= 107.1 w=178.9 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].CityStateZip_ft[0]
+      T: CITY, STATE, ZIP CODE:
+      L: CITY, STATE, ZIP CODE:
+      A: ADDRESS:
+p1 y= 108.4 x=  87.9 w= 80.7 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].Tel_ft[0]
+      T: TELEPHONE NUMBER.:
+      L: TELEPHONE NO.:
+      A: STATE, ZIP CODE:
+p1 y= 108.4 x= 196.7 w= 89.3 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].Fax_ft[0]
+      T: FAX NUMBER.:
+      L: TELEPHONE NO.: FAX NO.:
+      A: 
+p1 y= 119.5 x=  88.4 w=197.6 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].Email_ft[0]
+      T: EMAIL ADDRESS:
+      L: EMAIL ADDRESS:
+      A: TELEPHONE NO.: FAX NO.:
+p1 y= 130.7 x= 107.5 w=178.4 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].AttyPartyInfo[0].AttyForParty_ft[0]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: ADDRESS:
+p1 y= 144.9 x= 203.2 w= 82.8 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].CourtInfo[0].CrtCounty[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 155.9 x=  97.0 w=189.0 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].CourtInfo[0].CrtStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: COURT OF CALIFORNIA, COUNTY OF
+p1 y= 166.8 x=  97.0 w=189.0 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].CourtInfo[0].CrtMailingAdd[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 177.7 x=  97.0 w=189.0 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].CourtInfo[0].CrtCityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 189.4 x=  97.0 w=189.0 h= 9.0 Tx DE-305[0].Page1[0].SmallCaption[0].CourtInfo[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 211.5 x=  37.6 w=356.4 h=11.0 Tx DE-305[0].Page1[0].SmallCaption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: 
+      A: ESTATE OF (name): FOR
+p1 y= 213.6 x= 399.7 w=174.2 h=12.5 Tx DE-305[0].Page1[0].SmallCaption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p1 y= 268.6 x= 141.6 w=236.4 h= 9.0 Tx DE-305[0].Page1[0].List1[0].LI1[0].DecedentName[0]
+      T: The decedent (name):
+      L: 1. The decedent (name):
+      A: 
+p1 y= 280.2 x= 111.2 w=119.6 h= 9.0 Tx DE-305[0].Page1[0].List1[0].LI1[0].DeathDate[0]
+      T: date of death:
+      L: died on (date):
+      A: decedent (name):
+p1 y= 291.7 x= 109.8 w=268.2 h= 9.0 Tx DE-305[0].Page1[0].List1[0].LI1[0].DeathCityState[0]
+      T: place of death (city, state):
+      L: at (city, state):
+      A: (date):
+p1 y= 333.7 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-305[0].Page1[0].List3[0].lia[0].domicile[0]
+      T: The decedent was domiciled in this county at the time of death. 
+      L: 3. a.
+      A: copy of
+p1 y= 345.3 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-305[0].Page1[0].List3[0].lib[0].domicile[0]
+      T: The decedent was not domiciled in California at the time of death, but the decedent died owning real property in this co
+      L: b.
+      A: a.
+p1 y= 404.7 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-305[0].Page1[0].List4[0].PropValueOld[0].Value[0]
+      T: $55,425 (decedent died before April 1, 2022).
+      L: a.
+      A: appraisal—excluding
+p1 y= 415.5 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-305[0].Page1[0].List4[0].PropValue2022[0].Value[0]
+      T: $61,500 (decedent died on or after April 1, 2022, and before April 1, 2025. Form DE-300 is attached as required by law).
+      L: b.
+      A: appraisal—excluding a.
+p1 y= 425.7 x=  69.7 w=  9.0 h= 9.0 Btn[/3] DE-305[0].Page1[0].List4[0].PropValue2025[0].Value[0]
+      T: $69,625 (decedent died on or after April 1, 2025. Form DE-300 is attached as required by law).
+      L: c.
+      A: a. b.
+p1 y= 481.8 x=  65.4 w=510.6 h=53.3 Tx ML DE-305[0].Page1[0].List5[0].lib[0].DecPropIntrst_tf[0]
+      T: The decedent's interest in this real property is (specify):
+      L: 
+      A: exactly from deed or other legal instrument.)
+p1 y= 540.4 x= 490.6 w=  9.0 h= 9.0 Btn[/2] DE-305[0].Page1[0].List6[0].LI6[0].GCYes[0].GC[0]
+      T: are as follows:*
+      L: conservator of the decedent's estate at time of death: none
+      A: 
+p1 y= 540.4 x= 435.9 w=  9.0 h= 9.0 Btn[/1] DE-305[0].Page1[0].List6[0].LI6[0].GCNo[0].GC[0]
+      T: none
+      L: guardian or conservator of the decedent's estate at time of death:
+      A: 
+p1 y= 562.0 x=  50.7 w=234.0 h= 9.0 Tx DE-305[0].Page1[0].List6[0].LI6[0].GCName1[0]
+      T: Name of first guardian or conservator
+      L: 
+      A: 6. Name and address of each guardian or conservator of the decedent's
+p1 y= 562.0 x= 288.0 w=288.0 h= 9.0 Tx DE-305[0].Page1[0].List6[0].LI6[0].GCAddr1[0]
+      T: Address of first guardian or conservator
+      L: 
+      A: the decedent's estate at time of death: none are as follows:*
+p1 y= 572.8 x=  50.7 w=234.0 h= 9.0 Tx DE-305[0].Page1[0].List6[0].LI6[0].GCName2[0]
+      T: Name of second guardian or conservator
+      L: 
+      A: Name
+p1 y= 572.8 x= 288.0 w=288.0 h= 9.0 Tx DE-305[0].Page1[0].List6[0].LI6[0].GCAddr2[0]
+      T: Address of second guardian or conservator
+      L: 
+      A: Address
+p1 y= 583.8 x=  55.0 w=  9.0 h= 9.0 Btn[/1] DE-305[0].Page1[0].List6[0].LI6[0].GCAddlAtt_cb[0]
+      T: Additional guardians or conservators are identified in Attachment 6.
+      L: 
+      A: 
+p1 y= 689.8 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-305[0].Page1[0].Item8[0].lia[0].AdminYN[0]
+      T: No proceeding for administration of decedent's estate is now being or has been conducted in California.
+      L: 8. a.
+      A: referees
+p1 y= 700.6 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-305[0].Page1[0].Item8[0].lib[0].AdminYN[0]
+      T: The decedent's personal representative has consented in writing to the use of the procedure provided by Probate Code sec
+      L: b.
+      A: a.
+p2 y=  56.3 x=  37.6 w=356.4 h=11.0 Tx F68 DE-305[0].Page2[0].P2Caption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: 
+      A: ESTATE OF (name):
+p2 y=  57.0 x= 397.6 w=176.4 h=11.0 Tx F68 DE-305[0].Page2[0].P2Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER: DE-305
+p2 y= 144.9 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-305[0].Page2[0].Item10[0].Sub10a[0].WillYN[0]
+      T: (if decedent left a will) the sole beneficiary or all the beneficiaries who succeeded to the property under the decedent
+      L: a.
+      A: and no
+p2 y= 166.3 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-305[0].Page2[0].Item10[0].Sub10b[0].WillYN[0]
+      T: (if decedent died without a will) the sole person or all the persons who succeeded to the property under Probate Code se
+      L: b.
+      A: a.
+p2 y= 211.5 x=  62.0 w=154.0 h= 9.0 Tx DE-305[0].Page2[0].Signsub[0].DateSig1[0]
+      T: Date:
+      L: Date:
+      A: declare under penalty of perjury under the laws
+p2 y= 226.0 x=  36.0 w=277.6 h=13.9 Tx DE-305[0].Page2[0].Signsub[0].SignatureName1[0]
+      T: (TYPE OR PRINT NAME)*
+      L: 
+      A: Date:
+p2 y= 257.7 x=  62.0 w=154.0 h= 9.0 Tx DE-305[0].Page2[0].Signsub[0].DateSig2[0]
+      T: Date:
+      L: Date:
+      A: (TYPE OR PRINT NAME)*
+p2 y= 272.4 x=  36.0 w=277.6 h=14.4 Tx DE-305[0].Page2[0].Signsub[0].SignatureName2[0]
+      T: (TYPE OR PRINT NAME)*
+      L: 
+      A: Date:
+p2 y= 297.7 x= 328.0 w=  9.0 h= 9.0 Btn[/1] DE-305[0].Page2[0].Signsub[0].AddlDecl_cb[0]
+      T: SIGNATURES OF ADDITIONAL DECLARANTS ATTACHED
+      L: 
+      A: 
+p2 y= 416.4 x= 236.7 w=339.3 h= 9.0 Tx DE-305[0].Page2[0].CrtofAcknwldgmt[0].County[0]
+      T: STATE OF CALIFORNIA, COUNTY OF (specify):
+      L: STATE OF CALIFORNIA, COUNTY OF (specify):
+      A: not the truthfulness, accuracy, or validity of that document.
+p2 y= 429.0 x=  78.9 w=100.2 h= 9.0 Tx DE-305[0].Page2[0].CrtofAcknwldgmt[0].Notary\.date[0]
+      T: date of notarization
+      L: On (date):
+      A: STATE OF CALIFORNIA, COUNTY
+p2 y= 429.0 x= 295.6 w=280.4 h= 9.0 Tx DE-305[0].Page2[0].CrtofAcknwldgmt[0].notary\.name\.title[0]
+      T: name and title of notary
+      L: On (date): , before me (name and title):
+      A: 
+p2 y= 441.6 x= 186.6 w=389.4 h= 9.0 Tx DE-305[0].Page2[0].CrtofAcknwldgmt[0].appear\.names[0]
+      T: name of each declarant
+      L: personally appeared (name of each):
+      A: , before me (name and title):
+p2 y= 701.1 x= 209.6 w=102.5 h= 9.0 Tx DE-305[0].Page2[0].ClerkCert[0].Clerk\.certificate\.date[0]
+      T: Date:
+      L: Date:
+      A: 
+p2 y= 701.1 x= 365.0 w=167.8 h= 9.0 Tx DE-305[0].Page2[0].ClerkCert[0].ClerkBy[0]
+      T: Clerk, by
+      L: Date: Clerk, by
+      A: 
+p2 y= 761.4 x= 258.1 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-305[0].#pageSet[0].MPLast[0].#area[0].Print[0]
+      T: Print
+      L: button after you have printed the form.
+      A: Affidavit re Real Property of
+p2 y= 761.4 x= 344.6 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-305[0].#pageSet[0].MPLast[0].#area[0].Save[0]
+      T: Save
+      L: you have printed the form.
+      A: Property of Small Value
+p2 y= 761.4 x= 494.3 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-305[0].#pageSet[0].MPLast[0].#area[0].Reset[0]
+      T: Clear
+      L: 
+      A: 

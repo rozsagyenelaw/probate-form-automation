@@ -6,6 +6,11 @@
 
 [functions."process-form"]
   external_node_modules = ["pdf-lib"]
+  included_files = ["templates/official/*.pdf", "lib/formgen/fonts/*.ttf"]
+
+[functions."generate"]
+  external_node_modules = ["pdf-lib"]
+  included_files = ["templates/official/*.pdf", "lib/formgen/fonts/*.ttf"]
 
 [[headers]]
   for = "/.netlify/functions/*"

@@ -1,0 +1,176 @@
+p1 y= 109.3 x= 116.3 w=388.7 h=16.2 Tx DE-157[0].Page1[0].Party_ft[1]
+      T: (NAME)
+      L: 
+      A: 
+p1 y= 204.1 x= 103.5 w=466.1 h=13.0 Tx DE-157[0].Page1[0].TextField2[0]
+      T:       (Name):
+      L: 1. (Name):
+      A: NOTICE TO CREDITORS
+p1 y= 219.8 x= 103.6 w=466.5 h=39.1 Tx ML DE-157[0].Page1[0].TextField2[1]
+      T:   (Address):
+      L: 
+      A: (Name):
+p1 y= 261.5 x= 103.7 w=145.0 h=13.0 Tx DE-157[0].Page1[0].TextField2[2]
+      T: (Telephone):
+      L: (Telephone):
+      A: 
+p1 y= 278.1 x= 290.6 w=203.5 h=13.0 Tx DE-157[0].Page1[0].Party_ft[0]
+      T: is the personal representative of the ESTATE OF (name):
+      L: is the personal representative of the ESTATE OF (name):
+      A: 
+p1 y= 310.1 x= 319.0 w=254.7 h=13.0 Tx DE-157[0].Page1[0].TextField2[3]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF (specify):
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF (specify):
+      A: of the decedent's estate in the
+p1 y= 325.6 x= 130.0 w=443.7 h=13.0 Tx DE-157[0].Page1[0].TextField2[4]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF (specify):
+p1 y= 341.3 x= 130.0 w=443.7 h=13.0 Tx DE-157[0].Page1[0].TextField2[5]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 357.0 x= 130.0 w=443.7 h=13.0 Tx DE-157[0].Page1[0].TextField2[6]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 372.7 x= 130.0 w=443.7 h=13.0 Tx DE-157[0].Page1[0].TextField2[7]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 388.2 x= 163.8 w=159.6 h=13.0 Tx DE-157[0].Page1[0].CaseNumber_ft[0]
+      T: Case number (specify):
+      L: b. Case number (specify):
+      A: 
+p1 y= 434.8 x= 169.6 w=140.1 h= 9.0 Tx DE-157[0].Page1[0].DateField2[0]
+      T: four months after (date):
+      L: a. four months after (date):
+      A: of the following dates:
+p1 y= 465.6 x= 148.9 w=139.7 h= 9.0 Tx DE-157[0].Page1[0].DateField2[1]
+      T: 60 days after (date):
+      L: b. 60 days after (date):
+      A: general personal representative, as defined in
+p2 y=  64.5 x=  43.2 w=345.6 h=12.1 Tx F68 DE-157[0].Page2[0].#subform[0].Party_ft[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p2 y=  64.6 x= 399.6 w=172.8 h=12.0 Tx F68 DE-157[0].Page2[0].#subform[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p2 y= 150.4 x=  51.0 w=521.2 h=35.1 Tx ML DE-157[0].Page2[0]._2LineTR12[0]
+      T: My residence or business address is (specify):
+      L: 
+      A: 2. My residence or business address is (specify):
+p2 y= 187.8 x= 295.8 w=  9.0 h= 9.0 Btn[/1] DE-157[0].Page2[0].two[0]
+      T: and a blank Creditor's Claim form* on each person named 
+      L: 3. I served the foregoing Notice of Administration to Creditors
+      A: 
+p2 y= 216.0 x=  71.0 w=  9.0 h= 9.0 Btn[/1] DE-157[0].Page2[0].ThreeA[0]
+      T: depositing the sealed envelope with the United States Postal Service with the postage fully prepaid. 
+      L: a.
+      A: below by
+p2 y= 230.7 x=  71.0 w=  9.0 h= 9.0 Btn[/1] DE-157[0].Page2[0].ThreeB[0]
+      T: placing the envelope for collection and mailing on the date and at the place shown in item 4 following our ordinary  bus
+      L: b.
+      A: a.
+p2 y= 282.2 x= 421.1 w=153.3 h=13.0 Tx DE-157[0].Page2[0].TextField2[0]
+      T: Place of deposit (city and state):
+      L: b. Place of deposit (city and state):
+      A: postage fully prepaid.
+p2 y= 284.2 x= 132.0 w=130.5 h= 9.0 Tx DE-157[0].Page2[0].DateField2[0]
+      T: Date of deposit:
+      L: 4. a. Date of deposit:
+      A: business with the United States Postal Service
+p2 y= 326.0 x=  61.2 w=138.3 h=10.3 Tx DE-157[0].Page2[0].SigDate[0]
+      T: Date:
+      L: Date:
+      A: declare under penalty of perjury under the
+p2 y= 350.0 x=  36.0 w=250.6 h=13.2 Tx DE-157[0].Page2[0].SigPrintName_ft[0]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: 
+p2 y= 411.8 x=  55.7 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[1]
+      T: Enter Name of person 1
+      L: 
+      A: Name of person
+p2 y= 411.8 x= 246.4 w=329.5 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[2]
+      T: enter address 1
+      L: 
+      A: Address (number, street, city, state, and zip code)
+p2 y= 444.8 x=  56.2 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[3]
+      T: Enter Name of person 2
+      L: 
+      A: 
+p2 y= 444.8 x= 246.4 w=328.9 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[4]
+      T: enter address 2
+      L: 
+      A: 
+p2 y= 477.8 x=  56.2 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[5]
+      T: Enter Name of person 3
+      L: 
+      A: 
+p2 y= 477.8 x= 246.4 w=328.9 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[6]
+      T: enter address 3
+      L: 
+      A: 
+p2 y= 510.8 x=  55.7 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[7]
+      T: Enter Name of person 4
+      L: 
+      A: 
+p2 y= 510.8 x= 246.4 w=329.5 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[8]
+      T: enter address 4
+      L: 
+      A: 
+p2 y= 543.8 x=  56.2 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[9]
+      T: Enter Name of person 5
+      L: 
+      A: 
+p2 y= 543.8 x= 246.4 w=329.5 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[10]
+      T: enter address 5
+      L: 
+      A: 
+p2 y= 576.7 x=  56.2 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[11]
+      T: Enter Name of person 6
+      L: 
+      A: 
+p2 y= 576.7 x= 246.4 w=329.5 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[12]
+      T: enter address 6
+      L: 
+      A: 
+p2 y= 609.7 x=  56.2 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[13]
+      T: Enter Name of person 7
+      L: 
+      A: 
+p2 y= 609.7 x= 246.4 w=329.5 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[14]
+      T: enter address 7
+      L: 
+      A: 
+p2 y= 642.7 x=  56.2 w=180.0 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[15]
+      T: Enter Name of person 8
+      L: 
+      A: 
+p2 y= 642.7 x= 246.4 w=329.5 h=29.1 Tx ML DE-157[0].Page2[0].TextField2[16]
+      T: enter address 8
+      L: 
+      A: 
+p2 y= 673.9 x=  40.3 w=  9.0 h= 9.0 Btn[/1] DE-157[0].Page2[0].#area[0].Listofnames[0]
+      T: List of names and addresses continued in attachment. (You may use form POS-30(P) to show additional persons to whom a  c
+      L: 
+      A: 
+p2 y= 756.0 x=  36.0 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-157[0].#area[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: (Probate—Decedents’
+p2 y= 762.2 x= 258.7 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-157[0].#area[0].Print[0]
+      T: Print this form
+      L: 
+      A: 
+p2 y= 762.2 x= 345.2 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-157[0].#area[0].Save[0]
+      T: Save this form
+      L: 
+      A: 
+p2 y= 762.2 x= 494.9 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-157[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

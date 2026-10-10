@@ -1,0 +1,92 @@
+p1 y=  57.9 x=  38.0 w=356.3 h=51.5 Tx ML DE-147[0].Page1[0].AttyPartyInfo[0].TextField1[0]
+      T: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+p1 y= 111.8 x= 120.2 w=114.4 h= 9.0 Tx DE-147[0].Page1[0].AttyPartyInfo[0].Phone[0]
+      T: TELEPHONE NO.:
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 111.8 x= 296.1 w= 98.2 h= 9.0 Tx DE-147[0].Page1[0].AttyPartyInfo[0].Fax[0]
+      T: FAX NO. (Optional):
+      L: TELEPHONE NO.: FAX NO. (Optional):
+      A: 
+p1 y= 123.4 x= 120.2 w=274.2 h= 9.0 Tx DE-147[0].Page1[0].AttyPartyInfo[0].Email[0]
+      T: E-MAIL ADDRESS (Optional):
+      L: E-MAIL ADDRESS (Optional):
+      A: TELEPHONE NO.: FAX NO. (Optional):
+p1 y= 134.8 x= 120.2 w=274.2 h= 9.0 Tx DE-147[0].Page1[0].AttyPartyInfo[0].Email[1]
+      T:  ATTORNEY FOR (Name):
+      L: ATTORNEY FOR (Name):
+      A: (Optional):
+p1 y= 147.3 x= 228.1 w=166.3 h= 9.0 Tx DE-147[0].Page1[0].CourtInfo[0].CrtCounty_ft[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 158.3 x=  97.4 w=297.0 h= 9.0 Tx DE-147[0].Page1[0].CourtInfo[0].Street_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 169.2 x=  97.4 w=297.0 h= 9.0 Tx DE-147[0].Page1[0].CourtInfo[0].MailingAdd_ft[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 180.1 x=  97.4 w=297.0 h= 9.0 Tx DE-147[0].Page1[0].CourtInfo[0].CityZip_ft[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 191.1 x=  97.4 w=297.0 h= 9.0 Tx DE-147[0].Page1[0].CourtInfo[0].Branch_ft[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 216.7 x=  37.8 w=308.3 h=17.2 Tx DE-147[0].Page1[0].TitlePartyName[0].name_tf[0]
+      T: ESTATE OF (Name):
+      L: 
+      A: ESTATE OF (Name):
+p1 y= 252.1 x= 399.3 w=172.8 h=14.4 Tx DE-147[0].Page1[0].CaseNumber[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: and Acknowledgment of Receipt
+      A: CASE NUMBER:
+p2 y=  48.3 x= 399.8 w=172.8 h=14.4 Tx F68 DE-147[0].Page2[0].CaseNumber[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p2 y=  48.6 x=  38.8 w=354.4 h=10.4 Tx F68 DE-147[0].Page2[0].TitlePartyName[0].name_tf[0]
+      T: name:
+      L: 
+      A: ESTATE OF (Name):
+p2 y= 488.6 x=  54.7 w=518.4 h=33.6 Tx ML DE-147[0].Page2[0].TEXT\.5\.1\.1[0]
+      T: My address and telephone number are (specify):
+      L: 
+      A: 2. My address and telephone number are (specify):
+p2 y= 568.5 x=  61.9 w=117.5 h=10.0 Tx DE-147[0].Page2[0].SigDate[0]
+      T: Date:
+      L: Date:
+      A: 
+p2 y= 589.8 x=  36.7 w=239.9 h=14.1 Tx DE-147[0].Page2[0].SigName[0]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: Date:
+p2 y= 629.2 x=  62.4 w=117.5 h=10.0 Tx DE-147[0].Page2[0].SigDate[1]
+      T: Date:
+      L: Date:
+      A: 
+p2 y= 650.5 x=  37.2 w=239.9 h=14.1 Tx DE-147[0].Page2[0].SigName[1]
+      T: (TYPE OR PRINT NAME)
+      L: 
+      A: Date:
+p2 y= 747.1 x=  36.1 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147[0].Page2[0].#area[0].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: DUTIES AND LIABILITIES
+p2 y= 753.3 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147[0].Page2[0].#area[0].Print[0]
+      T: Print this form
+      L: 
+      A: (Probate)
+p2 y= 753.3 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147[0].Page2[0].#area[0].Save[0]
+      T: Save this form
+      L: 
+      A: (Probate)
+p2 y= 753.3 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-147[0].Page2[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

@@ -1,0 +1,340 @@
+p1 y=  48.2 x= 271.6 w=122.0 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].StateBarNo[0]
+      T: STATE BAR NUMBER:
+      L: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NO.:
+      A: 
+p1 y=  59.8 x=  56.8 w=336.9 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyPartyName[0]
+      T: NAME:
+      L: NAME:
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NO.:
+p1 y=  71.3 x=  72.6 w=321.4 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyFirm[0]
+      T: FIRM NAME:
+      L: FIRM NAME:
+      A: NAME:
+p1 y=  82.8 x=  93.6 w=300.4 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyPrtyStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: 
+p1 y=  94.3 x=  53.6 w=186.8 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyPrtyCity[0]
+      T: CITY:
+      L: CITY:
+      A: STREET ADDRESS:
+p1 y=  94.3 x= 264.0 w= 29.4 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyPrtyState[0]
+      T: STATE:
+      L: CITY: STATE:
+      A: 
+p1 y=  94.3 x= 326.4 w= 67.5 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyPrtyZip[0]
+      T: ZIP CODE:
+      L: STATE: ZIP CODE:
+      A: 
+p1 y= 105.8 x=  87.7 w=129.1 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Phone[0]
+      T: TELEPHONE NUMBER:
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 105.8 x= 264.3 w=129.6 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Fax[0]
+      T: FAX NUMBER:
+      L: TELEPHONE NO.: FAX NO.:
+      A: STATE: ZIP CODE:
+p1 y= 117.4 x=  87.7 w=306.3 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].Email[0]
+      T: EMAIL ADDRESS:
+      L: EMAIL ADDRESS:
+      A: TELEPHONE NO.: FAX NO.:
+p1 y= 128.9 x= 106.5 w=287.5 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyFor[0]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: ADDRESS:
+p1 y= 144.9 x= 226.5 w=167.5 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].CourtInfo[0].CrtCounty_ft[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 156.5 x=  98.8 w=295.2 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].CourtInfo[0].crtStreet_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 166.8 x=  98.8 w=295.2 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].CourtInfo[0].crtMailingAdd_ft[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 177.7 x=  98.8 w=295.2 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].CourtInfo[0].crtCityZip_ft[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 188.7 x=  98.8 w=295.2 h= 9.0 Tx DE-310[0].Page1[0].P1Caption[0].CourtInfo[0].crtBranch_ft[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 211.5 x=  37.6 w=356.4 h=11.0 Tx DE-310[0].Page1[0].P1Caption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: 
+      A: ESTATE OF (name):
+p1 y= 213.1 x= 399.6 w=172.8 h=14.4 Tx DE-310[0].Page1[0].P1Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p1 y= 243.0 x= 543.6 w= 28.8 h=14.4 Tx DE-310[0].Page1[0].P1Caption[0].HrgDept[0].Dept[0]
+      T: DEPARTMENT:
+      L: SUCCESSION
+      A: DEPT.:
+p1 y= 243.4 x= 399.6 w=136.8 h=14.4 Tx DE-310[0].Page1[0].P1Caption[0].HrgDateTime[0].HearingDtTm[0]
+      T: HEARING DATE AND TIME:
+      L: TO PRIMARY RESIDENCE
+      A: DECEDENT HEARING DATE AND TIME:
+p1 y= 277.2 x=  50.7 w=525.3 h=10.8 Tx DE-310[0].Page1[0].List1[0].LI1[0].PtnrNames_ft[0]
+      T: Petitioner (name of each person claiming an interest):
+      L: 
+      A: 
+p1 y= 316.8 x= 125.2 w=450.8 h= 9.0 Tx DE-310[0].Page1[0].List2[0].Party1[0]
+      T: Decedent (name):
+      L: 2. Decedent (name):
+      A: passing to petitioner.
+p1 y= 328.3 x= 125.1 w=120.3 h= 9.0 Tx DE-310[0].Page1[0].List2[0].lia[0].Decedent\.DOD[0]
+      T: Date of death:
+      L: a. Date of death:
+      A: (name):
+p1 y= 339.8 x= 381.1 w=194.9 h= 9.0 Tx DE-310[0].Page1[0].List2[0].lib[0].Decedent\.place[0]
+      T: Place of death (city and state or, if outside the United States, city and country):
+      L: death (city and state or, if outside the United States, city and country):
+      A: 
+p1 y= 373.3 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI4[0].lia[0].ResYN[0]
+      T: Decedent was a resident of this county at the time of death. 
+      L: 4. a.
+      A: At least
+p1 y= 384.8 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI4[0].ib[0].ResYN[0]
+      T: Decedent was not a resident of California at the time of death. Decedent died owning property in this county.
+      L: b.
+      A: a.
+p1 y= 401.4 x= 123.5 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].List5[0].LI5[0].WillYN[0]
+      T: intestate (without a will)
+      L: 5. Decedent died
+      A: Decedent was
+p1 y= 401.4 x= 250.3 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].List5[0].LI5[0].WillYN[1]
+      T: testate (with a will), and a copy of the will is attached as Attachment 5 or 12a.
+      L: 5. Decedent died intestate (without a will)
+      A: California at
+p1 y= 418.0 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI6[0].lia[0].ProcYN[0]
+      T: No proceeding for the administration of decedent's estate is being conducted or has been conducted in California. 
+      L: 6. a.
+      A: Decedent
+p1 y= 429.5 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI6[0].ib[0].ProcYN[0]
+      T: Decedent's personal representative's consent to use the procedure provided by Probate Code section 13150 et seq. is atta
+      L: b.
+      A: a.
+p1 y= 468.1 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI7[0].lia[0].OOSYN[0]
+      T: have not been commenced.
+      L: a.
+      A: Proceedings
+p1 y= 479.6 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI7[0].lib[0].OOSYN[0]
+      T: have been commenced
+      L: b.
+      A: a.
+p1 y= 479.6 x= 196.9 w=  9.0 h= 9.0 Btn[/Yes] DE-310[0].Page1[0].LI7[0].lib[0].Complete[0].OOSComplete[0]
+      T: and completed.
+      L: b. have been commenced
+      A: commenced.
+p1 y= 490.4 x=  88.5 w=487.5 h= 9.0 Tx DE-310[0].Page1[0].LI7[0].lib[0].Field7b[0]
+      T: (Specify state, county, court, and case number):
+      L: 
+      A: have not been commenced and completed. (Specify state, county, court, and case number):
+p1 y= 528.5 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI8[0].lia[0].GrossValue[0]
+      T: $166,250 (decedent died before April 1, 2022).
+      L: a.
+      A: The attached gross
+p1 y= 539.3 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI8[0].lib[0].GrossValue[0]
+      T: $184,500 (decedent died on or after April 1, 2022, and before April 1, 2025. Form DE-300 is attached as required by law)
+      L: b.
+      A: attached a.
+p1 y= 550.1 x=  69.7 w=  9.0 h= 9.0 Btn[/3] DE-310[0].Page1[0].LI8[0].lic[0].GrossValue[0]
+      T: $750,000 (decedent died on or after April 1, 2025, and before April 1, 2028. Form DE-300 is attached as required by law)
+      L: c.
+      A: a. b.
+p1 y= 599.6 x=  88.1 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li1[0].Spouse[0]
+      T: spouse
+      L: (1)
+      A: Decedent
+p1 y= 611.5 x=  88.1 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li2[0].Spouse[0]
+      T: no spouse, as follows:
+      L: (2)
+      A: (1)
+p1 y= 611.5 x= 229.3 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li2[0].LIST2[0].lia[0].NoSpouse[0]
+      T: divorced or never married 
+      L: (2) no spouse, as follows: (a)
+      A: 
+p1 y= 611.5 x= 384.4 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li2[0].LIST2[0].lib[0].NoSpouse[0]
+      T: spouse deceased
+      L: spouse, as follows: (a) divorced or never married (b)
+      A: 
+p1 y= 623.1 x=  88.1 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li3[0].RDP[0]
+      T: registered domestic partner
+      L: (3)
+      A: (2)
+p1 y= 634.6 x=  88.1 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li4[0].RDP[0]
+      T: no registered domestic partner (See Fam. Code, § 297.5(c); Prob. Code, §§ 37(b), 6401(c), and 6402.)
+      L: (4)
+      A: (3)
+p1 y= 646.1 x=  88.1 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li5[0].Child[0]
+      T: child, as follows:
+      L: (5)
+      A: (4)
+p1 y= 646.1 x= 205.3 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li5[0].LIST3[0].lia[0].ChildNat[0]
+      T: natural or adopted
+      L: (5) child, as follows: (a)
+      A: domestic partner
+p1 y= 646.1 x= 330.2 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li5[0].LIST3[0].lib[0].ChildNat[0]
+      T: natural, adopted by a third party
+      L: (5) child, as follows: (a) natural or adopted (b)
+      A: 297.5(c);
+p1 y= 658.2 x=  88.1 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li6[0].Child[0]
+      T: no child
+      L: (6)
+      A: (5)
+p1 y= 670.0 x=  88.1 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li7[0].Issue[0]
+      T: issue of a predeceased child
+      L: (7)
+      A: (6)
+p1 y= 682.3 x=  88.1 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI9[0].lia[0].LIST1[0].li8[0].Issue[0]
+      T: no issue of a predeceased child
+      L: (8)
+      A: (7)
+p1 y= 695.3 x= 119.4 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page1[0].LI9[0].Item9b[0].StepYN[0]
+      T: is
+      L: b. Decedent
+      A: no issue
+p1 y= 695.3 x= 160.1 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page1[0].LI9[0].Item9b[0].StepYN[1]
+      T: is not 
+      L: b. Decedent is
+      A: issue of a predeceased
+p2 y=  56.3 x=  37.6 w=356.4 h=11.7 Tx F68 DE-310[0].Page2[0].P2Caption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: 
+      A: ESTATE OF (name):
+p2 y=  58.0 x= 397.6 w=176.4 h=12.2 Tx F68 DE-310[0].Page2[0].P2Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER: DE-310
+p2 y=  84.6 x=  55.0 w=  9.0 h= 9.0 Btn[/Yes] DE-310[0].Page2[0].LI10[0].NoIssue_cb[0]
+      T: Decedent is survived by (complete if decedent is survived by (1) a spouse or registered domestic partner described in Pr
+      L: 10.
+      A: 
+p2 y= 118.7 x=  69.7 w=  9.0 h= 9.0 Btn[/a] DE-310[0].Page2[0].LI10[0].lia[0].Parent_cb[0]
+      T: a parent or parents who are listed in item 14. 
+      L: a.
+      A: Probate
+p2 y= 129.5 x=  69.7 w=  9.0 h= 9.0 Btn[/b] DE-310[0].Page2[0].LI10[0].lib[0].Sibling_cb[0]
+      T: a sibling, or issue of a deceased sibling, all of whom are listed in item 14. 
+      L: b.
+      A: a.
+p2 y= 140.3 x=  69.7 w=  9.0 h= 9.0 Btn[/c] DE-310[0].Page2[0].LI10[0].lic[0].OtherHeirs_cb[0]
+      T: other persons who might be entitled to inherit property if decedent did not have a will, all of whom are listed in item 
+      L: c.
+      A: a. b.
+p2 y= 151.1 x=  69.7 w=  9.0 h= 9.0 Btn[/d] DE-310[0].Page2[0].LI10[0].lid[0].NoNxtofKin_cb[0]
+      T: no known next of kin.
+      L: d.
+      A: c. b.
+p2 y= 242.3 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page2[0].Item12[0].Item12a[0].HeirYN[0]
+      T: (will) a beneficiary who succeeded to that property under decedent's will, and a copy of the will is attached as Attachm
+      L: a.
+      A: in the real
+p2 y= 265.0 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page2[0].Item12[0].Item12b[0].HeirYN[0]
+      T: (no will) a person who succeeded to that property under Probate Code sections 6401 and 6402.
+      L: b.
+      A: 
+p2 y= 282.7 x= 327.6 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page2[0].List13[0].LI13[0].BelAtt13[0]
+      T: is stated in Attachment 13
+      L: interest of each petitioner in the property described in item 11
+      A: under Probate
+p2 y= 282.7 x= 465.0 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page2[0].List13[0].LI13[0].BelAtt13[1]
+      T: is as follows
+      L: property described in item 11 is stated in Attachment 13
+      A: and 6402.
+p2 y= 293.5 x=  50.7 w=525.3 h=30.7 Tx ML DE-310[0].Page2[0].List13[0].LI13[0].Field13[0]
+      T: (specify):
+      L: 
+      A: 13.The interest of each petitioner in the property described in item 11 is stated in Attac
+p2 y= 373.0 x= 351.2 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page2[0].List15[0].LI15[0].BelAtt15[0]
+      T: listed below
+      L: names and addresses of all executors named in decedent's will are
+      A: will to receive
+p2 y= 373.0 x= 434.4 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page2[0].List15[0].LI15[0].BelAtt15[1]
+      T: listed in Attachment 15.
+      L: all executors named in decedent's will are listed below
+      A: property are
+p2 y= 383.8 x=  50.7 w=525.3 h=30.7 Tx ML DE-310[0].Page2[0].List15[0].LI15[0].Field15[0]
+      T: Names and addresses of all executors named in decedent's will:
+      L: 
+      A: 15.The names and addresses of all executors named in decedent's will are listed below list
+p2 y= 416.5 x=  55.0 w=  9.0 h= 9.0 Btn[/3] DE-310[0].Page2[0].List15[0].LI15[0].BelAtt15[2]
+      T: No executor is named.
+      L: 
+      A: 
+p2 y= 416.5 x= 179.1 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page2[0].List15[0].LI15[0].WillYN[0]
+      T: There is no will.
+      L: No executor is named.
+      A: 
+p2 y= 434.9 x=  55.0 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page2[0].List16[0].LI16[0].Trustee[0]
+      T: Petitioner is the trustee of a trust designated in decedent's will to receive property. The names and addresses of all p
+      L: 16.
+      A: 
+p2 y= 474.4 x=  55.0 w=  9.0 h= 9.0 Btn[/Yes] DE-310[0].Page2[0].List17[0].LI17[0].EstateGC_cb[0]
+      T: Decedent's estate was under a
+      L: 17.
+      A: 
+p2 y= 474.4 x= 213.4 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page2[0].List17[0].LI17[0].GC[0]
+      T: guardianship
+      L: 17. Decedent's estate was under a
+      A: 
+p2 y= 474.4 x= 299.0 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page2[0].List17[0].LI17[0].GC[1]
+      T: conservatorship 
+      L: 17. Decedent's estate was under a guardianship
+      A: 
+p2 y= 485.2 x= 328.0 w=  9.0 h= 9.0 Btn[/1] DE-310[0].Page2[0].List17[0].LI17[0].BelAtt17[0]
+      T: are listed below
+      L: addresses of all persons serving as guardian or conservator
+      A: conservatorship
+p2 y= 485.2 x= 425.9 w=  9.0 h= 9.0 Btn[/2] DE-310[0].Page2[0].List17[0].LI17[0].BelAtt17[1]
+      T: are listed in Attachment 17.
+      L: persons serving as guardian or conservator are listed below
+      A: decedent's
+p2 y= 495.9 x=  73.8 w=502.2 h=30.6 Tx ML DE-310[0].Page2[0].List17[0].LI17[0].Field17[0]
+      T: Names and addresses of all persons serving as guardian or conservator at decedent's death:
+      L: 
+      A: Decedent's addresses of estate all persons was under serving a as guardian guardianship or
+p2 y= 535.1 x= 162.6 w= 30.0 h=10.0 Tx DE-310[0].Page2[0].List18[0].LI18[0].NumPPAtt[0]
+      T: Number of pages attached:
+      L: 18.Number of pages attached:
+      A: 
+p2 y= 559.4 x=  61.2 w=108.0 h= 9.0 Tx DE-310[0].Page2[0].AttySigBlock[0].SigDateAtty[0]
+      T: Date:
+      L: Date:
+      A: 
+p2 y= 576.9 x=  36.0 w=250.8 h=10.0 Tx DE-310[0].Page2[0].AttySigBlock[0].NmAtty[0]
+      T: (TYPE OR PRINT NAME OF ATTORNEY)
+      L: 
+      A: Date:
+p2 y= 624.9 x=  61.2 w=108.0 h= 9.0 Tx DE-310[0].Page2[0].PtnrSigBlock[0].Pet1[0].SigDatePtnrs[0]
+      T: Date:
+      L: Date:
+      A: declare under penalty of perjury
+p2 y= 641.9 x=  36.0 w=250.8 h=10.0 Tx DE-310[0].Page2[0].PtnrSigBlock[0].Pet1[0].NmPtnr1[0]
+      T: (TYPE OR PRINT NAME OF PETITIONER)
+      L: 
+      A: Date:
+p2 y= 678.5 x=  36.0 w=250.8 h=10.0 Tx DE-310[0].Page2[0].PtnrSigBlock[0].Pet2[0].NmPtnr2[0]
+      T: (TYPE OR PRINT NAME OF PETITIONER)
+      L: 
+      A: 
+p2 y= 702.6 x= 328.3 w=  9.0 h= 9.0 Btn[/No] DE-310[0].Page2[0].PtnrSigBlock[0].Pet2[0].ExtraPets_cb[0]
+      T: SIGNATURE(S) OF ADDITIONAL PETITIONERS ATTACHED
+      L: 
+      A: 
+p2 y= 758.8 x= 258.7 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-310[0].#pageSet[0].MPLast[0].#area[0].Print[0]
+      T: Print this form
+      L: This Form button after you have printed the form.
+      A: TO PRIMARY RESIDENCE
+p2 y= 758.8 x= 345.2 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-310[0].#pageSet[0].MPLast[0].#area[0].Save[0]
+      T: Save this form
+      L: button after you have printed the form.
+      A: RESIDENCE
+p2 y= 758.8 x= 494.9 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-310[0].#pageSet[0].MPLast[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

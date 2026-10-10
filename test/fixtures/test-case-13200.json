@@ -1,0 +1,135 @@
+{
+  "id": "TEST-CASE-13200",
+  "userId": "test-user-forms",
+  "estateName": "Estate of Test Decedent",
+  "filingCounty": "Los Angeles",
+  "probateType": "testate",
+  "serviceType": "small-estate",
+  "decedent": {
+    "firstName": "Test",
+    "middleName": "",
+    "lastName": "Decedent",
+    "dateOfBirth": "1940-02-10",
+    "dateOfDeath": "2026-03-15",
+    "placeOfDeath": "Burbank, California",
+    "ssnLast4": "0000",
+    "maritalStatus": "widowed",
+    "citizenship": "US",
+    "lastAddress": {
+      "street": "100 Example Ave.",
+      "city": "Burbank",
+      "county": "Los Angeles",
+      "state": "CA",
+      "zip": "91501"
+    }
+  },
+  "petitioner": {
+    "firstName": "Test",
+    "lastName": "Executor",
+    "relationship": "Son",
+    "phone": "818-555-0100",
+    "email": "rozsagyenelaw1+formstest@gmail.com",
+    "isCAResident": true,
+    "address": {
+      "street": "200 Sample St.",
+      "city": "Glendale",
+      "state": "CA",
+      "zip": "91203"
+    }
+  },
+  "willExists": true,
+  "willDate": "2018-06-01",
+  "codicilExists": false,
+  "codicilDates": [],
+  "namedExecutor": "Test Executor",
+  "bondWaivedInWill": true,
+  "survivedBySpouse": false,
+  "survivedByChildren": true,
+  "survivedByGrandchildren": false,
+  "heirs": [
+    {
+      "firstName": "Test",
+      "lastName": "Executor",
+      "relationship": "Son",
+      "age": "Adult",
+      "isDeceased": false,
+      "sharePercentage": "50",
+      "waivedBond": false,
+      "address": {
+        "street": "200 Sample St.",
+        "city": "Glendale",
+        "state": "CA",
+        "zip": "91203"
+      }
+    },
+    {
+      "firstName": "Test",
+      "lastName": "Daughter",
+      "relationship": "Daughter",
+      "age": "Adult",
+      "isDeceased": false,
+      "sharePercentage": "50",
+      "waivedBond": false,
+      "address": {
+        "street": "500 Sample St.",
+        "city": "Pasadena",
+        "state": "CA",
+        "zip": "91101"
+      }
+    }
+  ],
+  "assets": {
+    "realProperty": [
+      {
+        "id": "rp1",
+        "address": "Lot 7, Example Rd., Lancaster, CA 93534",
+        "apn": "0000-000-001",
+        "propertyType": "Vacant Land",
+        "estimatedValue": "50000",
+        "mortgageBalance": "0"
+      }
+    ],
+    "financialAccounts": [
+      {
+        "id": "fa1",
+        "institutionName": "Example Bank",
+        "accountType": "Checking",
+        "accountNumber": "xxxx1111",
+        "estimatedValue": "42000"
+      },
+      {
+        "id": "fa2",
+        "institutionName": "Example Credit Union",
+        "accountType": "Savings",
+        "accountNumber": "xxxx3333",
+        "estimatedValue": "18000"
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "v1",
+        "year": "2015",
+        "make": "Toyota",
+        "model": "Camry",
+        "estimatedValue": "10000"
+      }
+    ],
+    "personalProperty": []
+  },
+  "liabilities": [
+    {
+      "creditorName": "Example Card Services",
+      "debtType": "Credit Card",
+      "accountNumber": "xxxx2222",
+      "amountOwed": "4200"
+    }
+  ],
+  "court": {
+    "county": "Los Angeles",
+    "caseNumber": null
+  },
+  "keyDates": {
+    "firstHearing": null,
+    "lettersIssued": null
+  }
+}

@@ -1,0 +1,180 @@
+p1 y=  47.5 x= 217.8 w= 68.2 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].AttyBarNo[0]
+      T: STATE BAR NUMBER:
+      L: ATTORNEY OR PARTY WITHOUT ATTORNEY STATE BAR NO.:
+      A: DE-315
+p1 y=  63.7 x=  56.4 w=229.6 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].partyName[0]
+      T: NAME:
+      L: NAME:
+      A: ATTORNEY After recording, OR return PARTY to: WITHOUT ATTORNEY STATE BAR NO.:
+p1 y=  74.9 x=  72.5 w=213.5 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].firmName[0]
+      T: FIRM NAME:
+      L: FIRM NAME:
+      A: NAME:
+p1 y=  86.0 x=  93.7 w=192.3 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].streetAdd[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: 
+p1 y=  97.2 x= 106.9 w=179.1 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].cityStateZip[0]
+      T: CITY, STATE, ZIP CODE:
+      L: CITY, STATE, ZIP CODE:
+      A: ADDRESS:
+p1 y= 108.4 x=  87.9 w= 80.7 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].partyTel[0]
+      T: TELEPHONE NUMBER:
+      L: TELEPHONE NO.:
+      A: STATE, ZIP CODE:
+p1 y= 108.4 x= 196.1 w= 89.8 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].partyFax[0]
+      T: FAX NUMBER:
+      L: TELEPHONE NO.: FAX NO.:
+      A: 
+p1 y= 119.5 x=  87.7 w=198.2 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].partyEmail[0]
+      T: EMAIL ADDRESS:
+      L: EMAIL ADDRESS:
+      A: TELEPHONE NO.: FAX NO.:
+p1 y= 130.7 x= 106.6 w=179.4 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].AttyPartyInfo[0].attyFor[0]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: ADDRESS:
+p1 y= 144.8 x= 202.5 w= 83.4 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].CrtInfo[0].Crtname[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 155.6 x=  97.0 w=189.0 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].CrtInfo[0].CrtStreetAdd[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: COURT OF CALIFORNIA, COUNTY OF
+p1 y= 166.4 x=  97.0 w=189.0 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].CrtInfo[0].CrtMail[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 177.2 x=  97.0 w=189.0 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].CrtInfo[0].CrtCityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 188.0 x=  97.0 w=189.0 h= 9.0 Tx DE-315[0].Page1[0].P1Caption[0].CrtInfo[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 211.5 x=  37.6 w=356.4 h=11.0 Tx DE-315[0].Page1[0].P1Caption[0].TitlePartyName[0].Party1[0]
+      T: ESTATE OF (name):
+      L: 
+      A: ESTATE OF (name):
+p1 y= 213.3 x= 401.8 w=170.6 h=12.4 Tx DE-315[0].Page1[0].P1Caption[0].CaseNumber[0].caseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER:
+p1 y= 270.0 x= 114.9 w= 98.9 h= 9.0 Tx DE-315[0].Page1[0].List1[0].LI1[0].HearingDate[0]
+      T: Date of hearing: 
+      L: 1. Date of hearing:
+      A: TO PRIMARY
+p1 y= 270.0 x= 243.7 w= 77.6 h= 9.0 Tx DE-315[0].Page1[0].List1[0].LI1[0].HearingTime[0]
+      T: Time:
+      L: 1. Date of hearing: Time:
+      A: RESIDENCE
+p1 y= 280.8 x= 100.9 w=112.9 h= 9.0 Tx DE-315[0].Page1[0].List1[0].LI1[0].HearingDept[0]
+      T: Department/Room:
+      L: Dept./Room:
+      A: hearing:
+p1 y= 291.6 x= 143.3 w=229.3 h= 9.0 Tx DE-315[0].Page1[0].List1[0].LI1[0].HearingOfcr[0]
+      T: Judicial Officer (name):
+      L: Judicial Officer (name):
+      A: Time:
+p1 y= 334.4 x= 149.8 w=133.1 h= 9.0 Tx DE-315[0].Page1[0].List3[0].DateofDeath[0]
+      T: Decedent died on (date):
+      L: 3. Decedent died on (date):
+      A: given as required by law.
+p1 y= 345.2 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].List3[0].lia[0].Resident[0]
+      T: a resident of this county. 
+      L: a.
+      A: Decedent
+p1 y= 356.0 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-315[0].Page1[0].List3[0].lib[0].Resident[0]
+      T: a nonresident of California who owned property in this county.
+      L: b.
+      A: Decedent a.
+p1 y= 366.9 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].List3[0].lic[0].Intestate[0]
+      T: intestate (without a will)
+      L: c.
+      A: a. b.
+p1 y= 366.9 x= 196.8 w=  9.0 h= 9.0 Btn[/2] DE-315[0].Page1[0].List3[0].lic[0].Intestate[1]
+      T: testate (with a will).
+      L: c. intestate (without a will)
+      A: California county. who
+p1 y= 394.6 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].LI5[0].lia[0].Proceeding[0]
+      T: No proceeding for the administration of the decedent's estate is now being or has been conducted in California.
+      L: 5. a.
+      A: At least
+p1 y= 405.4 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-315[0].Page1[0].LI5[0].lib[0].Proceeding[0]
+      T: Decedent's personal representative has consented in writing to use the procedure in Probate Code section 13150 et seq.
+      L: b.
+      A: a.
+p1 y= 430.6 x=  55.0 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].List6[0].LI6[0].Value[0]
+      T: $166,250 (death before April 1, 2022).
+      L: 
+      A: 6. The
+p1 y= 441.4 x=  55.0 w=  9.0 h= 9.0 Btn[/2] DE-315[0].Page1[0].List6[0].LI6[0].Value[1]
+      T: $184,500 (death on or after April 1, 2022, and before April 1, 2025).
+      L: 
+      A: 6. The
+p1 y= 452.2 x=  54.9 w=  9.0 h= 9.0 Btn[/3] DE-315[0].Page1[0].List6[0].LI6[0].Value[2]
+      T: $750,000 (death on or after April 1, 2025).
+      L: 
+      A: 
+p1 y= 488.2 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].LI7[0].lia[0].Will[0]
+      T: (will) a beneficiary who succeeded to the property under decedent's will. 
+      L: a.
+      A: property
+p1 y= 499.0 x=  69.7 w=  9.0 h= 9.0 Btn[/2] DE-315[0].Page1[0].LI7[0].lib[0].Will[0]
+      T: (no will) a person who succeeded to the property under Probate Code sections 6401 and 6402.
+      L: b.
+      A: a.
+p1 y= 545.5 x= 149.6 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].Item9[0].Item9a[0].DescAtt[0]
+      T: described in Attachment 9a
+      L: 9. a. The real property
+      A: FURTHER FINDS
+p1 y= 545.5 x= 293.0 w=  9.0 h= 9.0 Btn[/2] DE-315[0].Page1[0].Item9[0].Item9a[0].DescAtt[1]
+      T: described below
+      L: 9. a. The real property described in Attachment 9a
+      A: 
+p1 y= 565.7 x=  65.4 w=510.6 h=42.9 Tx ML DE-315[0].Page1[0].Item9[0].Item9a[0].Field9a[0]
+      T: Give legal description of the real property, including the Assessor's Parcel Number:
+      L: 
+      A: a. The (Give real property of described property, in including Attachment Assessor's 9a Pa
+p1 y= 612.9 x= 454.5 w=  9.0 h= 9.0 Btn[/2] DE-315[0].Page1[0].Item9[0].lib[0].BelAtt9b[1]
+      T: is as follows (specify):
+      L: specific interest in the property is stated in Attachment 9b
+      A: 
+p1 y= 612.9 x= 315.9 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].Item9[0].lib[0].BelAtt9b[0]
+      T: is stated in Attachment 9b
+      L: b. Each petitioner's name and specific interest in the property
+      A: 
+p1 y= 623.6 x=  65.4 w=510.6 h=30.6 Tx ML DE-315[0].Page1[0].Item9[0].lib[0].Field9b[0]
+      T: Specify each petitioner's name and specific interest in the real property
+      L: 
+      A: b. Each petitioner's name and specific interest in the property is stated in Attachment 9b
+p1 y= 662.8 x=  55.0 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].List10[0].LI10[0].OtherOrders_cb[0]
+      T: Other orders are stated in Attachment 10.
+      L: 10.
+      A: 
+p1 y= 678.2 x= 162.3 w= 31.4 h=10.0 Tx DE-315[0].Page1[0].List11[0].LI11[0].Pages[0]
+      T: Number of pages attached:
+      L: 11.Number of pages attached:
+      A: stated in Attachment
+p1 y= 695.5 x=  60.4 w=100.3 h= 9.0 Tx DE-315[0].Page1[0].JOSigBlock[0].Date[0]
+      T: Date:
+      L: Date:
+      A: 11.Number of pages attached:
+p1 y= 716.4 x= 323.0 w=  9.0 h= 9.0 Btn[/1] DE-315[0].Page1[0].JOSigBlock[0].Sig_cb[0]
+      T: SIGNATURE FOLLOWS LAST ATTACHMENT
+      L: 
+      A: 
+p1 y= 763.4 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-315[0].#pageSet[0].MP1[0].#area[0].Print[0]
+      T: Print this form
+      L: This Form button after you have printed the form.
+      A: TO PRIMARY RESIDENCE
+p1 y= 763.4 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-315[0].#pageSet[0].MP1[0].#area[0].Save[0]
+      T: Save this form
+      L: button after you have printed the form.
+      A: RESIDENCE
+p1 y= 763.4 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-315[0].#pageSet[0].MP1[0].#area[0].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

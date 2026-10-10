@@ -1,0 +1,234 @@
+p1 y=  54.4 x=  38.0 w=356.3 h=48.6 Tx ML DE-121[0].Page1[0].p1Caption[0].AttyPartyInfo[0].TextField1[0]
+      T: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+      L: 
+      A: ATTORNEY OR PARTY WITHOUT ATTORNEY (Name, State Bar number, and address):
+p1 y= 106.2 x= 120.2 w=114.4 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Phone[0]
+      T: Phone number
+      L: TELEPHONE NO.:
+      A: 
+p1 y= 106.2 x= 296.1 w= 98.2 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Fax[0]
+      T: Fax number
+      L: TELEPHONE NO.: FAX NO. (Optional):
+      A: 
+p1 y= 117.8 x= 120.2 w=274.2 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Email[0]
+      T: E-MAIL ADDRESS (Optional):
+      L: E-MAIL ADDRESS (Optional):
+      A: TELEPHONE NO.: FAX NO. (Optional):
+p1 y= 129.9 x= 120.2 w=274.2 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].AttyPartyInfo[0].Email[1]
+      T:  ATTORNEY FOR (Name):
+      L: ATTORNEY FOR (Name):
+      A: (Optional):
+p1 y= 144.9 x= 227.7 w=166.3 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].CourtInfo[0].CrtCounty[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 155.9 x=  97.0 w=297.0 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].CourtInfo[0].CrtStreet[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+p1 y= 166.8 x=  97.0 w=297.0 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].CourtInfo[0].CrtMailingAdd[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 177.7 x=  97.0 w=297.0 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].CourtInfo[0].CrtCityZip[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 189.4 x=  97.0 w=297.0 h= 9.0 Tx DE-121[0].Page1[0].p1Caption[0].CourtInfo[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: CODE:
+p1 y= 215.3 x=  38.3 w=354.4 h=10.4 Tx DE-121[0].Page1[0].p1Caption[0].TitlePartyName[0].name_tf[0]
+      T: name:
+      L: 
+      A: ESTATE OF (Name):
+p1 y= 245.0 x= 399.6 w=172.8 h=12.6 Tx DE-121[0].Page1[0].p1Caption[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: DECEDENT CASE NUMBER:
+p1 y= 248.5 x=  79.6 w=314.9 h=11.0 Tx DE-121[0].Page1[0].p1Caption[0].FormTitle[0].Name1[0]
+      T: (Name):
+      L: (Name):
+      A: NOTICE OF PETITION TO ADMINISTER ESTATE OF
+p1 y= 283.9 x=  50.8 w=522.5 h=12.5 Tx DE-121[0].Page1[0].Capacity1[0]
+      T: To all heirs, beneficiaries, creditors, contingent creditors, and persons who may otherwise be interested in the will or
+      L: 
+      A: 1. To or both, all heirs, of (specify beneficiaries, all names creditors, by which conting
+p1 y= 300.8 x= 299.3 w=274.0 h= 9.2 Tx DE-121[0].Page1[0].FillText109[0]
+      T: A Petition for Probate has been filed by (name of petitioner):
+      L: 2. A Petition for Probate has been filed by (name of petitioner):
+      A: 
+p1 y= 310.9 x= 270.9 w=302.4 h= 9.2 Tx DE-121[0].Page1[0].FillText109[1]
+      T: in the Superior Court of California, County of (specify):
+      L: in the Superior Court of California, County of (specify):
+      A: of petitioner):
+p1 y= 328.5 x= 237.7 w=335.6 h= 9.2 Tx DE-121[0].Page1[0].FillText109[2]
+      T: The Petition for Probate requests that (name):
+      L: 3. The Petition for Probate requests that (name):
+      A: County of (specify):
+p1 y= 355.8 x=  56.4 w=  9.0 h= 9.0 Btn[/1] DE-121[0].Page1[0].#area[0].CheckBox1[0]
+      T: The petition requests the decedent's will and codicils, if any, be admitted to probate. The will and any codicils are av
+      L: 4.
+      A: be appointed
+p1 y= 382.7 x=  56.4 w=  9.0 h= 9.0 Btn[/1] DE-121[0].Page1[0].#area[1].CheckBox1[1]
+      T: The petition requests authority to administer the estate under the Independent Administration of Estates Act. (This auth
+      L: 5.
+      A: 
+p1 y= 460.4 x=  94.9 w=122.2 h=12.0 Tx DE-121[0].Page1[0].HearingDate_dt[0]
+      T: Date:
+      L: a. Date:
+      A: hearing on the petition will be held in
+p1 y= 460.4 x= 251.2 w= 84.6 h=12.0 Tx DE-121[0].Page1[0].HearingTime_dt[0]
+      T: Time:
+      L: a. Date: Time:
+      A: this court as follows:
+p1 y= 460.4 x= 366.7 w= 78.6 h=12.0 Tx DE-121[0].Page1[0].HearingDept_ft[0]
+      T: Dept.:
+      L: Time: Dept.:
+      A: 
+p1 y= 460.4 x= 480.4 w= 92.1 h=12.0 Tx DE-121[0].Page1[0].HearingRoom_ft[0]
+      T: Room:
+      L: Time: Dept.: Room:
+      A: 
+p1 y= 482.6 x= 149.5 w=  9.0 h= 9.0 Btn[/1] DE-121[0].Page1[0].RB2Choices1[0]
+      T: same as noted above
+      L: b. A d d r e s s o f c o u r t :
+      A: 
+p1 y= 482.6 x= 304.0 w=  9.0 h= 9.0 Btn[/2] DE-121[0].Page1[0].RB2Choices1[1]
+      T: check one
+      L: b. A d d r e s s o f c o u r t : s a m e a s n o t e d a b o v e
+      A: 
+p1 y= 492.6 x=  65.8 w=507.0 h=12.0 Tx DE-121[0].Page1[0].HearingDept_ft[1]
+      T:                                                                                                                  (specif
+      L: 
+      A: b. A d d r e s s o f c o u r t : s a m e a s n o t e d a b o v e o t h e r (specify):
+p1 y= 637.2 x= 276.6 w=297.8 h=11.9 Tx DE-121[0].Page1[0].TextField6[0]
+      T: (name):
+      L: 10. Petitioner Attorney for petitioner (name):
+      A: for Special Notice form is available from the court clerk.
+p1 y= 638.6 x=  56.3 w=  9.0 h= 9.0 Btn[/3] DE-121[0].Page1[0].#area[2].limited[0]
+      T: Petitioner
+      L: 10.
+      A: provided
+p1 y= 638.6 x= 133.2 w=  9.0 h= 9.0 Btn[/3] DE-121[0].Page1[0].#area[3].limited[1]
+      T: Attorney for petitioner
+      L: 10. Petitioner
+      A: Probate Code
+p1 y= 650.4 x=  96.7 w=477.1 h=22.6 Tx ML DE-121[0].Page1[0].Datemail[0]
+      T: (Address):
+      L: (Address):
+      A: Petitioner Attorney for petitioner (name):
+p1 y= 674.6 x= 106.3 w=180.4 h= 9.9 Tx DE-121[0].Page1[0].placemail[0]
+      T: (Telephone):
+      L: (Telephone):
+      A: (Address):
+p2 y=  55.6 x= 399.6 w=172.8 h=14.4 Tx F68 DE-121[0].Page2[0].CaseNumber[0].CaseNumber[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER: DE-121
+p2 y=  58.0 x=  38.8 w=354.4 h=10.4 Tx F68 DE-121[0].Page2[0].TitlePartyName[0].name_tf[0]
+      T: name:
+      L: 
+      A: ESTATE OF (Name):
+p2 y= 117.0 x= 238.7 w=332.4 h=49.7 Tx ML DE-121[0].Page2[0].poston_date[0]
+      T: My residence or business address is (specify):
+      L: 
+      A: this cause. I am a resident of or employed in the county where the mailing occurred.
+p2 y= 198.7 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-121[0].Page2[0].#area[0].CheckBox3a[0]
+      T: depositing the sealed envelope with the United States Postal Service on the date and at the place shown in item 4,
+with 
+      L: a.
+      A: addressed
+p2 y= 224.3 x=  69.7 w=  9.0 h= 9.0 Btn[/1] DE-121[0].Page2[0].#area[1].CheckBox3b[0]
+      T: placing the envelope for collection and mailing on the date and at the place shown in item 4 following our ordinary
+busi
+      L: b.
+      A: 
+p2 y= 273.9 x= 118.8 w=116.6 h= 9.5 Tx DE-121[0].Page2[0].Datemail[0]
+      T: Date mailed:
+      L: 4. a. Date mailed:
+      A: course of business with the United States
+p2 y= 274.1 x= 357.2 w=216.1 h= 9.0 Tx DE-121[0].Page2[0].placemail[0]
+      T: Place mailed (city, state):
+      L: mailed: b. Place mailed (city, state):
+      A: sealed envelope with postage fully prepaid.
+p2 y= 290.8 x=  55.5 w=  9.0 h= 9.0 Btn[/1] DE-121[0].Page2[0].#area[2].CheckBoxCopy[0]
+      T: I served, with the Notice of Petition to Administer Estate, a copy of the petition or other document referred to in the 
+      L: 5.
+      A: 4. a.
+p2 y= 329.3 x=  61.2 w=108.0 h=10.0 Tx DE-121[0].Page2[0].#area[3].Date[0]
+      T: Date:
+      L: Date:
+      A: declare under penalty of perjury
+p2 y= 349.1 x=  36.0 w=239.9 h=14.1 Tx DE-121[0].Page2[0].#area[3].PrintName[0]
+      T: (TYPE OR PRINT NAME OF PERSON COMPLETING THIS FORM)
+      L: 
+      A: Date:
+p2 y= 426.0 x=  50.7 w=144.0 h=25.2 Tx ML DE-121[0].Page2[0].servname1[0]
+      T: Name1
+      L: 
+      A: Name of person served
+p2 y= 426.0 x= 202.5 w=360.0 h=25.2 Tx ML DE-121[0].Page2[0].servaddy1[0]
+      T: Address1 (street & number, city, state, zip code)
+      L: 
+      A: Address (number, street, city, state, and zip code)
+p2 y= 453.0 x=  50.7 w=144.0 h=25.2 Tx ML DE-121[0].Page2[0].servname2[0]
+      T: Name2
+      L: 
+      A: 
+p2 y= 453.0 x= 202.5 w=360.0 h=25.2 Tx ML DE-121[0].Page2[0].servaddy2[0]
+      T: Address2 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 480.0 x=  50.7 w=144.0 h=25.2 Tx ML DE-121[0].Page2[0].servname3[0]
+      T: Name3
+      L: 
+      A: 
+p2 y= 480.0 x= 202.5 w=360.0 h=25.2 Tx ML DE-121[0].Page2[0].servaddy3[0]
+      T: Address3 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 507.0 x=  50.7 w=144.0 h=25.2 Tx ML DE-121[0].Page2[0].servname4[0]
+      T: Name4
+      L: 
+      A: 
+p2 y= 507.0 x= 202.5 w=360.0 h=25.2 Tx ML DE-121[0].Page2[0].servaddy4[0]
+      T: Address4 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 534.0 x=  50.7 w=144.0 h=25.2 Tx ML DE-121[0].Page2[0].servname5[0]
+      T: Name5
+      L: 
+      A: 
+p2 y= 534.0 x= 202.5 w=360.0 h=25.2 Tx ML DE-121[0].Page2[0].servaddy5[0]
+      T: Address5 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 561.2 x=  50.7 w=144.0 h=25.2 Tx ML DE-121[0].Page2[0].servname5[1]
+      T: Name6
+      L: 
+      A: 
+p2 y= 561.2 x= 202.5 w=360.0 h=25.2 Tx ML DE-121[0].Page2[0].servaddy5[1]
+      T: Address6 (street & number, city, state, zip code)
+      L: 
+      A: 
+p2 y= 592.4 x=  55.5 w=  9.0 h= 9.0 Btn[/1] DE-121[0].Page2[0].#area[4].CheckBoxAttach[0]
+      T: Continued on an attachment. (You may use form DE-121(MA) to show additional persons served.)
+      L: 
+      A: 
+p2 y= 751.6 x=  36.1 w=211.3 h=23.2 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-121[0].Page2[0].#area[5].Warning[0]
+      T: For your protection and privacy, please press the Clear This Form button after you have printed the form.
+      L: 
+      A: (Probate—Decedents’
+p2 y= 757.8 x= 258.8 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-121[0].Page2[0].#area[5].Print[0]
+      T: Print this form
+      L: 
+      A: 
+p2 y= 757.8 x= 345.3 w= 81.1 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-121[0].Page2[0].#area[5].Save[0]
+      T: Save this form
+      L: 
+      A: 
+p2 y= 757.8 x= 495.0 w= 81.0 h=17.0 Btn[/BBox,/Filter,/FormType,/Matrix,/Resources,/Subtype,/Type] DE-121[0].Page2[0].#area[5].Reset[0]
+      T: Clear this form
+      L: 
+      A: 

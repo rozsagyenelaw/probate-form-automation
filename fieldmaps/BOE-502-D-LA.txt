@@ -1,0 +1,380 @@
+p1 y= 128.8 x=  74.1 w=247.6 h=70.9 Tx ML name and mailing address
+      T: Enter name and mailing address (make necessary corrections to the printed name and mailing address)
+      L: 
+      A: (Make necessary corrections to the printed name and mailing address)
+p1 y= 227.2 x= 431.3 w=144.6 h=15.3 Tx date of death
+      T: date of death
+      L: 
+      A: DATE OF DEATH
+p1 y= 227.4 x=  36.5 w=393.8 h=14.4 Tx name of decedent
+      T: name of decedent
+      L: 
+      A: NAME OF DECEDENT
+p1 y= 246.6 x=  38.3 w= 10.5 h=11.8 Btn[/Yes] real property interest yes
+      T: Did the decedent have an interest in real property in this county. If yes, answer all questions. If no, sign and complet
+      L: 
+      A: 
+p1 y= 246.6 x=  78.7 w= 10.5 h=11.8 Btn[/No] real property interest no
+      T: Did the decedent have an interest in real property in this county. If yes, answer all questions. If no, sign and complet
+      L: YES
+      A: 
+p1 y= 272.2 x= 357.5 w= 72.7 h=14.3 Tx zip of real property
+      T: zip code of real property
+      L: 
+      A: 
+p1 y= 272.5 x=  37.5 w=212.7 h=13.9 Tx street address of real property
+      T: street address of real property
+      L: 
+      A: complete the certification on page
+p1 y= 272.7 x= 251.1 w=106.7 h=14.4 Tx city of real property
+      T: city of real property
+      L: 
+      A: on page CITY 2.
+p1 y= 273.4 x= 431.5 w=141.4 h=13.1 Tx APN of real property
+      T: assessor parcel number of real property - if more than 1 parcel, attach separate sheet
+      L: 
+      A: ASSESSOR’S PARCEL NUMBER (APN)*
+p1 y= 318.5 x= 299.4 w= 10.5 h=11.8 Btn[/succession without a will] Succession without a will
+      T: disposition of real property. Succession without a will 
+      L: Copy of deed by which decedent acquired title is attached.
+      A: DISPOSITION
+p1 y= 318.9 x=  38.3 w= 10.5 h=11.8 Btn[/Yes] deed copy attached decedent acquired
+      T: Descriptive information, if assessor parcel number is unknown.  Copy of deed by which decedent acquired title is attache
+      L: 
+      A: DESCRIPTIVE
+p1 y= 319.5 x= 457.3 w= 10.5 h=11.8 Btn[/decree of distribution pursuant to will] Decree of distribution
+      T: Disposition of real property. Decree of distribution pursuant to will 
+      L: acquired title is attached. Succession without a will
+      A: PROPERTY R
+p1 y= 334.2 x= 300.0 w= 10.5 h=11.8 Btn[/probate code 13650 distribution] Probate Code
+      T: Disposition of real property. Probate Code 13650 distribution
+      L: Copy of decedent’s most recent tax bill is attached.
+      A: attached.
+p1 y= 334.7 x=  38.9 w= 10.5 h=11.8 Btn[/Yes] tax bill attached
+      T: Descriptive information - Copy of decedents most recent tax bill is attached.
+      L: 
+      A: 
+p1 y= 346.2 x= 456.8 w= 10.5 h=11.8 Btn[/action of trustee pursuant to terms of a trust] Action of trustee
+      T: Disposition of real property. Action of trustee pursuant to terms of a trust
+      L: legal description is attached. Affidavit
+      A: distribution
+p1 y= 349.9 x= 298.9 w= 10.5 h=11.8 Btn[/affidavit of death of joint tenant] Affidavit of death
+      T: Disposition of real property. Affidavit of death of joint tenant
+      L: Deed or tax bill is not available; legal description is attached.
+      A: 
+p1 y= 350.9 x=  38.3 w= 10.5 h=11.8 Btn[/Yes] legal attached
+      T: Descriptive information  Deed or tax bill is not available. Legal description is attached.
+      L: 
+      A: 
+p1 y= 386.4 x= 235.8 w= 11.8 h=12.4 Btn[/Yes] decedents registered domestic partner
+      T: Transfer property information  decedents registered domestic partner
+      L: Decedent’s spouse
+      A: R Check
+p1 y= 387.1 x=  38.9 w= 10.5 h=11.8 Btn[/Yes] decedents spouse
+      T: Transfer property information. Check all that apply and list details below. Decedents spouse
+      L: 
+      A: TRANSFER/PROPERTY
+p1 y= 407.6 x=  39.3 w= 10.5 h=11.8 Btn[/Yes] decedents child or parent
+      T: transfer information  decedents child or parent or children or parents. If qualified for exclusion from assessment, a cl
+      L: 
+      A: 
+p1 y= 430.7 x= 235.1 w= 10.5 h=11.8 Btn[/Yes] Was this the decendent's principal residence? Yes 1
+      T: Was this the decendent's principal residence? Yes 1
+      L: Was this the decedent's principal residence?
+      A: be filed
+p1 y= 430.8 x= 267.1 w= 10.5 h=11.8 Btn[/No] Was this the decendent's principal residence? No 1
+      T: Was this the decendent's principal residence? No 1
+      L: Was this the decedent's principal residence? YES
+      A: (see instructions).
+p1 y= 431.0 x= 436.8 w= 10.5 h=11.8 Btn[/Yes] Is this property a family farm? yes 1
+      T: Is this property a family farm? yes 1
+      L: principal residence? YES NO Is this property a family farm?
+      A: 
+p1 y= 431.2 x= 469.9 w= 10.5 h=11.8 Btn[/Yes] Is this property a family farm? no 1
+      T: Is this property a family farm?
+      L: residence? YES NO Is this property a family farm? YES
+      A: 
+p1 y= 449.3 x=  39.9 w=  9.8 h=11.1 Btn[/Yes] decedents grandchild
+      T: transfer information.  decedents grandchild or grandchildren. If qualified for exclusion from assessment, a claim for re
+      L: 
+      A: 
+p1 y= 470.3 x= 232.8 w= 10.5 h=11.8 Btn[/Yes] Was this the decendent's principal residence? yes 2
+      T: Was this the decendent's principal residence? yes 2
+      L: Was this the decedent's principal residence?
+      A: Grandchild must
+p1 y= 470.7 x= 267.7 w= 10.5 h=11.8 Btn[/No] Was this the decendent's principal residence? No 2
+      T: Was this the decendent's principal residence? No 2
+      L: Was this the decedent's principal residence? YES
+      A: must be filed
+p1 y= 470.9 x= 438.0 w= 10.5 h=11.8 Btn[/Yes] Is this property a family farm? yes 2
+      T: Is this property a family farm? yes 2
+      L: principal residence? YES NO Is this property a family farm?
+      A: 
+p1 y= 471.2 x= 471.1 w= 10.5 h=11.8 Btn[/Yes] Is this property a family farm? no 2
+      T: Is this property a family farm? no 2
+      L: residence? YES NO Is this property a family farm? YES
+      A: 
+p1 y= 487.9 x=  39.8 w=  9.6 h=11.8 Btn[/Yes] Contenant to contenant
+      T: transfer information  cotenant to cotenant. If qualified for exclusion from assesment, an Affidavit of Cotenant Residenc
+      L: 
+      A: 
+p1 y= 508.3 x=  38.8 w= 10.5 h=11.8 Btn[/Yes] other beneficiaries
+      T: transfer information  other beneficiaries or heirs
+      L: 
+      A: 
+p1 y= 525.6 x=  38.8 w= 10.5 h=11.8 Btn[/Yes] A trust
+      T: transfer information a trust
+      L: 
+      A: 
+p1 y= 554.4 x= 244.0 w=332.2 h=11.9 Tx address of trustee
+      T: address of trustee
+      L: 
+      A: ADDRESS OF TRUSTEE
+p1 y= 554.9 x=  38.2 w=196.4 h=11.9 Tx name of trustee
+      T: name of trustee
+      L: 
+      A: NAME OF TRUSTEE
+p1 y= 602.9 x=  63.2 w=161.0 h=11.5 Tx beneficiary name 1
+      T: List the names and percentage of ownership of all beneficiaries. Beneficiary name line 1.
+      L: 
+      A: NAME OF BENEFICIARY OR HEIRS
+p1 y= 603.1 x= 394.1 w=161.0 h=11.5 Tx percent received 1
+      T: percentage of ownership received line 1
+      L: 
+      A: PERCENT OF OWNERSHIP RECEIVED
+p1 y= 603.5 x= 229.2 w=161.0 h=11.5 Tx relationship 1
+      T: relationship to decedent line 1
+      L: 
+      A: RELATIONSHIP TO DECEDENT
+p1 y= 618.9 x=  63.2 w=161.0 h=11.5 Tx beneficiary name 2
+      T: Beneficiary name line 2
+      L: 
+      A: 
+p1 y= 619.4 x= 229.4 w=161.0 h=11.5 Tx relationship 2
+      T: relationship to decedent line 2
+      L: 
+      A: 
+p1 y= 619.9 x= 394.6 w=161.0 h=11.5 Tx percent received 2
+      T: percentage of ownership received line 2
+      L: 
+      A: 
+p1 y= 636.2 x= 395.1 w=161.0 h=11.5 Tx percent received 3
+      T: percentage of ownership received line 3
+      L: 
+      A: 
+p1 y= 636.2 x= 229.4 w=161.0 h=11.5 Tx relationship 3
+      T: relationship to decedent line 3
+      L: 
+      A: 
+p1 y= 636.7 x=  63.2 w=161.0 h=11.5 Tx beneficiary name 3
+      T: Beneficiary name line 3
+      L: 
+      A: 
+p1 y= 652.0 x= 229.2 w=161.0 h=11.5 Tx relationship 4
+      T: relationship to decedent line 4
+      L: 
+      A: 
+p1 y= 652.4 x= 395.1 w=161.0 h=11.5 Tx percent received 4
+      T: percentage of ownership received line 4
+      L: 
+      A: 
+p1 y= 653.0 x=  63.2 w=161.0 h=11.5 Tx beneficiary name 4
+      T: Beneficiary name line 4
+      L: 
+      A: 
+p1 y= 667.7 x= 229.9 w=161.0 h=11.5 Tx relationship 5
+      T: relationship to decedent line 5
+      L: 
+      A: 
+p1 y= 668.2 x=  63.2 w=161.0 h=11.5 Tx beneficiary name 5
+      T: Beneficiary name line 5
+      L: 
+      A: 
+p1 y= 668.7 x= 394.6 w=161.0 h=11.5 Tx percent received 5
+      T: percentage of ownership received line 5
+      L: 
+      A: 
+p1 y= 684.9 x=  63.2 w=161.0 h=11.5 Tx beneficiary name 6
+      T: Beneficiary name line 6
+      L: 
+      A: 
+p1 y= 684.9 x= 229.4 w=161.0 h=11.5 Tx relationship 6
+      T: relationship to decedent line 6
+      L: 
+      A: 
+p1 y= 685.5 x= 395.1 w=161.0 h=11.5 Tx percent received 6
+      T: percentage of ownership received line 6
+      L: 
+      A: 
+p1 y= 700.7 x=  63.3 w=161.0 h=11.5 Tx beneficiary name 7
+      T: Beneficiary name line 7
+      L: 
+      A: 
+p1 y= 701.2 x= 394.6 w=161.0 h=11.5 Tx percent received 7
+      T: percentage of ownership received line 7
+      L: 
+      A: 
+p1 y= 701.7 x= 228.9 w=161.0 h=11.5 Tx relationship 7
+      T: relationship to decedent line 7
+      L: 
+      A: 
+p1 y= 722.0 x=  38.8 w= 10.5 h=11.8 Btn[/Yes] sale prior to distribution
+      T: This property has been or will be sold prior to distribution. Attach the conveyance document and or court order. Note: s
+      L: 
+      A: 
+p2 y=  48.6 x=  78.7 w= 10.5 h=11.8 Btn[/No] decree includes legal entity
+      T: Will the decree of distribution include distribution of an ownership interest in any legal entity that owns real propert
+      L: YES
+      A: BOE-502-D (P2)
+p2 y=  49.2 x=  38.8 w= 10.5 h=11.8 Btn[/Yes] decree includes legal entity yes 2
+      T: Will the decree of distribution include distribution of an ownership interest in any legal entity that owns real propert
+      L: 
+      A: BOE-502-D
+p2 y=  71.7 x= 260.1 w= 10.5 h=11.8 Btn[/Yes] more than 50 yes
+      T: If yes, will the distribution result in any person or legal entity obtaining control of more than fifty percent of the o
+      L: the ownership of that legal entity?
+      A: the distribution
+p2 y=  71.7 x= 300.0 w= 10.5 h=11.8 Btn[/No] more than 50
+      T: If yes, will the distribution result in any person or legal entity obtaining control of more than fifty percent of the o
+      L: the ownership of that legal entity? YES
+      A: distribution result
+p2 y=  94.2 x=  38.0 w=348.7 h=15.4 Tx name and address of legal entity
+      T: name and address of legal entity
+      L: 
+      A: YES NO
+p2 y=  95.9 x= 394.1 w=180.4 h=13.6 Tx name gaining control
+      T: name of person or entity gaining such control
+      L: 
+      A: NAME OF PERSON OR ENTITY GAINING SUCH CONTROL
+p2 y= 115.3 x=  38.8 w= 10.5 h=11.8 Btn[/Yes] 35 year lease yes
+      T: Was the decedent the lessor or lessee in a lease that had an original term of thirty five years or more, including renew
+      L: 
+      A: 
+p2 y= 115.8 x=  78.7 w= 10.5 h=11.8 Btn[/No] 35 year lease
+      T: Was the decedent the lessor or lessee in a lease that had an original term of thirty five years or more, including renew
+      L: YES
+      A: 
+p2 y= 156.0 x= 181.2 w=167.2 h=11.1 Tx lease mail address 1
+      T: other party to lease mailing address line 1
+      L: 
+      A: MAILING ADDRESS
+p2 y= 156.3 x=  38.2 w=140.7 h=11.5 Tx lease name 1
+      T: Other party to lease name line 1
+      L: 
+      A: NAME
+p2 y= 156.6 x= 352.8 w=135.5 h=10.9 Tx lease city 1
+      T: other party to lease city line 1
+      L: 
+      A: CITY
+p2 y= 157.1 x= 491.2 w= 26.5 h=11.0 Tx lease state 1
+      T: other party to lease state line 1
+      L: 
+      A: STATE
+p2 y= 157.7 x= 522.2 w= 51.5 h=10.8 Tx lease zip 1
+      T: other party to lease zip code line 1
+      L: 
+      A: STATE ZIP CODE
+p2 y= 173.1 x=  37.8 w=140.4 h=11.5 Tx lease name 2
+      T: other party to lease name line 2
+      L: 
+      A: 
+p2 y= 173.3 x= 181.2 w=167.2 h=11.1 Tx lease mail address 2
+      T: other party to lease mailing address line 2
+      L: 
+      A: 
+p2 y= 173.3 x= 491.2 w= 26.5 h=11.0 Tx lease state 2
+      T: other party to lease state line 2
+      L: 
+      A: 
+p2 y= 173.4 x= 352.3 w=135.5 h=10.9 Tx lease city 2
+      T: other party to lease city line 2
+      L: 
+      A: 
+p2 y= 174.5 x= 521.7 w= 51.5 h=10.8 Tx lease zip 2
+      T: other party to lease zip code line 2
+      L: 
+      A: 
+p2 y= 189.9 x=  38.0 w=140.1 h=11.5 Tx lease name 3
+      T: other party to lease name line 3
+      L: 
+      A: 
+p2 y= 190.0 x= 181.2 w=167.2 h=11.1 Tx lease mail address 3
+      T: other party to lease mailing address line 3
+      L: 
+      A: 
+p2 y= 190.1 x= 491.8 w= 26.5 h=11.0 Tx lease state 3
+      T: other party to lease state line 3
+      L: 
+      A: 
+p2 y= 190.7 x= 352.8 w=135.5 h=10.9 Tx lease city 3
+      T: other party to lease city line 3
+      L: 
+      A: 
+p2 y= 190.7 x= 522.8 w= 51.5 h=10.8 Tx lease zip 3
+      T: other party to lease zip code line 3
+      L: 
+      A: 
+p2 y= 206.1 x=  38.2 w=139.7 h=11.5 Tx lease name 4
+      T: other party to lease name line 4
+      L: 
+      A: 
+p2 y= 206.3 x= 182.3 w=167.2 h=11.1 Tx lease mail address 4
+      T: other party to lease mailing address line 4
+      L: 
+      A: 
+p2 y= 206.4 x= 491.2 w= 26.5 h=11.0 Tx lease state 4
+      T: other party to lease state line 4
+      L: 
+      A: 
+p2 y= 206.4 x= 353.4 w=135.5 h=10.9 Tx lease city 4
+      T: other party to lease city line 4
+      L: 
+      A: 
+p2 y= 207.0 x= 522.2 w= 51.5 h=10.8 Tx lease zip 4
+      T: other party to lease zip code line 4
+      L: 
+      A: 
+p2 y= 240.0 x=  36.9 w=536.6 h=14.8 Tx Name
+      T: Name for future property tax statements
+      L: 
+      A: MAILING ADDRESS FOR FUTURE PROPERTY TAX STATEMENTS
+p2 y= 260.6 x= 465.4 w= 22.5 h=15.6 Tx pt mailing state
+      T: state for future property tax statements
+      L: 
+      A: 
+p2 y= 260.7 x=  35.9 w=284.3 h=15.6 Tx pt mailing address
+      T: mailing address for future property tax statements
+      L: 
+      A: 
+p2 y= 261.2 x= 326.3 w=135.1 h=15.6 Tx pt mailing city
+      T: city for future property tax statements
+      L: 
+      A: 
+p2 y= 262.7 x= 492.8 w= 81.2 h=13.8 Tx pt mailing zip
+      T: zip code for future property tax statements
+      L: 
+      A: STATE ZIP CODE
+p2 y= 319.7 x= 342.9 w=234.1 h=16.9 Tx Printed name of wet signature spouse/registered domestic partner/personal represenatitve to the left
+      T: Printed name of wet signature spouse/registered domestic partner/personal represenatitve to the left
+      L: 
+      A: correct and complete to the best of my knowledge and belief.
+p2 y= 343.0 x=  36.2 w=394.3 h=16.5 Tx title
+      T: title of spouse, registered domestic partner,  personal representative
+      L: 
+      A: t
+p2 y= 343.0 x= 437.5 w=139.3 h=15.9 Tx date
+      T: certification date
+      L: 
+      A: 
+p2 y= 365.0 x= 470.4 w=104.9 h=15.4 Tx telephone
+      T: daytime area code of spouse, registered domestic partner, personal representative
+      L: ( )
+      A: 
+p2 y= 365.8 x=  37.8 w=393.3 h=16.2 Tx email
+      T: email address of spouse, registered domestic partner, personal representative
+      L: 
+      A: 
+p2 y= 366.2 x= 442.0 w= 24.4 h=15.0 Tx area code
+      T: daytime area code of spouse, registered domestic partner, personal representative
+      L: (
+      A: DAYTIME TELEPHONE
