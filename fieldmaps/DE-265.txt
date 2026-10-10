@@ -1,0 +1,316 @@
+p1 y=  64.3 x=  38.4 w=243.0 h=12.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Add1_ft[0]
+      T: Add1_ft
+      L: 
+      A: ATTORNEY After recording OR return PARTY to: WITHOUT ATTORNEY (name, address, and State Ba
+p1 y=  76.6 x=  38.4 w=243.0 h=12.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Add2_ft[0]
+      T: Add2_ft
+      L: 
+      A: 
+p1 y=  89.0 x=  38.4 w=243.0 h=12.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Add3_ft[0]
+      T: Add3_ft
+      L: 
+      A: 
+p1 y= 101.4 x=  38.4 w=243.0 h=12.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Add4_ft[0]
+      T: Add4_ft
+      L: 
+      A: 
+p1 y= 115.4 x=  66.2 w= 72.6 h= 9.0 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Tel_ft[0]
+      T: TEL NO.:
+      L: TEL NO.:
+      A: 
+p1 y= 115.4 x= 203.4 w= 78.0 h= 9.0 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Tel_ft[2]
+      T: FAX NO. (optional):
+      L: TEL NO.: FAX NO. (optional):
+      A: 
+p1 y= 125.4 x= 121.4 w=160.0 h= 9.0 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Tel_ft[1]
+      T: E-MAIL ADDRESS (optional):
+      L: E-MAIL ADDRESS (optional):
+      A: FAX NO. (optional):
+p1 y= 136.4 x= 111.9 w=169.5 h= 9.0 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].AttyPartyInfo_sf[0].Tel_ft[3]
+      T: ATTORNEY FOR (name):
+      L: ATTORNEY FOR (name):
+      A: (optional):
+p1 y= 151.5 x= 179.3 w=102.1 h=11.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].CrtInfo_sf[0].Crtname_ft[0]
+      T: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      L: SUPERIOR COURT OF CALIFORNIA, COUNTY OF
+      A: 
+p1 y= 166.3 x=  98.9 w=182.5 h=10.9 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].CrtInfo_sf[0].CrtStreetAdd_ft[0]
+      T: STREET ADDRESS:
+      L: STREET ADDRESS:
+      A: COURT OF CALIFORNIA, COUNTY OF
+p1 y= 179.8 x=  98.9 w=182.5 h=11.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].CrtInfo_sf[0].CrtMail_ft[0]
+      T: MAILING ADDRESS:
+      L: MAILING ADDRESS:
+      A: ADDRESS:
+p1 y= 193.8 x= 100.4 w=181.0 h=11.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].CrtInfo_sf[0].CrtCityZip_ft[0]
+      T: CITY AND ZIP CODE:
+      L: CITY AND ZIP CODE:
+      A: ADDRESS:
+p1 y= 207.8 x=  88.1 w=193.3 h=11.4 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].CrtInfo_sf[0].CrtBranch[0]
+      T: BRANCH NAME:
+      L: BRANCH NAME:
+      A: ZIP CODE:
+p1 y= 225.5 x=  41.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].EJHeader_sf[0].Party_sf[0].EstateOf_cb[0]
+      T: ESTATE OF
+      L: 
+      A: BRANCH
+p1 y= 233.5 x= 212.4 w=317.5 h=11.0 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].Party_sf[0].Party_ft[0]
+      T: (name):
+      L: CONSERVATORSHIP OF (name):
+      A: 
+p1 y= 236.7 x=  41.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].EJHeader_sf[0].Party_sf[0].ConservatorshipOf_cb[0]
+      T: CONSERVATORSHIP OF
+      L: 
+      A: 
+p1 y= 248.7 x=  41.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].EJHeader_sf[0].Party_sf[0].GuardianshipOf_cb[0]
+      T: GUARDIANSHIP OF
+      L: 
+      A: 
+p1 y= 248.9 x= 294.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].EJHeader_sf[0].Party_sf[0].Decedent_cb[0]
+      T: DECEDENT
+      L: GUARDIANSHIP OF
+      A: 
+p1 y= 248.9 x= 373.7 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].EJHeader_sf[0].Party_sf[0].Conservatee_cb[0]
+      T: CONSERVATEE
+      L: GUARDIANSHIP OF DECEDENT
+      A: 
+p1 y= 248.9 x= 473.9 w=  9.0 h= 9.0 Btn[/3] topmostSubform[0].Page1[0].EJHeader_sf[0].Party_sf[0].Minor_cb[0]
+      T: MINOR
+      L: DECEDENT CONSERVATEE
+      A: 
+p1 y= 269.3 x= 387.8 w=177.8 h=16.5 Tx topmostSubform[0].Page1[0].EJHeader_sf[0].CaseNumber_sf_sf[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: Confirming Sale of Other Property as a Unit
+      A: CASE CONSERVATEE NUMBER: MINOR
+p1 y= 275.6 x=  73.4 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].EJHeader_sf[0].Title_sf[0].#area[0].Estate[0]
+      T: and Confirming Sale of Other Property as a Unit
+      L: 
+      A: 
+p1 y= 299.3 x= 320.9 w= 49.1 h= 9.2 Tx topmostSubform[0].Page1[0].FillText57[0]
+      T: Dept.:
+      L: Hearing date: Time: Dept.:
+      A: 
+p1 y= 299.4 x= 105.4 w=103.5 h= 9.0 Tx topmostSubform[0].Page1[0].FillText55[0]
+      T: Hearing date:
+      L: 1. Hearing date:
+      A: 
+p1 y= 299.4 x= 239.4 w= 49.6 h= 9.0 Tx topmostSubform[0].Page1[0].FillText56[0]
+      T: Time:
+      L: 1. Hearing date: Time:
+      A: 
+p1 y= 299.4 x= 397.3 w= 27.8 h= 9.0 Tx topmostSubform[0].Page1[0].FillText58[0]
+      T: Rm.:
+      L: Time: Dept.: Rm.:
+      A: 
+p1 y= 344.5 x=  70.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox19[0]
+      T: Sale was authorized or directed by the will 
+      L: 3. a.
+      A: All notices
+p1 y= 361.4 x=  70.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox18[0]
+      T: Good reason existed for the sale
+      L: b.
+      A: a.
+p1 y= 384.8 x=  65.4 w=356.8 h=25.5 Tx ML topmostSubform[0].Page1[0].FillText59[0]
+      T: of the property commonly described as (street address or location):
+      L: 
+      A: of the property commonly described as (street address or location):
+p1 y= 440.7 x=  55.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox17[0]
+      T: Private sale: The amount bid is 90% or more of the appraised value of the property as appraised within one year of the d
+      L: 6.
+      A: 5. The
+p1 y= 465.5 x= 317.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox16[0]
+      T: cannot be obtained
+      L: An offer exceeding the amount bid by the statutory percentages
+      A: 
+p1 y= 465.5 x= 429.4 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].CheckBox16[1]
+      T: was obtained in open court.
+      L: amount bid by the statutory percentages cannot be obtained
+      A: 
+p1 y= 492.8 x=  79.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox14[0]
+      T: personal representative
+      L: 8. The
+      A: The offer
+p1 y= 492.8 x= 209.6 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].ChckBox14[0]
+      T: conservator 
+      L: 8. The personal representative
+      A: applicable law.
+p1 y= 492.8 x= 299.1 w=  9.0 h= 9.0 Btn[/3] topmostSubform[0].Page1[0].CheckBx14[0]
+      T: guardian
+      L: 8. The personal representative conservator
+      A: 
+p1 y= 533.9 x= 245.7 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox10[0]
+      T: in item 15 on page 2
+      L: 9. The sale of the real property legally described
+      A: 
+p1 y= 533.9 x= 365.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox8[0]
+      T: on Attachment 9
+      L: the real property legally described in item 15 on page 2
+      A: 
+p1 y= 547.1 x=  55.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox11[0]
+      T: and other property sold as a unit described
+      L: 
+      A: 9. The
+p1 y= 547.1 x= 262.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox9[0]
+      T: in item 15 on page 2
+      L: and other property sold as a unit described
+      A: in
+p1 y= 547.1 x= 377.9 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox7[0]
+      T: on Attachment 9
+      L: property sold as a unit described in item 15 on page 2
+      A: on
+p1 y= 556.8 x=  50.7 w=525.3 h=12.8 Tx topmostSubform[0].Page1[0].FillText60[0]
+      T: is confirmed to (name):
+      L: 
+      A: and other property sold as a unit described in item 15 on page 2 on Attachment 9 is confir
+p1 y= 573.5 x= 148.2 w=412.2 h= 9.0 Tx topmostSubform[0].Page1[0].FillText61[0]
+      T: (manner of vesting title):
+      L: (manner of vesting title):
+      A: 
+p1 y= 587.6 x= 140.2 w=100.0 h= 9.0 Tx topmostSubform[0].Page1[0].FillText62[0]
+      T: for the sale price of:  $
+      L: for the sale price of: $
+      A: vesting title):
+p1 y= 597.7 x=  50.7 w=510.8 h=39.9 Tx ML topmostSubform[0].Page1[0].FillText63[0]
+      T: on the following terms (use item 15 on page 2 or Attachment 9 if necessary):
+      L: 
+      A: for the sale price of: $ on the following terms (use item 15 on page 2 or Attachment 9 if 
+p1 y= 642.7 x=  55.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox2[0]
+      T: Continued in item 15 on page 2.
+      L: 
+      A: 
+p1 y= 642.7 x= 226.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox5[0]
+      T: Continued on Attachment 9.
+      L: Continued in item 15 on page 2.
+      A: 
+p1 y= 659.5 x=  79.8 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox3[0]
+      T: personal representative
+      L: 10.The
+      A: Continued
+p1 y= 659.5 x= 206.3 w=  9.0 h= 9.0 Btn[/2] topmostSubform[0].Page1[0].ChckBox3[0]
+      T: conservator 
+      L: 10.The personal representative
+      A: page 2.
+p1 y= 659.8 x= 288.1 w=  9.0 h= 9.0 Btn[/3] topmostSubform[0].Page1[0].CheckBx3[0]
+      T: guardian 
+      L: 10.The personal representative conservator
+      A: Continued on
+p1 y= 673.7 x=  87.4 w=474.7 h= 9.0 Tx topmostSubform[0].Page1[0].FillText6115[0]
+      T: (name): 
+      L: (name):
+      A: personal representative conservator guardian of the estate of the decedent, conservatee, o
+p1 y= 698.3 x=  55.3 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page1[0].CheckBox1[0]
+      T: and other property described in item 9 sold as a unit
+      L: 
+      A: is directed
+p2 y=  51.9 x=  43.6 w=  9.0 h= 9.0 Btn[/1] F68 topmostSubform[0].Page2[0].PxHeader[0].Party_sf[0].EstateOf_cb[0]
+      T: ESTATE OF
+      L: 
+      A: 
+p2 y=  51.9 x= 126.4 w=  9.0 h= 9.0 Btn[/1] F68 topmostSubform[0].Page2[0].PxHeader[0].Party_sf[0].ConservatorshipOf_cb[0]
+      T: CONSERVATORSHIP OF
+      L: ESTATE OF
+      A: 
+p2 y=  51.9 x= 263.6 w=  9.0 h= 9.0 Btn[/1] F68 topmostSubform[0].Page2[0].PxHeader[0].Party_sf[0].GuardianshipOf_cb[0]
+      T: GUARDIANSHIP OF
+      L: ESTATE OF CONSERVATORSHIP OF
+      A: 
+p2 y=  58.5 x= 398.2 w=175.7 h=20.6 Tx F68 topmostSubform[0].Page2[0].PxHeader[0].CaseNumber_ft[0]
+      T: CASE NUMBER:
+      L: 
+      A: CASE NUMBER: DE-265/GC-065
+p2 y=  65.1 x=  73.8 w=317.5 h=11.0 Tx F68 topmostSubform[0].Page2[0].PxHeader[0].Party_sf[0].Party_ft[0]
+      T: (name):
+      L: (name):
+      A: ESTATE OF CONSERVATORSHIP OF GUARDIANSHIP OF
+p2 y=  91.0 x=  70.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox37[0]
+      T: No additional bond is required.
+      L: 11. a.
+      A: 
+p2 y= 103.5 x=  70.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox36[0]
+      T: Additional bond is required in the amount of:
+      L: b.
+      A: a.
+p2 y= 103.5 x= 274.9 w=127.8 h= 9.0 Tx topmostSubform[0].Page2[0].FillText66[0]
+      T: $
+      L: b. Additional bond is required in the amount of: $
+      A: 
+p2 y= 116.7 x=  70.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox35[0]
+      T: Net sale proceeds must be deposited by escrow holder in a blocked account to be withdrawn only on court order. 
+      L: c.
+      A: b.
+p2 y= 139.0 x=  88.8 w=480.2 h=15.7 Tx topmostSubform[0].Page2[0].FillText67[0]
+      T: Receipts must be filed. (Specify institution and location):
+      L: 
+      A: Receipts must be filed. (Specify institution and location):
+p2 y= 154.7 x=  70.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox34[0]
+      T: No commission is payable. 
+      L: 12. a .
+      A: 
+p2 y= 166.5 x= 392.7 w=167.1 h= 9.0 Tx topmostSubform[0].Page2[0].FillText69[0]
+      T: $
+      L: commission from the proceeds of the sale is approved in the amount of:$
+      A: 
+p2 y= 166.8 x=  70.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox33[0]
+      T: A commission from the proceeds of the sale is approved in the amount of:
+      L: b.
+      A: a .
+p2 y= 177.6 x= 212.3 w=355.7 h=28.6 Tx ML topmostSubform[0].Page2[0].FillText68[0]
+      T: to be paid as follows (specify):
+      L: 
+      A: proceeds of the sale is approved in the amount of:$
+p2 y= 218.9 x=  52.6 w=523.4 h=23.4 Tx ML topmostSubform[0].Page2[0].FillText70[0]
+      T: Other (specify, use Attachment 13 if necessary):
+      L: 
+      A: 13. Other (specify, use Attachment 13 if necessary):
+p2 y= 249.0 x= 167.2 w= 33.1 h= 9.8 Tx topmostSubform[0].Page2[0].FillText75[0]
+      T: Number of pages attached:
+      L: 14. Number of pages attached:
+      A: 
+p2 y= 270.5 x=  57.5 w=136.7 h=10.7 Tx topmostSubform[0].Page2[0].T100[0]
+      T: Date:
+      L: Date:
+      A: 14. Number of pages attached:
+p2 y= 290.2 x= 329.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox300[0]
+      T: Signature follows last attachment.
+      L: 
+      A: 
+p2 y= 307.1 x= 397.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox29[0]
+      T: personal property     in item 9:
+      L: apply): Legal description of the real property
+      A: Signature follows
+p2 y= 307.2 x= 178.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox28[0]
+      T: Legal description of the
+      L: 15. (Check all that apply):
+      A: 
+p2 y= 307.2 x= 308.1 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox30[0]
+      T: real property
+      L: 15. (Check all that apply): Legal description of the
+      A: 
+p2 y= 307.5 x=  55.0 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox31[0]
+      T: (Check all that apply):
+      L: 15.
+      A: 
+p2 y= 321.6 x= 178.2 w=  9.0 h= 9.0 Btn[/1] topmostSubform[0].Page2[0].CheckBox27[0]
+      T: Additional terms of sale from item 9: 
+      L: 
+      A: apply):
+p2 y= 332.7 x=  50.7 w=523.6 h=246.2 Tx ML topmostSubform[0].Page2[0].FillText1[0]
+      T: FillText1
+      L: 
+      A: Additional terms of sale from item 9:
+p2 y= 707.4 x= 219.8 w= 96.2 h= 9.0 Tx topmostSubform[0].Page2[0].FillText73[0]
+      T: Date:
+      L: Date:
+      A: 
+p2 y= 771.0 x= 258.2 w= 81.0 h=17.0 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] topmostSubform[0].Page2[0].BtnFooter_gp[0].Print_bt[0]
+      T: Print this form
+      L: This Form button after you have printed the form.
+      A: 
+p2 y= 771.0 x= 344.7 w= 81.1 h=17.0 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] topmostSubform[0].Page2[0].BtnFooter_gp[0].Save_bt[0]
+      T: Save this form
+      L: Form button after you have printed the form.
+      A: 
+p2 y= 771.0 x= 494.4 w= 81.0 h=17.0 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] topmostSubform[0].Page2[0].BtnFooter_gp[0].Reset_bt[0]
+      T: Clear this form
+      L: form.
+      A: 

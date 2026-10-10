@@ -13,12 +13,12 @@ const FX = path.join(__dirname, '../test/fixtures');
 const TPL = path.join(__dirname, '../templates/official');
 const SRC = path.join(__dirname, '../templates/source');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(FX, f)));
-const answers = { ...read('answers-group-b.json'), ...read('answers-admin.json'), ...read('answers-full.json') };
+const answers = { ...read('answers-group-b.json'), ...read('answers-admin.json'), ...read('answers-full.json'), ...read('answers-sale.json') };
 const adminRecords = read('admin-records.json');
 
 const RUNS = [
   { title: 'Full probate (Los Angeles, will, executor)', caseFile: 'test-case.json', extraCase: adminRecords,
-    forms: ['WILL-LODGING', 'DE-111', 'DE-142', 'DE-121', 'DE-140', 'DE-147', 'DE-147S', 'DE-150', 'DE-157', 'NOTICE-9202-DHCS', 'NOTICE-9202-FTB', 'NOTICE-9202-CALVCB', 'NOTICE-9202-DCSS', 'DE-160', 'DE-161', 'BOE-502-D', 'DE-165', 'DE-174', 'PETITION-FINAL-DISTRIBUTION', { id: 'DE-120', extra: { purpose: 'final' } }, 'ORDER-FINAL-DISTRIBUTION', 'DE-295'] },
+    forms: ['WILL-LODGING', 'DE-111', 'DE-142', 'DE-121', 'DE-140', 'DE-147', 'DE-147S', 'DE-150', 'DE-157', 'NOTICE-9202-DHCS', 'NOTICE-9202-FTB', 'NOTICE-9202-CALVCB', 'NOTICE-9202-DCSS', 'DE-160', 'DE-161', 'BOE-502-D', 'DE-165', 'NOTICE-OF-SALE', 'DE-260', 'DE-120-SALE', 'DE-265', 'DE-174', 'PETITION-FINAL-DISTRIBUTION', { id: 'DE-120', extra: { purpose: 'final' } }, 'ORDER-FINAL-DISTRIBUTION', 'DE-295'] },
   { title: 'Primary residence petition (Prob. Code 13151)', caseFile: 'test-case-13151.json', forms: ['DE-310', { id: 'DE-120', extra: { purpose: '13151' } }, 'DE-315', 'DE-160', 'DE-161'] },
   { title: 'Spousal property petition (Prob. Code 13650)', caseFile: 'test-case-spousal.json', forms: ['DE-221', { id: 'DE-120', extra: { purpose: '13650' } }, 'DE-226'] },
   { title: 'Small estate affidavit (Prob. Code 13100)', caseFile: 'test-case-small.json', forms: ['SMALL-ESTATE-AFFIDAVIT'] },

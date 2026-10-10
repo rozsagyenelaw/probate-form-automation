@@ -4,7 +4,7 @@ const fs = require('fs'); const path = require('path');
 const { generate, listForms } = require('../lib/formgen');
 const FX = path.join(__dirname, 'fixtures');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(FX, f)));
-const answers = { ...read('answers-group-b.json'), ...read('answers-admin.json'), ...read('answers-full.json') };
+const answers = { ...read('answers-group-b.json'), ...read('answers-admin.json'), ...read('answers-full.json'), ...read('answers-sale.json') };
 const cases = ['test-case.json', 'test-case-13151.json', 'test-case-spousal.json', 'test-case-small.json', 'test-case-13200.json'];
 const fails = []; let n = 0;
 (async () => {

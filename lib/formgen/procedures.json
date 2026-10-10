@@ -1,16 +1,116 @@
 {
-  "full": { "title": "Full probate (Letters, IAEA)", "statute": "Prob. Code 8000 to 12591",
+  "full": {
+    "title": "Full probate (Letters, IAEA)",
+    "statute": "Prob. Code 8000 to 12591",
     "steps": [
-      { "stage": "Open the case", "forms": ["WILL-LODGING", "DE-111", "DE-142", "DE-121", "DE-140", "DE-147", "DE-147S", "DE-150"] },
-      { "stage": "After Letters", "forms": ["DE-157", "NOTICE-9202-DHCS", "NOTICE-9202-FTB", "NOTICE-9202-CALVCB", "NOTICE-9202-DCSS", "DE-160", "DE-161", "BOE-502-D", "DE-165", "DE-174"] },
-      { "stage": "Close the case", "forms": ["PETITION-FINAL-DISTRIBUTION", "DE-120", "ORDER-FINAL-DISTRIBUTION", "DE-295"] }
-    ] },
-  "13151": { "title": "Petition to determine succession to primary residence", "statute": "Prob. Code 13150 to 13158",
-    "steps": [ { "stage": "Petition", "forms": ["DE-310", "DE-160", "DE-161", "DE-120", "DE-315", "BOE-502-D"] } ] },
-  "13100": { "title": "Small estate affidavit (personal property)", "statute": "Prob. Code 13100 to 13116",
-    "steps": [ { "stage": "Affidavit", "forms": ["SMALL-ESTATE-AFFIDAVIT", "DE-160", "DE-161"] } ] },
-  "13200": { "title": "Affidavit re real property of small value", "statute": "Prob. Code 13200 to 13211",
-    "steps": [ { "stage": "Affidavit", "forms": ["DE-305", "DE-160", "DE-161", "BOE-502-D"] } ] },
-  "13650": { "title": "Spousal or domestic partner property petition", "statute": "Prob. Code 13650 to 13660",
-    "steps": [ { "stage": "Petition", "forms": ["DE-221", "DE-120", "DE-226", "BOE-502-D"] } ] }
+      {
+        "stage": "Open the case",
+        "forms": [
+          "WILL-LODGING",
+          "DE-111",
+          "DE-142",
+          "DE-121",
+          "DE-140",
+          "DE-147",
+          "DE-147S",
+          "DE-150"
+        ]
+      },
+      {
+        "stage": "After Letters",
+        "forms": [
+          "DE-157",
+          "NOTICE-9202-DHCS",
+          "NOTICE-9202-FTB",
+          "NOTICE-9202-CALVCB",
+          "NOTICE-9202-DCSS",
+          "DE-160",
+          "DE-161",
+          "BOE-502-D",
+          "DE-165",
+          "DE-174"
+        ]
+      },
+      {
+        "stage": "Sell real property",
+        "forms": [
+          "NOTICE-OF-SALE",
+          "DE-260",
+          "DE-120-SALE",
+          "DE-265",
+          "DE-165"
+        ]
+      },
+      {
+        "stage": "Close the case",
+        "forms": [
+          "PETITION-FINAL-DISTRIBUTION",
+          "DE-120",
+          "ORDER-FINAL-DISTRIBUTION",
+          "DE-295"
+        ]
+      }
+    ]
+  },
+  "13151": {
+    "title": "Petition to determine succession to primary residence",
+    "statute": "Prob. Code 13150 to 13158",
+    "steps": [
+      {
+        "stage": "Petition",
+        "forms": [
+          "DE-310",
+          "DE-160",
+          "DE-161",
+          "DE-120",
+          "DE-315",
+          "BOE-502-D"
+        ]
+      }
+    ]
+  },
+  "13100": {
+    "title": "Small estate affidavit (personal property)",
+    "statute": "Prob. Code 13100 to 13116",
+    "steps": [
+      {
+        "stage": "Affidavit",
+        "forms": [
+          "SMALL-ESTATE-AFFIDAVIT",
+          "DE-160",
+          "DE-161"
+        ]
+      }
+    ]
+  },
+  "13200": {
+    "title": "Affidavit re real property of small value",
+    "statute": "Prob. Code 13200 to 13211",
+    "steps": [
+      {
+        "stage": "Affidavit",
+        "forms": [
+          "DE-305",
+          "DE-160",
+          "DE-161",
+          "BOE-502-D"
+        ]
+      }
+    ]
+  },
+  "13650": {
+    "title": "Spousal or domestic partner property petition",
+    "statute": "Prob. Code 13650 to 13660",
+    "steps": [
+      {
+        "stage": "Petition",
+        "forms": [
+          "DE-221",
+          "DE-120",
+          "DE-226",
+          "BOE-502-D"
+        ]
+      }
+    ]
+  }
 }
