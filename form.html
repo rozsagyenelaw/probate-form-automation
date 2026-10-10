@@ -217,6 +217,8 @@
             margin-top: 5px;
         }
     </style>
+    <!-- Office only: admin sign-in (W1-security item 16) -->
+    <script type="module" src="/admin-gate.js"></script>
 </head>
 <body>
     <div class="container">
@@ -501,6 +503,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${await window.mpcaAdmin.idToken()}`,
                     },
                     body: JSON.stringify(data)
                 });

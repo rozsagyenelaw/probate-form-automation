@@ -318,6 +318,9 @@
             background: #218838;
         }
     </style>
+    <!-- Office only: admin sign-in, and case data loaded by caseId (W1-security item 16) -->
+    <script type="module" src="/admin-gate.js"></script>
+    <script src="/case-prefill.js"></script>
 </head>
 <body>
     <div style="background:#fff3cd;border:1px solid #e0b100;color:#3d2e00;padding:12px 16px;font:15px/1.4 sans-serif;margin:0 0 12px;border-radius:8px">
@@ -762,17 +765,10 @@
         }
         
         // Pre-fill form from URL parameters (from probate-california app)
-        function prefillFromURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const dataParam = urlParams.get('data');
-
-            if (!dataParam) return false;
+        function prefillFromData(data) {
+            if (!data) return false;
 
             try {
-                // Unicode-safe base64 decoding
-                const jsonString = decodeURIComponent(escape(atob(dataParam)));
-                const data = JSON.parse(jsonString);
-                console.log('Pre-filling form with data:', data);
 
                 // Fill text inputs and selects
                 Object.keys(data).forEach(key => {
@@ -827,19 +823,25 @@
 
                 return true;
             } catch (e) {
-                console.error('Error parsing URL data:', e);
+                console.error('Could not pre-fill the form');
                 return false;
             }
         }
 
         // Add at least one heir field by default
-        window.onload = function() {
-            const prefilled = prefillFromURL();
-            // Only add default heir if not prefilled (prefillFromURL handles heirs)
-            if (!prefilled) {
-                addHeir();
-            } else if (heirCount === 0) {
-                // If prefilled but no heirs, add one empty entry
+        // Client data never travels in the web address: an old ?data= link is cleared unread, and a
+        // ?caseId= link loads the case through the signed-in admin session.
+        window.onload = async function() {
+            const params = new URLSearchParams(window.location.search);
+            const caseId = params.get('caseId');
+            if (params.has('data')) history.replaceState(null, '', caseId ? `?caseId=${encodeURIComponent(caseId)}` : window.location.pathname);
+            if (!caseId) { addHeir(); return; }
+            try {
+                await window.mpcaAdmin.ready;
+                const prefilled = prefillFromData(window.caseToGeneratorData(await window.mpcaAdmin.getCase(caseId)));
+                if (!prefilled || heirCount === 0) addHeir();
+            } catch (e) {
+                console.error('Could not load the case');
                 addHeir();
             }
         };
@@ -900,6 +902,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${await window.mpcaAdmin.idToken()}`,
                     },
                     body: JSON.stringify(data)
                 });

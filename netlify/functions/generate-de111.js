@@ -1,3 +1,4 @@
+const { requireAdmin } = require('../lib/require-admin');
 // netlify/functions/generate-de111.js
 const { PDFDocument, rgb } = require('pdf-lib');
 const fs = require('fs').promises;
@@ -6,8 +7,8 @@ const path = require('path');
 exports.handler = async (event, context) => {
   // Enable CORS
   const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type, X-API-Key',
+    'Access-Control-Allow-Origin': 'https://probateformautomation.netlify.app',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Content-Type': 'application/json'
   };
@@ -30,10 +31,15 @@ exports.handler = async (event, context) => {
     };
   }
 
+  // Office only: a signed-in admin (Firebase ID token, checked server-side)
+  const gate = await requireAdmin(event);
+  if (!gate.ok) {
+    return { statusCode: gate.status, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://probateformautomation.netlify.app' }, body: JSON.stringify({ error: gate.error }) };
+  }
+
   try {
     // Parse request body
     const data = JSON.parse(event.body);
-    console.log('Received data for DE-111:', data);
 
     // For now, we'll create a simple PDF
     // Later, you'll replace this with your actual form filling logic
@@ -94,7 +100,6 @@ exports.handler = async (event, context) => {
       headers,
       body: JSON.stringify({ 
         error: 'Failed to generate document',
-        details: error.message 
       })
     };
   }
