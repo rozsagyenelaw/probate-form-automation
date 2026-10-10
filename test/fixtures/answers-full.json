@@ -27,5 +27,8 @@
   "final.reserve": "5000",
   "final.distributionConfirmed": true,
   "final.conditionsOrAlternates": "None",
-  "final.prRequestsCompensation": false
+  "final.prRequestsCompensation": false,
+  "will.custodianAddress": "200 Sample St., Glendale, CA 91203 (FICTIONAL)",
+  "pro010.reason": "Central per LASC Rule 2.3",
+  "petitioner.needsInterpreter": "no"
 }
