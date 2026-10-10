@@ -13,7 +13,7 @@
   },
   "petitioner": {
     "firstName": "Test", "lastName": "Executor", "relationship": "Son", "phone": "818-555-0100",
-    "email": "rozsagyenelaw1+formstest@gmail.com", "isCAResident": true,
+    "email": "test.executor@example.com", "isCAResident": true,
     "address": { "street": "200 Sample St.", "city": "Glendale", "state": "CA", "zip": "91203" }
   },
   "willExists": true, "willDate": "2018-06-01", "codicilExists": false, "codicilDates": [],

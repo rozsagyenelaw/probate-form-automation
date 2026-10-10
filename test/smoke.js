@@ -2,6 +2,11 @@
 // house rules that matter on paper. Exit 1 on any failure.
 const fs = require('fs'); const path = require('path');
 const { generate, listForms } = require('../lib/formgen');
+const os = require('os'); const { execFileSync } = require('child_process');
+// Rozsa's decision 2026-10-10: the client is the self-represented petitioner; no attorney/firm
+// details on any court paper or letter, except the limited scope notice MC-950.
+const FIRM_RE = /Rozsa|Gyene|208356|myprobateca\.com|3500 W\. Olive|Law Offices/i;
+function pdfText(bytes) { const f = path.join(os.tmpdir(), `smoke-${process.pid}.pdf`); fs.writeFileSync(f, bytes); try { return execFileSync('pdftotext', [f, '-']).toString(); } catch (e) { return ''; } }
 const FX = path.join(__dirname, 'fixtures');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(FX, f)));
 const answers = { ...read('answers-group-b.json'), ...read('answers-admin.json'), ...read('answers-full.json'), ...read('answers-sale.json') };
@@ -20,6 +25,10 @@ const fails = []; let n = 0;
           const r = await generate({ formId: m.id, caseData, answers: ans, extra: rec !== undefined ? { record: rec } : {} });
           if (!r.draft) fails.push(`${tag}: not marked draft`);
           if (!r.pdfBytes || r.pdfBytes.length < 1000) fails.push(`${tag}: empty PDF`);
+          if (m.id !== 'MC-950') {
+            const txt = pdfText(r.pdfBytes) + r.fields.map((f) => f.value).join(' ');
+            if (FIRM_RE.test(txt)) fails.push(`${tag}: attorney or firm detail on a client-filed paper: ${(txt.match(FIRM_RE) || [])[0]}`);
+          }
           for (const f of r.fields) {
             if (f.value && !f.source) fails.push(`${tag}: ${f.field} has a value without a source`);
             if (/fax/i.test(f.label || '') && f.value) fails.push(`${tag}: fax value ${f.value}`);

@@ -28,7 +28,7 @@
     "lastName": "Executor",
     "relationship": "Son",
     "phone": "818-555-0100",
-    "email": "rozsagyenelaw1+formstest@gmail.com",
+    "email": "test.executor@example.com",
     "isCAResident": true,
     "address": {
       "street": "200 Sample St.",
