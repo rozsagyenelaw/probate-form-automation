@@ -82,3 +82,5 @@ window.mpcaAdmin = {
   },
   signOut: () => signOut(auth).then(() => location.reload())
 };
+// Pages that started before this module finished loading wait for this event
+window.dispatchEvent(new Event('mpca-admin-gate-ready'));

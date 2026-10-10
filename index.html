@@ -837,8 +837,9 @@
             if (params.has('data')) history.replaceState(null, '', caseId ? `?caseId=${encodeURIComponent(caseId)}` : window.location.pathname);
             if (!caseId) { addHeir(); return; }
             try {
-                await window.mpcaAdmin.ready;
-                const prefilled = prefillFromData(window.caseToGeneratorData(await window.mpcaAdmin.getCase(caseId)));
+                const gate = window.mpcaAdmin || await new Promise(r => window.addEventListener('mpca-admin-gate-ready', () => r(window.mpcaAdmin), { once: true }));
+                await gate.ready;
+                const prefilled = prefillFromData(window.caseToGeneratorData(await gate.getCase(caseId)));
                 if (!prefilled || heirCount === 0) addHeir();
             } catch (e) {
                 console.error('Could not load the case');
