@@ -12,6 +12,8 @@
           "DE-111",
           "DE-142",
           "DE-121",
+          "PUBLICATION-STEPS",
+          "MAILING-STEPS",
           "DE-140",
           "DE-147",
           "DE-147S",
@@ -68,6 +70,7 @@
           "DE-160",
           "DE-161",
           "DE-120",
+          "MAILING-STEPS",
           "DE-315",
           "BOE-502-D"
         ]
@@ -117,6 +120,7 @@
           "PRO-010",
           "DE-221",
           "DE-120",
+          "MAILING-STEPS",
           "DE-226",
           "BOE-502-D"
         ]

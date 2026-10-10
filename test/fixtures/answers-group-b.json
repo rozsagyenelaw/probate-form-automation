@@ -12,11 +12,11 @@
   "succession.petitionerIsTrustee": false,
   "decedent.underConservatorship": "no",
   "decedent.aka": "none",
-  "hearing.date": "2026-12-01",
+  "hearing.date": "2026-05-12",
   "hearing.time": "8:30 AM",
   "hearing.dept": "9",
   "hearing.sameAddress": true,
-  "final.hearingDate": "2027-06-01",
+  "final.hearingDate": "2027-04-13",
   "final.hearingTime": "8:30 AM",
   "spousal.passing": true,
   "spousal.confirmation": true,
@@ -26,5 +26,7 @@
   "spousal.attachment7b": "Petitioner's one-half community property interest in the real property at 100 Example Ave., Burbank, CA 91501, APN 0000-000-000 (FICTIONAL TEST DATA).",
   "spousal.nonProRataAgreement": false,
   "spousal.probatePetitionStatus": "not filed",
-  "smallEstate.affiantCapacity": "successor"
+  "smallEstate.affiantCapacity": "successor",
+  "asset.fa1.title": "the decedent alone",
+  "asset.fa2.title": "payable-on-death or transfer-on-death beneficiary"
 }

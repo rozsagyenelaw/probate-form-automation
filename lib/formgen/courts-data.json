@@ -7,7 +7,7 @@
    "courthouses": [
     {
      "key": "stanley-mosk",
-     "branch": "STANLEY MOSK COURTHOUSE",
+     "branch": "Stanley Mosk Courthouse",
      "street": "111 N. Hill St.",
      "mailing": "111 N. Hill St.",
      "cityZip": "Los Angeles, CA 90012",
@@ -16,7 +16,7 @@
     },
     {
      "key": "antelope-valley",
-     "branch": "MICHAEL ANTONOVICH ANTELOPE VALLEY COURTHOUSE",
+     "branch": "Michael Antonovich Antelope Valley Courthouse",
      "street": "42011 4th St. West",
      "mailing": "42011 4th St. West",
      "cityZip": "Lancaster, CA 93534",
@@ -29,7 +29,7 @@
    "courthouses": [
     {
      "key": "costa-mesa",
-     "branch": "COSTA MESA JUSTICE COMPLEX",
+     "branch": "Costa Mesa Justice Complex",
      "street": "3390 Harbor Blvd.",
      "mailing": "3390 Harbor Blvd.",
      "cityZip": "Costa Mesa, CA 92626",
@@ -42,7 +42,7 @@
    "courthouses": [
     {
      "key": "oxnard",
-     "branch": "JUVENILE AND PROBATE COURTHOUSE",
+     "branch": "Juvenile and Probate Courthouse",
      "street": "4353 E. Vineyard Ave.",
      "mailing": "4353 E. Vineyard Ave.",
      "cityZip": "Oxnard, CA 93036",
@@ -55,7 +55,7 @@
    "courthouses": [
     {
      "key": "central",
-     "branch": "CENTRAL COURTHOUSE",
+     "branch": "Central Courthouse",
      "street": "1100 Union St.",
      "mailing": "1100 Union St.",
      "cityZip": "San Diego, CA 92101",
@@ -68,7 +68,7 @@
    "courthouses": [
     {
      "key": "downtown",
-     "branch": "DOWNTOWN SUPERIOR COURT",
+     "branch": "Downtown Superior Court",
      "street": "191 North First St.",
      "mailing": "191 North First St.",
      "cityZip": "San Jose, CA 95113",
@@ -81,7 +81,7 @@
    "courthouses": [
     {
      "key": "berkeley",
-     "branch": "BERKELEY COURTHOUSE",
+     "branch": "Berkeley Courthouse",
      "street": "2120 Martin Luther King Jr. Way",
      "mailing": "2120 Martin Luther King Jr. Way",
      "cityZip": "Berkeley, CA 94704",
@@ -94,7 +94,7 @@
    "courthouses": [
     {
      "key": "ridgeway",
-     "branch": "WILLIAM R. RIDGEWAY FAMILY RELATIONS COURTHOUSE",
+     "branch": "William R. Ridgeway Family Relations Courthouse",
      "street": "3341 Power Inn Road",
      "mailing": "3341 Power Inn Road",
      "cityZip": "Sacramento, CA 95826",
@@ -107,7 +107,7 @@
    "courthouses": [
     {
      "key": "juvenile-justice-center",
-     "branch": "JUVENILE JUSTICE CENTER",
+     "branch": "Juvenile Justice Center",
      "street": "2100 College Ave.",
      "mailing": "2100 College Ave.",
      "cityZip": "Bakersfield, CA 93305",
@@ -120,7 +120,7 @@
    "courthouses": [
     {
      "key": "civic-center",
-     "branch": "CIVIC CENTER COURTHOUSE",
+     "branch": "Civic Center Courthouse",
      "street": "400 McAllister St.",
      "mailing": "400 McAllister St.",
      "cityZip": "San Francisco, CA 94102",
@@ -133,7 +133,7 @@
    "courthouses": [
     {
      "key": "wakefield-taylor",
-     "branch": "WAKEFIELD TAYLOR COURTHOUSE",
+     "branch": "Wakefield Taylor Courthouse",
      "street": "725 Court St.",
      "mailing": "725 Court St.",
      "cityZip": "Martinez, CA 94553",
@@ -146,7 +146,7 @@
    "courthouses": [
     {
      "key": "southern-branch",
-     "branch": "SOUTHERN BRANCH",
+     "branch": "Southern Branch",
      "street": "400 County Center",
      "mailing": "400 County Center",
      "cityZip": "Redwood City, CA 94063",
@@ -159,7 +159,7 @@
    "courthouses": [
     {
      "key": "sisk",
-     "branch": "B.F. SISK COURTHOUSE",
+     "branch": "B.F. Sisk Courthouse",
      "street": "1130 O St.",
      "mailing": "1130 O St.",
      "cityZip": "Fresno, CA 93721",
@@ -173,7 +173,7 @@
    "courthouses": [
     {
      "key": "fontana",
-     "branch": "FONTANA COURTHOUSE",
+     "branch": "Fontana Courthouse",
      "street": "17780 Arrow Blvd.",
      "mailing": "17780 Arrow Blvd.",
      "cityZip": "Fontana, CA 92335",
@@ -182,7 +182,7 @@
     },
     {
      "key": "victorville",
-     "branch": "VICTORVILLE DISTRICT",
+     "branch": "Victorville District",
      "street": "14455 Civic Drive, Suite 200",
      "mailing": "14455 Civic Drive, Suite 200",
      "cityZip": "Victorville, CA 92392",

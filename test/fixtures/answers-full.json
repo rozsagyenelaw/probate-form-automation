@@ -17,18 +17,15 @@
   "final.ftbNoticeDate": "2026-06-02",
   "final.calvcbStatement": "Petitioner does not know of any heir or beneficiary who is or was confined in a correctional facility, so no notice was required (Prob. Code 9202(b), (d)) (FICTIONAL)",
   "final.dcssStatement": "Petitioner has no knowledge or reason to believe the decedent had a child support obligation, so no notice was required (FICTIONAL)",
-  "final.inventoryStatement": "The Inventory and Appraisal was filed on August 20, 2026, and the change in ownership statement was filed with the Los Angeles County Assessor (FICTIONAL)",
+  "final.inventoryStatement": "The Inventory and Appraisal was filed on August 20, 2026, and the change in ownership statement was filed with the County Assessor (FICTIONAL)",
   "final.inventoryTotal": "1050000",
-  "final.gainsOnSales": "0",
   "final.receipts": "0",
-  "final.lossesOnSales": "0",
-  "final.iaeaActions": "None",
   "final.taxStatement": "The decedent's final income tax returns were filed and no estate tax return is required (FICTIONAL)",
   "final.characterStatement": "All estate property is the decedent's separate property (FICTIONAL)",
   "final.waiversStatement": "Yes; the waivers are attached as Exhibit A (FICTIONAL)",
-  "final.prWaivesCompensation": false,
-  "final.propertyOnHand": "Real property at 100 Example Ave., Burbank, CA 91501, APN 0000-000-000 (FICTIONAL); cash of $98,800.00 at Example Bank (FICTIONAL)",
+  "final.propertyOnHand": "Cash of $918,800.00 at Example Bank (net proceeds of the sale of the residence and the estate account) (FICTIONAL)",
   "final.reserve": "5000",
   "final.distributionConfirmed": true,
-  "final.conditionsOrAlternates": "None"
+  "final.conditionsOrAlternates": "None",
+  "final.prRequestsCompensation": false
 }
