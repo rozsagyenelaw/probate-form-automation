@@ -150,6 +150,23 @@ async function sheet(doc, { heading, lines = [], table }) {
     table: { cols: [{ title: 'Item', x: 36, w: 28 }, { title: 'Finding', x: 68, w: 150 }, { title: 'Fix', x: 222, w: 380 }, { title: 'See', x: 606, w: 150 }], rows: REVIEW_FIXES },
   });
   if (notNeeded.length) await sheet(combined, { heading: 'Documents not needed in this sample case (not generated)', lines: [], table: { cols: [{ title: 'Procedure', x: 36, w: 170 }, { title: 'Document', x: 210, w: 220 }, { title: 'Why not needed', x: 434, w: 322 }], rows: [...new Map(notNeeded.map((n) => [n[1] + n[0], [n[0], `${n[1]}: ${n[2]}`, n[3]]])).values()] } });
+  // Client step guides: the exact words written to the client's progress bar (cases/{id}/clientSteps)
+  await sheet(combined, { heading: 'Client step guides (portal progress bar)', lines: [
+    'These are the out-of-app steps each client sees in the portal, word for word, with the court documents attached when the office sends them. They come from one source (lib/formgen/clientSteps.js) and are written server side when a case reaches the stage.',
+    'HOLD: nothing is written to a real client until you approve (setting config/business.stepGuidesApproved, default false). Only TEST cases get them now.',
+    'Every legal statement has its source listed under the step.',
+  ] });
+  const { buildSteps } = require('../lib/formgen/clientSteps');
+  const { renderStep } = require('../lib/formgen/steprender');
+  for (const run of RUNS) {
+    const cd = { ...read(run.caseFile), ...(run.extraCase || {}) };
+    for (const st of buildSteps({ caseData: cd, answers, phase: 11 })) {
+      const sd = await renderStep({ ...st, title: `${st.title} [${run.title}; shown at stage ${st.phase}]` }, { estateName: [cd.decedent.firstName, cd.decedent.lastName].join(' ') });
+      await require('../lib/formgen/pdf').watermark(sd);
+      const sb = await PDFDocument.load(await sd.save());
+      (await combined.copyPages(sb, sb.getPageIndices())).forEach((pg) => combined.addPage(pg));
+    }
+  }
   for (const b of parts) { const d = await PDFDocument.load(b); const pages = await combined.copyPages(d, d.getPageIndices()); pages.forEach((p) => combined.addPage(p)); }
   fs.writeFileSync(path.join(OUT, '00-COMBINED-forms-sample-set.pdf'), await combined.save());
   console.log('done', n, 'documents; combined pages', combined.getPageCount());

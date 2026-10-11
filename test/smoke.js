@@ -16,7 +16,8 @@ const fails = []; let n = 0;
   for (const cf of cases) {
     const caseData = { ...read(cf), ...(cf === 'test-case.json' ? read('admin-records.json') : {}) };
     for (const m of listForms(caseData, answers)) {
-      if (m.records && !m.records.length) continue; // nothing in the file to generate (e.g. no parcel)
+      if (m.records && !m.records.length) continue;
+      if (m.notNeeded) continue; // nothing in the file to generate (e.g. no parcel)
       const recs = m.records ? m.records.map((r) => r.index) : [undefined];
       for (const rec of recs) for (const ans of [{}, answers]) {
         n += 1;
