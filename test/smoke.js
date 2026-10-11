@@ -43,6 +43,18 @@ const fails = []; let n = 0;
       }
     }
   }
+  // Item i: the letter RE block (DHCS case-number line and the rest) stays inside the right margin, even with long
+  // placeholders such as "[ANSWER NEEDED: Case number]" and a long court name
+  {
+    const { PDFDocument, StandardFonts } = require('pdf-lib');
+    const { layoutRe } = require('../lib/formgen/letter');
+    const d = await PDFDocument.create(); const bold = await d.embedFont(StandardFonts.TimesRomanBold);
+    const re = ['Estate of Maximiliana Bartholomew-Featherstonehaugh Rodriguez, Deceased', 'Superior Court of California, County of San Bernardino, Case No. [ANSWER NEEDED: Case number]', 'Social Security No.: XXX-XX-[ANSWER NEEDED]', 'A'.repeat(120)];
+    for (const { t, x } of layoutRe(re, bold, 12, 72, 540)) {
+      n += 1;
+      if (x + bold.widthOfTextAtSize(t, 12) > 540.01) fails.push(`letter RE line past the right margin: ${t}`);
+    }
+  }
   console.log(`${n} generations, ${fails.length} problems`);
   fails.slice(0, 50).forEach((f) => console.log('FAIL', f));
   process.exit(fails.length ? 1 : 0);
