@@ -4,7 +4,6 @@
   "letters.date": "2026-05-20",
   "creditors.noticeDate": "2026-06-01",
   "creditor.1.address": "Example Card Services, PO Box 1000, Wilmington, DE 19850",
-  "estate.estimatedValue": "1050000",
   "claim.1.decision": "allow",
   "inventory.kind": "final",
   "inventory.allOrPortion": "all",

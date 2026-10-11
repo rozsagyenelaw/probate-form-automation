@@ -22,11 +22,11 @@ const adminRecords = read('admin-records.json');
 
 const RUNS = [
   { title: 'Full probate (Los Angeles, will, executor)', caseFile: 'test-case.json', extraCase: adminRecords,
-    forms: ['FILING-STEPS', { id: 'WILL-LODGING', extra: {}, dropAnswers: ['case.number', 'hearing.date', 'hearing.time', 'hearing.dept'] }, 'DE-111', 'DE-142', 'DE-121', 'MAILING-STEPS', 'PUBLICATION-STEPS', 'DE-140', 'DE-147', 'DE-147S', 'DE-150', 'CIV-150', 'PRO-010', 'DE-157', 'NOTICE-9202-DHCS', 'NOTICE-9202-FTB', 'NOTICE-9202-CALVCB', 'NOTICE-9202-DCSS', 'DE-160', 'DE-161', 'BOE-502-D', 'DE-165', 'NOTICE-OF-SALE', 'DE-260', 'DE-120-SALE', 'DE-265', 'DE-174', 'PETITION-FINAL-DISTRIBUTION', { id: 'DE-120', extra: { purpose: 'final' } }, 'ORDER-FINAL-DISTRIBUTION', 'DE-295'] },
+    forms: ['FILING-STEPS', 'WILL-LODGING', 'DE-111', 'DE-142', 'DE-121', 'MAILING-STEPS', 'PUBLICATION-STEPS', 'DE-140', 'DE-147', 'DE-147S', 'DE-150', 'CIV-150', 'PRO-010', 'DE-157', 'NOTICE-9202-DHCS', 'NOTICE-9202-FTB', 'NOTICE-9202-CALVCB', 'NOTICE-9202-DCSS', 'DE-160', 'DE-161', 'BOE-502-D', 'DE-165', 'STEP-GUIDES', 'NOTICE-OF-SALE', 'DE-260', 'DE-120-SALE', 'PRO-009', 'DE-265', 'DE-174', 'PETITION-FINAL-DISTRIBUTION', { id: 'DE-120', extra: { purpose: 'final' } }, 'ORDER-FINAL-DISTRIBUTION', 'DE-295'] },
   { title: 'Primary residence petition (Prob. Code 13151)', caseFile: 'test-case-13151.json', forms: ['FILING-STEPS', 'PRO-010', 'DE-310', { id: 'DE-120', extra: { purpose: '13151' } }, 'MAILING-STEPS', 'DE-315', 'DE-160', 'DE-161'] },
   { title: 'Spousal property petition (Prob. Code 13650)', caseFile: 'test-case-spousal.json', forms: ['FILING-STEPS', 'PRO-010', 'DE-221', { id: 'DE-120', extra: { purpose: '13650' } }, 'MAILING-STEPS', 'DE-226'] },
   { title: 'Small estate affidavit (Prob. Code 13100)', caseFile: 'test-case-small.json', forms: ['FILING-STEPS', 'SMALL-ESTATE-AFFIDAVIT'] },
-  { title: 'Real property of small value (Prob. Code 13200)', caseFile: 'test-case-13200.json', forms: ['FILING-STEPS', 'PRO-010', 'DE-305'] },
+  { title: 'Real property of small value (Prob. Code 13200)', caseFile: 'test-case-13200.json', forms: ['FILING-STEPS', 'PRO-010', 'DE-305', 'DE-160', 'DE-161'] },
 ];
 
 
@@ -43,7 +43,19 @@ const REVIEW_FIXES = [
   ['J', 'Purchasers missing from the sale hearing notice', 'The purchasers named in the petition are added to the DE-120 service list (10308(c)).', 'DE-120 for the sale hearing'],
   ['K', 'Small estate affidavit checks', 'Each account\'s title is asked (the decedent alone, payable-on-death, joint, trust); only accounts in the decedent\'s name alone are included. The total counted toward the limit excludes vehicles and non-probate accounts. 40-day check and the death certificate and DE-300 attachments are stated.', 'Small estate affidavits'],
   ['L', 'Personal property may include non-probate accounts', 'DE-111 item 3d(1) leaves out accounts that pass outside probate and asks how any unanswered account is titled.', 'DE-111'],
-  ['M', 'On-screen "Clear This Form" notice text', 'The notice fields on DE-260 and DE-174 are hidden and do not print; all Print/Save/Clear buttons are removed.', 'DE-260, DE-174'],
+  ['M', 'On-screen "Clear This Form" notice text', 'The notice fields (DE-174, DE-260) are now removed, not just hidden; the grey button background layer is removed from the page content; review copies are flattened with qpdf, which prints only what prints. Checked on the rendered pages, including the blank comparison pages.', 'DE-260, DE-174, DE-140, DE-150, every blank page'],
+  ['V1', 'Check marks did not print (BOE-502-D); unembedded ZapfDingbats', 'Every check box and radio mark is drawn as a plain vector check (no font). Text is drawn with embedded Liberation Sans. The only unembedded fonts left are the court\'s own printed form text (Arial, Helvetica, Courier).', 'BOE-502-D, every Judicial Council form'],
+  ['V2', 'Letter dates (C)', 'Letters are dated from the file (the 9202 notice dates in the petition; the will lodging date), never silently after a deadline: past a deadline the date is left blank and asked for, with a warning.', 'WILL-LODGING, NOTICE-9202-DHCS, NOTICE-9202-FTB'],
+  ['V3', 'Will lodging version', 'With a case number on file, the pending-petition version is used. The will goes to the court clerk (Prob. Code 8200), never to the office.', 'WILL-LODGING'],
+  ['V4', 'E-filing consent sentence', 'Now: "Filing online does not mean you agree to get court papers by email. Agree to that only if you want it." (CCP 1010.6(c)(3); CRC 2.251(c)(3)(B)). Double period after "p.m." removed.', 'FILING-STEPS'],
+  ['V5', 'Client guides missing', 'New guides: papers for Letters (DE-140, DE-150, DE-147, DE-147S; Prob. Code 8404, LASC LR 4.30); notice to creditors (9050, 9051); state agency notices (9202); each claim decision (9250); each notice of proposed action (10586); notice of sale publication (10300, Gov. Code 6063a). 13151: five-business-day notice (13151(b)), Attachment 8 and DE-300 (13152), $435 fee. 13200: PRO 010, DE-160/DE-161, $45 fee (Gov. Code 70626(b)(8)).', 'FILING-STEPS, STEP-GUIDES, client step guides section'],
+  ['V6', 'Mailing guides', 'The mailer is told to check box 3a. Sources per notice: 8110 (petition), 10308(c)/1220/1230 (sale), 11601/1220 (final), 13153/1220/13151(b) (13151), 13655/1220 (13650). Each buyer is listed and mailed separately with the address (CRC 7.51(a)(3)), also on DE-120-SALE.', 'MAILING-STEPS, DE-120-SALE'],
+  ['V7', 'CIV-150 (decision D4)', 'Item 2a: "and at any continuance of that hearing" and "until submission of the order after hearing" are checked for every case; the per-hearing question is gone. Printed names under both signatures. Proof of service by mail pre-filled with the persons given notice of the hearing (not the client), to be completed and signed by the adult non-party who mails it (rule 3.36(a)).', 'CIV-150'],
+  ['V8', 'PRO 010 (decision D5)', 'Step 2 is computed under LASC Local Rule 2.3(a)(1)(A) (July 1, 2026 edition): Central filing marks the last column; North filing marks "District where decedent resided". The question is gone. The field sheet shows every checked box and cites the rule. 13200 checks "Affidavit - Real Property of Small Value - 13200 PR Code [3001]".', 'PRO 010 (all four)'],
+  ['V9', 'Overbid form (decision D7)', 'LASC PRO 009 Bid In Open Court on Sale of Real Property (Rev. 04/26) is generated with the sale packet, labelled "USE ONLY IF AN OVERBID HAPPENS AT THE SALE HEARING"; the lowest acceptable overbid is computed (Prob. Code 10311(a)(1)); LASC LR 4.39(c).', 'PRO-009'],
+  ['V10', 'Legal descriptions', 'Each parcel has its own legal description; the case-wide answer is used only when there is one parcel. Generated: DE-260 Attachment 2e (and 4a when the vesting does not fit), DE-265 Attachment 9, DE-221 7a/7b and DE-226 5a/7a rows with address, APN and legal description, DE-305 Attachment 5a per parcel.', 'DE-260, DE-265, DE-221, DE-226, DE-305'],
+  ['V11', 'Final petition numbers', 'Para 11 total computed from the inventories (Attachment 1 confirmed values + referee total). Para 18 (and order item 5): the cash figure is checked against the file and blocked when it is higher. Para 12: NOPA mailing date shown and checked against 10586; the court-confirmed sale is in its own paragraph 12A. Para 15 reworded. DE-120 final mentions compensation only when the personal representative asks for it. Order item 6 states what is "none".', 'PETITION-FINAL-DISTRIBUTION, ORDER, DE-120 final'],
+  ['V12', 'Other', 'DE-174 item 6 from the inventory or the petition estimate (9250(c)(5)). DE-310 value check shown on the field sheet. DE-221 asks whether the will gives the property to the spouse (13500). Notice of sale: no attorney wording; newspaper instruction moved to the client guide. FTB address per FTB 1240 (Rev. 03/2025). DHCS letter: "copy" in body and enclosures. Small estate affidavit: notary only if the holder asks (13101).', 'DE-174, DE-310, DE-221, NOTICE-OF-SALE, NOTICE-9202-FTB/DHCS, SMALL-ESTATE-AFFIDAVIT'],
   ['2', 'Documents not needed in this case', 'Not generated, listed below with the reason: DE-142 waivers (the will waives bond), CalVCB and DCSS letters when not required, and the will copy to the executor when the custodian is the executor. The will lodging letter, when a petition is already pending, lodges the will in that case instead of citing 8200.', 'This page'],
   ['2', 'DE-121 item 10 is published', 'A note tells the client they may use a mailing address.', 'DE-121 notes'],
 ];
@@ -87,7 +99,8 @@ async function sheet(doc, { heading, lines = [], table }) {
     for (const entry of run.forms) {
       const id = typeof entry === 'string' ? entry : entry.id;
       const extraBase = typeof entry === 'string' ? {} : (entry.extra || {});
-      const ans = typeof entry === 'object' && entry.dropAnswers ? Object.fromEntries(Object.entries(answers).filter(([k]) => !entry.dropAnswers.includes(k))) : answers;
+      const base = { ...answers, ...(run.answers || {}) };
+      const ans = typeof entry === 'object' && entry.dropAnswers ? Object.fromEntries(Object.entries(base).filter(([k]) => !entry.dropAnswers.includes(k))) : base;
       const m = meta[id]; const spec = REGISTRY.FORMS[id];
       if (!m) { console.log('not built', id); continue; }
       if (m.notNeeded) continue;
@@ -99,13 +112,19 @@ async function sheet(doc, { heading, lines = [], table }) {
         const cd = typeof entry === 'object' && entry.dropAnswers ? { ...caseData, court: { ...(caseData.court || {}), caseNumber: null } } : caseData;
         const full = await generate({ formId: id, caseData: cd, answers: ans, extra, approved: false });
         const intakeOnly = await generate({ formId: id, caseData: cd, answers: {}, extra, approved: false }).catch(() => null);
-        const doc = await PDFDocument.load(full.pdfBytes);
-        try { doc.getForm().flatten(); } catch (e) { /* generated documents have no form */ }
+        // review copy: flatten with qpdf (prints only what prints: hidden widgets and screen-only
+        // layers stay out, check marks keep their own appearance streams)
+        const tmpIn = path.join(require('os').tmpdir(), `ss-${process.pid}-in.pdf`); const tmpOut = tmpIn.replace('-in', '-out');
+        fs.writeFileSync(tmpIn, full.pdfBytes);
+        try { require('child_process').execFileSync('qpdf', ['--flatten-annotations=print', tmpIn, tmpOut], { stdio: 'ignore' }); } catch (e) { if (!fs.existsSync(tmpOut)) fs.copyFileSync(tmpIn, tmpOut); }
+        const doc = await PDFDocument.load(fs.readFileSync(tmpOut));
         const filledPages = doc.getPageCount();
         let blankPages = 0;
         if (spec.kind === 'jc') {
-          const blank = await PDFDocument.load(fs.readFileSync(path.join(TPL, spec.template)));
-          try { blank.getForm().flatten(); } catch (e) { /* no form */ }
+          const bIn = path.join(require('os').tmpdir(), `ss-${process.pid}-bin.pdf`); const bOut = bIn.replace('-bin', '-bout');
+          { const bdoc = await PDFDocument.load(fs.readFileSync(path.join(TPL, spec.template)), { updateMetadata: false }); require('../lib/formgen/pdf').hideScreenOnlyWidgets(bdoc); fs.writeFileSync(bIn, await bdoc.save({ updateFieldAppearances: false })); }
+          try { require('child_process').execFileSync('qpdf', ['--flatten-annotations=print', bIn, bOut], { stdio: 'ignore' }); } catch (e) { if (!fs.existsSync(bOut)) fs.copyFileSync(bIn, bOut); }
+          const blank = await PDFDocument.load(fs.readFileSync(bOut));
           const pages = await doc.copyPages(blank, blank.getPageIndices());
           const lab = await embed(doc, 'HelveticaBold');
           for (const p of pages) { doc.addPage(p); p.drawText(`BLANK ${spec.revision.toUpperCase()} (for comparison)`, { x: 36, y: p.getHeight() - 14, size: 8, font: lab, color: rgb(0, 0.3, 0.7) }); blankPages += 1; }

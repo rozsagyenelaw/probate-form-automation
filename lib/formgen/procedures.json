@@ -24,6 +24,7 @@
       {
         "stage": "After Letters",
         "forms": [
+          "STEP-GUIDES",
           "DE-157",
           "NOTICE-9202-DHCS",
           "NOTICE-9202-FTB",
@@ -42,6 +43,7 @@
           "NOTICE-OF-SALE",
           "DE-260",
           "DE-120-SALE",
+          "PRO-009",
           "DE-265",
           "DE-165"
         ]

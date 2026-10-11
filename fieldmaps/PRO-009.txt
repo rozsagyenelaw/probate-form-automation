@@ -1,0 +1,76 @@
+p1 y=  80.4 x= 323.1 w= 80.7 h=27.6 Tx 02
+      T: STATE BAR NUMBER
+      L: 
+      A: ATTORNEY: STATE BAR NUMBER
+p1 y=  81.1 x=  35.2 w=287.7 h=44.8 Tx ML 01
+      T: NAME, ADDRESS, AND TELEPHONE NUMBER OF ATTORNEY OR PARTY WITHOUT ATTORNEY
+      L: 
+      A: NAME, ADDRESS, AND TELEPHONE NUMBER OF ATTORNEY OR PARTY WITHOUT ATTORNEY:
+p1 y= 127.1 x= 122.6 w=281.3 h=15.8 Tx 03
+      T: ATTORNEY FOR (Name)
+      L: ATTORNEY FOR (Name):
+      A: 
+p1 y= 163.7 x=  34.7 w=369.4 h=14.8 Tx 04
+      T: COURTHOUSE ADDRESS
+      L: 
+      A: SUPERIOR COURTHOUSE ADDRESS: COURT OF CALIFORNIA, COUNTY OF LOS ANGELES
+p1 y= 189.0 x=  35.4 w=368.5 h=42.4 Tx ML 05
+      T: ESTATE OF
+      L: 
+      A: ESTATE OF:
+p1 y= 240.5 x= 404.2 w=171.1 h=21.4 Tx 06
+      T: CASE NUMBER
+      L: OPEN COURT ON SALE OF REAL PROPERTY
+      A: CASE NUMBER:
+p1 y= 283.9 x= 181.7 w=333.6 h=13.7 Tx 07
+      T: I hereby offer the sum of
+      L: Ihereby offer the sum of
+      A: 
+p1 y= 322.3 x=  71.7 w=436.9 h=33.7 Tx ML 08
+      T: for the following described property
+      L: 
+      A: balance, if any) for the following described property:
+p1 y= 372.7 x= 182.1 w=326.5 h=15.8 Tx 09
+      T: Terms of sale as follows
+      L: Terms of sale as follows:
+      A: described in the return of sale on file.
+p1 y= 396.4 x= 185.4 w=323.1 h=15.8 Tx 10
+      T: Name(s) of Purchaser(s)
+      L: Name(s) of Purchaser(s):
+      A: follows:
+p1 y= 419.5 x= 200.9 w=307.7 h=15.8 Tx 11
+      T: Title shall be held as follows
+      L: Title shall be held as follows:
+      A: Purchaser(s): __________________________________________________________
+p1 y= 500.1 x= 251.6 w=257.0 h=15.8 Tx 13
+      T: Commissions to be divided as indicated
+      L: Commissions to be divided as indicated:
+      A: bidder, is as follows:
+p1 y= 557.9 x= 304.5 w=204.1 h=15.8 ? 15
+      T: Signature of Bidder
+      L: Date: ________________
+      A: 
+p1 y= 558.5 x=  97.6 w= 89.2 h=15.8 Tx 14
+      T: Date
+      L: Date:
+      A: 
+p1 y= 615.0 x= 304.9 w=203.7 h=15.8 Tx 17
+      T: Print Name of Bidder
+      L: _____________________________________
+      A: 
+p1 y= 615.1 x=  70.8 w=206.0 h=15.8 Tx 16
+      T: Estate Representative
+      L: 
+      A: 
+p1 y= 759.5 x=  36.7 w= 73.3 h=15.8 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] F0 18
+      T: Print
+      L: 
+      A: SCLAC
+p1 y= 759.5 x= 116.6 w= 73.3 h=15.8 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] F0 19
+      T: Save
+      L: 
+      A: SCLAC PRO 009 Rev. 04/26
+p1 y= 759.5 x= 479.6 w= 73.3 h=15.8 Btn[/BBox,/FormType,/Matrix,/Resources,/Subtype,/Type,/Filter] F0 20
+      T: Clear
+      L: 
+      A: Probate Code § 10311

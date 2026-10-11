@@ -1,135 +1,136 @@
 {
-  "id": "TEST-CASE-13151",
-  "userId": "test-user-forms",
-  "estateName": "Estate of Test Decedent",
-  "filingCounty": "Los Angeles",
-  "probateType": "testate",
-  "serviceType": "simplified",
-  "decedent": {
-    "firstName": "Test",
-    "middleName": "",
-    "lastName": "Decedent",
-    "dateOfBirth": "1940-02-10",
-    "dateOfDeath": "2026-03-15",
-    "placeOfDeath": "Burbank, California",
-    "ssnLast4": "0000",
-    "maritalStatus": "widowed",
-    "citizenship": "US",
-    "lastAddress": {
-      "street": "100 Example Ave.",
-      "city": "Burbank",
-      "county": "Los Angeles",
-      "state": "CA",
-      "zip": "91501"
-    }
-  },
-  "petitioner": {
-    "firstName": "Test",
-    "lastName": "Executor",
-    "relationship": "Son",
-    "phone": "818-555-0100",
-    "email": "test.executor@example.com",
-    "isCAResident": true,
-    "address": {
-      "street": "200 Sample St.",
-      "city": "Glendale",
-      "state": "CA",
-      "zip": "91203"
-    }
-  },
-  "willExists": true,
-  "willDate": "2018-06-01",
-  "codicilExists": false,
-  "codicilDates": [],
-  "namedExecutor": "Test Executor",
-  "bondWaivedInWill": true,
-  "survivedBySpouse": false,
-  "survivedByChildren": true,
-  "survivedByGrandchildren": false,
-  "heirs": [
-    {
-      "firstName": "Test",
-      "lastName": "Executor",
-      "relationship": "Son",
-      "age": "Adult",
-      "isDeceased": false,
-      "sharePercentage": "50",
-      "waivedBond": false,
-      "address": {
-        "street": "200 Sample St.",
-        "city": "Glendale",
-        "state": "CA",
-        "zip": "91203"
-      }
-    },
-    {
-      "firstName": "Test",
-      "lastName": "Daughter",
-      "relationship": "Daughter",
-      "age": "Adult",
-      "isDeceased": false,
-      "sharePercentage": "50",
-      "waivedBond": false,
-      "address": {
-        "street": "500 Sample St.",
-        "city": "Pasadena",
-        "state": "CA",
-        "zip": "91101"
-      }
-    }
-  ],
-  "assets": {
-    "realProperty": [
-      {
-        "id": "rp1",
-        "address": "100 Example Ave., Burbank, CA 91501",
-        "apn": "0000-000-000",
-        "propertyType": "Single Family Home",
-        "estimatedValue": "600000",
-        "mortgageBalance": "0"
-      }
-    ],
-    "financialAccounts": [
-      {
-        "id": "fa1",
-        "institutionName": "Example Bank",
-        "accountType": "Checking",
-        "accountNumber": "xxxx1111",
-        "estimatedValue": "120000"
-      }
-    ],
-    "vehicles": [
-      {
-        "id": "v1",
-        "year": "2015",
-        "make": "Toyota",
-        "model": "Camry",
-        "estimatedValue": "10000"
-      }
-    ],
-    "personalProperty": [
-      {
-        "id": "pp1",
-        "description": "Household furniture and furnishings",
-        "estimatedValue": "20000",
-        "location": "Residence"
-      }
-    ]
-  },
-  "liabilities": [
-    {
-      "creditorName": "Example Card Services",
-      "debtType": "Credit Card",
-      "accountNumber": "xxxx2222",
-      "amountOwed": "4200"
-    }
-  ],
-  "court": {
-    "county": "Los Angeles",
-    "caseNumber": null
-  },
-  "keyDates": {
-    "firstHearing": null,
-    "lettersIssued": null
+ "id": "TEST-CASE-13151",
+ "userId": "test-user-forms",
+ "estateName": "Estate of Test Decedent",
+ "filingCounty": "Los Angeles",
+ "probateType": "testate",
+ "serviceType": "simplified",
+ "decedent": {
+  "firstName": "Test",
+  "middleName": "",
+  "lastName": "Decedent",
+  "dateOfBirth": "1940-02-10",
+  "dateOfDeath": "2026-03-15",
+  "placeOfDeath": "Burbank, California",
+  "ssnLast4": "0000",
+  "maritalStatus": "widowed",
+  "citizenship": "US",
+  "lastAddress": {
+   "street": "100 Example Ave.",
+   "city": "Burbank",
+   "county": "Los Angeles",
+   "state": "CA",
+   "zip": "91501"
   }
+ },
+ "petitioner": {
+  "firstName": "Test",
+  "lastName": "Executor",
+  "relationship": "Son",
+  "phone": "818-555-0100",
+  "email": "test.executor@example.com",
+  "isCAResident": true,
+  "address": {
+   "street": "200 Sample St.",
+   "city": "Glendale",
+   "state": "CA",
+   "zip": "91203"
+  }
+ },
+ "willExists": true,
+ "willDate": "2018-06-01",
+ "codicilExists": false,
+ "codicilDates": [],
+ "namedExecutor": "Test Executor",
+ "bondWaivedInWill": true,
+ "survivedBySpouse": false,
+ "survivedByChildren": true,
+ "survivedByGrandchildren": false,
+ "heirs": [
+  {
+   "firstName": "Test",
+   "lastName": "Executor",
+   "relationship": "Son",
+   "age": "Adult",
+   "isDeceased": false,
+   "sharePercentage": "50",
+   "waivedBond": false,
+   "address": {
+    "street": "200 Sample St.",
+    "city": "Glendale",
+    "state": "CA",
+    "zip": "91203"
+   }
+  },
+  {
+   "firstName": "Test",
+   "lastName": "Daughter",
+   "relationship": "Daughter",
+   "age": "Adult",
+   "isDeceased": false,
+   "sharePercentage": "50",
+   "waivedBond": false,
+   "address": {
+    "street": "500 Sample St.",
+    "city": "Pasadena",
+    "state": "CA",
+    "zip": "91101"
+   }
+  }
+ ],
+ "assets": {
+  "realProperty": [
+   {
+    "id": "rp1",
+    "address": "300 Example Ave., Burbank, CA 91501",
+    "apn": "0000-000-002",
+    "propertyType": "Single Family Home",
+    "estimatedValue": "600000",
+    "mortgageBalance": "0",
+    "legalDescription": "Lot 14 of Tract No. 0000, in the City of Burbank, County of Los Angeles, State of California, as per map recorded in Book 000, Page 00 of Maps (FICTIONAL TEST DATA)"
+   }
+  ],
+  "financialAccounts": [
+   {
+    "id": "fa1",
+    "institutionName": "Example Bank",
+    "accountType": "Checking",
+    "accountNumber": "xxxx1111",
+    "estimatedValue": "120000"
+   }
+  ],
+  "vehicles": [
+   {
+    "id": "v1",
+    "year": "2015",
+    "make": "Toyota",
+    "model": "Camry",
+    "estimatedValue": "10000"
+   }
+  ],
+  "personalProperty": [
+   {
+    "id": "pp1",
+    "description": "Household furniture and furnishings",
+    "estimatedValue": "20000",
+    "location": "Residence"
+   }
+  ]
+ },
+ "liabilities": [
+  {
+   "creditorName": "Example Card Services",
+   "debtType": "Credit Card",
+   "accountNumber": "xxxx2222",
+   "amountOwed": "4200"
+  }
+ ],
+ "court": {
+  "county": "Los Angeles",
+  "caseNumber": null
+ },
+ "keyDates": {
+  "firstHearing": null,
+  "lettersIssued": null
+ }
 }
