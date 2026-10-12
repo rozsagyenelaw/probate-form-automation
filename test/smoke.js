@@ -55,6 +55,15 @@ const fails = []; let n = 0;
       if (x + bold.widthOfTextAtSize(t, 12) > 540.01) fails.push(`letter RE line past the right margin: ${t}`);
     }
   }
+  // Item n (decisions 2026-10-12, point 5): a suffix prints after the last name on DE-111 (caption party box, item 2,
+  // verification), never in place of it
+  {
+    const c = { ...read('test-case.json'), petitioner: { ...read('test-case.json').petitioner, firstName: 'Robert', middleName: 'Allen', lastName: 'Whitfield', suffix: 'Jr.' } };
+    const r = await generate({ formId: 'DE-111', caseData: c, answers: {} });
+    n += 1;
+    const names = r.fields.filter((f) => /Petitioner \(name each\)|Name to be appointed|Petitioner name|party without attorney/i.test(f.label || '')).map((f) => String(f.value || ''));
+    if (!names.length || !names.every((v) => v.includes('Robert Allen Whitfield Jr.'))) fails.push(`DE-111 suffix: ${JSON.stringify(names)}`);
+  }
   console.log(`${n} generations, ${fails.length} problems`);
   fails.slice(0, 50).forEach((f) => console.log('FAIL', f));
   process.exit(fails.length ? 1 : 0);
